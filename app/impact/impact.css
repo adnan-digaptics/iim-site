@@ -1,0 +1,924 @@
+/* ==========================================================================
+   OUR IMPACT PAGE — scoped styles
+   ========================================================================== */
+
+.impact-page {
+  background: #fff;
+  color: #3a4650;
+  overflow-x: clip;
+}
+
+.impact-page section[id] {
+  scroll-margin-top: 92px;
+}
+
+.imp-eyebrow {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #971238;
+  margin: 0 0 10px;
+}
+
+.imp-h2 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(26px, 2.5vw, 34px);
+  line-height: 1.22;
+  color: #172331;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.imp-lead {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #3a4650;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.imp-body {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #3a4650;
+  margin: 0 0 22px;
+  max-width: 38ch;
+}
+
+.imp-section-intro {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.imp-section-intro--left {
+  text-align: left;
+}
+
+.imp-section-intro--left .imp-lead {
+  margin: 0;
+  max-width: 720px;
+}
+
+.imp-text-link {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #971238 !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.imp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 13px 18px;
+  border-radius: 1px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.imp-btn-fill {
+  background: #971238;
+  color: #fff !important;
+  border: 1px solid #971238;
+}
+
+.imp-btn-fill:hover {
+  background: #7a0e2c;
+  border-color: #7a0e2c;
+}
+
+.imp-btn-light {
+  background: transparent;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.imp-btn-light:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.imp-icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #971238;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  margin: 0 auto 14px;
+}
+
+.imp-icon-circle--sm {
+  width: 46px;
+  height: 46px;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   01 HERO
+   -------------------------------------------------------------------------- */
+
+.impact-page .hero-impact-seamless {
+  background-color: #faf8f4;
+  border-bottom: 1px solid #e8e3dc;
+}
+
+.impact-page .hero-impact-seamless .hero-bg-img {
+  object-position: center 30%;
+  width: 58%;
+}
+
+.impact-page .hero-impact-seamless .hero-gradient-overlay {
+  background: linear-gradient(
+    90deg,
+    #faf8f4 0%,
+    #faf8f4 40%,
+    rgba(250, 248, 244, 0.96) 48%,
+    rgba(250, 248, 244, 0.55) 58%,
+    rgba(250, 248, 244, 0) 72%
+  );
+}
+
+.impact-page .imp-hero-eyebrow {
+  color: #971238;
+  font-weight: 800;
+}
+
+.impact-page .hero-impact-seamless .hero-seamless-title {
+  font-size: clamp(38px, 4.4vw, 56px);
+  color: #172331;
+}
+
+.impact-page .hero-impact-seamless .hero-seamless-title em {
+  color: #971238;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.impact-page .hero-impact-seamless .hero-seamless-lead {
+  max-width: 460px;
+}
+
+.impact-page .hero-impact-seamless .btn-seamless-maroon {
+  background-color: #971238;
+  border-color: #971238;
+  gap: 8px;
+}
+
+.impact-page .hero-impact-seamless .btn-seamless-outline {
+  border-color: #971238;
+  color: #172331 !important;
+  gap: 8px;
+}
+
+.impact-page .imp-hero-quote {
+  right: 24px;
+  bottom: 28px;
+  background: #003b35;
+  padding: 18px 22px;
+  max-width: 280px;
+  position: absolute;
+  z-index: 3;
+}
+
+.impact-page .imp-hero-quote::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/islamic-pattern.svg");
+  background-size: 140px;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.impact-page .imp-hero-quote .quote-text {
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+   02 SNAPSHOT
+   -------------------------------------------------------------------------- */
+
+.imp-snapshot {
+  background: #faf8f4;
+  padding: 56px 0 60px;
+  border-bottom: 1px solid #ebe4da;
+}
+
+.imp-snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.imp-snapshot-card {
+  background: #fff;
+  border: 1px solid #e8e3dc;
+  padding: 26px 16px 22px;
+  text-align: center;
+  min-height: 100%;
+}
+
+.imp-snapshot-card h3 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #971238;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.imp-snapshot-card p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #5a6570;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   03 CREATES IMPACT
+   -------------------------------------------------------------------------- */
+
+.imp-creates {
+  background: #fff;
+  padding: 56px 0 58px;
+}
+
+.imp-creates-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.imp-creates-card {
+  background: #faf8f4;
+  border: 1px solid #e8e3dc;
+  padding: 22px 12px 18px;
+  text-align: center;
+}
+
+.imp-creates-card h3 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 15px;
+  color: #971238;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.imp-creates-card p {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #5a6570;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   04 NATIONAL REACH
+   -------------------------------------------------------------------------- */
+
+.imp-national {
+  background: #f7f3ec;
+  padding: 60px 0 64px;
+  border-top: 1px solid #ebe4da;
+  border-bottom: 1px solid #ebe4da;
+  position: relative;
+}
+
+.imp-national::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/islamic-pattern.svg");
+  background-size: 320px;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.imp-national .container {
+  position: relative;
+  z-index: 1;
+}
+
+.imp-national-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr 1.05fr;
+  gap: 24px 20px;
+  align-items: center;
+}
+
+.imp-national-copy .imp-h2 {
+  margin-bottom: 16px;
+}
+
+.imp-national-copy .imp-body {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #172331;
+  max-width: 34ch;
+}
+
+.imp-national-map {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+.imp-national-map img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+}
+
+.imp-national-examples .imp-eyebrow {
+  margin-bottom: 12px;
+}
+
+.imp-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.imp-example-card {
+  background: #fff;
+  border: 1px solid #e8e3dc;
+  box-shadow: 0 1px 2px rgba(23, 35, 49, 0.04);
+  padding: 14px 14px 14px;
+  min-height: 100%;
+}
+
+.imp-example-pin {
+  display: inline-flex;
+  color: #971238;
+  font-size: 14px;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.imp-example-place {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #971238;
+  margin: 0 0 8px;
+}
+
+.imp-example-card h3 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 14.5px;
+  line-height: 1.3;
+  color: #172331;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.imp-example-card > p:last-child {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #3a4650;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   05 / 07 MEDIA CARDS
+   -------------------------------------------------------------------------- */
+
+.imp-conferences,
+.imp-teaching {
+  background: #fff;
+  padding: 56px 0 60px;
+}
+
+.imp-teaching {
+  background: #faf8f4;
+  border-top: 1px solid #ebe4da;
+  border-bottom: 1px solid #ebe4da;
+}
+
+.imp-card-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.imp-media-card {
+  background: #fff;
+  border: 1px solid #e8e3dc;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.imp-teaching .imp-media-card {
+  background: #fff;
+}
+
+.imp-media-card-img {
+  height: 150px;
+  overflow: hidden;
+}
+
+.imp-media-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imp-media-card-body {
+  padding: 16px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.imp-media-card-body h3 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 15px;
+  line-height: 1.3;
+  color: #971238;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.imp-media-card-body p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #5a6570;
+  margin: 0 0 14px;
+  flex: 1;
+}
+
+.imp-card-arrow {
+  width: 28px;
+  height: 28px;
+  color: #971238 !important;
+  display: inline-grid;
+  place-items: center;
+  text-decoration: none;
+  font-size: 13px;
+  margin-top: auto;
+}
+
+/* --------------------------------------------------------------------------
+   06 DISCOURSE
+   -------------------------------------------------------------------------- */
+
+.imp-discourse {
+  background: #fff;
+  padding: 56px 0 58px;
+}
+
+.imp-discourse-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.imp-discourse-card {
+  border: 1px solid #e8e3dc;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  min-height: 180px;
+  overflow: hidden;
+}
+
+.imp-discourse-media {
+  min-height: 180px;
+  position: relative;
+}
+
+.imp-discourse-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imp-discourse-body {
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  background: #faf8f4;
+}
+
+.imp-discourse-body .imp-icon-circle {
+  margin: 0 0 10px;
+}
+
+.imp-discourse-body h3 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 16px;
+  color: #172331;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.imp-discourse-body p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #5a6570;
+  margin: 0 0 12px;
+  flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   08 PARTNERS
+   -------------------------------------------------------------------------- */
+
+.imp-partners {
+  background: #fff;
+  padding: 52px 0 54px;
+}
+
+.imp-partners .imp-section-intro--left {
+  margin-bottom: 22px;
+}
+
+.imp-partners .imp-lead {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 15px;
+  color: #5a6570;
+  max-width: 820px;
+}
+
+.imp-partners-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+.imp-partner {
+  padding: 22px 12px;
+  border-right: 1px solid #e0e0e0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 130px;
+  background: #fff;
+}
+
+.imp-partner:last-child {
+  border-right: none;
+}
+
+.imp-partner img {
+  width: 100%;
+  max-width: 190px;
+  height: 78px;
+  object-fit: contain;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   09 JOURNEY
+   -------------------------------------------------------------------------- */
+
+.imp-journey {
+  background: #faf8f4;
+  padding: 56px 0 58px;
+  border-top: 1px solid #ebe4da;
+}
+
+.imp-journey-track {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.imp-journey-item {
+  text-align: center;
+  padding: 0 4px;
+}
+
+.imp-journey-node {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.imp-journey-node .imp-icon-circle {
+  margin: 0;
+}
+
+.imp-journey-arrow {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #c4b8aa;
+  font-size: 14px;
+}
+
+.imp-journey-item h3 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 15px;
+  color: #971238;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.imp-journey-item p {
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #5a6570;
+  margin: 0 auto;
+  max-width: 140px;
+}
+
+/* --------------------------------------------------------------------------
+   10 FINAL CTA
+   -------------------------------------------------------------------------- */
+
+.imp-cta {
+  background: #003b35;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-bottom: 4px solid #971238;
+}
+
+.imp-cta-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.7fr);
+  min-height: 280px;
+  align-items: stretch;
+  background: #003b35;
+}
+
+.imp-cta-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/islamic-pattern.svg");
+  background-size: 240px;
+  background-repeat: repeat;
+  opacity: 0.14;
+  filter: sepia(1) saturate(2.2) hue-rotate(5deg) brightness(1.35);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.imp-cta-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1.05fr);
+  gap: 28px;
+  align-items: center;
+  padding: 48px 40px 48px 56px;
+  color: #fff;
+}
+
+.imp-cta-content h2 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(28px, 2.6vw, 38px);
+  line-height: 1.28;
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+  max-width: 14ch;
+}
+
+.imp-cta-divider {
+  width: 1px;
+  align-self: stretch;
+  background: rgba(255, 255, 255, 0.28);
+  min-height: 140px;
+  justify-self: center;
+}
+
+.imp-cta-right p {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 22px;
+  max-width: 46ch;
+}
+
+.imp-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.imp-cta-media {
+  position: relative;
+  z-index: 1;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.imp-cta-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1199px) {
+  .imp-snapshot-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .imp-creates-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .imp-national-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .imp-national-examples {
+    grid-column: 1 / -1;
+  }
+
+  .imp-partners-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .imp-partner:nth-child(4n) {
+    border-right: none;
+  }
+
+  .imp-partner {
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .imp-partner:nth-child(n + 5) {
+    border-bottom: none;
+  }
+
+  .imp-cta-content {
+    padding: 40px 28px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .impact-page .hero-impact-seamless .hero-bg-img {
+    width: 100%;
+    opacity: 0.28;
+  }
+
+  .impact-page .hero-impact-seamless .hero-gradient-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(250, 248, 244, 0.96) 0%,
+      rgba(250, 248, 244, 0.9) 100%
+    );
+  }
+
+  .impact-page .imp-hero-quote {
+    position: static;
+    margin-top: 20px;
+    max-width: none;
+  }
+
+  .impact-page .imp-hero-quote .quote-text {
+    color: #fff;
+  }
+
+  .imp-card-grid-4,
+  .imp-discourse-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .imp-journey-track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 22px;
+  }
+
+  .imp-journey-arrow {
+    display: none;
+  }
+
+  .imp-cta-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .imp-cta-media {
+    min-height: 220px;
+    order: -1;
+  }
+
+  .imp-cta-content {
+    grid-template-columns: 1fr;
+    padding: 36px 24px 40px;
+  }
+
+  .imp-cta-content h2 {
+    max-width: none;
+  }
+
+  .imp-cta-divider {
+    width: 48px;
+    height: 2px;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .imp-snapshot,
+  .imp-creates,
+  .imp-national,
+  .imp-conferences,
+  .imp-discourse,
+  .imp-teaching,
+  .imp-partners,
+  .imp-journey {
+    padding: 44px 0 48px;
+  }
+
+  .imp-snapshot-grid,
+  .imp-creates-grid,
+  .imp-card-grid-4,
+  .imp-discourse-grid,
+  .imp-national-grid,
+  .imp-examples-grid,
+  .imp-journey-track {
+    grid-template-columns: 1fr;
+  }
+
+  .imp-discourse-card {
+    grid-template-columns: 1fr;
+  }
+
+  .imp-discourse-media {
+    min-height: 160px;
+  }
+
+  .imp-partners-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .imp-partner {
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .imp-partner:nth-child(2n) {
+    border-right: none;
+  }
+
+  .imp-partner:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+
+  .imp-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .impact-page .hero-seamless-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .impact-page .hero-seamless-actions a {
+    justify-content: center;
+  }
+}

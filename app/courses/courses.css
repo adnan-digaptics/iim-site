@@ -1,0 +1,747 @@
+.courses-page {
+  background: #faf8f4;
+  color: #34404a;
+  overflow-x: clip;
+}
+
+.courses-page section[id] { scroll-margin-top: 92px; }
+
+.crs-eyebrow {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #971238;
+  margin: 0 0 10px;
+}
+
+.crs-eyebrow-gold { color: #e2c48a; }
+
+.crs-bar {
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: #971238;
+  margin: 0 0 16px;
+}
+
+.crs-h2 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(26px, 2.4vw, 34px);
+  line-height: 1.22;
+  color: #17212c;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.crs-lead,
+.crs-body {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #34404a;
+  max-width: 640px;
+  margin: 0 0 22px;
+}
+
+.crs-text-link {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #971238 !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.crs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 1px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.crs-btn i { font-size: 10px; }
+
+.crs-btn-fill {
+  background: #971238;
+  color: #fff !important;
+  border: 1px solid #971238;
+}
+
+.crs-btn-fill:hover { background: #7a0e2c; border-color: #7a0e2c; }
+
+.crs-btn-outline {
+  background: transparent;
+  color: #971238 !important;
+  border: 1px solid #971238;
+}
+
+.crs-btn-outline:hover { background: #f8eef1; }
+
+.crs-btn-light {
+  background: transparent;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.crs-btn-light:hover { background: rgba(255, 255, 255, 0.08); }
+
+.crs-btn-sm { padding: 10px 12px; font-size: 10px; }
+
+.crs-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.crs-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.crs-section-head .crs-eyebrow { margin-bottom: 0; }
+
+.crs-icon,
+.crs-path-icon,
+.crs-logo-mark {
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid #971238;
+  border-radius: 50%;
+  color: #971238;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+}
+
+.crs-logo-mark {
+  border-radius: 4px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  background: #fff;
+}
+
+/* 01 HERO */
+/* 01 HERO — same seamless pattern as index.html */
+.courses-page .hero-courses-seamless .hero-bg-img {
+  object-position: center 32%;
+}
+
+.courses-page .hero-courses-seamless .hero-seamless-title {
+  font-size: clamp(36px, 4vw, 56px);
+  max-width: 520px;
+}
+
+/* 02 PARTNERS */
+.crs-partners {
+  background: #faf9f6;
+  border-top: 1px solid #ebe4da;
+  border-bottom: 1px solid #ebe4da;
+  padding: 40px 0 38px;
+}
+
+.crs-partners .crs-section-head {
+  margin-bottom: 26px;
+  align-items: center;
+}
+
+.crs-partners-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
+}
+
+.crs-partner {
+  position: relative;
+  text-align: center;
+  padding: 2px 14px 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crs-partner:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 88px;
+  width: 1px;
+  background: #e3dbd0;
+}
+
+.crs-partner-logo {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.crs-partner-logo img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.crs-partner-360 .crs-partner-logo img {
+  width: 58px;
+  height: 58px;
+}
+
+.crs-partner-copy {
+  width: 100%;
+  max-width: 160px;
+}
+
+.crs-partner h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1a222c;
+  margin: 0 0 5px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.crs-partner-sub {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 9.5px;
+  line-height: 1.3;
+  color: #6b7280;
+  margin: -1px auto 6px;
+  max-width: 148px;
+}
+
+.crs-partner p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: #6b7280;
+  margin: 0 auto;
+  max-width: 148px;
+}
+
+.crs-legacy-logo {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.crs-legacy-logo img {
+  width: 72px;
+  height: 96px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* 03 PATHWAYS */
+.crs-pathways {
+  background: #faf8f4;
+  padding: 48px 0 52px;
+}
+
+.crs-path-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.crs-path {
+  background: #fff;
+  border: 1px solid #e7e1db;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.crs-path > img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.crs-path-icon {
+  position: absolute;
+  left: 16px;
+  top: 126px;
+  width: 46px;
+  height: 46px;
+  background: #fff;
+  box-shadow: 0 1px 0 #e7e1db;
+}
+
+.crs-path-body {
+  padding: 36px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.crs-path-body h3 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 18px;
+  color: #17212c;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.crs-path-body p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5a6570;
+  margin: 0 0 16px;
+  flex: 1;
+}
+
+.crs-path-arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #971238;
+  color: #fff !important;
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* 04 / 05 COURSES */
+.crs-upcoming,
+.crs-additional {
+  background: #fff;
+  padding: 48px 0 52px;
+}
+
+.crs-additional { background: #faf8f4; }
+
+.crs-course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.crs-course {
+  background: #fff;
+  border: 1px solid #e7e1db;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.crs-course-media {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.crs-course-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.crs-badge {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: #003b35;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.crs-badge-soft {
+  background: #f4e7b5;
+  color: #5a4a18;
+}
+
+.crs-course-body {
+  padding: 18px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.crs-course-body h3 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #003b35;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.crs-subtitle {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #5a6570;
+  margin: -4px 0 12px;
+}
+
+.crs-course-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+}
+
+.crs-course-body li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #4a5560;
+  margin-bottom: 6px;
+}
+
+.crs-course-body li i {
+  color: #971238;
+  width: 14px;
+  margin-top: 2px;
+  flex: 0 0 auto;
+}
+
+.crs-note {
+  background: #fff8e6;
+  border: 1px solid #efdfb0;
+  color: #6a5a28;
+  font-size: 12.5px;
+  line-height: 1.45;
+  padding: 10px 12px;
+  margin: 0 0 14px;
+}
+
+.crs-course-foot {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.crs-course-foot strong {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  color: #971238;
+  font-weight: 800;
+}
+
+/* 06 INSTITUTE */
+.crs-institute {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  min-height: 420px;
+  background: #faf8f4;
+}
+
+.crs-institute-media { position: relative; min-height: 420px; }
+
+.crs-institute-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+.crs-institute-copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 48px 48px 56px;
+}
+
+.crs-institute-copy::before {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 20px;
+  width: 200px;
+  height: 200px;
+  background: url("/images/islamic-pattern.svg") no-repeat center / contain;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.crs-inst-features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 8px 0 22px;
+}
+
+.crs-inst-features article { text-align: center; }
+
+.crs-inst-features i {
+  color: #971238;
+  font-size: 22px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.crs-inst-features h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #17212c;
+  margin: 0;
+}
+
+/* 07 HOW */
+.crs-how {
+  background: #fff;
+  border-top: 1px solid #e7e1db;
+  border-bottom: 1px solid #e7e1db;
+  padding: 40px 0 36px;
+}
+
+.crs-how-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.crs-how-grid article { text-align: center; padding: 4px 10px; }
+
+.crs-how-grid .crs-icon { margin: 0 auto 12px; }
+
+.crs-how-grid h3 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 17px;
+  color: #17212c;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.crs-how-grid p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5a6570;
+  margin: 0 auto;
+  max-width: 220px;
+}
+
+/* 08 LEGACY */
+.crs-legacy {
+  background: #faf8f4;
+  padding: 48px 0 52px;
+}
+
+.crs-legacy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.crs-legacy-grid article {
+  background: #fff;
+  border: 1px solid #e7e1db;
+  padding: 20px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.crs-legacy-grid h3 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 16px;
+  color: #17212c;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.crs-legacy-grid p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5a6570;
+  margin: 0;
+}
+
+/* 09 RESEARCH */
+.crs-research {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  min-height: 360px;
+  background: #faf8f4;
+}
+
+.crs-research-media { position: relative; min-height: 360px; }
+
+.crs-research-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+.crs-research-copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 48px 48px 56px;
+}
+
+.crs-research-copy::before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 20px;
+  width: 180px;
+  height: 180px;
+  background: url("/images/islamic-pattern.svg") no-repeat center / contain;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* 10 CTA */
+.crs-cta {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  min-height: 320px;
+  background: #003b35;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.crs-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/islamic-pattern.svg") no-repeat right 10% center / 360px;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.crs-cta-media {
+  position: relative;
+  min-height: 320px;
+  z-index: 1;
+}
+
+.crs-cta-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.crs-cta-copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 48px 48px 40px;
+  max-width: 640px;
+}
+
+.crs-cta-copy h2 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(26px, 2.4vw, 34px);
+  line-height: 1.25;
+  color: #fff;
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+
+.crs-cta-copy > p {
+  color: #d5e4df;
+  font-size: 14.5px;
+  line-height: 1.65;
+  max-width: 460px;
+  margin: 0 0 22px;
+}
+
+@media (max-width: 1199px) {
+  .crs-path > img { height: 130px; }
+  .crs-path-icon { top: 106px; }
+  .crs-inst-features { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+}
+
+@media (max-width: 1100px) {
+  .crs-institute,
+  .crs-research,
+  .crs-cta { grid-template-columns: 1fr; }
+  .crs-institute-copy,
+  .crs-research-copy,
+  .crs-cta-copy {
+    max-width: none;
+    padding: 40px 24px 36px;
+  }
+  .crs-institute-media,
+  .crs-research-media,
+  .crs-cta-media { min-height: 300px; height: 300px; }
+  .crs-partners-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 0; }
+  .crs-partner:nth-child(3)::after,
+  .crs-partner:nth-child(6)::after { display: none; }
+  .crs-path-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .crs-course-grid { grid-template-columns: 1fr 1fr; }
+  .crs-how-grid,
+  .crs-legacy-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 767px) {
+  .crs-section-head { flex-direction: column; align-items: flex-start; }
+  .crs-partners-grid,
+  .crs-path-grid,
+  .crs-course-grid,
+  .crs-how-grid,
+  .crs-legacy-grid,
+  .crs-inst-features { grid-template-columns: 1fr; }
+  .crs-partner { padding: 16px 0; }
+  .crs-partner::after { display: none; }
+  .crs-partner:not(:last-child) { border-bottom: 1px solid #e7e1db; }
+}
