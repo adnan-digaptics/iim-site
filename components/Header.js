@@ -1,5 +1,7 @@
 "use client";
 
+import { asset } from "../lib/asset";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -36,8 +38,14 @@ const NAV = [
   },
 ];
 
+function normalizePath(path) {
+  if (!path) return "/";
+  if (path.length > 1 && path.endsWith("/")) return path.slice(0, -1);
+  return path;
+}
+
 function isActive(path, href) {
-  return path === href;
+  return normalizePath(path) === normalizePath(href);
 }
 
 export default function Header() {
@@ -73,7 +81,7 @@ export default function Header() {
         <div className="container">
           <Link className="navbar-brand site-brand" href="/">
             <img
-              src="/images/logo.png"
+              src={asset("/images/logo.png")}
               alt="Initiative on Islam and Medicine"
               className="site-logo site-logo--header"
             />

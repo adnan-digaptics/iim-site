@@ -1,3 +1,4 @@
+import { asset } from "../../lib/asset";
 import Link from "next/link";
 
 export const metadata = {
@@ -10,7 +11,7 @@ export default function AboutPage() {
     <>
     <header className="hero-seamless hero-about-seamless">
       <div className="hero-bg-wrapper">
-        <img src="/images/hero-doctor-team.jpg" alt="About II&amp;M — healthcare team" className="hero-bg-img" loading="eager" />
+        <img src={asset("/images/hero-doctor-team.jpg")} alt="About II&amp;M — healthcare team" className="hero-bg-img" loading="eager" />
         <div className="hero-gradient-overlay" />
         <div className="hero-watermark-overlay" />
       </div>
@@ -63,7 +64,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
             </div>
           </div>
           <div className="col-lg-5">
-            <img src="/images/story-consultation.jpg" alt="Our Foundation Story - Patient Consultation" className="foundations-image" loading="lazy" />
+            <img src={asset("/images/story-consultation.jpg")} alt="Our Foundation Story - Patient Consultation" className="foundations-image" loading="lazy" />
           </div>
           <div className="col-lg-3">
             <div className="foundations-quote-card">
@@ -188,7 +189,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
         <div className="row g-4">
           <div className="col-md-6 col-lg-3">
             <div className="distinct-card">
-              <img src="/images/distinct-research.jpg" alt="Community-Engaged Research" className="distinct-card-img" loading="lazy" />
+              <img src={asset("/images/distinct-research.jpg")} alt="Community-Engaged Research" className="distinct-card-img" loading="lazy" />
               <div className="distinct-card-body">
                 <i className="fa-solid fa-users distinct-icon" />
                 <h3 className="distinct-card-title">Community-Engaged Research</h3>
@@ -198,7 +199,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="distinct-card">
-              <img src="/images/distinct-bioethics.jpg" alt="Islamic Bioethics Insight" className="distinct-card-img" loading="lazy" />
+              <img src={asset("/images/distinct-bioethics.jpg")} alt="Islamic Bioethics Insight" className="distinct-card-img" loading="lazy" />
               <div className="distinct-card-body">
                 <i className="fa-solid fa-book-open distinct-icon" />
                 <h3 className="distinct-card-title">Islamic Bioethics Insight</h3>
@@ -208,7 +209,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="distinct-card">
-              <img src="/images/distinct-education.jpg" alt="Practical Healthcare Education" className="distinct-card-img" loading="lazy" />
+              <img src={asset("/images/distinct-education.jpg")} alt="Practical Healthcare Education" className="distinct-card-img" loading="lazy" />
               <div className="distinct-card-body">
                 <i className="fa-solid fa-graduation-cap distinct-icon" />
                 <h3 className="distinct-card-title">Practical Healthcare Education</h3>
@@ -218,7 +219,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="distinct-card">
-              <img src="/images/distinct-building.jpg" alt="Trusted Institutional Advisory" className="distinct-card-img" loading="lazy" />
+              <img src={asset("/images/distinct-building.jpg")} alt="Trusted Institutional Advisory" className="distinct-card-img" loading="lazy" />
               <div className="distinct-card-body">
                 <i className="fa-solid fa-building-columns distinct-icon" />
                 <h3 className="distinct-card-title">Trusted Institutional Advisory</h3>
@@ -245,7 +246,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
         <div className="row g-3">
           <div className="col-6 col-md-4 col-lg-2">
             <div className="audience-card">
-              <img src="/images/audience-hospital.jpg" alt="Healthcare Institutions" className="audience-card-img" loading="lazy" />
+              <img src={asset("/images/audience-hospital.jpg")} alt="Healthcare Institutions" className="audience-card-img" loading="lazy" />
               <div className="audience-card-body">
                 <i className="fa-solid fa-hospital audience-icon" />
                 <h3 className="audience-title">Healthcare Institutions</h3>
@@ -255,7 +256,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
           </div>
           <div className="col-6 col-md-4 col-lg-2">
             <div className="audience-card">
-              <img src="/images/audience-clinician.jpg" alt="Clinicians" className="audience-card-img" loading="lazy" />
+              <img src={asset("/images/audience-clinician.jpg")} alt="Clinicians" className="audience-card-img" loading="lazy" />
               <div className="audience-card-body">
                 <i className="fa-solid fa-stethoscope audience-icon" />
                 <h3 className="audience-title">Clinicians</h3>
@@ -265,7 +266,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
           </div>
           <div className="col-6 col-md-4 col-lg-2">
             <div className="audience-card">
-              <img src="/images/audience-students.jpg" alt="Medical Students and Fellows" className="audience-card-img" loading="lazy" />
+              <img src={asset("/images/audience-students.jpg")} alt="Medical Students and Fellows" className="audience-card-img" loading="lazy" />
               <div className="audience-card-body">
                 <i className="fa-solid fa-graduation-cap audience-icon" />
                 <h3 className="audience-title">Medical Students and Fellows</h3>
@@ -275,7 +276,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
           </div>
           <div className="col-6 col-md-4 col-lg-2">
             <div className="audience-card">
-              <img src="/images/audience-family.jpg" alt="Muslim Patients and Families" className="audience-card-img" loading="lazy" />
+              <img src={asset("/images/audience-family.jpg")} alt="Muslim Patients and Families" className="audience-card-img" loading="lazy" />
               <div className="audience-card-body">
                 <i className="fa-solid fa-people-roof audience-icon" />
                 <h3 className="audience-title">Muslim Patients and Families</h3>
@@ -285,7 +286,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
           </div>
           <div className="col-6 col-md-4 col-lg-2">
             <div className="audience-card">
-              <img src="/images/audience-researcher.jpg" alt="Researchers" className="audience-card-img" loading="lazy" />
+              <img src={asset("/images/audience-researcher.jpg")} alt="Researchers" className="audience-card-img" loading="lazy" />
               <div className="audience-card-body">
                 <i className="fa-solid fa-clipboard-user audience-icon" />
                 <h3 className="audience-title">Researchers</h3>
@@ -295,7 +296,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
           </div>
           <div className="col-6 col-md-4 col-lg-2">
             <div className="audience-card">
-              <img src="/images/audience-community.jpg" alt="Community Organizations" className="audience-card-img" loading="lazy" />
+              <img src={asset("/images/audience-community.jpg")} alt="Community Organizations" className="audience-card-img" loading="lazy" />
               <div className="audience-card-body">
                 <i className="fa-solid fa-handshake-angle audience-icon" />
                 <h3 className="audience-title">Community Organizations</h3>
@@ -322,7 +323,7 @@ OUR NETWORK{' '}                <i className="fa-solid fa-arrow-right ms-2" />
             </div>
           </div>
           <div className="col-lg-5 leadership-img-col">
-            <img src="/images/leadership-meeting.jpg" alt="Leadership and Collaboration Meeting" className="leadership-photo" loading="lazy" />
+            <img src={asset("/images/leadership-meeting.jpg")} alt="Leadership and Collaboration Meeting" className="leadership-photo" loading="lazy" />
           </div>
           <div className="col-lg-3 leadership-green-col">
             <p className="leadership-green-quote">
@@ -400,7 +401,7 @@ Different              <br />
         <div className="row g-0 align-items-stretch">
           <div className="col-lg-5 p-0">
             <div className="about-cta-arch-wrap">
-              <img src="/images/about-cta-arch.jpg" alt="Islamic architecture through a stone arch" className="about-cta-arch-img" loading="lazy" />
+              <img src={asset("/images/about-cta-arch.jpg")} alt="Islamic architecture through a stone arch" className="about-cta-arch-img" loading="lazy" />
             </div>
           </div>
           <div className="col-lg-7 d-flex align-items-center">

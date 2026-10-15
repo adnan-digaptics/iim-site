@@ -1,3 +1,4 @@
+import { asset } from "../../lib/asset";
 import Link from "next/link";
 
 export const metadata = {
@@ -48,22 +49,22 @@ const examples = [
 
 const conferences = [
   {
-    img: "/images/our-impact/conf-1.jpg",
+    img: asset("/images/our-impact/conf-1.jpg"),
     title: "Dignity and Healthcare at End-of-Life: Abrahamic Faiths in a Bioethics Conversation",
     text: "A multidisciplinary dialogue on dignity, care, and faith traditions at the end of life.",
   },
   {
-    img: "/images/our-impact/conf-2.jpg",
+    img: asset("/images/our-impact/conf-2.jpg"),
     title: "Interfaces and Discourses: A Multidisciplinary Conference on Islamic Theology, Law, and Biomedicine",
     text: "Scholars and clinicians examining the intersections of theology, law, and biomedicine.",
   },
   {
-    img: "/images/our-impact/conf-3.jpg",
+    img: asset("/images/our-impact/conf-3.jpg"),
     title: "Multidisciplinary Symposium on Islam and Biomedicine",
     text: "Advancing research and conversation across medicine, ethics, and Islamic studies.",
   },
   {
-    img: "/images/our-impact/conf-4.jpg",
+    img: asset("/images/our-impact/conf-4.jpg"),
     title: "Religious Dimensions of Healthcare Delivery: A Multidisciplinary Workshop",
     text: "Practical workshop exploring faith, values, and healthcare delivery.",
   },
@@ -71,7 +72,7 @@ const conferences = [
 
 const discourse = [
   {
-    img: "/images/our-impact/disc-research.jpg",
+    img: asset("/images/our-impact/disc-research.jpg"),
     icon: "fa-file-lines",
     title: "Research Projects",
     text: "Evidence-informed inquiry that strengthens understanding of Islam, ethics, and healthcare.",
@@ -79,7 +80,7 @@ const discourse = [
     cta: "EXPLORE OUR RESEARCH",
   },
   {
-    img: "/images/our-impact/disc-pubs.jpg",
+    img: asset("/images/our-impact/disc-pubs.jpg"),
     icon: "fa-book",
     title: "Publications",
     text: "Books, articles, and resources that translate scholarship into practical guidance.",
@@ -87,7 +88,7 @@ const discourse = [
     cta: "VIEW PUBLICATIONS",
   },
   {
-    img: "/images/our-impact/disc-media.jpg",
+    img: asset("/images/our-impact/disc-media.jpg"),
     icon: "fa-comments",
     title: "Public Discourse",
     text: "Commentary and media engagement that elevate informed public conversations.",
@@ -98,35 +99,35 @@ const discourse = [
 
 const teaching = [
   {
-    img: "/images/our-impact/teach-1.jpg",
+    img: asset("/images/our-impact/teach-1.jpg"),
     title: "Constructing the Field of Islamic Bioethics",
     text: "Foundational teaching that maps the questions, methods, and stakes of the field.",
   },
   {
-    img: "/images/our-impact/teach-2.jpg",
+    img: asset("/images/our-impact/teach-2.jpg"),
     title: "A Mentored Introduction to Islam and Bioethics",
     text: "Guided learning for students and early-career professionals entering the conversation.",
   },
   {
-    img: "/images/our-impact/teach-3.jpg",
+    img: asset("/images/our-impact/teach-3.jpg"),
     title: "Islam, Medical Ethics, and Spiritual Care",
     text: "Education connecting clinical ethics with spiritual care and community contexts.",
   },
   {
-    img: "/images/our-impact/teach-4.jpg",
+    img: asset("/images/our-impact/teach-4.jpg"),
     title: "Introduction to the Field of Islamic Bioethics",
     text: "An accessible entry point for clinicians, educators, and community leaders.",
   },
 ];
 
 const partners = [
-  { src: "/images/our-impact/partners/imana.svg", name: "IMANA" },
-  { src: "/images/our-impact/partners/georgetown.svg", name: "Georgetown University" },
-  { src: "/images/our-impact/partners/jhu.svg", name: "Johns Hopkins University" },
-  { src: "/images/our-impact/partners/michigan.svg", name: "University of Michigan" },
-  { src: "/images/our-impact/partners/rush.svg", name: "Rush University" },
-  { src: "/images/our-impact/partners/kaiser.svg", name: "The Kaiser Permanente School of Medicine" },
-  { src: "/images/our-impact/partners/community.svg", name: "Community & Faith-Based Organizations" },
+  { src: asset("/images/our-impact/partners/imana.svg"), name: "IMANA" },
+  { src: asset("/images/our-impact/partners/georgetown.svg"), name: "Georgetown University" },
+  { src: asset("/images/our-impact/partners/jhu.svg"), name: "Johns Hopkins University" },
+  { src: asset("/images/our-impact/partners/michigan.svg"), name: "University of Michigan" },
+  { src: asset("/images/our-impact/partners/rush.svg"), name: "Rush University" },
+  { src: asset("/images/our-impact/partners/kaiser.svg"), name: "The Kaiser Permanente School of Medicine" },
+  { src: asset("/images/our-impact/partners/community.svg"), name: "Community & Faith-Based Organizations" },
 ];
 
 const journey = [
@@ -144,7 +145,7 @@ export default function ImpactPage() {
       <header className="hero-seamless hero-impact-seamless">
         <div className="hero-bg-wrapper">
           <img
-            src="/images/our-impact/hero.jpg"
+            src={asset("/images/our-impact/hero.jpg")}
             alt="Healthcare professionals collaborating around a laptop"
             className="hero-bg-img"
             loading="eager"
@@ -247,7 +248,7 @@ export default function ImpactPage() {
               </Link>
             </div>
             <div className="imp-national-map">
-              <img src="/images/our-impact/us-map.svg" alt="Map of II&M research and program locations across the United States" />
+              <img src={asset("/images/our-impact/us-map.svg")} alt="Map of II&M research and program locations across the United States" />
             </div>
             <div className="imp-national-examples">
               <p className="imp-eyebrow">SELECTED EXAMPLES</p>
@@ -422,7 +423,7 @@ export default function ImpactPage() {
           </div>
           <div className="imp-cta-media">
             <img
-              src="/images/our-impact/cta-mosque.jpg"
+              src={asset("/images/our-impact/cta-mosque.jpg")}
               alt="Mosque viewed through ornate Islamic arches at sunset"
             />
           </div>

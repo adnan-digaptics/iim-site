@@ -1,3 +1,4 @@
+import { asset } from "../lib/asset";
 import Link from "next/link";
 
 export const metadata = {
@@ -10,7 +11,7 @@ export default function HomePage() {
     <>
     <header className="hero-seamless">
       <div className="hero-bg-wrapper">
-        <img src="/images/hero-doctor.jpg" alt="Advancing knowledge, transforming healthcare" className="hero-bg-img" loading="eager" />
+        <img src={asset("/images/hero-doctor.jpg")} alt="Advancing knowledge, transforming healthcare" className="hero-bg-img" loading="eager" />
         <div className="hero-gradient-overlay" />
         <div className="hero-watermark-overlay" />
       </div>
@@ -81,7 +82,7 @@ People.            <br />
         <div className="row g-0 align-items-stretch">
           <div className="col-lg-6 p-0">
             <div className="story-fullwidth-image-wrap">
-              <img src="/images/story-meeting.jpg" alt="Where research meets responsibility" className="story-fullwidth-photo" loading="lazy" />
+              <img src={asset("/images/story-meeting.jpg")} alt="Where research meets responsibility" className="story-fullwidth-photo" loading="lazy" />
               <div className="story-exact-overlay">
                 <p className="story-exact-quote">
 Where research                  <br />
@@ -125,7 +126,7 @@ Education, Consultation              <br />
             <div className="row g-3 g-xl-4">
               <div className="col-md-4">
                 <div className="expertise-card">
-                  <img src="/images/expertise-education.jpg" alt="Education &amp; Training" className="expertise-card-img" loading="lazy" />
+                  <img src={asset("/images/expertise-education.jpg")} alt="Education &amp; Training" className="expertise-card-img" loading="lazy" />
                   <h3 className="expertise-card-title">Education &amp; Training</h3>
                   <p className="expertise-card-text">Courses, workshops, and professional development for students, healthcare professionals, and communities.</p>
                   <Link href="/education" className="card-maroon-link">
@@ -135,7 +136,7 @@ LEARN MORE{' '}                    <i className="fa-solid fa-arrow-right ms-1" /
               </div>
               <div className="col-md-4">
                 <div className="expertise-card">
-                  <img src="/images/expertise-consultation.jpg" alt="Consultation &amp; Advisory" className="expertise-card-img" loading="lazy" />
+                  <img src={asset("/images/expertise-consultation.jpg")} alt="Consultation &amp; Advisory" className="expertise-card-img" loading="lazy" />
                   <h3 className="expertise-card-title">Consultation &amp; Advisory</h3>
                   <p className="expertise-card-text">Expert guidance for hospitals, universities, policymakers, and healthcare teams.</p>
                   <Link href="/consultation" className="card-maroon-link">
@@ -145,7 +146,7 @@ LEARN MORE{' '}                    <i className="fa-solid fa-arrow-right ms-1" /
               </div>
               <div className="col-md-4">
                 <div className="expertise-card">
-                  <img src="/images/expertise-speaking.jpg" alt="Speaking &amp; Engagements" className="expertise-card-img" loading="lazy" />
+                  <img src={asset("/images/expertise-speaking.jpg")} alt="Speaking &amp; Engagements" className="expertise-card-img" loading="lazy" />
                   <h3 className="expertise-card-title">Speaking &amp; Engagements</h3>
                   <p className="expertise-card-text">Keynotes, grand rounds, panels, and community events.</p>
                   <Link href="/speaking" className="card-maroon-link">
@@ -163,7 +164,7 @@ REQUEST A SPEAKER{' '}                    <i className="fa-solid fa-arrow-right 
         <div className="row g-0 align-items-stretch">
           <div className="col-lg-5 p-0">
             <div className="learning-image-wrap">
-              <img src="/images/learning-lecture.jpg" alt="Knowledge that empowers care" className="learning-photo-tall" loading="lazy" />
+              <img src={asset("/images/learning-lecture.jpg")} alt="Knowledge that empowers care" className="learning-photo-tall" loading="lazy" />
               <div className="learning-overlay-banner">
                 <p className="learning-overlay-text">
 Knowledge that                  <br />
@@ -183,7 +184,7 @@ empowers care.                </p>
                 <div className="row g-3">
                   <div className="col-md-4">
                     <div className="learning-card">
-                      <img src="/images/course-bioethics.jpg" alt="Islamic Bioethics: A Primer for Muslim Physicians" className="learning-card-img" loading="lazy" />
+                      <img src={asset("/images/course-bioethics.jpg")} alt="Islamic Bioethics: A Primer for Muslim Physicians" className="learning-card-img" loading="lazy" />
                       <h3 className="learning-card-title">
 Islamic Bioethics:                        <br />
 A Primer for Muslim Physicians                      </h3>
@@ -195,7 +196,7 @@ VIEW COURSE{' '}                        <i className="fa-solid fa-arrow-right ms
                   </div>
                   <div className="col-md-4">
                     <div className="learning-card">
-                      <img src="/images/course-muslim-doctor.jpg" alt="Becoming a Muslim Doctor" className="learning-card-img" loading="lazy" />
+                      <img src={asset("/images/course-muslim-doctor.jpg")} alt="Becoming a Muslim Doctor" className="learning-card-img" loading="lazy" />
                       <h3 className="learning-card-title">Becoming a Muslim Doctor</h3>
                       <p className="learning-card-text">Identity, vocation, ethics, and professional development for medical students.</p>
                       <Link href="/courses" className="card-maroon-link">
@@ -205,7 +206,7 @@ LEARN MORE{' '}                        <i className="fa-solid fa-arrow-right ms-
                   </div>
                   <div className="col-md-4">
                     <div className="learning-card">
-                      <img src="/images/course-workshops.jpg" alt="Custom Workshops &amp; Training" className="learning-card-img" loading="lazy" />
+                      <img src={asset("/images/course-workshops.jpg")} alt="Custom Workshops &amp; Training" className="learning-card-img" loading="lazy" />
                       <h3 className="learning-card-title">Custom Workshops &amp; Training</h3>
                       <p className="learning-card-text">Tailored learning experiences for healthcare teams and institutions.</p>
                       <Link href="/workshops" className="card-maroon-link">
@@ -306,7 +307,7 @@ LISTEN TO THE PODCAST{' '}                    <i className="fa-solid fa-arrow-ri
           </div>
           <div className="col-lg-4 p-0">
             <div className="podcast-photo-wrap">
-              <img src="/images/podcast-medic-mufti.jpg" alt="The Medic &amp; The Mufti Podcast" className="podcast-photo" loading="lazy" />
+              <img src={asset("/images/podcast-medic-mufti.jpg")} alt="The Medic &amp; The Mufti Podcast" className="podcast-photo" loading="lazy" />
             </div>
           </div>
         </div>
@@ -317,7 +318,7 @@ LISTEN TO THE PODCAST{' '}                    <i className="fa-solid fa-arrow-ri
         <div className="row g-0 align-items-stretch">
           <div className="col-lg-5 p-0">
             <div className="cta-arch-wrap">
-              <img src="/images/cta-archway.jpg" alt="Islamic architecture at dusk" className="cta-arch-img" loading="lazy" />
+              <img src={asset("/images/cta-archway.jpg")} alt="Islamic architecture at dusk" className="cta-arch-img" loading="lazy" />
             </div>
           </div>
           <div className="col-lg-7 d-flex align-items-center">

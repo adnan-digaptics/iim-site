@@ -1,3 +1,4 @@
+import { asset } from "../lib/asset";
 import Link from "next/link";
 
 export default function Footer() {
@@ -8,7 +9,7 @@ export default function Footer() {
           <div className="col-lg-4 iim-footer-col">
             <Link className="iim-footer-brand" href="/">
               <img
-                src="/images/logo.png"
+                src={asset("/images/logo.png")}
                 alt="Initiative on Islam and Medicine"
                 className="site-logo site-logo--footer"
               />

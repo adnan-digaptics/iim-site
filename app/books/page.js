@@ -1,3 +1,4 @@
+import { asset } from "../../lib/asset";
 import Link from "next/link";
 
 export const metadata = {
@@ -6,11 +7,11 @@ export const metadata = {
 };
 
 const works = [
-  ["/images/book-medicine-shariah.jpg", "Medicine & Shariah", "Explores contemporary biomedical questions through Islamic ethics."],
-  ["/images/book-islam-biomedicine.jpg", "Islam and Biomedicine", "Explores the dynamic relationship between Islamic thought and modern biomedicine."],
-  ["/images/book-organ-donation.jpg", "Organ Donation in Islam", "A comprehensive exploration of organ transplantation in Islam."],
-  ["/images/book-muslim-patient.jpg", "The Muslim Patient", "Practical guidance for providing culturally responsive care to Muslim patients."],
-  ["/images/book-faith-health.jpg", "Faith, Health and Humanity", "Essays on moral formation, spiritual care, and compassionate healthcare."],
+  [asset("/images/book-medicine-shariah.jpg"), "Medicine & Shariah", "Explores contemporary biomedical questions through Islamic ethics."],
+  [asset("/images/book-islam-biomedicine.jpg"), "Islam and Biomedicine", "Explores the dynamic relationship between Islamic thought and modern biomedicine."],
+  [asset("/images/book-organ-donation.jpg"), "Organ Donation in Islam", "A comprehensive exploration of organ transplantation in Islam."],
+  [asset("/images/book-muslim-patient.jpg"), "The Muslim Patient", "Practical guidance for providing culturally responsive care to Muslim patients."],
+  [asset("/images/book-faith-health.jpg"), "Faith, Health and Humanity", "Essays on moral formation, spiritual care, and compassionate healthcare."],
 ];
 
 const reasons = [
@@ -25,7 +26,7 @@ export default function BooksPage() {
     <div className="books-page">
       <header className="hero-seamless hero-books-seamless">
         <div className="hero-bg-wrapper">
-          <img src="/images/books-hero-still.jpg" alt="Scholarly books on Islam, medicine, and ethics" className="hero-bg-img" />
+          <img src={asset("/images/books-hero-still.jpg")} alt="Scholarly books on Islam, medicine, and ethics" className="hero-bg-img" />
         </div>
         <div className="container hero-container-relative">
           <div className="hero-content-inner">
@@ -54,7 +55,7 @@ export default function BooksPage() {
         <div className="container">
           <div className="row align-items-center g-4 g-lg-5">
             <div className="col-lg-6">
-              <img src="/images/book-bridging.jpg" alt="Bridging Bioscience and Islam book cover" className="books-featured-cover" />
+              <img src={asset("/images/book-bridging.jpg")} alt="Bridging Bioscience and Islam book cover" className="books-featured-cover" />
             </div>
             <div className="col-lg-6">
               <p className="books-eyebrow">FEATURED BOOK</p>
@@ -106,7 +107,7 @@ export default function BooksPage() {
           </p>
           <div className="books-modules-grid">
             <article className="books-mod books-mod-split">
-              <img src="/images/book-curriculum.jpg" alt="Exploring Bioscience and Islam curriculum workbook" className="books-mod-img" />
+              <img src={asset("/images/book-curriculum.jpg")} alt="Exploring Bioscience and Islam curriculum workbook" className="books-mod-img" />
               <div className="books-mod-body">
                 <h3>Exploring Bioscience and Islam</h3>
                 <p>A Curriculum on Fundamental Questions about the Human Being.</p>
@@ -114,7 +115,7 @@ export default function BooksPage() {
               </div>
             </article>
             <article className="books-mod books-mod-split">
-              <img src="/images/book-decision-guide.jpg" alt="An Organ Donation Decisional Guide for Muslim Americans" className="books-mod-img" />
+              <img src={asset("/images/book-decision-guide.jpg")} alt="An Organ Donation Decisional Guide for Muslim Americans" className="books-mod-img" />
               <div className="books-mod-body">
                 <h3>An Organ Donation Decisional Guide for Muslim Americans</h3>
                 <p>An educational tool to support informed discussion among Muslim communities.</p>
@@ -177,7 +178,7 @@ export default function BooksPage() {
       <section className="books-cta">
         <div className="row g-0 align-items-stretch">
           <div className="col-lg-5 p-0 books-cta-media">
-            <img src="/images/books-hero-still.jpg" alt="Books in a scholarly library" className="books-cta-img" />
+            <img src={asset("/images/books-hero-still.jpg")} alt="Books in a scholarly library" className="books-cta-img" />
           </div>
           <div className="col-lg-7 books-cta-panel">
             <div className="books-cta-copy">

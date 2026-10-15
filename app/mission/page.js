@@ -1,3 +1,4 @@
+import { asset } from "../../lib/asset";
 import Link from "next/link";
 
 export const metadata = {
@@ -16,7 +17,7 @@ const values = [
 
 const pillars = [
   {
-    img: "/images/our-mission/pillar-research.jpg",
+    img: asset("/images/our-mission/pillar-research.jpg"),
     icon: "fa-chart-line",
     title: "Research & Impact",
     text: "We generate evidence that informs clinical practice, policy, and education on issues at the intersection of Islam and healthcare.",
@@ -24,7 +25,7 @@ const pillars = [
     cta: "EXPLORE RESEARCH",
   },
   {
-    img: "/images/our-mission/pillar-education.jpg",
+    img: asset("/images/our-mission/pillar-education.jpg"),
     icon: "fa-book-open",
     title: "Education & Training",
     text: "We develop courses, workshops, and professional development programs for healthcare professionals, students, and community members.",
@@ -32,7 +33,7 @@ const pillars = [
     cta: "EXPLORE EDUCATION",
   },
   {
-    img: "/images/our-mission/pillar-consultation.jpg",
+    img: asset("/images/our-mission/pillar-consultation.jpg"),
     icon: "fa-people-group",
     title: "Consultation & Advisory",
     text: "We provide expert guidance for institutions, healthcare organizations, and policymakers on Islam-related healthcare needs, policies, and practices.",
@@ -40,7 +41,7 @@ const pillars = [
     cta: "EXPLORE CONSULTATION",
   },
   {
-    img: "/images/our-mission/pillar-speaking.jpg",
+    img: asset("/images/our-mission/pillar-speaking.jpg"),
     icon: "fa-microphone",
     title: "Speaking & Dialogue",
     text: "We elevate trusted voices on Islam, medicine, and bioethics through speaking engagements, panels, and community conversations.",
@@ -51,31 +52,31 @@ const pillars = [
 
 const serve = [
   {
-    img: "/images/our-mission/serve-patients.jpg",
+    img: asset("/images/our-mission/serve-patients.jpg"),
     icon: "fa-hand-holding-heart",
     title: "Patients & Families",
     text: "Individuals and families seeking respectful, informed, and compassionate care.",
   },
   {
-    img: "/images/our-mission/serve-professionals.jpg",
+    img: asset("/images/our-mission/serve-professionals.jpg"),
     icon: "fa-user-doctor",
     title: "Healthcare Professionals",
     text: "Physicians, nurses, and allied health professionals seeking knowledge and practical guidance.",
   },
   {
-    img: "/images/our-mission/serve-students.jpg",
+    img: asset("/images/our-mission/serve-students.jpg"),
     icon: "fa-graduation-cap",
     title: "Students & Trainees",
     text: "Medical, nursing, and public health students building skills for culturally responsive care.",
   },
   {
-    img: "/images/our-mission/serve-institutions.jpg",
+    img: asset("/images/our-mission/serve-institutions.jpg"),
     icon: "fa-building-columns",
     title: "Institutions",
     text: "Hospitals, health systems, academic centers, and professional organizations.",
   },
   {
-    img: "/images/our-mission/serve-communities.jpg",
+    img: asset("/images/our-mission/serve-communities.jpg"),
     icon: "fa-people-roof",
     title: "Communities",
     text: "Faith-based and community organizations working for healthier, more equitable communities.",
@@ -95,7 +96,7 @@ export default function MissionPage() {
       <header className="hero-seamless hero-mission-seamless">
         <div className="hero-bg-wrapper">
           <img
-            src="/images/our-mission/hero.jpg"
+            src={asset("/images/our-mission/hero.jpg")}
             alt="Healthcare professionals in discussion"
             className="hero-bg-img"
             loading="eager"
@@ -166,7 +167,7 @@ export default function MissionPage() {
         <div className="row g-0 msn-vision-row">
           <div className="col-lg-4 msn-vision-media">
             <img
-              src="/images/our-mission/vision-mosque.jpg"
+              src={asset("/images/our-mission/vision-mosque.jpg")}
               alt="Mosque viewed through an ornate Islamic archway"
             />
           </div>
@@ -333,7 +334,7 @@ export default function MissionPage() {
           </div>
           <div className="msn-cta-media">
             <img
-              src="/images/our-mission/cta-mosque.jpg"
+              src={asset("/images/our-mission/cta-mosque.jpg")}
               alt="Mosque architecture viewed through an Islamic archway"
             />
           </div>

@@ -1,3 +1,4 @@
+import { asset } from "../../lib/asset";
 import Link from "next/link";
 
 export const metadata = {
@@ -7,37 +8,37 @@ export const metadata = {
 
 const partners = [
   {
-    logo: "/images/partners/icons/muslim-edex.png",
+    logo: asset("/images/partners/icons/muslim-edex.png"),
     name: "Muslim EdEx",
     sub: null,
     text: "Professional learning platform",
   },
   {
-    logo: "/images/partners/icons/imana.png",
+    logo: asset("/images/partners/icons/imana.png"),
     name: "IMANA",
     sub: null,
     text: "Medical education & professional development",
   },
   {
-    logo: "/images/partners/icons/albalagh.png",
+    logo: asset("/images/partners/icons/albalagh.png"),
     name: "ALBALAGH ACADEMY",
     sub: null,
     text: "Islamic scholarship and education",
   },
   {
-    logo: "/images/partners/icons/umma-health.png",
+    logo: asset("/images/partners/icons/umma-health.png"),
     name: "UMMA HEALTH",
     sub: null,
     text: "Community health and healthcare initiatives",
   },
   {
-    logo: "/images/partners/icons/workspace-junction.png",
+    logo: asset("/images/partners/icons/workspace-junction.png"),
     name: "Workspace Junction",
     sub: null,
     text: "Community space and events",
   },
   {
-    logo: "/images/partners/icons/360-growth-lab.png",
+    logo: asset("/images/partners/icons/360-growth-lab.png"),
     name: "360 Growth Lab",
     sub: null,
     text: "Technology and digital innovation",
@@ -45,15 +46,15 @@ const partners = [
 ];
 
 const pathways = [
-  ["/images/bio-topic-book.jpg", "fa-book-open", "Islamic Bioethics", "Foundational and advanced study of ethical questions in contemporary medicine."],
-  ["/images/hero-doctor-team.jpg", "fa-stethoscope", "Muslim Patient Care", "Practical guidance for culturally responsive, faith-sensitive clinical care."],
-  ["/images/bio-faculty-talk.jpg", "fa-user-doctor", "Professional Development", "Courses that strengthen ethical judgment and leadership in healthcare."],
-  ["/images/distinct-building.jpg", "fa-building-columns", "Institutional Programs", "Curriculum and training designed for schools, hospitals, and organizations."],
+  [asset("/images/bio-topic-book.jpg"), "fa-book-open", "Islamic Bioethics", "Foundational and advanced study of ethical questions in contemporary medicine."],
+  [asset("/images/hero-doctor-team.jpg"), "fa-stethoscope", "Muslim Patient Care", "Practical guidance for culturally responsive, faith-sensitive clinical care."],
+  [asset("/images/bio-faculty-talk.jpg"), "fa-user-doctor", "Professional Development", "Courses that strengthen ethical judgment and leadership in healthcare."],
+  [asset("/images/distinct-building.jpg"), "fa-building-columns", "Institutional Programs", "Curriculum and training designed for schools, hospitals, and organizations."],
 ];
 
 const upcoming = [
   {
-    img: "/images/course-primer.jpg",
+    img: asset("/images/course-primer.jpg"),
     badge: "32 CME CREDITS LISTED BY IMANA",
     title: "Islamic Bioethics — A Primer for Muslim Physicians",
     meta: [
@@ -67,7 +68,7 @@ const upcoming = [
     cta: "LEARN MORE",
   },
   {
-    img: "/images/bio-topic-mosque.jpg",
+    img: asset("/images/bio-topic-mosque.jpg"),
     badge: null,
     title: "An Intensive Introduction to the Field of Islamic Bioethics",
     meta: [
@@ -81,7 +82,7 @@ const upcoming = [
     cta: "LEARN MORE",
   },
   {
-    img: "/images/course-eol.jpg",
+    img: asset("/images/course-eol.jpg"),
     badge: "PREVIOUSLY OFFERED",
     badgeSoft: true,
     title: "End-of-Life Healthcare for Muslims: Islamic Guidance for Care, Planning, and Decision-Making",
@@ -98,7 +99,7 @@ const upcoming = [
 
 const additional = [
   {
-    img: "/images/course-muslim-doctor.jpg",
+    img: asset("/images/course-muslim-doctor.jpg"),
     title: "Becoming a Muslim Doctor",
     subtitle: "Foundations of Identity, Ethics, and Practice",
     meta: [
@@ -110,7 +111,7 @@ const additional = [
     cta: "LEARN MORE",
   },
   {
-    img: "/images/bio-campus.jpg",
+    img: asset("/images/bio-campus.jpg"),
     title: "Exploring Bioscience and Islam",
     subtitle: "A Curriculum on Fundamental Questions about the Human Being",
     meta: [
@@ -122,7 +123,7 @@ const additional = [
     cta: "REQUEST CURRICULUM INTEGRATION",
   },
   {
-    img: "/images/about-cta-arch.jpg",
+    img: asset("/images/about-cta-arch.jpg"),
     title: "Islam, Medical Ethics, and Spiritual Care",
     subtitle: null,
     meta: [
@@ -150,9 +151,9 @@ const howLearning = [
 ];
 
 const legacy = [
-  ["/images/partners/icons/imana.png", "IMANA", "CME-oriented physician education and clinical ethics partnerships."],
-  ["/images/partners/icons/albalagh.png", "AlBalagh Academy", "Structured online programs connecting Islamic sciences and medicine."],
-  ["/images/partners/icons/uchicago-medicine.png", "The University of Chicago Medicine", "Academic collaboration hosting past teaching and research offerings."],
+  [asset("/images/partners/icons/imana.png"), "IMANA", "CME-oriented physician education and clinical ethics partnerships."],
+  [asset("/images/partners/icons/albalagh.png"), "AlBalagh Academy", "Structured online programs connecting Islamic sciences and medicine."],
+  [asset("/images/partners/icons/uchicago-medicine.png"), "The University of Chicago Medicine", "Academic collaboration hosting past teaching and research offerings."],
 ];
 
 export default function CoursesPage() {
@@ -161,7 +162,7 @@ export default function CoursesPage() {
       <header className="hero-seamless hero-courses-seamless">
         <div className="hero-bg-wrapper">
           <img
-            src="/images/courses-hero.jpg"
+            src={asset("/images/courses-hero.jpg")}
             alt="Healthcare learners in discussion"
             className="hero-bg-img"
             loading="eager"
@@ -315,7 +316,7 @@ export default function CoursesPage() {
 
       <section className="crs-institute">
         <div className="crs-institute-media">
-          <img src="/images/courses-institutional.jpg" alt="Instructor leading an institutional training session" />
+          <img src={asset("/images/courses-institutional.jpg")} alt="Instructor leading an institutional training session" />
         </div>
         <div className="crs-institute-copy">
           <p className="crs-eyebrow">FOR INSTITUTIONS &amp; ORGANIZATIONS</p>
@@ -374,7 +375,7 @@ export default function CoursesPage() {
 
       <section className="crs-research">
         <div className="crs-research-media">
-          <img src="/images/books-hero-still.jpg" alt="Scholarly books informing II&M education" />
+          <img src={asset("/images/books-hero-still.jpg")} alt="Scholarly books informing II&M education" />
         </div>
         <div className="crs-research-copy">
           <p className="crs-eyebrow">FROM RESEARCH TO EDUCATION</p>
@@ -390,7 +391,7 @@ export default function CoursesPage() {
 
       <section className="crs-cta">
         <div className="crs-cta-media">
-          <img src="/images/cta-archway.jpg" alt="Islamic architectural archway" />
+          <img src={asset("/images/cta-archway.jpg")} alt="Islamic architectural archway" />
         </div>
         <div className="crs-cta-copy">
           <p className="crs-eyebrow crs-eyebrow-gold">LET&apos;S LEARN TOGETHER</p>

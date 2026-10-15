@@ -1,3 +1,4 @@
+import { asset } from "../../lib/asset";
 import Link from "next/link";
 
 export const metadata = {
@@ -22,11 +23,11 @@ const partners = [
 ];
 
 const areas = [
-  ["/images/story-consultation.jpg", "Islamic Bioethics", "Guidance on ethical decision-making in clinical care."],
-  ["/images/bio-faculty-talk.jpg", "Cultural & Religious Competency", "Strategies for more inclusive, culturally responsive care."],
-  ["/images/expertise-consultation.jpg", "Institutional Policy & Guidance", "Review and development of policies, protocols, and systems of care."],
-  ["/images/learning-lecture.jpg", "Program Development & Training", "Custom educational programs for healthcare professionals."],
-  ["/images/audience-community.jpg", "Community Engagement", "Building bridges between healthcare institutions and Muslim communities."],
+  [asset("/images/story-consultation.jpg"), "Islamic Bioethics", "Guidance on ethical decision-making in clinical care."],
+  [asset("/images/bio-faculty-talk.jpg"), "Cultural & Religious Competency", "Strategies for more inclusive, culturally responsive care."],
+  [asset("/images/expertise-consultation.jpg"), "Institutional Policy & Guidance", "Review and development of policies, protocols, and systems of care."],
+  [asset("/images/learning-lecture.jpg"), "Program Development & Training", "Custom educational programs for healthcare professionals."],
+  [asset("/images/audience-community.jpg"), "Community Engagement", "Building bridges between healthcare institutions and Muslim communities."],
 ];
 
 const steps = [
@@ -68,7 +69,7 @@ export default function ConsultationPage() {
           </div>
         </div>
         <div className="consult-hero-media">
-          <img src="/images/consult-hero-team.jpg" alt="Healthcare professionals collaborating around a consultation table" />
+          <img src={asset("/images/consult-hero-team.jpg")} alt="Healthcare professionals collaborating around a consultation table" />
           <div className="consult-hero-quote">
             <p>Bridging perspectives. Building solutions.</p>
           </div>
@@ -93,7 +94,7 @@ export default function ConsultationPage() {
         <div className="container">
           <div className="row align-items-center g-4 g-lg-5">
             <div className="col-lg-6">
-              <img className="consult-approach-img" src="/images/bio-hero-discussion.jpg" alt="Academic and healthcare professionals discussing ethical questions" />
+              <img className="consult-approach-img" src={asset("/images/bio-hero-discussion.jpg")} alt="Academic and healthcare professionals discussing ethical questions" />
             </div>
             <div className="col-lg-6">
               <p className="consult-eyebrow">OUR APPROACH</p>
@@ -164,7 +165,7 @@ export default function ConsultationPage() {
 
       <section className="consult-cta" id="request">
         <div className="consult-cta-media">
-          <img src="/images/distinct-building.jpg" alt="Academic medical institution" />
+          <img src={asset("/images/distinct-building.jpg")} alt="Academic medical institution" />
           <div className="consult-cta-quote">
             <p>Let&apos;s work together to create more inclusive, ethical, and compassionate care.</p>
             <span />

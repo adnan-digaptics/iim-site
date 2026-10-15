@@ -1,31 +1,33 @@
 "use client";
 
+import { asset } from "../../lib/asset";
+
 import { useEffect, useRef, useState } from "react";
 
 const AMBASSADORS = [
   {
     name: "Mufti Mohammed Zubair Butt",
-    img: "/images/our-team/amb-zubair.jpg",
+    img: asset("/images/our-team/amb-zubair.jpg"),
     note: "Ambassador & Community of Support",
   },
   {
     name: "Ermin Sinanovic",
-    img: "/images/our-team/amb-ermin.jpg",
+    img: asset("/images/our-team/amb-ermin.jpg"),
     note: "Ambassador & Community of Support",
   },
   {
     name: "Hatem al-Haj",
-    img: "/images/our-team/amb-hatem.jpg",
+    img: asset("/images/our-team/amb-hatem.jpg"),
     note: "Ambassador & Community of Support",
   },
   {
     name: "Yasir Qadhi",
-    img: "/images/our-team/amb-yasir.jpg",
+    img: asset("/images/our-team/amb-yasir.jpg"),
     note: "Ambassador & Community of Support",
   },
   {
     name: "Ingrid Mattson",
-    img: "/images/our-team/amb-ingrid.jpg",
+    img: asset("/images/our-team/amb-ingrid.jpg"),
     note: "Ambassador & Community of Support",
   },
 ];

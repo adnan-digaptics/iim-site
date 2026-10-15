@@ -1,3 +1,4 @@
+import { asset } from "../../lib/asset";
 import Link from "next/link";
 
 export const metadata = {
@@ -24,32 +25,32 @@ const findings = [
 
 const projects = [
   {
-    img: "/images/research/project-mahsn.jpg",
+    img: asset("/images/research/project-mahsn.jpg"),
     title: "Muslim American Healthcare & Spiritual Needs (MAHSN)",
     text: "A national survey examining the healthcare experiences, spiritual needs, and cultural considerations of Muslim patients in the United States.",
   },
   {
-    img: "/images/research/project-mheart.jpg",
+    img: asset("/images/research/project-mheart.jpg"),
     title: "Mosque-Based Health Education and Research Tools (M-HEaRT)",
     text: "Development and testing of replicable tools and workshops to assess and address health needs within mosque communities, working with imams and community leaders.",
   },
   {
-    img: "/images/research/project-palliative.jpg",
+    img: asset("/images/research/project-palliative.jpg"),
     title: "Investigating American Muslim Palliative & Hospice Care Needs (I AM PCN)",
     text: "Exploring the needs of Muslim patients and families in end-of-life care, with practical resources and replication guides for healthcare teams.",
   },
   {
-    img: "/images/research/project-equity.jpg",
+    img: asset("/images/research/project-equity.jpg"),
     title: "Advancing Equity for Muslim Physicians",
     text: "Examining experiences of discrimination, accommodation, and professional well-being among Muslim physicians and healthcare trainees to inform supportive workplace policies and interventions.",
   },
   {
-    img: "/images/research/project-mammography.jpg",
+    img: asset("/images/research/project-mammography.jpg"),
     title: "Religiously Tailored Mammography Intervention",
     text: "A community-designed educational intervention to increase breast cancer screening among Muslim women, with culturally and religiously tailored materials.",
   },
   {
-    img: "/images/research/project-empart.jpg",
+    img: asset("/images/research/project-empart.jpg"),
     title: "EMPART & E-MARCH",
     text: "Community-centered outcomes research and training programs to build research capacity, promote health equity, and engage Muslim communities in meaningful research partnerships.",
   },
@@ -57,21 +58,21 @@ const projects = [
 
 const resources = [
   {
-    img: "/images/research/resource-eol.jpg",
+    img: asset("/images/research/resource-eol.jpg"),
     title: "End-of-Life Healthcare Guide",
     text: "Practical guidance for Muslim patients, families, and healthcare teams.",
     cta: "ACCESS RESOURCE",
     href: "/resources",
   },
   {
-    img: "/images/research/resource-workshop.jpg",
+    img: asset("/images/research/resource-workshop.jpg"),
     title: "Mosque-Based Workshop Guides",
     text: "Step-by-step guides to replicate health education programs in your community.",
     cta: "ACCESS RESOURCE",
     href: "/resources",
   },
   {
-    img: "/images/research/resource-pubs.jpg",
+    img: asset("/images/research/resource-pubs.jpg"),
     title: "Policy Reports & Publications",
     text: "Evidence, recommendations, and scholarly publications to inform practice and policy.",
     cta: "BROWSE PUBLICATIONS",
@@ -94,7 +95,7 @@ export default function ResearchPage() {
       <header className="hero-seamless hero-research-seamless">
         <div className="hero-bg-wrapper">
           <img
-            src="/images/research/hero.jpg"
+            src={asset("/images/research/hero.jpg")}
             alt="Healthcare professionals collaborating on research and care"
             className="hero-bg-img"
             loading="eager"
@@ -175,7 +176,7 @@ export default function ResearchPage() {
             </div>
           </div>
           <div className="rs-findings-media">
-            <img src="/images/research/findings-mosque.jpg" alt="Mosque architecture" />
+            <img src={asset("/images/research/findings-mosque.jpg")} alt="Mosque architecture" />
           </div>
         </div>
       </section>
@@ -203,7 +204,7 @@ export default function ResearchPage() {
             </div>
             <div className="rs-approach-media">
               <img
-                src="/images/research/approach.jpg"
+                src={asset("/images/research/approach.jpg")}
                 alt="Community research discussion with Muslim participants"
               />
               <div className="rs-approach-quote">
@@ -255,7 +256,7 @@ export default function ResearchPage() {
         <div className="row g-0">
           <div className="col-lg-5 rs-edu-media">
             <img
-              src="/images/research/education.jpg"
+              src={asset("/images/research/education.jpg")}
               alt="Educator presenting research-informed learning"
             />
           </div>
@@ -340,7 +341,7 @@ export default function ResearchPage() {
         <div className="row g-0">
           <div className="col-lg-6 rs-cta-media">
             <img
-              src="/images/research/cta-conference.jpg"
+              src={asset("/images/research/cta-conference.jpg")}
               alt="Conference audience collaborating on research and care"
             />
           </div>

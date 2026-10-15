@@ -1,3 +1,4 @@
+import { asset } from "../../lib/asset";
 import Link from "next/link";
 
 export const metadata = {
@@ -10,7 +11,7 @@ export default function BiosciencePage() {
     <>
     <header className="hero-seamless hero-bio-seamless">
       <div className="hero-bg-wrapper">
-        <img src="/images/bio-hero-discussion.jpg" alt="Educators in academic discussion" className="hero-bg-img" loading="eager" />
+        <img src={asset("/images/bio-hero-discussion.jpg")} alt="Educators in academic discussion" className="hero-bg-img" loading="eager" />
         <div className="hero-gradient-overlay" />
         <div className="hero-watermark-overlay" />
       </div>
@@ -76,7 +77,7 @@ A more compassionate future.          </p>
         <div className="row g-3">
           <div className="col-md-4">
             <article className="bio-card">
-              <img src="/images/bio-way-students.jpg" alt="Students studying" className="bio-card-img" />
+              <img src={asset("/images/bio-way-students.jpg")} alt="Students studying" className="bio-card-img" />
               <span className="bio-card-icon">
                 <i className="fa-solid fa-layer-group" />
               </span>
@@ -88,7 +89,7 @@ A more compassionate future.          </p>
           </div>
           <div className="col-md-4">
             <article className="bio-card">
-              <img src="/images/bio-way-seminar.jpg" alt="Dedicated seminar" className="bio-card-img" />
+              <img src={asset("/images/bio-way-seminar.jpg")} alt="Dedicated seminar" className="bio-card-img" />
               <span className="bio-card-icon">
                 <i className="fa-solid fa-users" />
               </span>
@@ -100,7 +101,7 @@ A more compassionate future.          </p>
           </div>
           <div className="col-md-4">
             <article className="bio-card">
-              <img src="/images/bio-way-faculty.jpg" alt="Faculty training" className="bio-card-img" />
+              <img src={asset("/images/bio-way-faculty.jpg")} alt="Faculty training" className="bio-card-img" />
               <span className="bio-card-icon">
                 <i className="fa-solid fa-user-group" />
               </span>
@@ -234,37 +235,37 @@ Institutions              </h3>
         </div>
         <div className="bio-topic-row">
           <article className="bio-topic-card">
-            <img src="/images/bio-topic-book.jpg" alt="Islam, science, and ways of knowing" />
+            <img src={asset("/images/bio-topic-book.jpg")} alt="Islam, science, and ways of knowing" />
             <span className="bio-topic-num">1</span>
             <h3>Islam, Science &amp; Ways of Knowing</h3>
           </article>
           <article className="bio-topic-card">
-            <img src="/images/bio-dna.jpg" alt="Evolution and human origins" />
+            <img src={asset("/images/bio-dna.jpg")} alt="Evolution and human origins" />
             <span className="bio-topic-num">2</span>
             <h3>Evolution &amp; Human Origins</h3>
           </article>
           <article className="bio-topic-card">
-            <img src="/images/bio-hero-mind.jpg" alt="Neuroscience, AI, and the soul" />
+            <img src={asset("/images/bio-hero-mind.jpg")} alt="Neuroscience, AI, and the soul" />
             <span className="bio-topic-num">3</span>
             <h3>Neuroscience, AI &amp; the Soul</h3>
           </article>
           <article className="bio-topic-card">
-            <img src="/images/bio-topic-robot.jpg" alt="Human enhancement and transhumanism" />
+            <img src={asset("/images/bio-topic-robot.jpg")} alt="Human enhancement and transhumanism" />
             <span className="bio-topic-num">4</span>
             <h3>Human Enhancement &amp; Transhumanism</h3>
           </article>
           <article className="bio-topic-card">
-            <img src="/images/bio-topic-genes.jpg" alt="Free will and genetic determinism" />
+            <img src={asset("/images/bio-topic-genes.jpg")} alt="Free will and genetic determinism" />
             <span className="bio-topic-num">5</span>
             <h3>Free Will &amp; Genetic Determinism</h3>
           </article>
           <article className="bio-topic-card">
-            <img src="/images/bio-planet.jpg" alt="Life beyond Earth" />
+            <img src={asset("/images/bio-planet.jpg")} alt="Life beyond Earth" />
             <span className="bio-topic-num">6</span>
             <h3>Life Beyond Earth</h3>
           </article>
           <article className="bio-topic-card">
-            <img src="/images/bio-topic-mosque.jpg" alt="Synthesis, ethics, and reflection" />
+            <img src={asset("/images/bio-topic-mosque.jpg")} alt="Synthesis, ethics, and reflection" />
             <span className="bio-topic-num">7</span>
             <h3>Synthesis, Ethics &amp; Reflection</h3>
           </article>
@@ -278,28 +279,28 @@ Institutions              </h3>
         <div className="row g-3">
           <div className="col-6 col-lg-3">
             <article className="bio-res">
-              <img src="/images/bio-book-cover.jpg" alt="Key readings textbook" />
+              <img src={asset("/images/bio-book-cover.jpg")} alt="Key readings textbook" />
               <h3>Key Readings</h3>
               <p>Bridging Bioscience and Islam and other foundational texts.</p>
             </article>
           </div>
           <div className="col-6 col-lg-3">
             <article className="bio-res">
-              <img src="/images/bio-modules-print.jpg" alt="Teaching modules" />
+              <img src={asset("/images/bio-modules-print.jpg")} alt="Teaching modules" />
               <h3>Teaching Modules</h3>
               <p>Structured materials for each of the seven topics.</p>
             </article>
           </div>
           <div className="col-6 col-lg-3">
             <article className="bio-res">
-              <img src="/images/bio-companion.jpg" alt="Teacher's Companion" />
+              <img src={asset("/images/bio-companion.jpg")} alt="Teacher's Companion" />
               <h3>Teacher's Companion</h3>
               <p>Guidance, discussion questions, and facilitation tips.</p>
             </article>
           </div>
           <div className="col-6 col-lg-3">
             <article className="bio-res">
-              <img src="/images/bio-resource-laptop.jpg" alt="Additional resources" />
+              <img src={asset("/images/bio-resource-laptop.jpg")} alt="Additional resources" />
               <h3>Additional Resources</h3>
               <p>Videos, case studies, and activities for classroom use.</p>
             </article>
@@ -317,11 +318,11 @@ Institutions              </h3>
             <Link href="/education" className="bio-btn-maroon">VIEW PAST STUDENT SEMINARS</Link>
           </div>
           <div className="col-lg-4">
-            <img src="/images/bio-student-main.jpg" alt="Student in academic discussion" className="bio-tall-photo" />
+            <img src={asset("/images/bio-student-main.jpg")} alt="Student in academic discussion" className="bio-tall-photo" />
           </div>
           <div className="col-lg-4">
-            <img src="/images/bio-student-group.jpg" alt="Group discussion" className="bio-stack-photo mb-3" />
-            <img src="/images/bio-student-study.jpg" alt="Students collaborating" className="bio-stack-photo" />
+            <img src={asset("/images/bio-student-group.jpg")} alt="Group discussion" className="bio-stack-photo mb-3" />
+            <img src={asset("/images/bio-student-study.jpg")} alt="Students collaborating" className="bio-stack-photo" />
           </div>
         </div>
       </div>
@@ -339,7 +340,7 @@ Institutions              </h3>
 VIEW PUBLICATIONS{' '}                  <i className="fa-solid fa-arrow-right ms-1" />
                 </Link>
               </div>
-              <img src="/images/bio-journal.jpg" alt="Academic research papers" className="bio-ed-img" />
+              <img src={asset("/images/bio-journal.jpg")} alt="Academic research papers" className="bio-ed-img" />
             </article>
           </div>
           <div className="col-lg-6">
@@ -352,7 +353,7 @@ VIEW PUBLICATIONS{' '}                  <i className="fa-solid fa-arrow-right ms
 VIEW ALL EVENTS{' '}                  <i className="fa-solid fa-arrow-right ms-1" />
                 </Link>
               </div>
-              <img src="/images/bio-campus.jpg" alt="University campus" className="bio-ed-img" />
+              <img src={asset("/images/bio-campus.jpg")} alt="University campus" className="bio-ed-img" />
             </article>
           </div>
         </div>
@@ -379,35 +380,35 @@ VIEW ALL EVENTS{' '}                  <i className="fa-solid fa-arrow-right ms-1
           <div className="col-lg-8">
             <div className="bio-team">
               <figure className="bio-member">
-                <img src="/images/bio-team-1.jpg" alt="Dr. Aasim I. Padela" />
+                <img src={asset("/images/bio-team-1.jpg")} alt="Dr. Aasim I. Padela" />
                 <figcaption>
                   <strong>Dr. Aasim I. Padela</strong>
                   <span>Founder, II&amp;M</span>
                 </figcaption>
               </figure>
               <figure className="bio-member">
-                <img src="/images/bio-team-2.jpg" alt="Dr. Shoaib Ahmed Malik" />
+                <img src={asset("/images/bio-team-2.jpg")} alt="Dr. Shoaib Ahmed Malik" />
                 <figcaption>
                   <strong>Dr. Shoaib A. Malik</strong>
                   <span>University of Edinburgh</span>
                 </figcaption>
               </figure>
               <figure className="bio-member">
-                <img src="/images/bio-team-3.jpg" alt="Faculty scholar" />
+                <img src={asset("/images/bio-team-3.jpg")} alt="Faculty scholar" />
                 <figcaption>
                   <strong>Faculty Scholar</strong>
                   <span>Curriculum &amp; Pedagogy</span>
                 </figcaption>
               </figure>
               <figure className="bio-member">
-                <img src="/images/bio-team-4.jpg" alt="Dr. Macksood Aftab" />
+                <img src={asset("/images/bio-team-4.jpg")} alt="Dr. Macksood Aftab" />
                 <figcaption>
                   <strong>Dr. Macksood Aftab</strong>
                   <span>Michigan State University</span>
                 </figcaption>
               </figure>
               <figure className="bio-member">
-                <img src="/images/bio-team-5.jpg" alt="Faculty scholar" />
+                <img src={asset("/images/bio-team-5.jpg")} alt="Faculty scholar" />
                 <figcaption>
                   <strong>Faculty Scholar</strong>
                   <span>Islamic Studies</span>

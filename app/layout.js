@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SiteEffects from "../components/SiteEffects";
+import { asset } from "../lib/asset";
 
 export const metadata = {
   title: {
@@ -14,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning style={{ "--iim-pattern": `url("${asset("/images/islamic-pattern.svg")}")` }}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />

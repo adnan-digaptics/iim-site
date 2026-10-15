@@ -1,5 +1,7 @@
 "use client";
 
+import { asset } from "../../lib/asset";
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
@@ -30,7 +32,7 @@ const TESTIMONIALS = [
   {
     id: "t1",
     cat: "healthcare",
-    img: "/images/donation/voice-1.jpg",
+    img: asset("/images/donation/voice-1.jpg"),
     duration: "2:18",
     quote: "II&M gave me language and frameworks to care for Muslim patients with greater confidence and compassion.",
     name: "Dr. Rania Awaad",
@@ -39,7 +41,7 @@ const TESTIMONIALS = [
   {
     id: "t2",
     cat: "students",
-    img: "/images/donation/voice-2.jpg",
+    img: asset("/images/donation/voice-2.jpg"),
     duration: "1:54",
     quote: "The courses helped me connect my faith with clinical training in a way that feels rigorous and practical.",
     name: "Omar H.",
@@ -48,7 +50,7 @@ const TESTIMONIALS = [
   {
     id: "t3",
     cat: "healthcare",
-    img: "/images/donation/voice-3.jpg",
+    img: asset("/images/donation/voice-3.jpg"),
     duration: "3:02",
     quote: "Their research and teaching strengthen how institutions approach ethics, education, and community partnership.",
     name: "Dr. Aasim I. Padela",
@@ -57,7 +59,7 @@ const TESTIMONIALS = [
   {
     id: "t4",
     cat: "leaders",
-    img: "/images/donation/impact-bridges.jpg",
+    img: asset("/images/donation/impact-bridges.jpg"),
     duration: "2:05",
     quote: "Partnering with II&M helped our organization bring evidence-informed learning to our community.",
     name: "Community Partner",
@@ -66,7 +68,7 @@ const TESTIMONIALS = [
   {
     id: "t5",
     cat: "patients",
-    img: "/images/donation/impact-learners.jpg",
+    img: asset("/images/donation/impact-learners.jpg"),
     duration: "1:41",
     quote: "Knowing clinicians are learning faith-sensitive care makes families feel seen and respected.",
     name: "Family Advocate",
@@ -83,21 +85,21 @@ const AMOUNTS = [
 ];
 
 const IMPACT = [
-  ["/images/donation/impact-learners.jpg", "fa-user-doctor", "Equip Learners and Clinicians", "Deliver courses and practical resources that strengthen ethical, faith-informed care."],
-  ["/images/donation/impact-institutions.jpg", "fa-building-columns", "Strengthen Institutions", "Integrate curricula and training into schools, hospitals, and organizations."],
-  ["/images/donation/impact-expertise.jpg", "fa-microphone", "Share Expertise Globally", "Bring research-informed teaching and speaking to communities worldwide."],
-  ["/images/donation/impact-resources.jpg", "fa-laptop", "Develop Practical Resources", "Create guides, modules, and tools that move knowledge into everyday practice."],
-  ["/images/donation/impact-bridges.jpg", "fa-handshake", "Build Bridges and Partnerships", "Collaborate with partners who expand education and community impact."],
-  ["/images/donation/impact-change.jpg", "fa-seedling", "Create Lasting Change", "Sustain programs that improve understanding, equity, and compassionate care."],
+  [asset("/images/donation/impact-learners.jpg"), "fa-user-doctor", "Equip Learners and Clinicians", "Deliver courses and practical resources that strengthen ethical, faith-informed care."],
+  [asset("/images/donation/impact-institutions.jpg"), "fa-building-columns", "Strengthen Institutions", "Integrate curricula and training into schools, hospitals, and organizations."],
+  [asset("/images/donation/impact-expertise.jpg"), "fa-microphone", "Share Expertise Globally", "Bring research-informed teaching and speaking to communities worldwide."],
+  [asset("/images/donation/impact-resources.jpg"), "fa-laptop", "Develop Practical Resources", "Create guides, modules, and tools that move knowledge into everyday practice."],
+  [asset("/images/donation/impact-bridges.jpg"), "fa-handshake", "Build Bridges and Partnerships", "Collaborate with partners who expand education and community impact."],
+  [asset("/images/donation/impact-change.jpg"), "fa-seedling", "Create Lasting Change", "Sustain programs that improve understanding, equity, and compassionate care."],
 ];
 
 const PARTNERS = [
-  ["/images/partners/icons/muslim-edex.png", "Muslim EdEx", "Professional learning platform"],
-  ["/images/partners/icons/imana.png", "IMANA", "Medical education & professional development"],
-  ["/images/partners/icons/albalagh.png", "ALBALAGH INSTITUTE", "Islamic scholarship and education"],
-  ["/images/partners/icons/umma-health.png", "UMMA HEALTH", "Community health and healthcare initiatives"],
-  ["/images/partners/icons/workspace-junction.png", "Workspace Junction", "Community space and events"],
-  ["/images/partners/icons/360-growth-lab.png", "360 Growth Lab", "Technology and digital innovation"],
+  [asset("/images/partners/icons/muslim-edex.png"), "Muslim EdEx", "Professional learning platform"],
+  [asset("/images/partners/icons/imana.png"), "IMANA", "Medical education & professional development"],
+  [asset("/images/partners/icons/albalagh.png"), "ALBALAGH INSTITUTE", "Islamic scholarship and education"],
+  [asset("/images/partners/icons/umma-health.png"), "UMMA HEALTH", "Community health and healthcare initiatives"],
+  [asset("/images/partners/icons/workspace-junction.png"), "Workspace Junction", "Community space and events"],
+  [asset("/images/partners/icons/360-growth-lab.png"), "360 Growth Lab", "Technology and digital innovation"],
 ];
 
 export default function DonatePageClient() {
@@ -165,7 +167,7 @@ export default function DonatePageClient() {
       <header className="hero-seamless hero-donate-seamless">
         <div className="hero-bg-wrapper">
           <img
-            src="/images/donation/donate-hero.jpg"
+            src={asset("/images/donation/donate-hero.jpg")}
             alt="Healthcare professionals in consultation"
             className="hero-bg-img"
             loading="eager"
@@ -426,7 +428,7 @@ export default function DonatePageClient() {
             </div>
           </div>
           <div className="col-12 col-lg-6 donate-cta-media">
-            <img src="/images/donation/cta-mosque.jpg" alt="Mosque with blue dome viewed through an Islamic archway at sunset" />
+            <img src={asset("/images/donation/cta-mosque.jpg")} alt="Mosque with blue dome viewed through an Islamic archway at sunset" />
           </div>
         </div>
       </section>

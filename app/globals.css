@@ -1060,7 +1060,7 @@ a {
   right: 0;
   width: 220px;
   height: 220px;
-  background-image: url('/images/islamic-pattern.svg');
+  background-image: var(--iim-pattern);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.35;
@@ -1441,7 +1441,7 @@ a {
   right: -10px;
   width: 280px;
   height: 280px;
-  background-image: url('/images/islamic-pattern.svg');
+  background-image: var(--iim-pattern);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.22;
@@ -1732,7 +1732,7 @@ a {
   right: 45px;
   width: 195px;
   height: 195px;
-  background-image: url('/images/islamic-pattern.svg');
+  background-image: var(--iim-pattern);
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.35;
@@ -2231,7 +2231,7 @@ a {
   right: 25px;
   width: 180px;
   height: 180px;
-  background-image: url('/images/islamic-pattern.svg');
+  background-image: var(--iim-pattern);
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.35;
@@ -2578,7 +2578,7 @@ a {
   bottom: -20px;
   width: 180px;
   height: 180px;
-  background-image: url('/images/islamic-pattern.svg');
+  background-image: var(--iim-pattern);
   background-size: contain;
   opacity: 0.16;
   pointer-events: none;
@@ -2811,7 +2811,7 @@ a {
   top: -50px;
   width: 280px;
   height: 280px;
-  background-image: url('/images/islamic-pattern.svg');
+  background-image: var(--iim-pattern);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.12;
@@ -3618,7 +3618,7 @@ a {
   top: -40px;
   width: 280px;
   height: 280px;
-  background-image: url('/images/islamic-pattern.svg');
+  background-image: var(--iim-pattern);
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0.14;
@@ -3833,7 +3833,7 @@ a {
   width: 240px;
   height: 240px;
   transform: translateY(-50%);
-  background-image: url('/images/islamic-pattern.svg');
+  background-image: var(--iim-pattern);
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0.16;
@@ -4349,7 +4349,7 @@ a {
 /* CTA */
 .bio-cta {
   background: #003B35;
-  background-image: url('/images/islamic-pattern.svg');
+  background-image: var(--iim-pattern);
   background-repeat: no-repeat;
   background-position: right -40px center;
   background-size: 280px;
@@ -4658,7 +4658,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 140px;
   opacity: 0.1;
   pointer-events: none;
@@ -4691,7 +4691,7 @@ a {
   top: 0;
   bottom: 0;
   width: 160px;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 180px;
   opacity: 0.06;
   pointer-events: none;
@@ -4785,7 +4785,7 @@ a {
   right: -60px;
   bottom: -40px;
   width: 280px;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 240px;
   opacity: 0.14;
   pointer-events: none;
@@ -5086,7 +5086,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 220px;
   background-repeat: repeat;
   opacity: 0.14;
@@ -5530,7 +5530,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 140px;
   opacity: 0.12;
   pointer-events: none;
@@ -5638,7 +5638,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 320px;
   opacity: 0.03;
   pointer-events: none;
@@ -6013,7 +6013,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 240px;
   background-repeat: repeat;
   opacity: 0.14;
@@ -6537,7 +6537,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 180px;
   background-repeat: repeat;
   opacity: 0.07;
@@ -6929,7 +6929,7 @@ a {
   right: 0;
   width: 220px;
   height: 220px;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.12;
@@ -7010,7 +7010,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 280px;
   background-repeat: repeat;
   opacity: 0.08;
@@ -7727,7 +7727,7 @@ a {
   top: 20px;
   width: 200px;
   height: 200px;
-  background: url("/images/islamic-pattern.svg") no-repeat center / contain;
+  background: var(--iim-pattern) no-repeat center / contain;
   opacity: 0.1;
   pointer-events: none;
 }
@@ -7863,7 +7863,7 @@ a {
   bottom: 20px;
   width: 180px;
   height: 180px;
-  background: url("/images/islamic-pattern.svg") no-repeat center / contain;
+  background: var(--iim-pattern) no-repeat center / contain;
   opacity: 0.1;
   pointer-events: none;
 }
@@ -7883,7 +7883,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/images/islamic-pattern.svg") no-repeat right 10% center / 360px;
+  background: var(--iim-pattern) no-repeat right 10% center / 360px;
   opacity: 0.12;
   pointer-events: none;
 }
@@ -8321,7 +8321,7 @@ a {
   top: -30px;
   width: 260px;
   height: 260px;
-  background: url("/images/islamic-pattern.svg") no-repeat center / contain;
+  background: var(--iim-pattern) no-repeat center / contain;
   opacity: 0.14;
   pointer-events: none;
 }
@@ -9287,7 +9287,7 @@ a {
   top: 0;
   bottom: 0;
   width: 120px;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-repeat: repeat-y;
   background-position: left center;
   background-size: 120px auto;
@@ -9708,7 +9708,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 140px;
   opacity: 0.1;
   pointer-events: none;
@@ -10084,7 +10084,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 220px;
   opacity: 0.14;
   filter: sepia(1) saturate(2.2) hue-rotate(5deg) brightness(1.35);
@@ -10515,7 +10515,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 280px;
   background-repeat: repeat;
   opacity: 0.08;
@@ -10768,7 +10768,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 280px;
   background-repeat: repeat;
   opacity: 0.08;
@@ -10985,7 +10985,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/islamic-pattern.svg");
+  background-image: var(--iim-pattern);
   background-size: 320px;
   background-repeat: repeat;
   opacity: 0.1;
