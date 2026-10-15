@@ -1,5 +1,4 @@
 import DonatePageClient from "./DonatePageClient";
-import "./donate.css";
 
 export const metadata = {
   title: "Support II&M | Initiative on Islam & Medicine",

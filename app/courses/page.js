@@ -1,5 +1,4 @@
 import Link from "next/link";
-import "./courses.css";
 
 export const metadata = {
   title: "Courses & Certifications | Initiative on Islam & Medicine",
@@ -153,7 +152,7 @@ const howLearning = [
 const legacy = [
   ["/images/partners/icons/imana.png", "IMANA", "CME-oriented physician education and clinical ethics partnerships."],
   ["/images/partners/icons/albalagh.png", "AlBalagh Academy", "Structured online programs connecting Islamic sciences and medicine."],
-  [null, "The University of Chicago Medicine", "Academic collaboration hosting past teaching and research offerings."],
+  ["/images/partners/icons/uchicago-medicine.png", "The University of Chicago Medicine", "Academic collaboration hosting past teaching and research offerings."],
 ];
 
 export default function CoursesPage() {
@@ -360,13 +359,9 @@ export default function CoursesPage() {
           <div className="crs-legacy-grid">
             {legacy.map(([logo, name, text]) => (
               <article key={name}>
-                {logo ? (
-                  <div className="crs-legacy-logo">
-                    <img src={logo} alt={name} />
-                  </div>
-                ) : (
-                  <div className="crs-logo-mark" aria-hidden="true">UC</div>
-                )}
+                <div className="crs-legacy-logo">
+                  <img src={logo} alt={name} />
+                </div>
                 <div>
                   <h3>{name}</h3>
                   <p>{text}</p>

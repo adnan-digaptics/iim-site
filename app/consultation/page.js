@@ -1,5 +1,4 @@
 import Link from "next/link";
-import "./consultation.css";
 
 export const metadata = {
   title: "Consultation & Advisory Services | Initiative on Islam & Medicine",

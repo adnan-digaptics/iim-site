@@ -1,5 +1,4 @@
 import Link from "next/link";
-import "./impact.css";
 
 export const metadata = {
   title: "Our Impact | Initiative on Islam & Medicine",

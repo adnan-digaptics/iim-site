@@ -21,9 +21,7 @@ const NAV = [
     items: [
       ["Education Overview", "/education"],
       ["Courses", "/courses"],
-      ["Workshops", "/workshops"],
       ["Bioscience & Islam", "/bioscience"],
-      ["Institutional Curriculum", "/curriculum"],
     ],
   },
   {
@@ -32,26 +30,9 @@ const NAV = [
     items: [["Consultation", "/consultation"]],
   },
   {
-    label: "Speaking",
-    href: "/speaking",
-    items: [["Speaking", "/speaking"]],
-  },
-  {
-    label: "Research & Impact",
-    href: "/research",
-    items: [
-      ["Research Projects", "/research"],
-      ["Our Impact", "/impact"],
-    ],
-  },
-  {
-    label: "Resources",
-    href: "/resources",
-    items: [
-      ["Resource Library", "/resources"],
-      ["Books", "/books"],
-      ["Podcast", "/podcast"],
-    ],
+    label: "Books",
+    href: "/books",
+    items: [["Books", "/books"]],
   },
 ];
 
@@ -82,7 +63,7 @@ export default function Header() {
             <Link href="/consultation">CONTACT</Link>
             <span className="mx-2">|</span>
             <Link href="/donate">DONATE</Link>
-            <Link href="/resources" aria-label="Search">
+            <Link href="/books" aria-label="Search">
               <i className="fa-solid fa-magnifying-glass topbar-search-icon" />
             </Link>
           </span>
@@ -90,13 +71,12 @@ export default function Header() {
       </div>
       <nav className="navbar navbar-expand-lg sticky-top main-nav">
         <div className="container">
-          <Link className="navbar-brand d-flex align-items-center" href="/">
-            <span className="brand-mark" aria-hidden="true" />
-            <span className="brand-type">
-              Initiative on<br />
-              <b>Islam &amp; Medicine</b>
-              <small>INSTILLING HIKMAH IN HEALTHCARE</small>
-            </span>
+          <Link className="navbar-brand site-brand" href="/">
+            <img
+              src="/images/logo.png"
+              alt="Initiative on Islam and Medicine"
+              className="site-logo site-logo--header"
+            />
           </Link>
           <button
             className="navbar-toggler"

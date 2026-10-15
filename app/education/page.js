@@ -1,5 +1,4 @@
 import Link from "next/link";
-import "./education.css";
 
 export const metadata = {
   title: "Education | Initiative on Islam & Medicine",
