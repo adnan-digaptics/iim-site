@@ -20,11 +20,11 @@ export default function AboutPage() {
           <p className="hero-eyebrow-text-gold">PEOPLE | KNOWLEDGE | MORE COMPASSIONATE CARE</p>
           <div className="hero-eyebrow-bar-maroon" />
           <h1 className="hero-seamless-title">
-About II&amp;M            <br />
-{' '}Rooted in            <br />
-{' '}research.            <br />
+About II&amp;M <br />
+{' '}Rooted in <br />
+{' '}research. <br />
 {' '}            <em>
-Transforming              <br />
+Transforming <br />
 {' '}care.            </em>
 {' '}          </h1>
           <p className="hero-seamless-lead">The Initiative on Islam &amp; Medicine (II&amp;M) works at the intersection of Islam and healthcare to build a more informed, equitable, and compassionate healthcare system for all.</p>

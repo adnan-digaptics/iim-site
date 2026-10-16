@@ -1,8 +1,7 @@
 "use client";
 
 import { asset } from "../../lib/asset";
-
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 const AMBASSADORS = [
   {
@@ -32,36 +31,81 @@ const AMBASSADORS = [
   },
 ];
 
+const COUNT = AMBASSADORS.length;
+
 export default function TeamAmbassadors() {
   const trackRef = useRef(null);
-  const [canPrev, setCanPrev] = useState(false);
-  const [canNext, setCanNext] = useState(true);
-
-  function updateArrows() {
-    const el = trackRef.current;
-    if (!el) return;
-    setCanPrev(el.scrollLeft > 8);
-    setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 8);
-  }
+  const jumpTarget = useRef(null);
+  const indexRef = useRef(0);
+  const [index, setIndex] = useState(0);
+  const [instant, setInstant] = useState(false);
+  const [step, setStep] = useState(0);
 
   useEffect(() => {
-    const el = trackRef.current;
-    if (!el) return;
-    updateArrows();
-    el.addEventListener("scroll", updateArrows, { passive: true });
-    window.addEventListener("resize", updateArrows);
-    return () => {
-      el.removeEventListener("scroll", updateArrows);
-      window.removeEventListener("resize", updateArrows);
-    };
+    indexRef.current = index;
+  }, [index]);
+
+  useLayoutEffect(() => {
+    function measure() {
+      const card = trackRef.current?.querySelector(".tm-ambassador-card");
+      if (!card) return;
+      setStep(card.getBoundingClientRect().width + 14);
+    }
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
   }, []);
 
-  function scrollByCard(dir) {
-    const el = trackRef.current;
-    if (!el) return;
-    const card = el.querySelector(".tm-ambassador-card");
-    const amount = card ? card.offsetWidth + 14 : 280;
-    el.scrollBy({ left: dir * amount, behavior: "smooth" });
+  useEffect(() => {
+    const id = setInterval(() => {
+      setInstant(false);
+      setIndex((current) => (current >= COUNT ? current : current + 1));
+    }, 3200);
+    return () => clearInterval(id);
+  }, []);
+
+  useEffect(() => {
+    if (index < COUNT || jumpTarget.current != null) return undefined;
+    const timer = setTimeout(() => {
+      setInstant(true);
+      setIndex(0);
+    }, 520);
+    return () => clearTimeout(timer);
+  }, [index]);
+
+  useEffect(() => {
+    if (!instant) return undefined;
+    let second = 0;
+    const first = requestAnimationFrame(() => {
+      second = requestAnimationFrame(() => {
+        setInstant(false);
+        if (jumpTarget.current != null) {
+          const next = jumpTarget.current;
+          jumpTarget.current = null;
+          setIndex(next);
+        }
+      });
+    });
+    return () => {
+      cancelAnimationFrame(first);
+      cancelAnimationFrame(second);
+    };
+  }, [instant]);
+
+  function goNext() {
+    setInstant(false);
+    setIndex((current) => Math.min(current + 1, COUNT));
+  }
+
+  function goPrev() {
+    if (indexRef.current <= 0) {
+      jumpTarget.current = COUNT - 1;
+      setInstant(true);
+      setIndex(COUNT);
+      return;
+    }
+    setInstant(false);
+    setIndex((current) => current - 1);
   }
 
   return (
@@ -75,37 +119,37 @@ export default function TeamAmbassadors() {
             </p>
           </div>
           <div className="tm-carousel-nav" role="group" aria-label="Ambassador carousel">
-            <button
-              type="button"
-              className="tm-carousel-btn"
-              aria-label="Previous ambassadors"
-              disabled={!canPrev}
-              onClick={() => scrollByCard(-1)}
-            >
+            <button type="button" className="tm-carousel-btn" aria-label="Previous ambassadors" onClick={goPrev}>
               <i className="fa-solid fa-angle-left" aria-hidden="true" />
             </button>
-            <button
-              type="button"
-              className="tm-carousel-btn"
-              aria-label="Next ambassadors"
-              disabled={!canNext}
-              onClick={() => scrollByCard(1)}
-            >
+            <button type="button" className="tm-carousel-btn" aria-label="Next ambassadors" onClick={goNext}>
               <i className="fa-solid fa-angle-right" aria-hidden="true" />
             </button>
           </div>
         </div>
 
-        <div className="tm-ambassador-track" ref={trackRef} tabIndex={0}>
-          {AMBASSADORS.map((person) => (
-            <article className="tm-ambassador-card" key={person.name}>
-              <img src={person.img} alt={person.name} className="tm-ambassador-photo" />
-              <div className="tm-ambassador-body">
-                <p className="tm-ambassador-note">{person.note}</p>
-                <h3>{person.name}</h3>
-              </div>
-            </article>
-          ))}
+        <div className="tm-ambassador-viewport">
+          <div
+            className={`tm-ambassador-track${instant ? " is-instant" : ""}`}
+            ref={trackRef}
+            style={{ transform: `translateX(-${index * step}px)` }}
+          >
+            {[0, 1].map((copy) =>
+              AMBASSADORS.map((person) => (
+                <article
+                  className="tm-ambassador-card"
+                  key={`${person.name}-${copy}`}
+                  aria-hidden={copy === 1 ? "true" : undefined}
+                >
+                  <img src={person.img} alt={copy === 0 ? person.name : ""} className="tm-ambassador-photo" />
+                  <div className="tm-ambassador-body">
+                    <p className="tm-ambassador-note">{person.note}</p>
+                    <h3>{person.name}</h3>
+                  </div>
+                </article>
+              ))
+            )}
+          </div>
         </div>
       </div>
     </section>

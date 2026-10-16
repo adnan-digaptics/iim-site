@@ -15,7 +15,7 @@ export default function WorkshopsPage() {
             WORKSHOPS &AMP; EDUCATIONAL PROGRAMS
           </div>
           <h1>
-Workshops That Turn Research Into            <br />
+Workshops That Turn Research Into <br />
             <em>Meaningful Learning.</em>
           </h1>
           <p>Evidence-informed workshops, seminars, and educational sessions at the intersection of Islam, healthcare, and bioethics.</p>
@@ -85,7 +85,7 @@ PARTNER WITH II&M{' '}              <i className="fa-solid fa-arrow-right ms-2" 
               OUR APPROACH
             </div>
             <h2>
-Our Research Informs              <br />
+Our Research Informs <br />
               <em>Real-World Learning.</em>
             </h2>
             <p>II&M combines rigorous research, practical education, expert consultation, and community partnerships to support more compassionate, responsive, and evidence-informed healthcare.</p>
@@ -186,7 +186,7 @@ LEARN MORE{' '}                  <i className="fa-solid fa-arrow-right" />
             LET’S CREATE MEANINGFUL IMPACT TOGETHER
           </div>
           <h2>
-Better understanding is the beginning            <br />
+Better understanding is the beginning <br />
 of better healthcare.          </h2>
           <p>Connect with II&M to bring evidence-informed learning, institutional guidance, and expert perspectives to your community.</p>
         </div>

@@ -20,7 +20,7 @@ export default function BiosciencePage() {
           <p className="hero-eyebrow-text-gold">EXPLORING BIOSCIENCE &amp; ISLAM</p>
           <div className="hero-eyebrow-bar-maroon" />
           <h1 className="hero-seamless-title">
-Bring Bioscience &amp; Islam            <br />
+Bring Bioscience &amp; Islam <br />
 {' '}Into Your Curriculum          </h1>
           <p className="hero-seamless-lead">An interdisciplinary, adaptable educational program helping students explore the big questions at the intersection of bioscience and Islamic theology.</p>
           <div className="hero-seamless-actions">
@@ -125,7 +125,7 @@ A more compassionate future.          </p>
                 <i className="fa-solid fa-building-columns" />
               </span>
               <h3>
-Universities &amp;                <br />
+Universities &amp; <br />
 Medical Schools              </h3>
               <p>Enrich biomedical, pre-med and interdisciplinary programs.</p>
             </div>
@@ -136,7 +136,7 @@ Medical Schools              </h3>
                 <i className="fa-solid fa-school" />
               </span>
               <h3>
-Islamic Schools                <br />
+Islamic Schools <br />
 &amp; Colleges              </h3>
               <p>Integrate science and Islamic thought in faith-based education.</p>
             </div>
@@ -147,7 +147,7 @@ Islamic Schools                <br />
                 <i className="fa-solid fa-stethoscope" />
               </span>
               <h3>
-Pre-Health                <br />
+Pre-Health <br />
 Programs              </h3>
               <p>Equip future healthcare professionals with a holistic perspective.</p>
             </div>
@@ -158,7 +158,7 @@ Programs              </h3>
                 <i className="fa-solid fa-mosque" />
               </span>
               <h3>
-Faith-Based Educational                <br />
+Faith-Based Educational <br />
 Institutions              </h3>
               <p>Create spaces for rigorous, values-based dialogue.</p>
             </div>

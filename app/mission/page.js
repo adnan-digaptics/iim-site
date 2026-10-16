@@ -109,10 +109,8 @@ export default function MissionPage() {
             <p className="hero-eyebrow-text-gold msn-hero-eyebrow">OUR MISSION</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Advancing
-              <br />
-              understanding.
-              <br />
+              Advancing <br />
+              understanding. <br />
               <em>Transforming care.</em>
             </h1>
             <p className="hero-seamless-lead">
@@ -174,8 +172,7 @@ export default function MissionPage() {
           <div className="col-lg-5 msn-vision-copy">
             <p className="msn-eyebrow">OUR VISION</p>
             <h2 className="msn-h2">
-              A more compassionate,
-              <br />
+              A more compassionate, <br />
               inclusive, and just healthcare future.
             </h2>
             <p className="msn-body">

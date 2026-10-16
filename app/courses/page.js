@@ -8,31 +8,31 @@ export const metadata = {
 
 const partners = [
   {
-    logo: asset("/images/partners/icons/muslim-edex.png"),
+    logo: asset("/images/partners/logos/muslim-edex.webp"),
     name: "Muslim EdEx",
     sub: null,
     text: "Professional learning platform",
   },
   {
-    logo: asset("/images/partners/icons/imana.png"),
+    logo: asset("/images/partners/logos/imana.webp"),
     name: "IMANA",
     sub: null,
     text: "Medical education & professional development",
   },
   {
-    logo: asset("/images/partners/icons/albalagh.png"),
+    logo: asset("/images/partners/logos/albalagh.png"),
     name: "ALBALAGH ACADEMY",
     sub: null,
     text: "Islamic scholarship and education",
   },
   {
-    logo: asset("/images/partners/icons/umma-health.png"),
+    logo: asset("/images/partners/logos/umma-health.png"),
     name: "UMMA HEALTH",
     sub: null,
     text: "Community health and healthcare initiatives",
   },
   {
-    logo: asset("/images/partners/icons/workspace-junction.png"),
+    logo: asset("/images/partners/logos/workspace-junction.png"),
     name: "Workspace Junction",
     sub: null,
     text: "Community space and events",
@@ -151,8 +151,8 @@ const howLearning = [
 ];
 
 const legacy = [
-  [asset("/images/partners/icons/imana.png"), "IMANA", "CME-oriented physician education and clinical ethics partnerships."],
-  [asset("/images/partners/icons/albalagh.png"), "AlBalagh Academy", "Structured online programs connecting Islamic sciences and medicine."],
+  [asset("/images/partners/logos/imana.webp"), "IMANA", "CME-oriented physician education and clinical ethics partnerships."],
+  [asset("/images/partners/logos/albalagh.png"), "AlBalagh Academy", "Structured online programs connecting Islamic sciences and medicine."],
   [asset("/images/partners/icons/uchicago-medicine.png"), "The University of Chicago Medicine", "Academic collaboration hosting past teaching and research offerings."],
 ];
 
@@ -175,8 +175,8 @@ export default function CoursesPage() {
             <p className="hero-eyebrow-text-gold">COURSES &amp; CERTIFICATIONS</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Courses That Deepen<br />
-              Understanding.<br />
+              Courses That Deepen <br />
+              Understanding. <br />
               <em>Shape Practice.</em>
             </h1>
             <p className="hero-seamless-lead">
@@ -204,19 +204,27 @@ export default function CoursesPage() {
             <p className="crs-eyebrow">EDUCATIONAL PARTNERS &amp; COLLABORATORS</p>
             <Link href="/education" className="crs-text-link">VIEW ALL PARTNERS <i className="fa-solid fa-arrow-right" /></Link>
           </div>
-          <div className="crs-partners-grid">
-            {partners.map((partner) => (
-              <article className={`crs-partner${partner.name === "360 Growth Lab" ? " crs-partner-360" : ""}`} key={partner.name}>
-                <div className="crs-partner-logo">
-                  <img src={partner.logo} alt="" />
-                </div>
-                <div className="crs-partner-copy">
-                  <h3>{partner.name}</h3>
-                  {partner.sub ? <span className="crs-partner-sub">{partner.sub}</span> : null}
-                  <p>{partner.text}</p>
-                </div>
-              </article>
-            ))}
+          <div className="crs-partners-marquee">
+            <div className="crs-partners-track">
+              {[0, 1].map((copy) =>
+                partners.map((partner) => (
+                  <article
+                    className={`crs-partner${partner.name === "360 Growth Lab" ? " crs-partner-360" : ""}${partner.name === "Muslim EdEx" ? " crs-partner-edex" : ""}`}
+                    key={`${partner.name}-${copy}`}
+                    aria-hidden={copy === 1 ? "true" : undefined}
+                  >
+                    <div className="crs-partner-logo">
+                      <img src={partner.logo} alt={copy === 0 ? partner.name : ""} />
+                    </div>
+                    <div className="crs-partner-copy">
+                      <h3>{partner.name}</h3>
+                      {partner.sub ? <span className="crs-partner-sub">{partner.sub}</span> : null}
+                      <p>{partner.text}</p>
+                    </div>
+                  </article>
+                ))
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -359,7 +367,7 @@ export default function CoursesPage() {
           <p className="crs-lead">Past offerings have been hosted in collaboration with:</p>
           <div className="crs-legacy-grid">
             {legacy.map(([logo, name, text]) => (
-              <article key={name}>
+              <article className={name === "The University of Chicago Medicine" ? undefined : "crs-legacy-wordmark"} key={name}>
                 <div className="crs-legacy-logo">
                   <img src={logo} alt={name} />
                 </div>

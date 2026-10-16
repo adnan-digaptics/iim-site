@@ -15,7 +15,7 @@ export default function PodcastPage() {
             PODCAST
           </div>
           <h1>
-The Medic &amp;            <br />
+The Medic &amp; <br />
             <em>The Mufti Podcast.</em>
           </h1>
           <p>Big questions about the human being. Islam and biomedicine in dialogue through thoughtful conversations on science, spirituality, and healthcare.</p>
@@ -85,7 +85,7 @@ PARTNER WITH II&M{' '}              <i className="fa-solid fa-arrow-right ms-2" 
               OUR APPROACH
             </div>
             <h2>
-Dialogue for a              <br />
+Dialogue for a <br />
               <em>More Human Future.</em>
             </h2>
             <p>II&M combines rigorous research, practical education, expert consultation, and community partnerships to support more compassionate, responsive, and evidence-informed healthcare.</p>
@@ -209,7 +209,7 @@ LEARN MORE{' '}                  <i className="fa-solid fa-arrow-right" />
             LET’S CREATE MEANINGFUL IMPACT TOGETHER
           </div>
           <h2>
-Better understanding is the beginning            <br />
+Better understanding is the beginning <br />
 of better healthcare.          </h2>
           <p>Connect with II&M to bring evidence-informed learning, institutional guidance, and expert perspectives to your community.</p>
         </div>

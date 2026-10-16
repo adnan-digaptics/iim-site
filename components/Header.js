@@ -18,6 +18,16 @@ const NAV = [
     ],
   },
   {
+    label: "Research",
+    href: "/research",
+    items: [["Research & Impact", "/research"]],
+  },
+  {
+    label: "Resources",
+    href: "/resources",
+    items: [["Resources", "/resources"]],
+  },
+  {
     label: "Education",
     href: "/education",
     items: [
@@ -30,6 +40,11 @@ const NAV = [
     label: "Consultation",
     href: "/consultation",
     items: [["Consultation", "/consultation"]],
+  },
+  {
+    label: "Speaking",
+    href: "/speaking",
+    items: [["Speaking", "/speaking"]],
   },
   {
     label: "Books",
@@ -99,7 +114,21 @@ export default function Header() {
             <ul className="navbar-nav mx-auto">
               {NAV.map((item) => {
                 const active = isActive(path, item.href) || item.items.some(([, href]) => isActive(path, href));
-                const shown = menu === item.label;
+                const hasMenu = item.items.length > 1;
+                const shown = hasMenu && menu === item.label;
+                if (!hasMenu) {
+                  return (
+                    <li className="nav-item" key={item.label}>
+                      <Link
+                        className={`nav-link${active ? " active" : ""}`}
+                        href={item.href}
+                        onClick={() => setOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  );
+                }
                 return (
                   <li
                     className={`nav-item dropdown${shown ? " show" : ""}`}

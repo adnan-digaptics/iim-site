@@ -157,8 +157,7 @@ export default function EducationPage() {
               EDUCATION <span aria-hidden="true">|</span> LEARNING FOR A MORE COMPASSIONATE CARE
             </p>
             <h1 className="hero-seamless-title">
-              Education
-              <br />
+              Education <br />
               <em>that informs care.</em>
             </h1>
             <p className="hero-seamless-lead">

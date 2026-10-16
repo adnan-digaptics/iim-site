@@ -158,8 +158,7 @@ export default function ImpactPage() {
             <p className="hero-eyebrow-text-gold imp-hero-eyebrow">OUR IMPACT</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              From Research to
-              <br />
+              From Research to <br />
               <em>Real-World Change.</em>
             </h1>
             <p className="hero-seamless-lead">
@@ -236,8 +235,7 @@ export default function ImpactPage() {
           <div className="imp-national-grid">
             <div className="imp-national-copy">
               <h2 className="imp-h2">
-                Research with
-                <br />
+                Research with <br />
                 National Reach
               </h2>
               <p className="imp-body">
@@ -402,8 +400,7 @@ export default function ImpactPage() {
         <div className="imp-cta-inner">
           <div className="imp-cta-content">
             <h2>
-              Let&apos;s Build More Meaningful
-              <br />
+              Let&apos;s Build More Meaningful <br />
               Impact Together.
             </h2>
             <div className="imp-cta-divider" aria-hidden="true" />

@@ -15,7 +15,7 @@ export default function CurriculumPage() {
             INSTITUTIONAL CURRICULUM
           </div>
           <h1>
-Bring Bioscience &amp; Islam            <br />
+Bring Bioscience &amp; Islam <br />
             <em>Into Your Curriculum.</em>
           </h1>
           <p>An interdisciplinary, adaptable educational program helping students explore the big questions at the intersection of bioscience, medicine, and Islamic theology.</p>
@@ -85,7 +85,7 @@ PARTNER WITH II&M{' '}              <i className="fa-solid fa-arrow-right ms-2" 
               OUR APPROACH
             </div>
             <h2>
-A Simple Pathway              <br />
+A Simple Pathway <br />
               <em>for Implementation</em>
             </h2>
             <p>II&M combines rigorous research, practical education, expert consultation, and community partnerships to support more compassionate, responsive, and evidence-informed healthcare.</p>
@@ -169,7 +169,7 @@ LEARN MORE{' '}                  <i className="fa-solid fa-arrow-right" />
             LET’S CREATE MEANINGFUL IMPACT TOGETHER
           </div>
           <h2>
-Better understanding is the beginning            <br />
+Better understanding is the beginning <br />
 of better healthcare.          </h2>
           <p>Connect with II&M to bring evidence-informed learning, institutional guidance, and expert perspectives to your community.</p>
         </div>

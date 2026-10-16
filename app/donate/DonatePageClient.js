@@ -94,11 +94,11 @@ const IMPACT = [
 ];
 
 const PARTNERS = [
-  [asset("/images/partners/icons/muslim-edex.png"), "Muslim EdEx", "Professional learning platform"],
-  [asset("/images/partners/icons/imana.png"), "IMANA", "Medical education & professional development"],
-  [asset("/images/partners/icons/albalagh.png"), "ALBALAGH INSTITUTE", "Islamic scholarship and education"],
-  [asset("/images/partners/icons/umma-health.png"), "UMMA HEALTH", "Community health and healthcare initiatives"],
-  [asset("/images/partners/icons/workspace-junction.png"), "Workspace Junction", "Community space and events"],
+  [asset("/images/partners/logos/muslim-edex.webp"), "Muslim EdEx", "Professional learning platform"],
+  [asset("/images/partners/logos/imana.webp"), "IMANA", "Medical education & professional development"],
+  [asset("/images/partners/logos/albalagh.png"), "ALBALAGH INSTITUTE", "Islamic scholarship and education"],
+  [asset("/images/partners/logos/umma-health.png"), "UMMA HEALTH", "Community health and healthcare initiatives"],
+  [asset("/images/partners/logos/workspace-junction.png"), "Workspace Junction", "Community space and events"],
   [asset("/images/partners/icons/360-growth-lab.png"), "360 Growth Lab", "Technology and digital innovation"],
 ];
 
@@ -180,8 +180,8 @@ export default function DonatePageClient() {
             <p className="hero-eyebrow-text-gold">SUPPORT II&amp;M</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Real Knowledge.<br />
-              Real People.<br />
+              Real Knowledge. <br />
+              Real People. <br />
               Real Change.
             </h1>
             <p className="hero-seamless-lead">
@@ -416,7 +416,7 @@ export default function DonatePageClient() {
           <div className="col-12 col-lg-6 donate-cta-copy">
             <div className="donate-cta-copy-inner">
               <h2>
-                Together, We Can Create a More<br />
+                Together, We Can Create a More <br />
                 Compassionate Healthcare Future
               </h2>
               <p>
@@ -447,16 +447,24 @@ export default function DonatePageClient() {
               PARTNER WITH US <i className="fa-solid fa-arrow-right" />
             </Link>
           </div>
-          <div className="donate-partners-grid">
-            {PARTNERS.map(([logo, name, text]) => (
-              <article className="donate-partner" key={name}>
-                <div className="donate-partner-logo">
-                  <img src={logo} alt="" />
-                </div>
-                <h3>{name}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
+          <div className="donate-partners-marquee">
+            <div className="donate-partners-track">
+              {[0, 1].map((copy) =>
+                PARTNERS.map(([logo, name, text]) => (
+                  <article
+                    className={`donate-partner${name === "Muslim EdEx" ? " donate-partner-edex" : ""}`}
+                    key={`${name}-${copy}`}
+                    aria-hidden={copy === 1 ? "true" : undefined}
+                  >
+                    <div className="donate-partner-logo">
+                      <img src={logo} alt={copy === 0 ? name : ""} />
+                    </div>
+                    <h3>{name}</h3>
+                    <p>{text}</p>
+                  </article>
+                ))
+              )}
+            </div>
           </div>
         </div>
       </section>

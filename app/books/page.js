@@ -26,14 +26,16 @@ export default function BooksPage() {
     <div className="books-page">
       <header className="hero-seamless hero-books-seamless">
         <div className="hero-bg-wrapper">
-          <img src={asset("/images/books-hero-still.jpg")} alt="Scholarly books on Islam, medicine, and ethics" className="hero-bg-img" />
+          <img src={asset("/images/books-hero-still.jpg")} alt="Scholarly books on Islam, medicine, and ethics" className="hero-bg-img" loading="eager" />
+          <div className="hero-gradient-overlay" />
+          <div className="hero-watermark-overlay" />
         </div>
         <div className="container hero-container-relative">
           <div className="hero-content-inner">
             <p className="hero-eyebrow-text-gold">BOOKS &amp; SCHOLARLY WORKS</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Books that deepen<br />
+              Books that deepen <br />
               <em>understanding.</em>
             </h1>
             <p className="hero-seamless-lead">
@@ -45,7 +47,13 @@ export default function BooksPage() {
             </div>
           </div>
           <div className="hero-seamless-quote">
-            <p className="quote-text">Scholarship that informs education, ethics, and care.</p>
+            <p className="quote-text">
+              Scholarship that
+              <br />
+              informs education,
+              <br />
+              ethics, and care.
+            </p>
             <div className="quote-gold-bar" />
           </div>
         </div>

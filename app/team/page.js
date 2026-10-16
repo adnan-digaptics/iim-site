@@ -79,8 +79,7 @@ export default function TeamPage() {
             <p className="hero-eyebrow-text-gold tm-hero-eyebrow">OUR TEAM</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Meet the People
-              <br />
+              Meet the People <br />
               <em>Behind II&amp;M.</em>
             </h1>
             <p className="hero-seamless-lead">

@@ -20,10 +20,10 @@ export default function HomePage() {
           <p className="hero-eyebrow-text-gold">BRIDGING FAITH, ETHICS, AND MEDICINE</p>
           <div className="hero-eyebrow-bar-maroon" />
           <h1 className="hero-seamless-title">
-Advancing            <br />
-{' '}knowledge.            <br />
+Advancing <br />
+{' '}knowledge. <br />
 {' '}            <em>
-Transforming              <br />
+Transforming <br />
 {' '}healthcare.            </em>
 {' '}          </h1>
           <p className="hero-seamless-lead">
@@ -97,7 +97,7 @@ meets responsibility.                </p>
                 <span className="story-exact-eyebrow-bar" />
               </div>
               <h2 className="story-exact-title">
-Listening. Learning.                <br />
+Listening. Learning. <br />
 {' '}Creating Solutions.              </h2>
               <p className="story-exact-desc">II&amp;M began with a simple but urgent question: Where is the voice of Muslim patients and healthcare professionals? We started with research to understand their needs, developed reliable tools to measure them, and identified critical gaps in care and knowledge.</p>
               <p className="story-exact-desc">Today, we build on that foundation through education, consultation, and scholarly engagement — helping close the gaps and equipping healthcare professionals and institutions to provide culturally informed, ethically grounded, and compassionate care.</p>
@@ -118,7 +118,7 @@ OUR HISTORY &amp; MISSION{' '}                <i className="fa-solid fa-arrow-ri
               <span className="expertise-eyebrow-bar" />
             </div>
             <h2 className="expertise-heading">
-Education, Consultation              <br />
+Education, Consultation <br />
 {' '}and Thought Leadership            </h2>
             <p className="expertise-desc">We partner with individuals, institutions, and communities to advance understanding and improve healthcare experiences for Muslim patients and healthcare professionals.</p>
           </div>
@@ -186,7 +186,7 @@ empowers care.                </p>
                     <div className="learning-card">
                       <img src={asset("/images/course-bioethics.jpg")} alt="Islamic Bioethics: A Primer for Muslim Physicians" className="learning-card-img" loading="lazy" />
                       <h3 className="learning-card-title">
-Islamic Bioethics:                        <br />
+Islamic Bioethics: <br />
 A Primer for Muslim Physicians                      </h3>
                       <p className="learning-card-text">Foundational frameworks for ethical decision-making.</p>
                       <Link href="/courses" className="card-maroon-link">
@@ -287,7 +287,7 @@ EXPLORE RESEARCH &amp; IMPACT{' '}              <i className="fa-solid fa-arrow-
                         II&amp;M PRESENTS
                       </div>
                       <h3 className="podcast-main-name">
-The Medic                        <br />
+The Medic <br />
 &amp; The Mufti                      </h3>
                       <div className="podcast-categories">
                         ISLAM · ETHICS · BIOMEDICINE
@@ -327,8 +327,8 @@ LISTEN TO THE PODCAST{' '}                    <i className="fa-solid fa-arrow-ri
                 <span className="eyebrow-text eyebrow-gold">LET'S CREATE MEANINGFUL IMPACT TOGETHER</span>
               </div>
               <h2 className="cta-emerald-title">
-Better understanding                <br />
-{' '}is the beginning of                <br />
+Better understanding <br />
+{' '}is the beginning of <br />
 {' '}better healthcare.              </h2>
               <p className="cta-emerald-desc">Connect with II&amp;M to bring evidence-informed learning, institutional guidance, and expert perspectives to your community.</p>
               <div className="cta-emerald-actions">
