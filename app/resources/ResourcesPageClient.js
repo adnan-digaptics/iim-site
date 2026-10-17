@@ -157,79 +157,95 @@ const AUDIENCE_CARDS = [
   },
 ];
 
-function visiblePublicationCount() {
-  if (typeof window === "undefined") return 5;
-  const width = window.innerWidth;
-  if (width >= 1200) return 5;
-  if (width >= 992) return 3;
-  if (width >= 768) return 2;
-  return 1;
-}
-
 export default function ResourcesPageClient() {
   const [draft, setDraft] = useState("");
   const [query, setQuery] = useState("");
   const [audience, setAudience] = useState("all");
   const [type, setType] = useState("");
-  const [pubIndex, setPubIndex] = useState(0);
-  const [instant, setInstant] = useState(false);
-  const [paused, setPaused] = useState(false);
-  const [visiblePubs, setVisiblePubs] = useState(5);
-  const jumpTarget = useRef(null);
-  const pubIndexRef = useRef(0);
+  const scroller = useRef(null);
+  const pausedRef = useRef(false);
   const pubCount = PUBLICATIONS.length;
-  pubIndexRef.current = pubIndex;
   const slides = [...PUBLICATIONS, ...PUBLICATIONS];
 
   useEffect(() => {
-    function sync() {
-      const next = visiblePublicationCount();
-      setVisiblePubs((current) => {
-        if (current !== next) setPubIndex(0);
-        return next;
-      });
-    }
-    sync();
-    window.addEventListener("resize", sync);
-    return () => window.removeEventListener("resize", sync);
-  }, []);
+    const el = scroller.current;
+    if (!el) return;
+    const query = window.matchMedia("(max-width: 991px)");
+    let frame;
+    let timer;
+    let anim;
 
-  useEffect(() => {
-    if (paused || instant) return undefined;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
-    const id = window.setInterval(() => {
-      setPubIndex((current) => (current >= pubCount ? current : current + 1));
-    }, 4000);
-    return () => window.clearInterval(id);
-  }, [paused, instant, pubCount]);
-
-  useEffect(() => {
-    if (pubIndex < pubCount || jumpTarget.current != null) return undefined;
-    const timer = window.setTimeout(() => {
-      setInstant(true);
-      setPubIndex(0);
-    }, 480);
-    return () => window.clearTimeout(timer);
-  }, [pubIndex, pubCount]);
-
-  useEffect(() => {
-    if (!instant) return undefined;
-    let second = 0;
-    const first = window.requestAnimationFrame(() => {
-      second = window.requestAnimationFrame(() => {
-        setInstant(false);
-        if (jumpTarget.current != null) {
-          const target = jumpTarget.current;
-          jumpTarget.current = null;
-          setPubIndex(target);
-        }
-      });
-    });
-    return () => {
-      window.cancelAnimationFrame(first);
-      window.cancelAnimationFrame(second);
+    const wrap = (value) => {
+      const half = el.scrollWidth / 2;
+      if (half <= 1) return 0;
+      return ((value % half) + half) % half;
     };
-  }, [instant]);
+
+    const fitCards = () => {
+      const mobile = query.matches;
+      const size = mobile ? `${el.clientWidth}px` : "";
+      el.querySelectorAll(".res-pub-card").forEach((card) => {
+        card.style.flex = mobile ? `0 0 ${size}` : "";
+        card.style.width = size;
+        card.style.maxWidth = size;
+      });
+    };
+
+    const cardStep = () => {
+      fitCards();
+      const card = el.querySelector(".res-pub-card");
+      return card ? card.getBoundingClientRect().width : el.clientWidth;
+    };
+
+    const animateBy = (distance) => {
+      const start = el.scrollLeft;
+      const began = performance.now();
+      cancelAnimationFrame(anim);
+      const step = (now) => {
+        const progress = Math.min(1, (now - began) / 650);
+        const eased = 1 - (1 - progress) ** 3;
+        el.scrollLeft = wrap(start + distance * eased);
+        if (progress < 1) anim = requestAnimationFrame(step);
+      };
+      anim = requestAnimationFrame(step);
+    };
+
+    const start = () => {
+      cancelAnimationFrame(frame);
+      cancelAnimationFrame(anim);
+      clearInterval(timer);
+      if (query.matches) {
+        const stepWidth = cardStep();
+        el.scrollLeft = stepWidth > 1 ? wrap(Math.round(el.scrollLeft / stepWidth) * stepWidth) : 0;
+        timer = window.setInterval(() => {
+          if (!pausedRef.current) animateBy(cardStep());
+        }, 3200);
+        return;
+      }
+      const tick = () => {
+        if (!pausedRef.current) {
+          const half = el.scrollWidth / 2;
+          if (half > 1) {
+            const next = el.scrollLeft + 0.65;
+            el.scrollLeft = next >= half ? next - half : next;
+          }
+        }
+        frame = requestAnimationFrame(tick);
+      };
+      frame = requestAnimationFrame(tick);
+    };
+
+    start();
+    query.addEventListener("change", start);
+    window.addEventListener("resize", start);
+    return () => {
+      query.removeEventListener("change", start);
+      window.removeEventListener("resize", start);
+      cancelAnimationFrame(frame);
+      cancelAnimationFrame(anim);
+      clearInterval(timer);
+    };
+  }, []);
 
   const results = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -261,28 +277,24 @@ export default function ResourcesPageClient() {
     document.getElementById("featured-resources")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  function goNext() {
-    setPubIndex((current) => (current >= pubCount ? current : current + 1));
-  }
-
-  function goPrev() {
-    if (pubIndexRef.current <= 0) {
-      jumpTarget.current = pubCount - 1;
-      setInstant(true);
-      setPubIndex(pubCount);
-      return;
-    }
-    setPubIndex(pubIndexRef.current - 1);
+  function movePublications(direction) {
+    const el = scroller.current;
+    if (!el) return;
+    const card = el.querySelector(".res-pub-card");
+    const step = card ? card.getBoundingClientRect().width : el.clientWidth;
+    const half = el.scrollWidth / 2;
+    if (half <= 1) return;
+    el.scrollLeft = ((el.scrollLeft + direction * step) % half + half) % half;
   }
 
   function onCarouselKey(event) {
     if (event.key === "ArrowRight") {
       event.preventDefault();
-      goNext();
+      movePublications(1);
     }
     if (event.key === "ArrowLeft") {
       event.preventDefault();
-      goPrev();
+      movePublications(-1);
     }
   }
 
@@ -478,32 +490,33 @@ export default function ResourcesPageClient() {
             aria-roledescription="carousel"
             aria-label="Research publications"
             onKeyDown={onCarouselKey}
-            onMouseEnter={() => setPaused(true)}
-            onMouseLeave={() => setPaused(false)}
-            onFocus={() => setPaused(true)}
-            onBlur={() => setPaused(false)}
+            onMouseEnter={() => {
+              pausedRef.current = true;
+            }}
+            onMouseLeave={() => {
+              pausedRef.current = false;
+            }}
+            onFocus={() => {
+              pausedRef.current = true;
+            }}
+            onBlur={() => {
+              pausedRef.current = false;
+            }}
           >
             <button
               type="button"
               className="res-carousel-btn res-carousel-btn-prev"
               aria-label="Previous publications"
-              onClick={goPrev}
+              onClick={() => movePublications(-1)}
             >
               <i className="fa-solid fa-chevron-left" />
             </button>
-            <div className="res-carousel-viewport">
-              <div
-                className={`res-carousel-track${instant ? " is-instant" : ""}`}
-                style={{
-                  width: `${(slides.length / visiblePubs) * 100}%`,
-                  transform: `translateX(-${Math.min(pubIndex, pubCount) * (100 / slides.length)}%)`,
-                }}
-              >
+            <div className="res-carousel-viewport" ref={scroller}>
+              <div className="res-carousel-track">
                 {slides.map((item, index) => (
                   <article
                     className="res-pub-card"
                     key={`${item.id}-${index}`}
-                    style={{ flex: `0 0 ${100 / slides.length}%` }}
                     aria-hidden={index >= pubCount ? true : undefined}
                   >
                     <div className="res-pub-media">
@@ -523,7 +536,7 @@ export default function ResourcesPageClient() {
               type="button"
               className="res-carousel-btn res-carousel-btn-next"
               aria-label="Next publications"
-              onClick={goNext}
+              onClick={() => movePublications(1)}
             >
               <i className="fa-solid fa-chevron-right" />
             </button>

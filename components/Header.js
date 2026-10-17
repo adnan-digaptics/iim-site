@@ -33,8 +33,19 @@ const NAV = [
     items: [
       ["Education Overview", "/education"],
       ["Courses", "/courses"],
+      ["Curriculum", "/curriculum"],
       ["Bioscience & Islam", "/bioscience"],
     ],
+  },
+  {
+    label: "Workshops",
+    href: "/workshops",
+    items: [["Workshops", "/workshops"]],
+  },
+  {
+    label: "Podcast",
+    href: "/podcast",
+    items: [["Podcast", "/podcast"]],
   },
   {
     label: "Consultation",

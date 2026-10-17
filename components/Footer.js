@@ -42,6 +42,9 @@ export default function Footer() {
             <ul className="iim-footer-links">
               <li><Link href="/education">Education</Link></li>
               <li><Link href="/courses">Courses</Link></li>
+              <li><Link href="/curriculum">Curriculum</Link></li>
+              <li><Link href="/workshops">Workshops</Link></li>
+              <li><Link href="/podcast">Podcast</Link></li>
               <li><Link href="/bioscience">Bioscience &amp; Islam</Link></li>
               <li><Link href="/books">Books</Link></li>
               <li><Link href="/resources">Resources</Link></li>

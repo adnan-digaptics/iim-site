@@ -238,8 +238,10 @@ export default function CoursesPage() {
           <div className="crs-path-grid">
             {pathways.map(([img, icon, title, text]) => (
               <article className="crs-path" key={title}>
-                <img src={img} alt={title} />
-                <div className="crs-path-icon"><i className={`fa-solid ${icon}`} /></div>
+                <div className="crs-path-media">
+                  <img src={img} alt={title} />
+                  <div className="crs-path-icon"><i className={`fa-solid ${icon}`} /></div>
+                </div>
                 <div className="crs-path-body">
                   <h3>{title}</h3>
                   <p>{text}</p>
