@@ -94,7 +94,7 @@ export default function Header() {
         <div className="container d-flex justify-content-between align-items-center">
           <span>INSTILLING HIKMAH IN HEALTHCARE</span>
           <span>
-            <Link href="/consultation">CONTACT</Link>
+            <Link href="/contact">CONTACT</Link>
             <span className="mx-2">|</span>
             <Link href="/donate">DONATE</Link>
             <Link href="/books" aria-label="Search">
@@ -159,6 +159,7 @@ export default function Header() {
                       {item.label}
                     </button>
                     <ul className={`dropdown-menu${shown ? " show" : ""}`}>
+                      <li className="dropdown-kicker" aria-hidden="true">{item.label}</li>
                       {item.items.map(([label, href]) => (
                         <li key={`${item.label}-${href}`}>
                           <Link

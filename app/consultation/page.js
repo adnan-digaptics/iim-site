@@ -56,8 +56,8 @@ export default function ConsultationPage() {
             <span className="consult-hero-line" />
           </p>
           <h1>
-            Guidance for Today&apos;s
-            <em>Complex Healthcare</em>
+            Guidance for Today&apos;s{" "}
+            <em>Complex Healthcare</em>{" "}
             Challenges.
           </h1>
           <p>

@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="iim-footer-legal">
             <Link href="/consultation">Privacy Policy</Link>
             <Link href="/consultation">Terms</Link>
-            <Link href="/consultation">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </div>
         </div>
       </div>
