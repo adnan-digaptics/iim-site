@@ -20,8 +20,8 @@ export default function BiosciencePage() {
           <p className="hero-eyebrow-text-gold">EXPLORING BIOSCIENCE &amp; ISLAM</p>
           <div className="hero-eyebrow-bar-maroon" />
           <h1 className="hero-seamless-title">
-Bring Bioscience &amp; Islam <br />
-{' '}Into Your Curriculum          </h1>
+            Bring Bioscience &amp; Islam <em>Into Your Curriculum</em>
+          </h1>
           <p className="hero-seamless-lead">An interdisciplinary, adaptable educational program helping students explore the big questions at the intersection of bioscience and Islamic theology.</p>
           <div className="hero-seamless-actions">
             <Link href="/consultation" className="btn-seamless-maroon">REQUEST CURRICULUM INTEGRATION</Link>
@@ -125,8 +125,8 @@ A more compassionate future.          </p>
                 <i className="fa-solid fa-building-columns" />
               </span>
               <h3>
-Universities &amp; <br />
-Medical Schools              </h3>
+                Universities &amp; Medical Schools
+              </h3>
               <p>Enrich biomedical, pre-med and interdisciplinary programs.</p>
             </div>
           </div>
@@ -136,8 +136,8 @@ Medical Schools              </h3>
                 <i className="fa-solid fa-school" />
               </span>
               <h3>
-Islamic Schools <br />
-&amp; Colleges              </h3>
+                Islamic Schools &amp; Colleges
+              </h3>
               <p>Integrate science and Islamic thought in faith-based education.</p>
             </div>
           </div>
@@ -147,8 +147,8 @@ Islamic Schools <br />
                 <i className="fa-solid fa-stethoscope" />
               </span>
               <h3>
-Pre-Health <br />
-Programs              </h3>
+                Pre-Health Programs
+              </h3>
               <p>Equip future healthcare professionals with a holistic perspective.</p>
             </div>
           </div>
@@ -158,8 +158,8 @@ Programs              </h3>
                 <i className="fa-solid fa-mosque" />
               </span>
               <h3>
-Faith-Based Educational <br />
-Institutions              </h3>
+                Faith-Based Educational Institutions
+              </h3>
               <p>Create spaces for rigorous, values-based dialogue.</p>
             </div>
           </div>
@@ -279,28 +279,28 @@ Institutions              </h3>
         <div className="row g-3">
           <div className="col-6 col-lg-3">
             <article className="bio-res">
-              <img src={asset("/images/bio-book-cover.jpg")} alt="Key readings textbook" />
+              <img src={asset("/images/bio-res-readings.jpg")} alt="Key readings textbook" />
               <h3>Key Readings</h3>
               <p>Bridging Bioscience and Islam and other foundational texts.</p>
             </article>
           </div>
           <div className="col-6 col-lg-3">
             <article className="bio-res">
-              <img src={asset("/images/bio-modules-print.jpg")} alt="Teaching modules" />
+              <img src={asset("/images/bio-res-modules.jpg")} alt="Teaching modules" />
               <h3>Teaching Modules</h3>
               <p>Structured materials for each of the seven topics.</p>
             </article>
           </div>
           <div className="col-6 col-lg-3">
             <article className="bio-res">
-              <img src={asset("/images/bio-companion.jpg")} alt="Teacher's Companion" />
+              <img src={asset("/images/bio-res-companion.jpg")} alt="Teacher's Companion" />
               <h3>Teacher's Companion</h3>
               <p>Guidance, discussion questions, and facilitation tips.</p>
             </article>
           </div>
           <div className="col-6 col-lg-3">
             <article className="bio-res">
-              <img src={asset("/images/bio-resource-laptop.jpg")} alt="Additional resources" />
+              <img src={asset("/images/bio-res-laptop.jpg")} alt="Additional resources" />
               <h3>Additional Resources</h3>
               <p>Videos, case studies, and activities for classroom use.</p>
             </article>

@@ -108,10 +108,7 @@ export default function ResearchPage() {
             <p className="hero-eyebrow-text-gold rs-hero-eyebrow">RESEARCH &amp; IMPACT</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Research that <br />
-              reveals needs. <br />
-              <em>Impact that</em> <br />
-              <em>changes care.</em>
+              Research that reveals needs. <em>Impact that changes care.</em>
             </h1>
             <p className="hero-seamless-lead">
               We listen to Muslim patients and healthcare professionals, generate rigorous evidence, and turn insights into education, tools, and better healthcare practice.
@@ -185,8 +182,7 @@ export default function ResearchPage() {
             <div className="rs-approach-copy">
               <p className="rs-eyebrow">OUR APPROACH</p>
               <h2>
-                From Community Voices <br />
-                to Measurable Change.
+                From Community Voices to Measurable Change.
               </h2>
               <p>
                 II&amp;M conducts research that highlights the lived experiences of Muslim patients and healthcare professionals, identifies gaps in knowledge and practice, and informs practical solutions.
@@ -260,8 +256,7 @@ export default function ResearchPage() {
             <div className="rs-edu-inner">
               <p className="rs-eyebrow rs-eyebrow-light">FROM RESEARCH TO REAL-WORLD SOLUTIONS</p>
               <h2>
-                Research is the foundation. <br />
-                Education is how we multiply the impact.
+                Research is the foundation. Education is how we multiply the impact.
               </h2>
               <p>
                 Our research informs our educational programs, consultation services, and advocacy efforts — creating a continuous cycle of knowledge, application, and community benefit.
@@ -281,8 +276,7 @@ export default function ResearchPage() {
             <div className="rs-resources-intro">
               <p className="rs-eyebrow">RESEARCH INTO RESOURCES</p>
               <h2>
-                Tools that put <br />
-                knowledge into practice.
+                Tools that put knowledge into practice.
               </h2>
               <p>
                 We create and curate practical, evidence-informed resources to support healthcare professionals, community leaders, and institutions.
@@ -343,8 +337,7 @@ export default function ResearchPage() {
             <div className="rs-cta-inner">
               <p className="rs-eyebrow rs-eyebrow-light">COLLABORATE WITH II&amp;M</p>
               <h2>
-                Partner with us to <br />
-                turn evidence into action.
+                Partner with us to turn evidence into action.
               </h2>
               <p>
                 We welcome opportunities to collaborate with healthcare institutions, academic centers, community organizations, and funders to advance research, education, and meaningful impact in Muslim health.

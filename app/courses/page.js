@@ -46,7 +46,7 @@ const partners = [
 ];
 
 const pathways = [
-  [asset("/images/bio-topic-book.jpg"), "fa-book-open", "Islamic Bioethics", "Foundational and advanced study of ethical questions in contemporary medicine."],
+  [asset("/images/courses/islamic-bioethics.jpg"), "fa-book-open", "Islamic Bioethics", "Foundational and advanced study of ethical questions in contemporary medicine."],
   [asset("/images/hero-doctor-team.jpg"), "fa-stethoscope", "Muslim Patient Care", "Practical guidance for culturally responsive, faith-sensitive clinical care."],
   [asset("/images/bio-faculty-talk.jpg"), "fa-user-doctor", "Professional Development", "Courses that strengthen ethical judgment and leadership in healthcare."],
   [asset("/images/distinct-building.jpg"), "fa-building-columns", "Institutional Programs", "Curriculum and training designed for schools, hospitals, and organizations."],
@@ -54,7 +54,7 @@ const pathways = [
 
 const upcoming = [
   {
-    img: asset("/images/course-primer.jpg"),
+    img: asset("/images/courses/islamic-bioethics-seminar.jpg"),
     badge: "32 CME CREDITS LISTED BY IMANA",
     title: "Islamic Bioethics — A Primer for Muslim Physicians",
     meta: [
@@ -68,7 +68,7 @@ const upcoming = [
     cta: "LEARN MORE",
   },
   {
-    img: asset("/images/bio-topic-mosque.jpg"),
+    img: asset("/images/courses/islamic-bioethics-library.jpg"),
     badge: null,
     title: "An Intensive Introduction to the Field of Islamic Bioethics",
     meta: [
@@ -175,9 +175,7 @@ export default function CoursesPage() {
             <p className="hero-eyebrow-text-gold">COURSES &amp; CERTIFICATIONS</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Courses That Deepen <br />
-              Understanding. <br />
-              <em>Shape Practice.</em>
+              Courses That Deepen Understanding. <em>Shape Practice.</em>
             </h1>
             <p className="hero-seamless-lead">
               Evidence-informed education at the intersection of Islam, biomedicine, and ethics for healthcare professionals, students, educators, and institutions.
@@ -401,7 +399,7 @@ export default function CoursesPage() {
 
       <section className="crs-cta">
         <div className="crs-cta-media">
-          <img src={asset("/images/cta-archway.jpg")} alt="Islamic architectural archway" />
+          <img src={asset("/images/courses/cta-learn.jpg")} alt="Illuminated mosque and minaret at night" />
         </div>
         <div className="crs-cta-copy">
           <p className="crs-eyebrow crs-eyebrow-gold">LET&apos;S LEARN TOGETHER</p>

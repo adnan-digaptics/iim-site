@@ -18,14 +18,36 @@ const EPISODES = [
 ];
 
 const GUESTS = [
-  ["Dr. Mohd Yusof Mohamad", "Yale University", "/images/podcast/guest-mohamad.jpg"],
-  ["Dr. Omar Qureshi", "University of Chicago", "/images/podcast/guest-qureshi.jpg"],
-  ["Dr. Macksood Aftab", "University of Oxford", "/images/bio-team-4.jpg"],
-  ["Dr. Shoaib A. Malik", "Harvard Medical Corporation", "/images/bio-team-2.jpg"],
-  ["Usama Javed Mirza", "AlMaghrib Institute", "/images/podcast/guest-mirza.jpg"],
-  ["Dr. Ahsan", "UT Southwestern", "/images/podcast/guest-ahsan.jpg"],
-  ["Shaykh Bilal Ali Ansari", "Zaytuna College", "/images/podcast/guest-ansari.jpg"],
-  ["Dr. Raudah Yunus", "Harvard", "/images/our-team/raudah.jpg"],
+  ["Dr. Mohd Yusof Mohamad", "International Islamic University Malaysia", "/images/podcast/guest-mohamad.png"],
+  ["Dr. Omar Qureshi", "Yaqeen Institute", "/images/podcast/guest-qureshi.png"],
+  ["Dr. Macksood Aftab", "Michigan State University", "/images/podcast/guest-aftab.png"],
+  ["Dr. Shoaib Malik", "University of Edinburgh", "/images/podcast/guest-malik.png"],
+  ["Dr. Abdurezak Hashi", "International Islamic University Malaysia", "/images/podcast/guest-hashi.png"],
+  ["Usama Javed Mirza", "University of Cambridge", "/images/podcast/guest-mirza.png"],
+  ["Dr. Ahsan Arozullah", "Darul Qasim College", "/images/podcast/guest-ahsan.jpg"],
+  ["Shaykh Bilal Ali Ansari", "Darul Qasim College", "/images/podcast/guest-ansari.png"],
+  ["Dr. Raudah Yunus", "Medical College of Wisconsin", "/images/podcast/guest-yunus.png"],
+  ["Shaykh Hamza Karamali", "Basira Education", "/images/podcast/guest-karamali.png"],
+  ["Dr. Jennifer Wiseman", "Johns Hopkins University", "/images/podcast/guest-wiseman.png"],
+  ["Dr. Anke Bouzenita", "Sultan Qaboos University", ""],
+  ["Dr. Paul Davies", "Arizona State University", "/images/podcast/guest-davies.png"],
+  ["Dr. Jennifer Nagel", "University of Toronto", "/images/podcast/guest-nagel.png"],
+  ["Dr. Tara Shears", "University of Liverpool", "/images/podcast/guest-shears.jpg"],
+  ["Prof. Philip Donoghue", "University of Bristol", "/images/podcast/guest-donoghue.jpg"],
+  ["Prof. Rana Dajani", "Hashemite University", "/images/podcast/guest-dajani.jpg"],
+  ["Prof. Chris Stringer", "Natural History Museum, London", "/images/podcast/guest-stringer.jpg"],
+  ["Prof. Agustín Fuentes", "Princeton University", "/images/podcast/guest-fuentes.jpg"],
+  ["Prof. Megan Peters", "University of California, Irvine", "/images/podcast/guest-peters.webp"],
+  ["Prof. Peter Ulric Tse", "Dartmouth College", "/images/podcast/guest-tse.jpg"],
+  ["Prof. Philip Goff", "Durham University", "/images/podcast/guest-goff.jpg"],
+  ["Dr. James J. Hughes", "University of Massachusetts Boston", "/images/podcast/guest-hughes.jpg"],
+  ["Dr. Anders Sandberg", "Oxford's Future of Humanity Institute", ""],
+  ["Prof. Gregg D. Caruso", "Fairfield University", "/images/podcast/guest-caruso.jpg"],
+  ["Prof. Emilie Caspar", "Ghent University", "/images/podcast/guest-caspar.jpg"],
+  ["Prof. Han Brunner", "Radboud University Medical Center", "/images/podcast/guest-brunner.jpg"],
+  ["Dr. Gwen Adshead", "Ravenswood House", "/images/podcast/guest-adshead.jpg"],
+  ["Prof. Sara Walker", "Arizona State University", "/images/podcast/guest-walker.jpg"],
+  ["Prof. Monica Grady", "The Open University", "/images/podcast/guest-grady.jpg"],
 ];
 
 const PLATFORMS = [
@@ -88,12 +110,11 @@ export default function PodcastPage() {
             <p className="hero-eyebrow-text-gold">PODCAST</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              The Medic &amp; <br />
-              The Mufti Podcast
+              The Medic &amp; The Mufti <em>Podcast</em>
             </h1>
-            <p className="pod-kicker">Big Questions About the Human Being — Islam and Biomedicine in Dialogue</p>
+            <p className="pod-kicker">Big Questions About the Human Being — Islam and Biomedicine in Dialogue.</p>
             <p className="hero-seamless-lead">
-              A thoughtful podcast exploring how medicine and Islamic wisdom intersect to shape ethics, healing, and human well-being. Join Dr. Aasim Padela and distinguished guests for meaningful conversations on science, spirituality, and the big questions that matter.
+              A thought-provoking podcast exploring how medicine and faith intersect to shape health, healing, and human well-being — with conversations grounded in knowledge, compassion, and real-world relevance.
             </p>
             <div className="hero-seamless-actions">
               <a href="#listen" className="btn-seamless-maroon">LISTEN NOW <i className="fa-solid fa-arrow-right" /></a>
@@ -102,15 +123,13 @@ export default function PodcastPage() {
             </div>
           </div>
           <div className="pod-hero-notes">
-          <aside className="pod-award" aria-label="Award recognition shown in the page design. Not independently verified in project records.">
-            <span className="pod-laurel" aria-hidden="true" />
-            <p>
-              Recognised as
-              <strong>Podcast of the Year</strong>
-              <em>2026</em>
-              by the American Writing Awards
-            </p>
-            <span className="pod-laurel pod-laurel-right" aria-hidden="true" />
+          <aside className="pod-award">
+            <a href="https://americanwritingawards.com/podcast-of-the-year" target="_blank" rel="noopener noreferrer">
+              <img
+                src={asset("/images/podcast/podcast-of-the-year-2026.png")}
+                alt="American Writing Awards Podcast of the Year 2026"
+              />
+            </a>
           </aside>
           <aside className="pod-hero-quote">
             <p>
@@ -126,14 +145,27 @@ export default function PodcastPage() {
         </div>
       </header>
 
+      <div className="pod-award-bar">
+        <a className="pod-award-bar-main" href="https://americanwritingawards.com/podcast-of-the-year" target="_blank" rel="noopener noreferrer">
+          <span className="pod-award-bar-icon" aria-hidden="true"><i className="fa-solid fa-microphone" /></span>
+          <span>
+            <strong>Podcast of the Year 2026</strong>
+            <small>AMERICANWRITINGAWARDS.COM</small>
+          </span>
+        </a>
+        <a className="pod-award-bar-cat" href="https://americanwritingawards.com/podcast-of-the-year" target="_blank" rel="noopener noreferrer">
+          <span className="pod-award-bar-icon" aria-hidden="true"><i className="fa-solid fa-book-open" /></span>
+          <strong>RELIGION &amp; SPIRITUALITY</strong>
+        </a>
+      </div>
+
       <section className="pod-about" id="about">
         <div className="container">
           <div className="pod-about-grid">
             <div>
               <p className="pod-eyebrow">ABOUT THE PODCAST</p>
               <h2>
-                Dialogue for a More <br />
-                Human Future.
+                Dialogue for a More Human Future.
               </h2>
               <p>
                 What happens when the expertise of a physician meets the insight of a mufti? The Medic &amp; The Mufti explores ethics, healing, science, spirituality, and the questions that matter most. Through honest and respectful dialogue, the podcast brings together diverse perspectives to foster understanding, not debate — inviting listeners to think more deeply about what it means to be human.
@@ -189,7 +221,7 @@ export default function PodcastPage() {
       <section className="pod-host">
         <div className="container">
           <div className="pod-host-grid">
-            <img src={asset("/images/our-team/padela.jpg")} alt="Dr. Aasim I. Padela" />
+            <img src={asset("/images/our-team/padela-portrait.jpg")} alt="Dr. Aasim I. Padela" />
             <div>
               <p className="pod-eyebrow">MEET THE HOST</p>
               <h2>Dr. Aasim Padela, MD, MSc, FACEP</h2>
@@ -204,7 +236,7 @@ export default function PodcastPage() {
             </div>
             <div className="pod-books">
               <img src={asset("/images/podcast/host-book-bridging.jpg")} alt="Bridging Bioscience and Islam" />
-              <img src={asset("/images/podcast/host-book-shariah.jpg")} alt="Medicine and Shariah" />
+              <img src={asset("/images/book-medicine-shariah.png")} alt="Medicine and Shariah" />
               <img src={asset("/images/podcast/host-book-biomedicine.jpg")} alt="Islam and Biomedicine" />
             </div>
           </div>
@@ -230,10 +262,7 @@ export default function PodcastPage() {
       <section className="pod-episodes" id="episodes">
         <div className="container">
           <div className="pod-head">
-            <div>
-              <p className="pod-eyebrow">FEATURED EPISODES</p>
-            </div>
-            <a href="#episodes" className="pod-more">VIEW ALL EPISODES <i className="fa-solid fa-arrow-right" /></a>
+            <p className="pod-eyebrow">FEATURED EPISODES</p>
           </div>
           <div className="pod-episode-row">
             {EPISODES.map(([num, title, date, image]) => (
@@ -285,8 +314,7 @@ export default function PodcastPage() {
             <div>
               <p className="pod-eyebrow">WHY THIS SERIES MATTERS</p>
               <h2>
-                Big Questions for <br />
-                a More Compassionate World.
+                Big Questions for a More Compassionate World.
               </h2>
             </div>
             <div className="pod-topics">

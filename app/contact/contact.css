@@ -11,12 +11,19 @@
 }
 
 .contact-page .hero-contact-seamless .hero-bg-img {
-  width: 58%;
+  width: 78%;
   object-position: 62% center;
 }
 
 .contact-page .hero-contact-seamless .hero-gradient-overlay {
-  background: linear-gradient(90deg, #faf8f4 0%, #faf8f4 34%, rgba(250, 248, 244, 0.92) 44%, rgba(250, 248, 244, 0.28) 56%, rgba(250, 248, 244, 0) 68%);
+  background: linear-gradient(
+    90deg,
+    #faf8f4 0%,
+    #faf8f4 30%,
+    rgba(250, 248, 244, 0.96) 38%,
+    rgba(250, 248, 244, 0.4) 48%,
+    rgba(250, 248, 244, 0) 56%
+  );
 }
 
 .contact-page .ct-hero-eyebrow {
@@ -25,14 +32,17 @@
 }
 
 .contact-page .hero-contact-seamless .hero-seamless-title {
-  font-size: clamp(36px, 3.6vw, 52px);
-  line-height: 1.12;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
   max-width: 560px;
   color: #172331;
 }
 
 .contact-page .hero-contact-seamless .hero-seamless-lead {
   max-width: 460px;
+  font-size: 16.5px;
+  line-height: 1.6;
 }
 
 .contact-page .hero-contact-seamless .btn-seamless-outline {
@@ -46,9 +56,9 @@
   right: 28px;
   bottom: 32px;
   max-width: 220px;
-  background: #003b35;
+  background: #4a5158;
   padding: 16px 18px 14px;
-  box-shadow: 0 10px 24px rgba(0, 30, 27, 0.18);
+  box-shadow: 0 10px 24px rgba(58, 65, 72, 0.18);
 }
 
 .contact-page .ct-hero-quote::before {
@@ -78,7 +88,7 @@
 
 .contact-page .ct-eyebrow {
   font-family: "DM Sans", sans-serif;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -241,7 +251,7 @@
 }
 
 .contact-page .ct-status-ready {
-  color: #003b35;
+  color: #4a5158;
 }
 
 .contact-page .ct-status-error {
@@ -272,7 +282,7 @@
 }
 
 .contact-page .ct-office-body {
-  background: #003b35;
+  background: #4a5158;
   color: #fff;
   padding: 18px 18px 20px;
 }

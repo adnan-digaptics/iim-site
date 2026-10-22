@@ -8,6 +8,11 @@ import { useEffect, useState } from "react";
 
 const NAV = [
   {
+    label: "Home",
+    href: "/",
+    items: [["Home", "/"]],
+  },
+  {
     label: "About",
     href: "/about",
     items: [
@@ -97,6 +102,14 @@ export default function Header() {
             <Link href="/contact">CONTACT</Link>
             <span className="mx-2">|</span>
             <Link href="/donate">DONATE</Link>
+            <span className="mx-2">|</span>
+            <a
+              href="https://us3.campaign-archive.com/?u=2bae284872df3a573e6e5c828&id=7ddea0acbb"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NEWSLETTER
+            </a>
             <Link href="/books" aria-label="Search">
               <i className="fa-solid fa-magnifying-glass topbar-search-icon" />
             </Link>
@@ -159,7 +172,6 @@ export default function Header() {
                       {item.label}
                     </button>
                     <ul className={`dropdown-menu${shown ? " show" : ""}`}>
-                      <li className="dropdown-kicker" aria-hidden="true">{item.label}</li>
                       {item.items.map(([label, href]) => (
                         <li key={`${item.label}-${href}`}>
                           <Link

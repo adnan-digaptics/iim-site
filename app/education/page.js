@@ -37,7 +37,7 @@ const pathways = [
     href: "/workshops",
   },
   {
-    img: asset("/images/educate/path-bioethics.jpg"),
+    img: asset("/images/educate/path-bioethics-learning.jpg"),
     icon: "fa-book-open",
     title: "Islamic Bioethics Learning",
     text: "Rigorous study of ethical questions at the intersection of Islam, biomedicine, and contemporary practice.",
@@ -47,7 +47,7 @@ const pathways = [
 
 const featured = [
   {
-    img: asset("/images/educate/course-bioethics.jpg"),
+    img: asset("/images/educate/course-bioethics-primer.jpg"),
     title: "Islamic Bioethics: A Primer for Muslim Physicians",
     text: "Core ethical principles, real-world cases, and practical guidance for contemporary healthcare.",
     href: "/courses",
@@ -157,8 +157,7 @@ export default function EducationPage() {
               EDUCATION <span aria-hidden="true">|</span> LEARNING FOR A MORE COMPASSIONATE CARE
             </p>
             <h1 className="hero-seamless-title">
-              Education <br />
-              <em>that informs care.</em>
+              Education <em>that informs care.</em>
             </h1>
             <p className="hero-seamless-lead">
               Evidence-informed learning at the intersection of Islam, ethics, and healthcare.
@@ -208,7 +207,7 @@ export default function EducationPage() {
             <aside className="edu-mission-quote">
               <span className="edu-quote-mark" aria-hidden="true">“</span>
               <p>
-                Education is how we turn knowledge into better care — for individuals, communities, and a more just and compassionate healthcare system.
+                Education is how we turn knowledge into public impact — for individuals, communities, and a more just and compassionate healthcare system.
               </p>
               <div className="edu-quote-line" />
             </aside>
@@ -359,18 +358,18 @@ export default function EducationPage() {
         <div className="row g-0 edu-testimonial-row">
           <div className="col-lg-5 edu-testimonial-media">
             <img
-              src={asset("/images/educate/testimonial.jpg")}
-              alt="Muslim healthcare professional in a white coat"
+              src={asset("/images/educate/testimonial-intern.jpg")}
+              alt="Summer intern in a brown hijab and white blazer"
             />
           </div>
           <div className="col-lg-7 edu-testimonial-copy">
             <span className="edu-quote-mark" aria-hidden="true">“</span>
             <p>
-              II&amp;M&apos;s education programs gave me the language, confidence, and practical tools to serve my patients with greater compassion and understanding. It&apos;s knowledge that truly makes a difference in daily practice.
+              My Summer 2025 internship with II&amp;M allowed me to formally study Islamic bioethics in a way not offered during medical school. Through the Islam and Bioethics course and close mentorship, I gained confidence engaging ethical questions at the intersection of medicine, Islam, and emerging technologies. The experience continues to shape my professional growth.
             </p>
             <div className="edu-testimonial-attr">
               <span className="edu-quote-line" />
-              <cite>MEDICAL RESIDENT, UNITED STATES</cite>
+              <cite>SUMMER 2025 INTERN</cite>
             </div>
           </div>
         </div>

@@ -316,9 +316,7 @@ export default function ResourcesPageClient() {
             <p className="hero-eyebrow-text-gold res-hero-eyebrow">RESOURCES</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Resources for <br />
-              Knowledge. <br />
-              <em>Tools for Better Care.</em>
+              Resources for Knowledge. <em>Tools for Public Impact.</em>
             </h1>
             <p className="hero-seamless-lead">
               Evidence-informed guidance, practical tools, and trusted scholarship at the intersection of Islam and medicine.
@@ -556,8 +554,7 @@ export default function ResourcesPageClient() {
             <div className="res-cta-inner">
               <p className="res-eyebrow res-eyebrow-light">SHARE KNOWLEDGE. CREATE IMPACT.</p>
               <h2>
-                Bring evidence-informed education <br />
-                to your community.
+                Bring evidence-informed education to your community.
               </h2>
               <p>
                 Interested in hosting a workshop, training, or customized session? We offer materials, expert faculty, and support to help you make a difference.

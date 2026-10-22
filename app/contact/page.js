@@ -47,15 +47,7 @@ export default function ContactPage() {
             <p className="hero-eyebrow-text-gold ct-hero-eyebrow">CONTACT US</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Let&apos;s Work Together
-              <br />
-              for a Healthier,
-              <br />
-              <em>
-                More Compassionate
-                <br />
-                Tomorrow.
-              </em>
+              Let&apos;s Work Together for a Healthier, <em>More Compassionate Tomorrow.</em>
             </h1>
             <p className="hero-seamless-lead">
               We welcome your questions, inquiries, and ideas. Whether you&apos;re interested in our research, educational programs, consultation services, or partnership opportunities, our team is here to help.

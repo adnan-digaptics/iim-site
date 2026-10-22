@@ -109,9 +109,7 @@ export default function MissionPage() {
             <p className="hero-eyebrow-text-gold msn-hero-eyebrow">OUR MISSION</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Advancing <br />
-              understanding. <br />
-              <em>Transforming care.</em>
+              Advancing understanding. <em>Transforming care.</em>
             </h1>
             <p className="hero-seamless-lead">
               The Initiative on Islam &amp; Medicine (II&amp;M) advances knowledge, education, and compassionate care at the intersection of Islam, medicine, and the diverse communities we serve.
@@ -131,7 +129,7 @@ export default function MissionPage() {
               <br />
               People.
               <br />
-              Better Care.
+              Public Impact.
               <br />
               Stronger Communities.
             </p>
@@ -172,8 +170,7 @@ export default function MissionPage() {
           <div className="col-lg-5 msn-vision-copy">
             <p className="msn-eyebrow">OUR VISION</p>
             <h2 className="msn-h2">
-              A more compassionate, <br />
-              inclusive, and just healthcare future.
+              A more compassionate, inclusive, and just healthcare future.
             </h2>
             <p className="msn-body">
               We envision healthcare systems and communities where Islamic thought, ethical reflection, and lived experiences inform practices that are compassionate, culturally responsive, and evidence-based — improving health and well-being for individuals and communities everywhere.
@@ -181,9 +178,9 @@ export default function MissionPage() {
           </div>
           <div className="col-lg-3 msn-vision-quote">
             <p>
-              Faith.
+            faith to 
               <br />
-              Knowledge.
+              religion
               <br />
               Compassion.
               <br />

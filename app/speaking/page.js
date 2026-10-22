@@ -44,34 +44,34 @@ const AUDIENCES = [
 
 const SPEAKERS = [
   {
-    name: "Fatema Mirza",
-    lines: ["Treasurer", "Initiative on Islam & Medicine"],
-    image: "/images/our-team/fatema.jpg",
+    name: "Aasim I. Padela, MD, MSc, FACEP",
+    lines: ["Advisor", "Initiative on Islam & Medicine"],
+    image: "/images/our-team/padela-portrait.jpg",
   },
   {
-    name: "Aasim I. Padela, MD, MSc",
-    lines: ["Founder · Chairperson · Director", "Initiative on Islam & Medicine"],
-    image: "/images/our-team/padela.jpg",
+    name: "Faisal Qazi, DO",
+    lines: ["Advisor", "Initiative on Islam & Medicine"],
+    image: "/images/our-team/advisor-faisal-portrait.jpg",
+  },
+  {
+    name: "Najam Fasiuddin, DO",
+    lines: ["Advisor", "Initiative on Islam & Medicine"],
+    image: "/images/our-team/advisor-najam-portrait.png",
+  },
+  {
+    name: "Fatema Mirza",
+    lines: ["Advisor", "Initiative on Islam & Medicine"],
+    image: "/images/our-team/fatema-portrait.jpg",
   },
   {
     name: "Imam Ayman Soliman",
     lines: ["Advisor", "Initiative on Islam & Medicine"],
-    image: "/images/our-team/advisor-ayman.jpg",
-  },
-  {
-    name: "Dr. Waqas Haque",
-    lines: ["Advisor", "Initiative on Islam & Medicine"],
-    image: "/images/our-team/advisor-waqas.jpg",
-  },
-  {
-    name: "Sarah Ahmed",
-    lines: ["Director of Strategic Partnerships", "Initiative on Islam & Medicine"],
-    image: "/images/our-team/sarah.jpg",
+    image: "/images/our-team/advisor-ayman-portrait.jpg",
   },
   {
     name: "Dr. Nasir Malim, DO, MPH",
     lines: ["Advisor", "Initiative on Islam & Medicine"],
-    image: "/images/our-team/advisor-nasir.jpg",
+    image: "/images/our-team/advisor-nasir-portrait.jpg",
   },
 ];
 
@@ -108,9 +108,7 @@ export default function SpeakingPage() {
             <p className="hero-eyebrow-text-gold spk-hero-eyebrow">SPEAKING &amp; ENGAGEMENTS</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Meaningful <br />
-              Conversations <br />
-              <em>for a Healthier Tomorrow.</em>
+              Meaningful Conversations <em>for a Healthier Tomorrow.</em>
             </h1>
             <p className="hero-seamless-lead">
               II&amp;M brings together medical professionals, Islamic scholars, and thought leaders to educate, inspire, and equip diverse audiences with practical insights at the intersection of Islam, medicine, ethics, and society.
@@ -159,8 +157,7 @@ export default function SpeakingPage() {
             <div>
               <p className="spk-eyebrow">SPEAKING TOPICS</p>
               <h2>
-                Timely Topics at the <br />
-                Intersection of Faith and Medicine
+                Timely Topics at the Intersection of Faith and Medicine
               </h2>
               <p className="spk-lead">
                 We offer a range of engaging and evidence-informed presentations tailored to the needs of your audience.
@@ -168,12 +165,12 @@ export default function SpeakingPage() {
               <div className="spk-topic-table">
                 {TOPICS.map(([left, right]) => (
                   <div className="spk-topic-row" key={left}>
-                    <Link href="#speaker-request">
+                    <span>
                       {left} <i className="fa-solid fa-arrow-right" />
-                    </Link>
-                    <Link href="#speaker-request">
+                    </span>
+                    <span>
                       {right} <i className="fa-solid fa-arrow-right" />
-                    </Link>
+                    </span>
                   </div>
                 ))}
               </div>
@@ -194,13 +191,12 @@ export default function SpeakingPage() {
             <aside className="spk-formats">
               <p className="spk-eyebrow">ENGAGEMENT FORMATS</p>
               <h2>
-                Flexible Formats for <br />
-                Every Audience
+                Flexible Formats for Every Audience
               </h2>
               <ul>
                 {FORMATS.map(([icon, title, text]) => (
                   <li key={title}>
-                    <Link href="/consultation">
+                    <span>
                       <span className="spk-format-icon" aria-hidden="true">
                         <i className={`fa-solid ${icon}`} />
                       </span>
@@ -209,7 +205,7 @@ export default function SpeakingPage() {
                         <em>{text}</em>
                       </span>
                       <i className="fa-solid fa-arrow-right" aria-hidden="true" />
-                    </Link>
+                    </span>
                   </li>
                 ))}
               </ul>

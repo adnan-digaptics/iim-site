@@ -1,6 +1,7 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
 import TeamAmbassadors from "./TeamAmbassadors";
+import TeamResearch from "./TeamResearch";
 
 export const metadata = {
   title: "Our Team | Initiative on Islam & Medicine",
@@ -29,28 +30,13 @@ const operations = [
   },
 ];
 
-const research = [
-  {
-    name: "Laila Azam, PhD, MBA",
-    role: "Research Scientist",
-    img: asset("/images/our-team/laila.jpg"),
-    text: "Contributes research that informs education, practice, and policy at the intersection of Islam and medicine.",
-  },
-  {
-    name: "Raudah Yunus",
-    role: "Researcher / Public Health Scholar",
-    img: asset("/images/our-team/raudah.jpg"),
-    text: "Advances community-engaged inquiry to strengthen culturally responsive healthcare and public health.",
-  },
-];
-
 const advisors = [
-  { name: "Adel Syed, MPPA", detail: "Advisor", img: asset("/images/our-team/advisor-adel.jpg") },
-  { name: "Faisal Qazi, DO", detail: "Advisor", img: asset("/images/our-team/advisor-faisal.jpg") },
-  { name: "Najam Fasiuddin, DO", detail: "Advisor", img: asset("/images/our-team/advisor-najam.jpg") },
-  { name: "Dr. Waqas Haque", detail: "Advisor", img: asset("/images/our-team/advisor-waqas.jpg") },
-  { name: "Imam Ayman Soliman", detail: "Advisor", img: asset("/images/our-team/advisor-ayman.jpg") },
-  { name: "Dr. Nasir Malim, DO, MPH", detail: "Advisor", img: asset("/images/our-team/advisor-nasir.jpg") },
+  { name: "Aasim I. Padela, MD, MSc, FACEP", detail: "Advisor", img: asset("/images/our-team/padela-portrait.jpg") },
+  { name: "Faisal Qazi, DO", detail: "Advisor", img: asset("/images/our-team/advisor-faisal-portrait.jpg") },
+  { name: "Najam Fasiuddin, DO", detail: "Advisor", img: asset("/images/our-team/advisor-najam-portrait.png") },
+  { name: "Fatema Mirza", detail: "Advisor", img: asset("/images/our-team/fatema-portrait.jpg") },
+  { name: "Imam Ayman Soliman", detail: "Advisor", img: asset("/images/our-team/advisor-ayman-portrait.jpg") },
+  { name: "Dr. Nasir Malim, DO, MPH", detail: "Advisor", img: asset("/images/our-team/advisor-nasir-portrait.jpg") },
 ];
 
 const advances = [
@@ -79,8 +65,7 @@ export default function TeamPage() {
             <p className="hero-eyebrow-text-gold tm-hero-eyebrow">OUR TEAM</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Meet the People <br />
-              <em>Behind II&amp;M.</em>
+              Meet the People <em>Behind II&amp;M.</em>
             </h1>
             <p className="hero-seamless-lead">
               II&amp;M brings together scholars, clinicians, educators, researchers, and community leaders at the intersection of Islam and medicine — working toward more compassionate, equitable, and evidence-informed healthcare for all.
@@ -117,7 +102,7 @@ export default function TeamPage() {
           <div className="tm-leadership-grid">
             <article className="tm-lead-card">
               <div className="tm-lead-media">
-                <img src={asset("/images/our-team/padela.jpg")} alt="Aasim I. Padela, MD, MSc, FACEP" />
+                <img src={asset("/images/our-team/padela-portrait.jpg")} alt="Aasim I. Padela, MD, MSc, FACEP" />
               </div>
               <div className="tm-lead-body">
                 <h3>Aasim I. Padela, MD, MSc, FACEP</h3>
@@ -141,7 +126,7 @@ export default function TeamPage() {
 
             <article className="tm-lead-card">
               <div className="tm-lead-media">
-                <img src={asset("/images/our-team/fatema.jpg")} alt="Fatema Mirza" />
+                <img src={asset("/images/our-team/fatema-portrait.jpg")} alt="Fatema Mirza" />
               </div>
               <div className="tm-lead-body">
                 <h3>Fatema Mirza</h3>
@@ -185,23 +170,8 @@ export default function TeamPage() {
 
       <section className="tm-research">
         <div className="container">
-          <div className="tm-section-head">
-            <p className="tm-eyebrow">RESEARCH &amp; EDUCATION TEAM</p>
-            <p className="tm-lead">Advancing knowledge. Training the next generation.</p>
-          </div>
+          <TeamResearch />
           <div className="tm-research-grid">
-            {research.map((person) => (
-              <article className="tm-research-card" key={person.name}>
-                <div className="tm-research-media">
-                  <img src={person.img} alt={person.name} />
-                </div>
-                <div className="tm-research-body">
-                  <h3>{person.name}</h3>
-                  <p className="tm-role">{person.role}</p>
-                  <p>{person.text}</p>
-                </div>
-              </article>
-            ))}
             <article className="tm-research-feature">
               <div className="tm-research-feature-media">
                 <img

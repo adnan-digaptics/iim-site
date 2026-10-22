@@ -20,12 +20,8 @@ export default function HomePage() {
           <p className="hero-eyebrow-text-gold">BRIDGING FAITH, ETHICS, AND MEDICINE</p>
           <div className="hero-eyebrow-bar-maroon" />
           <h1 className="hero-seamless-title">
-Advancing <br />
-{' '}knowledge. <br />
-{' '}            <em>
-Transforming <br />
-{' '}healthcare.            </em>
-{' '}          </h1>
+            Advancing knowledge. <em>Transforming healthcare.</em>
+          </h1>
           <p className="hero-seamless-lead">
 We educate, consult, and convene to better serve the needs of{' '}            <em>Muslim</em>
 {' '}patients and healthcare professionals at the intersection of Islam and medicine.          </p>
@@ -36,9 +32,9 @@ We educate, consult, and convene to better serve the needs of{' '}            <e
         </div>
         <div className="hero-seamless-quote">
           <p className="quote-text">
-People.            <br />
-{' '}Principles.            <br />
-{' '}Better Care.          </p>
+Better Care            <br />
+to            <br />
+Public Impact.          </p>
           <div className="quote-gold-bar" />
         </div>
       </div>
@@ -97,8 +93,8 @@ meets responsibility.                </p>
                 <span className="story-exact-eyebrow-bar" />
               </div>
               <h2 className="story-exact-title">
-Listening. Learning. <br />
-{' '}Creating Solutions.              </h2>
+                Listening. Learning. Creating Solutions.
+              </h2>
               <p className="story-exact-desc">II&amp;M began with a simple but urgent question: Where is the voice of Muslim patients and healthcare professionals? We started with research to understand their needs, developed reliable tools to measure them, and identified critical gaps in care and knowledge.</p>
               <p className="story-exact-desc">Today, we build on that foundation through education, consultation, and scholarly engagement — helping close the gaps and equipping healthcare professionals and institutions to provide culturally informed, ethically grounded, and compassionate care.</p>
               <Link href="/about" className="btn-story-mission">
@@ -118,8 +114,8 @@ OUR HISTORY &amp; MISSION{' '}                <i className="fa-solid fa-arrow-ri
               <span className="expertise-eyebrow-bar" />
             </div>
             <h2 className="expertise-heading">
-Education, Consultation <br />
-{' '}and Thought Leadership            </h2>
+              Education, Consultation and Thought Leadership
+            </h2>
             <p className="expertise-desc">We partner with individuals, institutions, and communities to advance understanding and improve healthcare experiences for Muslim patients and healthcare professionals.</p>
           </div>
           <div className="col-lg-8">
@@ -160,34 +156,23 @@ REQUEST A SPEAKER{' '}                    <i className="fa-solid fa-arrow-right 
       </div>
     </section>
     <section className="section-featured-learning">
-      <div className="container-fluid p-0">
-        <div className="row g-0 align-items-stretch">
-          <div className="col-lg-5 p-0">
-            <div className="learning-image-wrap">
-              <img src={asset("/images/learning-lecture.jpg")} alt="Knowledge that empowers care" className="learning-photo-tall" loading="lazy" />
-              <div className="learning-overlay-banner">
-                <p className="learning-overlay-text">
-Knowledge that                  <br />
-empowers care.                </p>
-              </div>
+      <div className="container">
+        <div className="learning-content-wrap">
+          <div className="learning-head">
+            <div className="eyebrow-container">
+              <span className="eyebrow-text">FEATURED LEARNING OPPORTUNITIES</span>
+              <span className="eyebrow-line" />
             </div>
+            <h2 className="learning-main-heading">Courses for Real-World Impact</h2>
+            <p className="learning-subhead">Evidence-informed, practical, and rooted in Islamic ethics.</p>
           </div>
-          <div className="col-lg-7 d-flex">
-            <div className="learning-content-wrap">
-              <div>
-                <div className="eyebrow-container">
-                  <span className="eyebrow-text">FEATURED LEARNING OPPORTUNITIES</span>
-                  <span className="eyebrow-line" />
-                </div>
-                <h2 className="learning-main-heading">Courses for Real-World Impact</h2>
-                <p className="learning-subhead">Evidence-informed, practical, and rooted in Islamic ethics.</p>
-                <div className="row g-3">
+          <div className="row g-4 justify-content-center">
                   <div className="col-md-4">
                     <div className="learning-card">
                       <img src={asset("/images/course-bioethics.jpg")} alt="Islamic Bioethics: A Primer for Muslim Physicians" className="learning-card-img" loading="lazy" />
                       <h3 className="learning-card-title">
-Islamic Bioethics: <br />
-A Primer for Muslim Physicians                      </h3>
+                        Islamic Bioethics: A Primer for Muslim Physicians
+                      </h3>
                       <p className="learning-card-text">Foundational frameworks for ethical decision-making.</p>
                       <Link href="/courses" className="card-maroon-link">
 VIEW COURSE{' '}                        <i className="fa-solid fa-arrow-right ms-1" />
@@ -214,13 +199,10 @@ REQUEST TRAINING{' '}                        <i className="fa-solid fa-arrow-rig
 {' '}                      </Link>
                     </div>
                   </div>
-                </div>
-              </div>
-              <Link href="/courses" className="all-courses-link">
-VIEW ALL COURSES &amp; PROGRAMS{' '}                <i className="fa-solid fa-arrow-right ms-1" />
-{' '}              </Link>
-            </div>
           </div>
+          <Link href="/courses" className="all-courses-link">
+VIEW ALL COURSES &amp; PROGRAMS{' '}            <i className="fa-solid fa-arrow-right ms-1" />
+{' '}          </Link>
         </div>
       </div>
     </section>
@@ -281,14 +263,14 @@ EXPLORE RESEARCH &amp; IMPACT{' '}              <i className="fa-solid fa-arrow-
               <div className="row g-4 align-items-center">
                 <div className="col-lg-5">
                   <div className="podcast-brand-col">
-                    <i className="fa-solid fa-microphone-lines podcast-mic-icon" />
+                    <img src={asset("/images/podcast-stethoscope.png")} alt="" className="podcast-mic-icon" />
                     <div>
                       <div className="podcast-subtag">
                         II&amp;M PRESENTS
                       </div>
                       <h3 className="podcast-main-name">
-The Medic <br />
-&amp; The Mufti                      </h3>
+                        The Medic &amp; The Mufti
+                      </h3>
                       <div className="podcast-categories">
                         ISLAM · ETHICS · BIOMEDICINE
                       </div>
@@ -296,7 +278,7 @@ The Medic <br />
                   </div>
                 </div>
                 <div className="col-lg-7">
-                  <h3 className="podcast-center-title">Meaningful Conversations at the Intersection of Faith and Medicine</h3>
+                  <h3 className="podcast-center-title">Meaningful Conversations at the Intersection of Faith to Religion</h3>
                   <p className="podcast-center-text">Join medical experts and Islamic scholars as we explore today's most important questions in healthcare, ethics, and society.</p>
                   <Link href="/podcast" className="btn-white-pill">
 LISTEN TO THE PODCAST{' '}                    <i className="fa-solid fa-arrow-right ms-2" />
@@ -327,9 +309,8 @@ LISTEN TO THE PODCAST{' '}                    <i className="fa-solid fa-arrow-ri
                 <span className="eyebrow-text eyebrow-gold">LET'S CREATE MEANINGFUL IMPACT TOGETHER</span>
               </div>
               <h2 className="cta-emerald-title">
-Better understanding <br />
-{' '}is the beginning of <br />
-{' '}better healthcare.              </h2>
+                Better understanding is the beginning of better healthcare.
+              </h2>
               <p className="cta-emerald-desc">Connect with II&amp;M to bring evidence-informed learning, institutional guidance, and expert perspectives to your community.</p>
               <div className="cta-emerald-actions">
                 <Link href="/consultation" className="btn-solid-maroon">

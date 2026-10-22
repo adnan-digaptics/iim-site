@@ -158,8 +158,7 @@ export default function ImpactPage() {
             <p className="hero-eyebrow-text-gold imp-hero-eyebrow">OUR IMPACT</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              From Research to <br />
-              <em>Real-World Change.</em>
+              From Research to <em>Real-World Change.</em>
             </h1>
             <p className="hero-seamless-lead">
               II&amp;M advances understanding and improves healthcare through research, educational programs, conferences, workshops, lectures, and strategic partnerships at the intersection of Islam and medicine.
@@ -235,8 +234,7 @@ export default function ImpactPage() {
           <div className="imp-national-grid">
             <div className="imp-national-copy">
               <h2 className="imp-h2">
-                Research with <br />
-                National Reach
+                Research with National Reach
               </h2>
               <p className="imp-body">
                 Through workshops, conferences, research, and lectures, II&amp;M contributes to national conversations on Islam and medicine, engaging diverse communities across the United States.
@@ -334,16 +332,18 @@ export default function ImpactPage() {
           </div>
           <div className="imp-card-grid-4">
             {teaching.map((item) => (
-              <article className="imp-media-card" key={item.title}>
-                <div className="imp-media-card-img">
-                  <img src={item.img} alt="" />
+              <article className="imp-course" key={item.title}>
+                <div className="imp-course-media">
+                  <img src={item.img} alt={item.title} />
                 </div>
-                <div className="imp-media-card-body">
+                <div className="imp-course-body">
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
-                  <Link href="/courses" className="imp-card-arrow" aria-label={`Learn more about ${item.title}`}>
-                    <i className="fa-solid fa-arrow-right" />
-                  </Link>
+                  <div className="imp-course-foot">
+                    <Link href="/courses" className="crs-btn crs-btn-fill crs-btn-sm">
+                      LEARN MORE <i className="fa-solid fa-arrow-right" />
+                    </Link>
+                  </div>
                 </div>
               </article>
             ))}
@@ -400,8 +400,7 @@ export default function ImpactPage() {
         <div className="imp-cta-inner">
           <div className="imp-cta-content">
             <h2>
-              Let&apos;s Build More Meaningful <br />
-              Impact Together.
+              Let&apos;s Build More Meaningful Impact Together.
             </h2>
             <div className="imp-cta-divider" aria-hidden="true" />
             <div className="imp-cta-right">

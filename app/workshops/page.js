@@ -89,9 +89,7 @@ export default function WorkshopsPage() {
             <p className="hero-eyebrow-text-gold">WORKSHOPS &amp; EDUCATIONAL PROGRAMS</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Workshops That Turn <br />
-              Research Into <br />
-              <em>Meaningful Learning.</em>
+              Workshops That Turn Research Into <em>Meaningful Learning.</em>
             </h1>
             <p className="hero-seamless-lead">
               II&amp;M offers evidence-informed workshops, seminars, and educational sessions at the intersection of Islam, healthcare, and bioethics for institutions, professionals, and communities.
@@ -126,8 +124,7 @@ export default function WorkshopsPage() {
             <div className="ws-why-intro">
               <p className="ws-eyebrow">WHY II&amp;M WORKSHOPS</p>
               <h2>
-                Distinctive Learning <br />
-                Grounded in Research.
+                Distinctive Learning Grounded in Research.
               </h2>
             </div>
             <div className="ws-why-cols">
@@ -177,9 +174,7 @@ export default function WorkshopsPage() {
             <div className="ws-practice-intro">
               <p className="ws-eyebrow ws-eyebrow-light">FROM RESEARCH TO PRACTICE</p>
               <h2>
-                Our Research <br />
-                Informs Real-World <br />
-                Learning.
+                Our Research Informs Real-World Learning.
               </h2>
               <p>
                 Our workshops are built on II&amp;M’s ongoing research programs, ensuring that educational content is evidence-informed, relevant, and responsive to community needs.
@@ -259,8 +254,7 @@ export default function WorkshopsPage() {
             <div className="ws-scholar-intro">
               <p className="ws-eyebrow">GROUNDED IN SCHOLARSHIP</p>
               <h2>
-                Workshops Backed by <br />
-                Rigorous Research.
+                Workshops Backed by Rigorous Research.
               </h2>
               <p>
                 Our educational programs draw on peer-reviewed publications and scholarly work at the intersection of Islam, medicine, and bioethics.
@@ -281,9 +275,7 @@ export default function WorkshopsPage() {
               ))}
               <article className="ws-paper-cta">
                 <h3>
-                  Connect <br />
-                  Research to <br />
-                  Your Event.
+                  Connect Research to Your Event.
                 </h3>
                 <p>We can tailor workshop content using our latest research and publications.</p>
                 <Link href="/consultation" className="btn-seamless-outline">

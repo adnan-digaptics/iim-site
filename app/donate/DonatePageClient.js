@@ -180,9 +180,7 @@ export default function DonatePageClient() {
             <p className="hero-eyebrow-text-gold">SUPPORT II&amp;M</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Real Knowledge. <br />
-              Real People. <br />
-              Real Change.
+              Real Knowledge. Real People. Real Change.
             </h1>
             <p className="hero-seamless-lead">
               For years, we listened to Muslim patients, healthcare professionals, and communities. We conducted research, published our findings, and worked with diverse stakeholders. Today, we are bringing together leading thinkers, educators, and practitioners to deliver education, workshops, courses, training, consulting, and speaking engagements — turning knowledge into meaningful impact.
@@ -416,8 +414,7 @@ export default function DonatePageClient() {
           <div className="col-12 col-lg-6 donate-cta-copy">
             <div className="donate-cta-copy-inner">
               <h2>
-                Together, We Can Create a More <br />
-                Compassionate Healthcare Future
+                Together, We Can Create a More Compassionate Healthcare Future
               </h2>
               <p>
                 The research established the need. The evidence built our foundation. Now, your support helps us put that knowledge to work — through education, training, consultation, and speaking that create meaningful change.

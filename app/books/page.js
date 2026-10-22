@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 const works = [
-  [asset("/images/book-medicine-shariah.jpg"), "Medicine & Shariah", "Explores contemporary biomedical questions through Islamic ethics."],
+  [asset("/images/book-medicine-shariah.png"), "Medicine & Shariah", "Explores contemporary biomedical questions through Islamic ethics."],
   [asset("/images/book-islam-biomedicine.jpg"), "Islam and Biomedicine", "Explores the dynamic relationship between Islamic thought and modern biomedicine."],
   [asset("/images/book-organ-donation.jpg"), "Organ Donation in Islam", "A comprehensive exploration of organ transplantation in Islam."],
   [asset("/images/book-muslim-patient.jpg"), "The Muslim Patient", "Practical guidance for providing culturally responsive care to Muslim patients."],
@@ -35,8 +35,7 @@ export default function BooksPage() {
             <p className="hero-eyebrow-text-gold">BOOKS &amp; SCHOLARLY WORKS</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Books that deepen <br />
-              <em>understanding.</em>
+              Books that deepen <em>understanding.</em>
             </h1>
             <p className="hero-seamless-lead">
               Explore books and scholarly works at the intersection of Islam, medicine, ethics, and the human experience.

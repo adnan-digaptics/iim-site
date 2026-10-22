@@ -89,9 +89,7 @@ export default function CurriculumPage() {
             <p className="hero-eyebrow-text-gold">EDUCATIONAL CURRICULUM</p>
             <div className="hero-eyebrow-bar-maroon" />
             <h1 className="hero-seamless-title">
-              Knowledge for a <br />
-              More Compassionate <br />
-              <em>and Ethical Healthcare.</em>
+              Knowledge for a More Compassionate <em>and Ethical Healthcare.</em>
             </h1>
             <p className="hero-seamless-lead">
               II&amp;M&apos;s curriculum provides evidence-informed, Islamically grounded educational programs for healthcare professionals, students, and community members at the intersection of Islam, medicine, and bioethics.
@@ -189,8 +187,7 @@ export default function CurriculumPage() {
           <div className="cu-intro">
             <p className="cu-eyebrow">LEARNING FORMATS</p>
             <h2>
-              Flexible Options for <br />
-              Every Setting.
+              Flexible Options for Every Setting.
             </h2>
           </div>
           <div className="cu-format-list">
@@ -212,8 +209,7 @@ export default function CurriculumPage() {
           <div className="cu-intro">
             <p className="cu-eyebrow">WHO IT&apos;S FOR</p>
             <h2>
-              Building Knowledge <br />
-              Across Communities.
+              Building Knowledge Across Communities.
             </h2>
           </div>
           <div className="cu-who-list">
@@ -234,8 +230,7 @@ export default function CurriculumPage() {
           <div className="cu-intro">
             <p className="cu-eyebrow">RESOURCES FOR EDUCATORS</p>
             <h2>
-              Tools to Teach. <br />
-              Materials to Inspire.
+              Tools to Teach. Materials to Inspire.
             </h2>
             <p>
               We provide curated teaching materials, syllabi, case studies, and discussion guides to support effective and engaging education.
@@ -260,8 +255,7 @@ export default function CurriculumPage() {
           <div className="cu-intro">
             <p className="cu-eyebrow">OUR IMPACT</p>
             <h2>
-              Educating for a More <br />
-              Compassionate Tomorrow.
+              Educating for a More Compassionate Tomorrow.
             </h2>
           </div>
           <CurriculumStats stats={STATS} />

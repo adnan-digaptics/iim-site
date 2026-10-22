@@ -6,7 +6,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 const AMBASSADORS = [
   {
     name: "Mufti Mohammed Zubair Butt",
-    img: asset("/images/our-team/amb-zubair.jpg"),
+    img: asset("/images/our-team/amb-zubair-butt.jpg"),
     note: "Ambassador & Community of Support",
   },
   {

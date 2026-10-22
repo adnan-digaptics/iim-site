@@ -20,13 +20,8 @@ export default function AboutPage() {
           <p className="hero-eyebrow-text-gold">PEOPLE | KNOWLEDGE | MORE COMPASSIONATE CARE</p>
           <div className="hero-eyebrow-bar-maroon" />
           <h1 className="hero-seamless-title">
-About II&amp;M <br />
-{' '}Rooted in <br />
-{' '}research. <br />
-{' '}            <em>
-Transforming <br />
-{' '}care.            </em>
-{' '}          </h1>
+            About II&amp;M Rooted in research. <em>Transforming care.</em>
+          </h1>
           <p className="hero-seamless-lead">The Initiative on Islam &amp; Medicine (II&amp;M) works at the intersection of Islam and healthcare to build a more informed, equitable, and compassionate healthcare system for all.</p>
           <div className="hero-seamless-actions">
             <a href="#story" className="btn-seamless-maroon">
@@ -37,9 +32,9 @@ OUR STORY{' '}              <i className="fa-solid fa-arrow-down ms-2" />
         </div>
         <div className="hero-seamless-quote">
           <p className="quote-text">
-Knowledge.            <br />
-{' '}People.            <br />
-{' '}Better Care.          </p>
+          care to            <br />
+{' '}Impact.            <br />
+{' '}Better Impact         </p>
           <div className="quote-gold-bar" />
         </div>
       </div>
@@ -55,7 +50,7 @@ Knowledge.            <br />
               </div>
               <h2 className="expertise-heading">Our Story</h2>
               <p className="expertise-desc">II&amp;M began by researching the needs of Muslim patients, communities, and healthcare professionals because their voices were often missing from funding and policy conversations. We developed replicable, verifiable, and vetted tools to identify gaps and generate evidence.</p>
-              <p className="expertise-desc">Through this work, we recognized that many clinicians and healthcare workers lacked the knowledge and confidence to address Muslim patients' concerns. This insight led II&amp;M to expand into education, training, consultation, and scholarly engagement — turning evidence into practical solutions for better care.</p>
+              <p className="expertise-desc">Through this work, we recognized that many clinicians and healthcare workers lacked the knowledge and confidence to address Muslim patients' concerns. This insight led II&amp;M to expand into education, training, consultation, and scholarly engagement — turning evidence into practical solutions for public impact.</p>
             </div>
             <div className="mt-3">
               <Link href="/research" className="btn-outline-bordered">
@@ -88,7 +83,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
             <h2 className="expertise-heading m-0">From Listening to Lasting Impact</h2>
           </div>
           <div className="col-lg-6 text-lg-end mt-2 mt-lg-0">
-            <p className="text-muted m-0" style={{ fontSize: "13.5px", maxWidth: "460px", marginLeft: "auto" }}>A growing body of work, shaped by community needs, evidence, and a commitment to real-world change.</p>
+            <p className="text-muted lead-aside">A growing body of work, shaped by community needs, evidence, and a commitment to real-world change.</p>
           </div>
         </div>
         <div className="journey-timeline-track">
@@ -144,7 +139,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
             <h2 className="expertise-heading m-0">Mission, Vision, and Approach</h2>
           </div>
           <div className="col-lg-6 text-lg-end mt-2 mt-lg-0">
-            <p className="text-muted m-0" style={{ fontSize: "13.5px", maxWidth: "480px", marginLeft: "auto" }}>Guided by our commitment to knowledge, people, and better care, II&amp;M works to bridge understanding and practice at the intersection of Islam and healthcare.</p>
+            <p className="text-muted lead-aside">Guided by our commitment to knowledge, people, and public impact, II&amp;M works to bridge understanding and practice at the intersection of Islam and healthcare.</p>
           </div>
         </div>
         <div className="row g-4">
@@ -199,7 +194,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="distinct-card">
-              <img src={asset("/images/distinct-bioethics.jpg")} alt="Islamic Bioethics Insight" className="distinct-card-img" loading="lazy" />
+              <img src={asset("/images/distinct-bioethics-insight.jpg")} alt="Islamic Bioethics Insight" className="distinct-card-img" loading="lazy" />
               <div className="distinct-card-body">
                 <i className="fa-solid fa-book-open distinct-icon" />
                 <h3 className="distinct-card-title">Islamic Bioethics Insight</h3>
@@ -240,7 +235,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
             <h2 className="expertise-heading m-0">Who We Serve</h2>
           </div>
           <div className="col-lg-6 text-lg-end mt-2 mt-lg-0">
-            <p className="text-muted m-0" style={{ fontSize: "13.5px", maxWidth: "480px", marginLeft: "auto" }}>We work with a wide range of individuals and organizations to advance understanding and improve care at the intersection of Islam and medicine.</p>
+            <p className="text-muted lead-aside">We work with a wide range of individuals and organizations to advance understanding and improve care at the intersection of Islam and medicine.</p>
           </div>
         </div>
         <div className="row g-3">
@@ -316,7 +311,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
                 <span className="expertise-eyebrow-text">A STRONGER ECOSYSTEM</span>
               </div>
               <h2 className="expertise-heading mb-3">Leadership &amp; Collaboration</h2>
-              <p className="expertise-desc mb-4">II&amp;M brings together scholars, clinicians, educators, researchers, and community voices to create meaningful change. Our work is strengthened by interdisciplinary collaboration and a shared commitment to better care.</p>
+              <p className="expertise-desc mb-4">II&amp;M brings together scholars, clinicians, educators, researchers, and community voices to create meaningful change. Our work is strengthened by interdisciplinary collaboration and a shared commitment to public impact.</p>
               <Link href="/team" className="btn-outline-bordered">
 OUR NETWORK{' '}                <i className="fa-solid fa-arrow-right ms-2" />
 {' '}              </Link>
