@@ -251,7 +251,7 @@ export default function PodcastPage() {
               <p>
                 The Medic &amp; The Mufti is part of II&amp;M’s broader educational initiative, which includes a comprehensive curriculum, workshops, and mentorship to help Muslim medical students and healthcare professionals engage deeply with questions at the intersection of science, religion, and the human experience.
               </p>
-              <Link href="/bioscience" className="btn-seamless-maroon">EXPLORE THE EDUCATIONAL PROGRAM <i className="fa-solid fa-arrow-right" /></Link>
+              <Link href="/education" className="btn-seamless-maroon">EXPLORE THE EDUCATIONAL PROGRAM <i className="fa-solid fa-arrow-right" /></Link>
         </div>
             <figure>
               <img src={asset("/images/podcast/edu-discussion.jpg")} alt="Students and clinicians talking together around a laptop" />

@@ -119,7 +119,7 @@ const additional = [
       ["fa-chalkboard-user", "Interdisciplinary faculty"],
       ["fa-building-columns", "For universities, colleges, and schools"],
     ],
-    href: "/curriculum",
+    href: "/education",
     cta: "REQUEST CURRICULUM INTEGRATION",
   },
   {

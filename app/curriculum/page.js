@@ -1,5 +1,6 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import CurriculumStats from "./CurriculumStats";
 
 export const metadata = {
@@ -71,6 +72,7 @@ function ArrowLink({ href, children }) {
 }
 
 export default function CurriculumPage() {
+  notFound();
   return (
     <div className="curriculum-page">
       <header className="hero-seamless hero-curriculum-seamless">

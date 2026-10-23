@@ -38,8 +38,6 @@ const NAV = [
     items: [
       ["Education Overview", "/education"],
       ["Courses", "/courses"],
-      ["Curriculum", "/curriculum"],
-      ["Bioscience & Islam", "/bioscience"],
     ],
   },
   {

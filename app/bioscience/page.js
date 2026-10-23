@@ -1,5 +1,6 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export const metadata = {
   title: "Bioscience & Islam | Initiative on Islam & Medicine",
@@ -7,6 +8,7 @@ export const metadata = {
 };
 
 export default function BiosciencePage() {
+  notFound();
   return (
     <>
     <header className="hero-seamless hero-bio-seamless">

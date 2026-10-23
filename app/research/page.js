@@ -58,21 +58,21 @@ const projects = [
 
 const resources = [
   {
-    img: asset("/images/research/resource-eol.jpg"),
+    img: asset("/images/mod-organ-guide.png"),
     title: "End-of-Life Healthcare Guide",
     text: "Practical guidance for Muslim patients, families, and healthcare teams.",
     cta: "ACCESS RESOURCE",
     href: "/resources",
   },
   {
-    img: asset("/images/research/resource-workshop.jpg"),
+    img: asset("/images/mod-bioscience.png"),
     title: "Mosque-Based Workshop Guides",
     text: "Step-by-step guides to replicate health education programs in your community.",
     cta: "ACCESS RESOURCE",
     href: "/resources",
   },
   {
-    img: asset("/images/research/resource-pubs.jpg"),
+    img: asset("/images/work-islam-biomedicine.png"),
     title: "Policy Reports & Publications",
     text: "Evidence, recommendations, and scholarly publications to inform practice and policy.",
     cta: "BROWSE PUBLICATIONS",
@@ -220,8 +220,8 @@ export default function ResearchPage() {
         <div className="container">
           <div className="rs-projects-head">
             <p className="rs-eyebrow">FEATURED RESEARCH PROJECTS</p>
-            <a href="#projects" className="rs-text-link">
-              VIEW ALL RESEARCH PROJECTS <i className="fa-solid fa-arrow-right" />
+            <a href="/workshops" className="rs-text-link">
+            SHOW MORE <i className="fa-solid fa-arrow-right" />
             </a>
           </div>
           <div className="rs-projects-grid">
@@ -289,7 +289,7 @@ export default function ResearchPage() {
               {resources.map((item) => (
                 <article className="rs-resource-card" key={item.title}>
                   <div className="rs-resource-media">
-                    <img src={item.img} alt="" />
+                    <img src={item.img} alt={item.title} />
                   </div>
                   <div className="rs-resource-body">
                     <h3>{item.title}</h3>

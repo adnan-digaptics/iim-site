@@ -1,5 +1,6 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
+import BooksReviews from "./BooksReviews";
 
 export const metadata = {
   title: "Books & Scholarly Works | Initiative on Islam & Medicine",
@@ -7,11 +8,11 @@ export const metadata = {
 };
 
 const works = [
-  [asset("/images/book-medicine-shariah.png"), "Medicine & Shariah", "Explores contemporary biomedical questions through Islamic ethics."],
-  [asset("/images/book-islam-biomedicine.jpg"), "Islam and Biomedicine", "Explores the dynamic relationship between Islamic thought and modern biomedicine."],
-  [asset("/images/book-organ-donation.jpg"), "Organ Donation in Islam", "A comprehensive exploration of organ transplantation in Islam."],
-  [asset("/images/book-muslim-patient.jpg"), "The Muslim Patient", "Practical guidance for providing culturally responsive care to Muslim patients."],
-  [asset("/images/book-faith-health.jpg"), "Faith, Health and Humanity", "Essays on moral formation, spiritual care, and compassionate healthcare."],
+  [asset("/images/work-islam-biomedicine.png"), "Islam and Biomedicine", "Explores the dynamic relationship between Islamic thought and modern biomedicine."],
+  [asset("/images/work-maqasid.png"), "Maqasid al-Shariah and Biomedicine", "Bridging moral, ethical, and policy discourses."],
+  [asset("/images/work-medicine-shariah.png"), "Medicine and Shariah", "A dialogue in Islamic bioethics."],
+  [asset("/images/work-organ-donation.png"), "Organ Donation in Islam", "The interplay of jurisprudence, ethics, and society."],
+  [asset("/images/work-covid.png"), "Islam, Muslims, and COVID-19", "The intersection of ethics, health, and social life in the diaspora."],
 ];
 
 const reasons = [
@@ -26,7 +27,7 @@ export default function BooksPage() {
     <div className="books-page">
       <header className="hero-seamless hero-books-seamless">
         <div className="hero-bg-wrapper">
-          <img src={asset("/images/books-hero-still.jpg")} alt="Scholarly books on Islam, medicine, and ethics" className="hero-bg-img" loading="eager" />
+          <img src={asset("/images/books-banner-wide.jpg")} alt="Medicine and Shariah, Organ Donation in Islam, Maqasid al-Shariah and Biomedicine, and Bridging Bioscience and Islam" className="hero-bg-img" loading="eager" />
           <div className="hero-gradient-overlay" />
           <div className="hero-watermark-overlay" />
         </div>
@@ -62,7 +63,7 @@ export default function BooksPage() {
         <div className="container">
           <div className="row align-items-center g-4 g-lg-5">
             <div className="col-lg-6">
-              <img src={asset("/images/book-bridging.jpg")} alt="Bridging Bioscience and Islam book cover" className="books-featured-cover" />
+              <img src={asset("/images/book-bridging-cover.jpg")} alt="Bridging Bioscience and Islam book cover" className="books-featured-cover" />
             </div>
             <div className="col-lg-6">
               <p className="books-eyebrow">FEATURED BOOK</p>
@@ -73,8 +74,8 @@ export default function BooksPage() {
                 Bridging Bioscience and Islam advances discourse at the interface of Islam, biomedicine, and the human being, bringing together diverse scholarly perspectives. It explores foundational questions about what it means to be human in a rapidly changing biomedical age.
               </p>
               <div className="books-featured-actions">
-                <Link href="/bioscience" className="books-btn-outline">LEARN MORE</Link>
-                <Link href="/bioscience" className="books-btn-maroon">BUY NOW</Link>
+                <Link href="/education" className="books-btn-outline">LEARN MORE</Link>
+                <Link href="/education" className="books-btn-maroon">BUY NOW</Link>
               </div>
             </div>
           </div>
@@ -114,15 +115,15 @@ export default function BooksPage() {
           </p>
           <div className="books-modules-grid">
             <article className="books-mod books-mod-split">
-              <img src={asset("/images/book-curriculum.jpg")} alt="Exploring Bioscience and Islam curriculum workbook" className="books-mod-img" />
+              <img src={asset("/images/mod-bioscience.png")} alt="Exploring Bioscience and Islam curriculum cover" className="books-mod-img" />
               <div className="books-mod-body">
                 <h3>Exploring Bioscience and Islam</h3>
                 <p>A Curriculum on Fundamental Questions about the Human Being.</p>
-                <Link href="/curriculum" className="books-text-link">LEARN MORE</Link>
+                <Link href="/education" className="books-text-link">LEARN MORE</Link>
               </div>
             </article>
             <article className="books-mod books-mod-split">
-              <img src={asset("/images/book-decision-guide.jpg")} alt="An Organ Donation Decisional Guide for Muslim Americans" className="books-mod-img" />
+              <img src={asset("/images/mod-organ-guide.png")} alt="An Organ Donation Decisional Guide for Muslim Americans" className="books-mod-img" />
               <div className="books-mod-body">
                 <h3>An Organ Donation Decisional Guide for Muslim Americans</h3>
                 <p>An educational tool to support informed discussion among Muslim communities.</p>
@@ -135,30 +136,7 @@ export default function BooksPage() {
 
       <section className="books-reviews">
         <div className="container">
-          <p className="books-eyebrow">REVIEWS &amp; SCHOLARLY RECEPTION</p>
-          <h2 className="books-h2">Reviews &amp; Scholarly Reception</h2>
-          <div className="row g-4">
-            <div className="col-lg-6">
-              <blockquote className="books-quote">
-                <span className="books-quote-mark" aria-hidden="true">&ldquo;</span>
-                <p>&ldquo;Organ Donation in Islam makes an important and timely contribution by offering a careful, nuanced, and deeply informed analysis of a complex and consequential topic.&rdquo;</p>
-                <cite>
-                  <strong>Mark Siegler</strong>
-                  <span>The University of Chicago</span>
-                </cite>
-              </blockquote>
-            </div>
-            <div className="col-lg-6">
-              <blockquote className="books-quote">
-                <span className="books-quote-mark" aria-hidden="true">&ldquo;</span>
-                <p>&ldquo;Islam and Biomedicine is an insightful and timely work that deepens our understanding of how Islamic thought engages with modern biomedicine.&rdquo;</p>
-                <cite>
-                  <strong>Mohammed Ghaly</strong>
-                  <span>Research Center for Islamic Legislation and Ethics</span>
-                </cite>
-              </blockquote>
-            </div>
-          </div>
+          <BooksReviews />
         </div>
       </section>
 
@@ -185,7 +163,7 @@ export default function BooksPage() {
       <section className="books-cta">
         <div className="row g-0 align-items-stretch">
           <div className="col-lg-5 p-0 books-cta-media">
-            <img src={asset("/images/books-hero-still.jpg")} alt="Books in a scholarly library" className="books-cta-img" />
+            <img src={asset("/images/books-cta-hq.jpg")} alt="Medicine and Shariah, Maqasid al-Shariah and Biomedicine, and Bridging Bioscience and Islam" className="books-cta-img" />
           </div>
           <div className="col-lg-7 books-cta-panel">
             <div className="books-cta-copy">
