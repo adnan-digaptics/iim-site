@@ -1,0 +1,1401 @@
+/* ==========================================================================
+   MAMMOGRAPHY PAGE — CSS MODULE
+   Religiously-Tailored Mammography Intervention for American Muslims
+   Pixel-accurate replication with responsive design
+   ========================================================================== */
+
+.pageWrapper {
+  background-color: #fcfaf7;
+  color: #293845;
+  font-family: 'DM Sans', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* 01 Hero Section */
+.hero {
+  position: relative;
+  background-color: #fbf8f2;
+  border-bottom: 1px solid #ede6dc;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroBgWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heroBgImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+.heroGradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #fbf8f2 0%,
+    #fbf8f2 15%,
+    rgba(251, 248, 242, 0.95) 30%,
+    rgba(251, 248, 242, 0.45) 60%,
+    rgba(251, 248, 242, 0.05) 90%
+  );
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 2;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.heroEyebrow {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8c6e4e;
+  margin-bottom: 12px;
+}
+
+.heroTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(28px, 3.8vw, 46px);
+  line-height: 1.18;
+  color: #10243a;
+  margin-bottom: 16px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: #800000;
+  font-weight: 400;
+}
+
+.heroLead {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #4a5766;
+  max-width: 520px;
+  margin-bottom: 22px;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.btnMaroon {
+  background-color: #800000;
+  border: 1.5px solid #800000;
+  color: #ffffff !important;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.btnMaroon:hover {
+  background-color: #660000;
+  border-color: #660000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(128, 0, 0, 0.22);
+}
+
+.btnOutline {
+  background-color: transparent;
+  border: 1.5px solid #800000;
+  color: #800000 !important;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.btnOutline:hover {
+  background-color: #800000;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.heroTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.heroTag {
+  display: inline-block;
+  padding: 5px 12px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e5dcce;
+  border-radius: 20px;
+  font-size: 11.5px;
+  color: #637180;
+}
+
+.heroQuotePanel {
+  background-color: #7a1a28;
+  color: #ffffff;
+  padding: 18px 24px;
+  max-width: 250px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  border-radius: 2px;
+  margin-left: auto;
+  margin-top: 130px;
+}
+
+.heroQuoteEyebrow {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #ddb47a;
+  margin-bottom: 8px;
+}
+
+.heroQuoteText {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 14.5px;
+  font-style: italic;
+  line-height: 1.45;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* 02 Sticky Section Navigation */
+.stickySubnav {
+  position: sticky;
+  top: 83px;
+  z-index: 90;
+  background-color: #fbf8f2;
+  border-top: 1px solid #ede6dc;
+  border-bottom: 1px solid #ede6dc;
+  box-shadow: 0 2px 8px rgba(16, 36, 58, 0.04);
+}
+
+.subnavWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.subnavList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.subnavList::-webkit-scrollbar {
+  display: none;
+}
+
+.subnavItem {
+  flex-shrink: 0;
+}
+
+.subnavLink {
+  display: block;
+  padding: 12px 18px;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #556272;
+  text-decoration: none;
+  border-bottom: 2.5px solid transparent;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.subnavLink:hover {
+  color: #800000;
+}
+
+.subnavLinkActive {
+  color: #800000 !important;
+  border-bottom-color: #800000 !important;
+}
+
+/* 03 Main Section & Layout */
+.mainSection {
+  background-color: #fcfaf7;
+  padding: 44px 0 64px;
+}
+
+.sectionBlock {
+  margin-bottom: 44px;
+  scroll-margin-top: 135px;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.sectionHeadLeft {
+  flex-grow: 1;
+}
+
+.sectionTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.accentBar {
+  width: 28px;
+  height: 2px;
+  background-color: #800000;
+  margin-bottom: 14px;
+}
+
+.counterTag {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #800000;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.68;
+  color: #3b4756;
+  margin-bottom: 14px;
+}
+
+.leadText {
+  font-size: 14.5px;
+  line-height: 1.62;
+  color: #43505f;
+  margin-bottom: 16px;
+}
+
+/* Overview Section Media Badge */
+.mediaWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 4px 14px rgba(16, 36, 58, 0.08);
+}
+
+.editorialImg {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.editorialImg:hover {
+  transform: scale(1.02);
+}
+
+.mediaBadge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #800000;
+  color: #ffffff;
+  padding: 8px 14px;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Background Callout Stat Box */
+.highlightStatBox {
+  background-color: #fbf5ee;
+  border: 1px solid #eddcca;
+  border-left: 4px solid #800000;
+  padding: 20px 24px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.highlightStatNum {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 44px;
+  color: #800000;
+  font-weight: 400;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.highlightStatText {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #3b4756;
+  margin: 0;
+}
+
+/* Factors Grid */
+.subheading {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 12px;
+}
+
+.factorCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 16px 18px;
+  border-radius: 2px;
+  height: 100%;
+}
+
+.factorHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.factorNum {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #800000;
+}
+
+.factorTitle {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #10243a;
+  margin: 0;
+}
+
+.factorText {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #4a5766;
+  margin: 0;
+}
+
+/* 3-Pillar Cards (Religiously-Tailored Approach) */
+.pillarCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 22px 18px;
+  border-radius: 2px;
+  text-align: center;
+  height: 100%;
+}
+
+.circleBadge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid #800000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #800000;
+  background-color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.pillarTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.pillarText {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #556272;
+  margin: 0;
+}
+
+/* 4-Step Methodology Cards */
+.stepCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 18px 14px;
+  border-radius: 2px;
+  text-align: center;
+  height: 100%;
+}
+
+.stepTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 6px;
+}
+
+.stepText {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #556272;
+  margin: 0;
+}
+
+/* Quote Callout Banner */
+.quoteBanner {
+  background-color: #f9f5ed;
+  border-left: 4px solid #800000;
+  padding: 22px 28px;
+  margin: 32px 0 28px;
+  border-radius: 0 2px 2px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.quoteMark {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 38px;
+  color: #800000;
+  line-height: 1;
+  font-style: italic;
+  flex-shrink: 0;
+}
+
+.quoteBannerText {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 16.5px;
+  font-style: italic;
+  color: #10243a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Key Outcomes Stat Cards */
+.outcomesRow {
+  margin-bottom: 14px;
+}
+
+.outcomeCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 22px 16px;
+  text-align: center;
+  border-radius: 2px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.outcomeCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(16, 36, 58, 0.06);
+}
+
+.outcomeNum {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(34px, 3.5vw, 42px);
+  color: #800000;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.outcomeLabel {
+  font-size: 12.5px;
+  line-height: 1.42;
+  color: #4e5a68;
+  margin: 0;
+}
+
+.outcomesFootnote {
+  font-size: 12px;
+  font-style: italic;
+  color: #768391;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Publications List */
+.papersList {
+  margin-top: 6px;
+}
+
+.paperItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eae2d4;
+}
+
+.paperNum {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #800000;
+  flex-shrink: 0;
+  margin-top: 2px;
+  min-width: 24px;
+}
+
+.paperContent {
+  flex-grow: 1;
+}
+
+.paperTag {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8c6e4e;
+  margin-bottom: 4px;
+}
+
+.paperTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #10243a;
+  margin-bottom: 6px;
+}
+
+.paperLink {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #800000;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.paperLink:hover {
+  text-decoration: underline;
+  transform: translateX(3px);
+}
+
+/* Presentations & Posters */
+.presentationList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.presentationItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #3b4756;
+  margin-bottom: 12px;
+}
+
+.presentationNum {
+  font-weight: 700;
+  color: #800000;
+  flex-shrink: 0;
+  min-width: 20px;
+}
+
+.posterCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 16px 18px;
+  border-radius: 2px;
+  height: 100%;
+}
+
+.posterHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.posterNum {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #800000;
+  flex-shrink: 0;
+}
+
+.posterText {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #3b4756;
+  margin: 0;
+}
+
+/* Community Conferences & Media */
+.conferenceCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 14px 18px;
+  border-radius: 2px;
+  height: 100%;
+}
+
+.conferenceText {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #3b4756;
+  margin: 0;
+}
+
+.mediaCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 16px 20px;
+  border-radius: 2px;
+  display: block;
+  text-decoration: none;
+  color: #10243a;
+  transition: all 0.2s ease;
+  height: 100%;
+}
+
+.mediaCard:hover {
+  background-color: #f0eae0;
+  border-color: #800000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(128, 0, 0, 0.08);
+}
+
+.mediaOutlet {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 6px;
+}
+
+.mediaHeadline {
+  font-size: 12.5px;
+  color: #800000;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Dissemination Products & Toolkits */
+.toolkitCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 20px 22px;
+  border-radius: 2px;
+  height: 100%;
+}
+
+.toolkitTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 6px;
+}
+
+.toolkitDesc {
+  font-size: 13px;
+  color: #800000;
+  margin: 0;
+}
+
+/* Team Cards */
+.teamCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 22px 20px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+}
+
+.teamBadge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #800000;
+  color: #ffffff;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.teamName {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 4px;
+}
+
+.teamRole {
+  font-size: 12px;
+  color: #556272;
+  margin: 0;
+}
+
+/* Sidebar Styles */
+.sidebarColumn {
+  position: relative;
+}
+
+.sidebarCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 20px 18px;
+  margin-bottom: 16px;
+  border-radius: 2px;
+}
+
+.sidebarTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 4px;
+}
+
+.objectivesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.objectiveItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.objectiveItem:last-child {
+  margin-bottom: 0;
+}
+
+.objectiveNum {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #800000;
+  font-size: 10px;
+  font-weight: 700;
+  color: #800000;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.objectiveText {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #3b4756;
+  margin: 0;
+}
+
+.bullet {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #800000;
+  margin-right: 8px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.glanceList {
+  margin: 0;
+}
+
+.glanceItem {
+  margin-bottom: 10px;
+}
+
+.glanceItem:last-child {
+  margin-bottom: 0;
+}
+
+.glanceDt {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.glanceDd {
+  font-size: 12px;
+  color: #4e5a68;
+  margin: 0 0 0 13px;
+  line-height: 1.45;
+}
+
+.sidebarStatItem {
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ede5d7;
+}
+
+.sidebarStatItem:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.sidebarStatNum {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 26px;
+  color: #800000;
+  font-weight: 400;
+  display: block;
+  line-height: 1.1;
+  margin-bottom: 3px;
+}
+
+.sidebarStatLabel {
+  font-size: 12px;
+  color: #4e5a68;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.exploreList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exploreLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px solid #ede5d7;
+  text-decoration: none;
+  color: #3b4756;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.exploreLink:hover {
+  color: #800000;
+  padding-left: 4px;
+}
+
+.exploreList li:last-child .exploreLink {
+  border-bottom: none;
+}
+
+.cardBurgundy {
+  background-color: #800000;
+  border-color: #800000;
+  color: #ffffff;
+}
+
+.textLight {
+  color: #f7e6e8;
+}
+
+.btnWhiteOutline {
+  background-color: transparent;
+  border: 1.5px solid #ffffff;
+  color: #ffffff !important;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.btnWhiteOutline:hover {
+  background-color: #ffffff;
+  color: #800000 !important;
+}
+
+/* 04 Bottom Call to Action Banner */
+.bottomCta {
+  position: relative;
+  overflow: hidden;
+  background-color: #0c1c22;
+  padding: 56px 0;
+  color: #ffffff;
+}
+
+.bottomCtaBg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.bottomCtaImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  opacity: 0.35;
+}
+
+.bottomCtaOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 28, 32, 0.94) 0%,
+    rgba(14, 38, 38, 0.88) 100%
+  );
+}
+
+.bottomCtaContainer {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaEyebrow {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ddb47a;
+  margin-bottom: 10px;
+}
+
+.ctaHeading {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.ctaSubtext {
+  font-size: 14px;
+  line-height: 1.62;
+  color: #d0dedb;
+  max-width: 600px;
+  margin-bottom: 22px;
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btnCta {
+  padding: 12px 24px;
+  font-size: 10.5px;
+}
+
+/* ==========================================================================
+   RESPONSIVE OVERRIDES (TABLET & MOBILE)
+   ========================================================================== */
+
+/* Tablet (max-width: 991px) */
+@media (max-width: 991px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .heroBgWrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.18;
+  }
+
+  .heroGradientOverlay {
+    background: linear-gradient(
+      180deg,
+      rgba(251, 248, 242, 0.93) 0%,
+      rgba(251, 248, 242, 0.98) 100%
+    );
+  }
+
+  .heroContainer {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .heroLead {
+    font-size: 14px;
+    margin-bottom: 18px;
+    max-width: 100%;
+  }
+
+  .heroQuotePanel {
+    position: static;
+    margin-top: 18px;
+    max-width: 100%;
+    padding: 13px 18px;
+    border-left: 3.5px solid #ddb47a;
+  }
+
+  .stickySubnav {
+    top: 72px;
+  }
+
+  .subnavLink {
+    padding: 11px 14px;
+    font-size: 10.5px;
+  }
+
+  .mainSection {
+    padding: 32px 0 48px;
+  }
+
+  .sectionBlock {
+    margin-bottom: 32px;
+    scroll-margin-top: 115px;
+  }
+
+  .sidebarColumn {
+    margin-top: 24px;
+  }
+
+  .bottomCta {
+    padding: 42px 0;
+  }
+}
+
+/* Mobile Phone (max-width: 575px) */
+@media (max-width: 575px) {
+  .heroContainer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .heroEyebrow {
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+  }
+
+  .heroTitle {
+    font-size: 25px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .heroLead {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .heroActions {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .btnMaroon,
+  .btnOutline {
+    width: 100%;
+    padding: 11px 16px;
+    font-size: 10.5px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .heroQuotePanel {
+    margin-top: 14px;
+    padding: 11px 14px;
+  }
+
+  .heroQuoteText {
+    font-size: 13px;
+  }
+
+  .stickySubnav {
+    top: 72px;
+  }
+
+  .subnavWrapper::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    background: linear-gradient(to right, transparent, rgba(251, 248, 242, 0.95));
+    pointer-events: none;
+  }
+
+  .subnavList {
+    padding: 0 6px;
+  }
+
+  .subnavLink {
+    padding: 10px 11px;
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+  }
+
+  .mainSection {
+    padding: 20px 0 32px;
+  }
+
+  .sectionBlock {
+    margin-bottom: 24px;
+    scroll-margin-top: 110px;
+  }
+
+  .sectionHead {
+    margin-bottom: 10px;
+  }
+
+  .sectionTitle {
+    font-size: 19px;
+    margin-bottom: 4px;
+  }
+
+  .accentBar {
+    width: 24px;
+    height: 2px;
+    margin-bottom: 10px;
+  }
+
+  .text {
+    font-size: 13.5px;
+    line-height: 1.58;
+    margin-bottom: 10px;
+  }
+
+  .leadText {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+
+  .editorialImg {
+    aspect-ratio: 16 / 10;
+    max-height: 220px;
+  }
+
+  .highlightStatBox {
+    padding: 14px 16px;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .highlightStatNum {
+    font-size: 34px;
+  }
+
+  .highlightStatText {
+    font-size: 13px;
+  }
+
+  .factorCard {
+    padding: 12px 14px;
+  }
+
+  .quoteBanner {
+    padding: 16px 18px;
+    margin: 20px 0;
+    gap: 12px;
+  }
+
+  .quoteMark {
+    font-size: 28px;
+  }
+
+  .quoteBannerText {
+    font-size: 14px;
+  }
+
+  .outcomesRow {
+    margin-bottom: 14px;
+  }
+
+  .outcomeCard {
+    padding: 12px 14px;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 12px;
+  }
+
+  .outcomeNum {
+    font-size: 28px;
+    margin-bottom: 0;
+    min-width: 62px;
+    flex-shrink: 0;
+  }
+
+  .outcomeLabel {
+    font-size: 11.5px;
+    line-height: 1.35;
+  }
+
+  .paperItem {
+    padding: 12px 0;
+    gap: 12px;
+  }
+
+  .paperNum {
+    font-size: 13px;
+    min-width: 20px;
+  }
+
+  .paperTitle {
+    font-size: 14px;
+  }
+
+  .presentationItem {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .posterCard,
+  .conferenceCard {
+    padding: 12px 14px;
+  }
+
+  .mediaCard,
+  .toolkitCard,
+  .teamCard {
+    padding: 14px 16px;
+  }
+
+  .teamBadge {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .sidebarCard {
+    padding: 15px 14px;
+    margin-bottom: 12px;
+  }
+
+  .sidebarTitle {
+    font-size: 15.5px;
+    margin-bottom: 4px;
+  }
+
+  .btnWhiteOutline {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 9px 14px;
+  }
+
+  .bottomCta {
+    padding: 30px 0;
+  }
+
+  .ctaEyebrow {
+    font-size: 9.5px;
+    margin-bottom: 6px;
+  }
+
+  .ctaHeading {
+    font-size: 21px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  .ctaSubtext {
+    font-size: 13px;
+    line-height: 1.52;
+    margin-bottom: 14px;
+  }
+
+  .ctaActions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btnCta {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 16px;
+  }
+}

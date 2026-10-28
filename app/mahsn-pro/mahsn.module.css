@@ -1,0 +1,1548 @@
+/* ==========================================================================
+   MAHSN PAGE — CSS MODULE
+   Muslim American Healthcare & Spiritual Needs
+   Pixel-accurate screenshot replication with award-winning responsiveness
+   ========================================================================== */
+
+.pageWrapper {
+  background-color: #fcfaf7;
+  color: #293845;
+  font-family: 'DM Sans', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* 01 Hero Section */
+.hero {
+  position: relative;
+  background-color: #fbf8f2;
+  border-bottom: 1px solid #ede6dc;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroBgWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heroBgImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+.heroGradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #fbf8f2 0%,
+    #fbf8f2 15%,
+    rgba(251, 248, 242, 0.95) 30%,
+    rgba(251, 248, 242, 0.45) 60%,
+    rgba(251, 248, 242, 0.05) 90%
+  );
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 2;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.heroEyebrow {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8c6e4e;
+  margin-bottom: 12px;
+}
+
+.heroTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(28px, 3.8vw, 46px);
+  line-height: 1.18;
+  color: #10243a;
+  margin-bottom: 16px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: #800000;
+  font-weight: 400;
+}
+
+.heroLead {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #4a5766;
+  max-width: 520px;
+  margin-bottom: 22px;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.btnMaroon {
+  background-color: #800000;
+  border: 1.5px solid #800000;
+  color: #ffffff !important;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.btnMaroon:hover {
+  background-color: #660000;
+  border-color: #660000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(128, 0, 0, 0.22);
+}
+
+.btnOutline {
+  background-color: transparent;
+  border: 1.5px solid #800000;
+  color: #800000 !important;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.btnOutline:hover {
+  background-color: #800000;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.heroTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.heroTag {
+  display: inline-block;
+  padding: 5px 12px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e5dcce;
+  border-radius: 20px;
+  font-size: 11.5px;
+  color: #637180;
+}
+
+.heroQuotePanel {
+  background-color: #7a1a28;
+  color: #ffffff;
+  padding: 18px 24px;
+  max-width: 250px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  border-radius: 2px;
+  margin-left: auto;
+  margin-top: 130px;
+}
+
+.heroQuoteEyebrow {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #ddb47a;
+  margin-bottom: 8px;
+}
+
+.heroQuoteText {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 14.5px;
+  font-style: italic;
+  line-height: 1.45;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* 02 Sticky Section Navigation */
+.stickySubnav {
+  position: sticky;
+  top: 83px;
+  z-index: 90;
+  background-color: #fbf8f2;
+  border-top: 1px solid #ede6dc;
+  border-bottom: 1px solid #ede6dc;
+  box-shadow: 0 2px 8px rgba(16, 36, 58, 0.04);
+}
+
+.subnavWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.subnavList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.subnavList::-webkit-scrollbar {
+  display: none;
+}
+
+.subnavItem {
+  flex-shrink: 0;
+}
+
+.subnavLink {
+  display: block;
+  padding: 12px 18px;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #556272;
+  text-decoration: none;
+  border-bottom: 2.5px solid transparent;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.subnavLink:hover {
+  color: #800000;
+}
+
+.subnavLinkActive {
+  color: #800000 !important;
+  border-bottom-color: #800000 !important;
+}
+
+/* 03 Main Section & Layout */
+.mainSection {
+  background-color: #fcfaf7;
+  padding: 44px 0 64px;
+}
+
+.sectionBlock {
+  margin-bottom: 44px;
+  scroll-margin-top: 135px;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.sectionHeadLeft {
+  flex-grow: 1;
+}
+
+.sectionTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.accentBar {
+  width: 28px;
+  height: 2px;
+  background-color: #800000;
+  margin-bottom: 14px;
+}
+
+.counterTag {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #800000;
+  text-decoration: none;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.68;
+  color: #3b4756;
+  margin-bottom: 14px;
+}
+
+.leadText {
+  font-size: 14.5px;
+  line-height: 1.62;
+  color: #43505f;
+  margin-bottom: 16px;
+}
+
+/* Media Badge for Overview */
+.mediaWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 4px 14px rgba(16, 36, 58, 0.08);
+}
+
+.editorialImg {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.editorialImg:hover {
+  transform: scale(1.02);
+}
+
+.mediaBadge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #800000;
+  color: #ffffff;
+  padding: 8px 14px;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Significance Quote Banner */
+.quoteBanner {
+  background-color: #f9f5ed;
+  border-left: 4px solid #800000;
+  padding: 22px 28px;
+  margin: 22px 0 24px;
+  border-radius: 0 2px 2px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.quoteMark {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 38px;
+  color: #800000;
+  line-height: 1;
+  font-style: italic;
+  flex-shrink: 0;
+}
+
+.quoteBannerText {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #10243a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 3 Significance Feature Cards */
+.pillarCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 22px 18px;
+  border-radius: 2px;
+  text-align: left;
+  height: 100%;
+}
+
+.circleBadge {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid #800000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #800000;
+  background-color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.pillarTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 6px;
+}
+
+.pillarText {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #556272;
+  margin: 0;
+}
+
+/* 4 Recruitment Channel Cards */
+.subheading {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 12px;
+}
+
+.channelCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 18px 14px;
+  border-radius: 2px;
+  text-align: center;
+  height: 100%;
+}
+
+.channelTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 6px;
+}
+
+.channelText {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #556272;
+  margin: 0;
+}
+
+/* Results & Research Insights Stat Cards */
+.statsRow {
+  margin-bottom: 18px;
+}
+
+.statCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 22px 16px;
+  text-align: center;
+  border-radius: 2px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(16, 36, 58, 0.06);
+}
+
+.statNum {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(32px, 3.4vw, 40px);
+  color: #800000;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.statLabel {
+  font-size: 12px;
+  line-height: 1.42;
+  color: #4e5a68;
+  margin: 0;
+}
+
+/* Highlighted Insight Panel */
+.insightPanel {
+  background-color: #f9f5ed;
+  border-left: 4px solid #800000;
+  padding: 18px 22px;
+  margin-top: 18px;
+  border-radius: 0 2px 2px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.insightDiamond {
+  color: #800000;
+  font-size: 14px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.insightTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 4px;
+}
+
+.insightText {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #3b4756;
+  margin: 0;
+}
+
+/* Publications List */
+.papersList {
+  margin-top: 6px;
+}
+
+.paperItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eae2d4;
+}
+
+.paperNum {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #800000;
+  flex-shrink: 0;
+  margin-top: 2px;
+  min-width: 24px;
+}
+
+.paperContent {
+  flex-grow: 1;
+}
+
+.paperTag {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8c6e4e;
+  margin-bottom: 4px;
+}
+
+.paperTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #10243a;
+  margin-bottom: 4px;
+}
+
+.paperDesc {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #556272;
+  margin-bottom: 6px;
+}
+
+.paperLink {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #800000;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.paperLink:hover {
+  text-decoration: underline;
+  transform: translateX(3px);
+}
+
+/* Dissemination Products */
+.productCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  border-radius: 2px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.productMockupWrap1 {
+  background-color: #f2e7d7;
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+}
+
+.productMockupWrap2 {
+  background-color: #e2e8ea;
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+}
+
+.mockupPaper {
+  background-color: #ffffff;
+  padding: 18px 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-top: 3px solid #800000;
+  width: 100%;
+  max-width: 220px;
+  text-align: left;
+}
+
+.mockupKicker {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #800000;
+  margin-bottom: 4px;
+}
+
+.mockupHeading {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #10243a;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.mockupSub {
+  font-size: 8px;
+  color: #768391;
+  margin: 0;
+}
+
+.productBody {
+  padding: 16px 18px;
+}
+
+.productTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 6px;
+}
+
+.productLink {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #800000;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.productLink:hover {
+  text-decoration: underline;
+}
+
+/* Videos */
+.videoCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 100%;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.2s ease;
+  position: relative;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.videoCard:hover,
+.videoCard:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(16, 36, 58, 0.14);
+  border-color: #800000;
+}
+
+.videoThumbWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #10243a;
+}
+
+.videoThumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.videoCard:hover .videoThumb,
+.videoCard:focus-visible .videoThumb {
+  transform: scale(1.05);
+}
+
+.playOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(16, 36, 58, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s ease;
+}
+
+.videoCard:hover .playOverlay,
+.videoCard:focus-visible .playOverlay {
+  background-color: rgba(16, 36, 58, 0.48);
+}
+
+.playCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #800000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.25s ease;
+}
+
+.playCircle i {
+  margin-left: 2px;
+}
+
+.videoCard:hover .playCircle,
+.videoCard:focus-visible .playCircle {
+  transform: scale(1.14);
+  background-color: #800000;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(128, 0, 0, 0.45);
+}
+
+.videoBody {
+  padding: 14px 16px;
+  flex: 1;
+}
+
+.videoTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+
+.videoLabel {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #800000;
+  margin: 0;
+}
+
+/* Video Lightbox Modal */
+.videoModalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10500;
+  background-color: rgba(10, 20, 32, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.videoModalDialog {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  background-color: #10243a;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  animation: modalScaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.videoModalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background-color: #0b1a2a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 12px;
+}
+
+.videoModalHeaderInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.videoModalBadge {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f1ebe0;
+  background-color: #800000;
+  padding: 3px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.videoModalTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.videoModalCloseBtn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.videoModalCloseBtn:hover {
+  background-color: #800000;
+  border-color: #800000;
+  transform: rotate(90deg);
+}
+
+.videoModalFrameWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000000;
+}
+
+.videoModalIframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.videoModalFooter {
+  padding: 12px 20px;
+  background-color: #0e2034;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.videoModalCaption {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 12.5px;
+  color: #c5d0dc;
+  margin: 0;
+  flex: 1;
+  min-width: 200px;
+}
+
+.videoModalYoutubeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #f1ebe0;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.videoModalYoutubeLink:hover {
+  background-color: #cc0000;
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .videoModalDialog {
+    max-width: 100%;
+  }
+  .videoModalHeader {
+    padding: 10px 14px;
+  }
+  .videoModalTitle {
+    font-size: 13px;
+  }
+  .videoModalFooter {
+    padding: 10px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Project Gallery Placeholder */
+.galleryCard {
+  background: repeating-linear-gradient(
+    45deg,
+    #f8f4ec,
+    #f8f4ec 10px,
+    #f1ebe0 10px,
+    #f1ebe0 20px
+  );
+  border: 1px dashed #d9cebe;
+  border-radius: 2px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.galleryText1 {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8c7f70;
+  margin-bottom: 4px;
+}
+
+.galleryText2 {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b5a898;
+  margin: 0;
+}
+
+/* Partner Organizations */
+.partnerCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 18px 20px;
+  border-radius: 2px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 78px;
+}
+
+.partnerNameBold {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #10243a;
+  line-height: 1.25;
+}
+
+.partnerSubtext {
+  font-size: 10.5px;
+  color: #556272;
+  margin-top: 3px;
+}
+
+.partnerFootnote {
+  font-size: 11.5px;
+  font-style: italic;
+  color: #768391;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+/* Funding Section */
+.fundingBox {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 20px 24px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.fundingBadge {
+  background-color: #800000;
+  color: #ffffff;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  width: 52px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+.fundingText {
+  font-size: 13.5px;
+  color: #3b4756;
+  margin: 0;
+}
+
+.fundingText strong {
+  color: #10243a;
+}
+
+/* Sidebar Styles */
+.sidebarColumn {
+  position: relative;
+}
+
+.sidebarCard {
+  background-color: #f8f4ec;
+  border: 1px solid #eae2d4;
+  padding: 20px 18px;
+  margin-bottom: 16px;
+  border-radius: 2px;
+}
+
+.sidebarTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 4px;
+}
+
+.objectivesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.objectiveItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.objectiveItem:last-child {
+  margin-bottom: 0;
+}
+
+.objectiveNum {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #800000;
+  font-size: 10px;
+  font-weight: 700;
+  color: #800000;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.objectiveText {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #3b4756;
+  margin: 0;
+}
+
+.bullet {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #800000;
+  margin-right: 8px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.glanceList {
+  margin: 0;
+}
+
+.glanceItem {
+  margin-bottom: 10px;
+}
+
+.glanceItem:last-child {
+  margin-bottom: 0;
+}
+
+.glanceDt {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.glanceDd {
+  font-size: 12px;
+  color: #4e5a68;
+  margin: 0 0 0 13px;
+  line-height: 1.45;
+}
+
+.sidebarPubList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarPubItem {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #3b4756;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.sidebarPubItem:last-child {
+  margin-bottom: 0;
+}
+
+.forthcomingText {
+  font-size: 12px;
+  font-style: italic;
+  color: #768391;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.quickNavList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quickNavLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px solid #ede5d7;
+  text-decoration: none;
+  color: #3b4756;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.quickNavLink:hover {
+  color: #800000;
+  padding-left: 4px;
+}
+
+.quickNavList li:last-child .quickNavLink {
+  border-bottom: none;
+}
+
+.cardBurgundy {
+  background-color: #800000;
+  border-color: #800000;
+  color: #ffffff;
+}
+
+.textLight {
+  color: #f7e6e8;
+}
+
+.btnWhiteOutline {
+  background-color: transparent;
+  border: 1.5px solid #ffffff;
+  color: #ffffff !important;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.btnWhiteOutline:hover {
+  background-color: #ffffff;
+  color: #800000 !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE OVERRIDES (TABLET & MOBILE)
+   ========================================================================== */
+
+/* Tablet (max-width: 991px) */
+@media (max-width: 991px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .heroBgWrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.18;
+  }
+
+  .heroGradientOverlay {
+    background: linear-gradient(
+      180deg,
+      rgba(251, 248, 242, 0.93) 0%,
+      rgba(251, 248, 242, 0.98) 100%
+    );
+  }
+
+  .heroContainer {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .heroLead {
+    font-size: 14px;
+    margin-bottom: 18px;
+    max-width: 100%;
+  }
+
+  .heroQuotePanel {
+    position: static;
+    margin-top: 18px;
+    max-width: 100%;
+    padding: 13px 18px;
+    border-left: 3.5px solid #ddb47a;
+  }
+
+  .stickySubnav {
+    top: 72px;
+  }
+
+  .subnavLink {
+    padding: 11px 14px;
+    font-size: 10.5px;
+  }
+
+  .mainSection {
+    padding: 32px 0 48px;
+  }
+
+  .sectionBlock {
+    margin-bottom: 32px;
+    scroll-margin-top: 115px;
+  }
+
+  .sidebarColumn {
+    margin-top: 24px;
+  }
+}
+
+/* Mobile Phone (max-width: 575px) */
+@media (max-width: 575px) {
+  .heroContainer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .heroEyebrow {
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+  }
+
+  .heroTitle {
+    font-size: 25px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .heroLead {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .heroActions {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .btnMaroon,
+  .btnOutline {
+    width: 100%;
+    padding: 11px 16px;
+    font-size: 10.5px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .heroQuotePanel {
+    margin-top: 14px;
+    padding: 11px 14px;
+  }
+
+  .heroQuoteText {
+    font-size: 13px;
+  }
+
+  .stickySubnav {
+    top: 72px;
+  }
+
+  .subnavWrapper::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    background: linear-gradient(to right, transparent, rgba(251, 248, 242, 0.95));
+    pointer-events: none;
+  }
+
+  .subnavList {
+    padding: 0 6px;
+  }
+
+  .subnavLink {
+    padding: 10px 11px;
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+  }
+
+  .mainSection {
+    padding: 20px 0 32px;
+  }
+
+  .sectionBlock {
+    margin-bottom: 24px;
+    scroll-margin-top: 110px;
+  }
+
+  .sectionHead {
+    margin-bottom: 10px;
+  }
+
+  .sectionTitle {
+    font-size: 19px;
+    margin-bottom: 4px;
+  }
+
+  .accentBar {
+    width: 24px;
+    height: 2px;
+    margin-bottom: 10px;
+  }
+
+  .text {
+    font-size: 13.5px;
+    line-height: 1.58;
+    margin-bottom: 10px;
+  }
+
+  .leadText {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+
+  .editorialImg {
+    aspect-ratio: 16 / 10;
+    max-height: 220px;
+  }
+
+  .quoteBanner {
+    padding: 16px 18px;
+    margin: 18px 0;
+    gap: 12px;
+  }
+
+  .quoteMark {
+    font-size: 28px;
+  }
+
+  .quoteBannerText {
+    font-size: 14px;
+  }
+
+  .statsRow {
+    margin-bottom: 14px;
+  }
+
+  .statCard {
+    padding: 12px 14px;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 12px;
+  }
+
+  .statNum {
+    font-size: 28px;
+    margin-bottom: 0;
+    min-width: 62px;
+    flex-shrink: 0;
+  }
+
+  .statLabel {
+    font-size: 11.5px;
+    line-height: 1.35;
+  }
+
+  .paperItem {
+    padding: 12px 0;
+    gap: 12px;
+  }
+
+  .paperNum {
+    font-size: 13px;
+    min-width: 20px;
+  }
+
+  .paperTitle {
+    font-size: 14px;
+  }
+
+  .fundingBox {
+    padding: 16px 18px;
+    gap: 14px;
+  }
+
+  .sidebarCard {
+    padding: 15px 14px;
+    margin-bottom: 12px;
+  }
+
+  .sidebarTitle {
+    font-size: 15.5px;
+    margin-bottom: 4px;
+  }
+
+  .btnWhiteOutline {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 9px 14px;
+  }
+}
