@@ -1,0 +1,1428 @@
+/* ==========================================================================
+   Exploring Bioscience & Islam - Page Scoped Styles
+   Brand: Initiative on Islam & Medicine (II&M)
+   ========================================================================== */
+
+.pageWrapper {
+  background-color: #ffffff;
+  color: #293845;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Typography Helpers */
+.serif {
+  font-family: 'Libre Baskerville', Georgia, serif;
+}
+
+.burgundyItalic {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-style: italic;
+  color: #800000;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #800000;
+  margin-bottom: 12px;
+}
+
+.eyebrowLight {
+  color: #ddb47a;
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.heroSection {
+  background: #fbf8f3;
+  border-bottom: 1px solid #eae3d6;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroRow {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 600px;
+}
+
+.heroContentCol {
+  flex: 1 1 52%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 48px 60px 0;
+  z-index: 2;
+}
+
+.heroEyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #800000;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.heroTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  line-height: 1.1;
+  color: #10243a;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+.heroSubtitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+  color: #10243a;
+  line-height: 1.4;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+.heroLead {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #4e555c;
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+
+.heroBtnGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.btnBurgundy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #800000;
+  color: #ffffff !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 13px 26px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border: 1px solid #800000;
+}
+
+.btnBurgundy:hover {
+  background-color: #600000;
+  border-color: #600000;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(128, 0, 0, 0.18);
+}
+
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #10243a !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 13px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border: 1px solid #d5c8b5;
+}
+
+.btnOutline:hover {
+  background-color: #f4eee3;
+  border-color: #800000;
+  color: #800000 !important;
+  transform: translateY(-1px);
+}
+
+.heroTagline {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #7a8694;
+  text-transform: uppercase;
+  padding-top: 18px;
+  border-top: 1px solid #eae3d6;
+  max-width: 500px;
+}
+
+.heroImageCol {
+  flex: 1 1 48%;
+  position: relative;
+  min-height: 560px;
+  display: flex;
+}
+
+.heroImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  background-color: #e5e0d8;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ==========================================================================
+   2. STICKY SUBNAV
+   ========================================================================== */
+.stickySubnav {
+  position: sticky;
+  top: 83px;
+  z-index: 100;
+  background: #ffffff;
+  border-bottom: 1px solid #eae3d6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: top 0.2s ease;
+}
+
+.subnavContainer {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.subnavContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.subnavList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+}
+
+.subnavItem {
+  flex-shrink: 0;
+}
+
+.subnavLink {
+  display: block;
+  padding: 14px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4e555c;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.subnavLink:hover {
+  color: #800000;
+}
+
+.subnavLinkActive {
+  color: #800000;
+}
+
+.subnavLinkActive::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  right: 12px;
+  height: 3px;
+  background-color: #800000;
+  border-radius: 2px 2px 0 0;
+}
+
+/* ==========================================================================
+   3. PROJECT OVERVIEW
+   ========================================================================== */
+.overviewSection {
+  padding: 72px 0 68px;
+  background: #ffffff;
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.overviewHeading {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(1.85rem, 2.8vw, 2.45rem);
+  line-height: 1.25;
+  color: #10243a;
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+
+.overviewBody {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #3e4c59;
+  margin-bottom: 18px;
+}
+
+.overviewCitation {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-style: italic;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #6c7987;
+  padding-top: 14px;
+  border-top: 1px solid #eae3d6;
+  margin-top: 24px;
+}
+
+.overviewCard {
+  background: #faf7f2;
+  border: 1px solid #eae3d6;
+  border-radius: 8px;
+  padding: 34px 30px;
+  box-shadow: 0 4px 18px rgba(16, 36, 58, 0.03);
+}
+
+.overviewCardEyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #800000;
+  margin-bottom: 10px;
+}
+
+.overviewCardTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 20px;
+  color: #10243a;
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+
+.objectivesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.objectiveItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #293845;
+}
+
+.objectiveIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #800000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   4. FIVE FUNDAMENTAL QUESTIONS
+   ========================================================================== */
+.fiveQuestionsSection {
+  background-color: #faf7f2;
+  border-top: 1px solid #eae3d6;
+  border-bottom: 1px solid #eae3d6;
+  padding: 72px 0 80px;
+}
+
+.sectionHeaderCenter {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 46px;
+}
+
+.sectionHeaderCenter .eyebrow {
+  margin-bottom: 8px;
+}
+
+.sectionTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(2rem, 3.2vw, 2.65rem);
+  line-height: 1.25;
+  color: #10243a;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.sectionSubtitle {
+  font-size: 15.5px;
+  color: #5c6b79;
+  line-height: 1.6;
+}
+
+.fiveQuestionsRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.questionCard {
+  background: #ffffff;
+  border: 1px solid #eae3d6;
+  border-radius: 6px;
+  padding: 26px 18px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.25s ease;
+  min-height: 210px;
+}
+
+.questionCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(16, 36, 58, 0.06);
+  border-color: #d0c0ac;
+}
+
+.questionNumber {
+  font-size: 11px;
+  font-weight: 700;
+  color: #8c98a4;
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+}
+
+.questionIconCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #800000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: transform 0.25s ease;
+}
+
+.questionCard:hover .questionIconCircle {
+  transform: scale(1.08);
+}
+
+.questionText {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #10243a;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* ==========================================================================
+   5. LEARNING TO UNDERSTAND KNOWLEDGE (FRAMEWORK)
+   ========================================================================== */
+.frameworkSection {
+  padding: 76px 0 80px;
+  background: #ffffff;
+}
+
+.frameworkColumnsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.frameworkCol {
+  position: relative;
+  padding-right: 18px;
+}
+
+.frameworkCol:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background-color: #eae3d6;
+}
+
+.frameworkTag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8c98a4;
+  margin-bottom: 10px;
+}
+
+.frameworkHeading {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 18px;
+  color: #800000;
+  margin-bottom: 12px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.frameworkDesc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #4e555c;
+  margin: 0;
+}
+
+/* Dark Navy Connected Framework Box */
+.navyFrameworkPanel {
+  background: #10243a;
+  border-radius: 10px;
+  padding: 44px 48px;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr;
+  gap: 40px;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(16, 36, 58, 0.12);
+}
+
+.navyContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.navyEyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #ddb47a;
+  margin-bottom: 10px;
+}
+
+.navyTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(1.6rem, 2.3vw, 2.2rem);
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.navyTitleItalic {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-style: italic;
+  color: #dd7c8a;
+}
+
+.navyText {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #b5c3d2;
+  margin: 0;
+}
+
+.navyDiagramWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navySvgDiagram {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   6. EXPLORE THE CURRICULUM (3x3 Grid)
+   ========================================================================== */
+.curriculumSection {
+  background-color: #faf7f2;
+  border-top: 1px solid #eae3d6;
+  border-bottom: 1px solid #eae3d6;
+  padding: 76px 0 84px;
+}
+
+.curriculumHeaderRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.curriculumHeaderLeft {
+  max-width: 680px;
+}
+
+.curriculumLinkRight {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #800000;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.curriculumLinkRight:hover {
+  color: #600000;
+  transform: translateX(2px);
+}
+
+.curriculumGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Unit Card */
+.unitCard {
+  background: #ffffff;
+  border: 1px solid #eae3d6;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.unitCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(16, 36, 58, 0.08);
+  border-color: #d0c0ac;
+}
+
+.unitImageContainer {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  background-color: #e5e0d8;
+  overflow: hidden;
+}
+
+.unitImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.unitCard:hover .unitImage {
+  transform: scale(1.03);
+}
+
+.unitBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #800000;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+.unitContent {
+  padding: 22px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.unitTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 17.5px;
+  line-height: 1.35;
+  color: #10243a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.unitDesc {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #5c6b79;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.unitFooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.unitArrowBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #dcd3c5;
+  background: #ffffff;
+  color: #800000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.unitCard:hover .unitArrowBtn {
+  background: #800000;
+  color: #ffffff;
+  border-color: #800000;
+}
+
+/* Audience Cards (Educators & Learners) */
+.audienceCard {
+  background: #fbf8f3;
+  border: 1px solid #e2d8c9;
+  border-radius: 6px;
+  padding: 30px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.audienceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(16, 36, 58, 0.08);
+  border-color: #cbbaa5;
+}
+
+.audienceIconCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #800000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.audienceTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 20px;
+  color: #10243a;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.audienceDesc {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #5c6b79;
+  margin-bottom: 24px;
+  max-width: 290px;
+}
+
+.audienceBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #800000;
+  color: #ffffff !important;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  width: 100%;
+  max-width: 260px;
+  transition: all 0.25s ease;
+  border: 1px solid #800000;
+}
+
+.audienceBtn:hover {
+  background-color: #600000;
+  border-color: #600000;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   7. BUILT FOR THOUGHTFUL LEARNING
+   ========================================================================== */
+.thoughtfulSection {
+  padding: 76px 0 76px;
+  background: #ffffff;
+}
+
+.thoughtfulGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.thoughtfulCard {
+  background: #ffffff;
+  border: 1px solid #eae3d6;
+  border-radius: 8px;
+  padding: 34px 28px;
+  transition: all 0.25s ease;
+}
+
+.thoughtfulCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(16, 36, 58, 0.05);
+  border-color: #d0c0ac;
+}
+
+.thoughtfulIcon {
+  width: 32px;
+  height: 32px;
+  color: #800000;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.thoughtfulTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 19px;
+  color: #10243a;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.thoughtfulDesc {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #4e555c;
+  margin: 0;
+}
+
+/* ==========================================================================
+   8. ACROSS EVERY LEARNING ENVIRONMENT
+   ========================================================================== */
+.environmentsSection {
+  padding: 76px 0 84px;
+  background: #ffffff;
+  border-top: 1px solid #eae3d6;
+}
+
+.environmentsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.envCard {
+  background: #faf7f2;
+  border: 1px solid #eae3d6;
+  border-radius: 8px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  transition: all 0.25s ease;
+}
+
+.envCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(16, 36, 58, 0.06);
+  border-color: #d0c0ac;
+}
+
+.envImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 175px;
+  background-color: #e5e0d8;
+  overflow: hidden;
+}
+
+.envImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.envContent {
+  padding: 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.envTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 18.5px;
+  color: #800000;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.envDesc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #4e555c;
+  margin: 0;
+}
+
+/* ==========================================================================
+   9. LEARNER REFLECTIONS
+   ========================================================================== */
+.reflectionsSection {
+  background: #faf7f2;
+  border-top: 1px solid #eae3d6;
+  border-bottom: 1px solid #eae3d6;
+  padding: 76px 0 84px;
+}
+
+.reflectionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+.reflectionLeftPanel {
+  background: linear-gradient(135deg, #6b1724 0%, #460c15 100%);
+  border-radius: 8px;
+  padding: 44px 38px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 26px rgba(107, 23, 36, 0.16);
+  position: relative;
+  overflow: hidden;
+}
+
+.reflectionLeftPanel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.reflectionLeftEyebrow {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #e5b980;
+  margin-bottom: 16px;
+}
+
+.reflectionLeftTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(1.75rem, 2.5vw, 2.3rem);
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.reflectionLeftLink {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: all 0.2s ease;
+}
+
+.reflectionLeftLink:hover {
+  color: #e5b980;
+}
+
+.reflectionRightCard {
+  background: #ffffff;
+  border: 1px solid #eae3d6;
+  border-radius: 8px;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.quoteMark {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 64px;
+  line-height: 1;
+  color: #800000;
+  margin-bottom: -10px;
+}
+
+.reflectionQuote {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+  line-height: 1.5;
+  color: #10243a;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.reflectionAuthor {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #10243a;
+  margin-bottom: 4px;
+}
+
+.reflectionSource {
+  font-size: 12.5px;
+  color: #72808e;
+}
+
+/* ==========================================================================
+   10. PARTNERS & SUPPORT
+   ========================================================================== */
+.partnersSection {
+  padding: 76px 0 80px;
+  background: #ffffff;
+}
+
+.partnersWrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.partnersTabButtons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.partnerTabBtn {
+  background: #ffffff;
+  border: 1px solid #d5c8b5;
+  color: #4e555c;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 11px 26px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.partnerTabBtn:hover {
+  border-color: #800000;
+  color: #800000;
+}
+
+.partnerTabBtnActive {
+  background: #800000;
+  border-color: #800000;
+  color: #ffffff !important;
+}
+
+.partnersContentCard {
+  background: #faf7f2;
+  border: 1px solid #eae3d6;
+  border-radius: 6px;
+  padding: 32px 36px;
+  text-align: center;
+}
+
+.partnerTabPanel {
+  animation: fadeIn 0.3s ease;
+}
+
+.partnerText {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #4e555c;
+  margin-bottom: 16px;
+}
+
+.partnerLink {
+  color: #800000;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.partnerLink:hover {
+  color: #600000;
+}
+
+/* ==========================================================================
+   11. FREQUENTLY ASKED QUESTIONS
+   ========================================================================== */
+.faqSection {
+  padding: 76px 0 96px;
+  background: #ffffff;
+  border-top: 1px solid #eae3d6;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.faqTitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(2.2rem, 3.4vw, 3rem);
+  line-height: 1.15;
+  color: #10243a;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+.faqDesc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #5c6b79;
+}
+
+.faqAccordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqItem {
+  background: #ffffff;
+  border: 1px solid #eae3d6;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.faqItemOpen {
+  background: #faf7f2;
+  border-color: #d8cdbe;
+}
+
+.faqQuestionBtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.faqQuestionText {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #10243a;
+  font-weight: 400;
+}
+
+.faqItemOpen .faqQuestionText {
+  color: #800000;
+}
+
+.faqChevron {
+  color: #72808e;
+  transition: transform 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.faqChevronOpen {
+  transform: rotate(180deg);
+  color: #800000;
+}
+
+.faqAnswerWrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+}
+
+.faqAnswerVisible {
+  max-height: 500px;
+  transition: max-height 0.35s ease-in-out;
+}
+
+.faqAnswerContent {
+  padding: 0 22px 20px;
+}
+
+.faqAnswerContent p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4e555c;
+  margin: 0;
+}
+
+/* ==========================================================================
+   ANIMATIONS & KEYFRAMES
+   ========================================================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* Tablet Landscape / Small Desktop (<= 1024px) */
+@media (max-width: 1024px) {
+  .heroRow {
+    flex-direction: column;
+  }
+  .heroContentCol {
+    padding: 48px 0 36px 0;
+  }
+  .heroImageCol {
+    min-height: 420px;
+  }
+  .heroImageWrapper {
+    min-height: 420px;
+  }
+
+  .overviewGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .fiveQuestionsRow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .questionCard:last-child {
+    grid-column: span 2;
+  }
+
+  .frameworkColumnsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+  .frameworkCol::after {
+    display: none;
+  }
+
+  .navyFrameworkPanel {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 36px 30px;
+  }
+
+  .curriculumGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .environmentsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .reflectionsGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Tablet Portrait (<= 768px) */
+@media (max-width: 768px) {
+  .stickySubnav {
+    top: 72px;
+  }
+  .subnavLink {
+    padding: 12px 10px;
+    font-size: 11px;
+  }
+
+  .heroTitle {
+    font-size: 2.3rem;
+  }
+  .heroSubtitle {
+    font-size: 1.15rem;
+  }
+  .heroBtnGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btnBurgundy, .btnOutline {
+    width: 100%;
+    text-align: center;
+  }
+
+  .fiveQuestionsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .questionCard:last-child {
+    grid-column: span 2;
+  }
+
+  .frameworkColumnsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .curriculumGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .thoughtfulGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .envCard {
+    grid-template-columns: 1fr;
+  }
+  .envImageWrapper {
+    height: 180px;
+  }
+
+  .reflectionLeftPanel {
+    padding: 32px 24px;
+  }
+  .reflectionRightCard {
+    padding: 32px 24px;
+  }
+}
+
+/* Mobile (<= 480px) */
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 1.95rem;
+  }
+  .heroSubtitle {
+    font-size: 1.05rem;
+  }
+  .heroLead {
+    font-size: 14.5px;
+  }
+  .heroImageCol {
+    min-height: 360px;
+  }
+  .heroImageWrapper {
+    min-height: 360px;
+  }
+
+  .overviewHeading {
+    font-size: clamp(1.4rem, 5.5vw, 1.85rem);
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+  .overviewCard {
+    padding: 24px 18px;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .fiveQuestionsRow {
+    grid-template-columns: 1fr;
+  }
+  .questionCard:last-child {
+    grid-column: span 1;
+  }
+
+  .navyFrameworkPanel {
+    padding: 26px 18px;
+  }
+  .navyTitle {
+    font-size: 1.5rem;
+  }
+
+  .partnersTabButtons {
+    flex-direction: column;
+  }
+  .partnerTabBtn {
+    width: 100%;
+  }
+
+  .faqTitle {
+    font-size: 2rem;
+  }
+}

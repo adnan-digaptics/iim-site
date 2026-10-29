@@ -1660,7 +1660,12 @@ a {
   }
 
   .podcast-brand-col {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    gap: 14px;
+  }
+
+  .podcast-mic-icon {
+    width: clamp(85px, 20vw, 115px);
   }
 
   .podcast-photo-wrap,
@@ -16626,6 +16631,106 @@ section.section-values-cards .row {
 
   .section-featured-learning .learning-content-wrap {
     padding: 40px 32px 36px;
+  }
+
+  /* Homepage Red Section (The Medic & The Mufti Podcast Strip) at 1024px / Laptop */
+  .section-podcast-strip > .container-fluid > .row > .col-lg-8,
+  .section-podcast-strip .row.align-items-stretch > .col-lg-8 {
+    flex: 0 0 62% !important;
+    max-width: 62% !important;
+    width: 62% !important;
+  }
+
+  .section-podcast-strip > .container-fluid > .row > .col-lg-4,
+  .section-podcast-strip .row.align-items-stretch > .col-lg-4 {
+    flex: 0 0 38% !important;
+    max-width: 38% !important;
+    width: 38% !important;
+  }
+
+  .section-podcast-strip .podcast-copy-wrap {
+    padding: 34px 32px 34px 38px !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .section-podcast-strip .podcast-copy-wrap > .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+
+  .section-podcast-strip .podcast-copy-wrap .col-lg-5,
+  .section-podcast-strip .podcast-copy-wrap .col-lg-7 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .section-podcast-strip .podcast-copy-wrap .col-lg-5 {
+    margin-bottom: 14px !important;
+  }
+
+  .section-podcast-strip .podcast-brand-col {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .section-podcast-strip .podcast-mic-icon {
+    width: 110px !important;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .section-podcast-strip .podcast-subtag {
+    font-size: 8.5px;
+    letter-spacing: 0.16em;
+  }
+
+  .section-podcast-strip .podcast-main-name {
+    font-size: 22px;
+    line-height: 1.2;
+    margin: 4px 0 3px;
+    white-space: nowrap;
+  }
+
+  .section-podcast-strip .podcast-categories {
+    font-size: 8.5px;
+    letter-spacing: 0.14em;
+    white-space: nowrap;
+  }
+
+  .section-podcast-strip .podcast-center-title {
+    font-size: 19px;
+    line-height: 1.32;
+    margin-bottom: 8px;
+    max-width: 520px;
+  }
+
+  .section-podcast-strip .podcast-center-text {
+    font-size: 12.5px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+    max-width: 480px;
+  }
+
+  .section-podcast-strip .btn-white-pill {
+    padding: 10px 22px;
+    font-size: 10px;
+    letter-spacing: 0.09em;
+  }
+
+  .section-podcast-strip .podcast-photo-wrap {
+    min-height: 100%;
+    height: 100%;
+  }
+
+  .section-podcast-strip .podcast-photo {
+    object-position: 55% center;
   }
 }
 
