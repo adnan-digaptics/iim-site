@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { asset } from "../../lib/asset";
 import ExploringBioscienceNav from "./ExploringBioscienceNav";
 import { PartnersTabs, FaqAccordion } from "./ExploringBioscienceInteractive";
 import styles from "./exploring-bioscience.module.css";
@@ -89,43 +90,43 @@ const CURRICULUM_UNITS = [
     unit: "UNIT 01",
     title: "Epistemic Framework",
     desc: "Core concepts, sources of knowledge, and application exercises.",
-    image: "/images/exploring-bioscience/unit-01.jpg",
+    image: asset("/images/exploring-bioscience/unit-01.jpg"),
   },
   {
     unit: "UNIT 02",
     title: "What Do We Know and How Do We Know It?",
     desc: "Reasoning exercises in Islam and science.",
-    image: "/images/exploring-bioscience/unit-02.jpg",
+    image: asset("/images/exploring-bioscience/unit-02.jpg"),
   },
   {
     unit: "UNIT 03",
     title: "What is the Origin of Mankind?",
     desc: "Evolution and God's special creation.",
-    image: "/images/exploring-bioscience/unit-03.jpg",
+    image: asset("/images/exploring-bioscience/unit-03.jpg"),
   },
   {
     unit: "UNIT 04",
     title: "What Does It Mean to Be a Human Being?",
     desc: "Neuroscience, artificial intelligence, and the soul.",
-    image: "/images/exploring-bioscience/unit-04.jpg",
+    image: asset("/images/exploring-bioscience/unit-04.jpg"),
   },
   {
     unit: "UNIT 05",
     title: "Human Enhancement and Transhumanism",
     desc: "Are we changing—and should we change—our being?",
-    image: "/images/exploring-bioscience/unit-05.jpg",
+    image: asset("/images/exploring-bioscience/unit-05.jpg"),
   },
   {
     unit: "UNIT 06",
     title: "Are We Programmed or Do We Have Free Will?",
     desc: "Fate and genetic determinism.",
-    image: "/images/exploring-bioscience/unit-06.jpg",
+    image: asset("/images/exploring-bioscience/unit-06.jpg"),
   },
   {
     unit: "UNIT 07",
     title: "Are Human Beings Unique in This Universe?",
     desc: "Extraterrestrial life and theological inquiry.",
-    image: "/images/exploring-bioscience/unit-07.jpg",
+    image: asset("/images/exploring-bioscience/unit-07.jpg"),
   },
 ];
 
@@ -174,7 +175,7 @@ export default function ExploringBiosciencePage() {
             <div className={styles.heroImageCol}>
               <div className={styles.heroImageWrapper}>
                 <Image
-                  src="/images/exploring-bioscience/hero-lab.jpg"
+                  src={asset("/images/exploring-bioscience/hero-lab.jpg")}
                   alt="Laboratory glassware with clear liquid and scientific pipettes"
                   fill
                   priority
@@ -535,7 +536,7 @@ export default function ExploringBiosciencePage() {
             <div className={styles.envCard}>
               <div className={styles.envImageWrapper}>
                 <Image
-                  src="/images/exploring-bioscience/env-classroom-hq.jpg"
+                  src={asset("/images/exploring-bioscience/env-classroom-hq.jpg")}
                   alt="Students in university library"
                   fill
                   className={styles.envImage}
@@ -554,7 +555,7 @@ export default function ExploringBiosciencePage() {
             <div className={styles.envCard}>
               <div className={styles.envImageWrapper}>
                 <Image
-                  src="/images/exploring-bioscience/env-beyond-hq.jpg"
+                  src={asset("/images/exploring-bioscience/env-beyond-hq.jpg")}
                   alt="Study desk with textbooks and learning materials"
                   fill
                   className={styles.envImage}
