@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import styles from "./mahsn.module.css";
 
 const NAV_ITEMS = [
   { id: "overview", label: "Overview" },
@@ -21,7 +20,7 @@ export default function MahsnNav() {
     if (typeof window === "undefined") return 120;
     const isMobile = window.innerWidth <= 991;
     const headerHeight = isMobile ? 72 : 83;
-    const subnavEl = document.querySelector(`.${styles.stickySubnav}`);
+    const subnavEl = document.querySelector(".mahsn-stickySubnav");
     const subnavHeight = subnavEl ? subnavEl.offsetHeight : 44;
     return headerHeight + subnavHeight + 12;
   };
@@ -85,16 +84,16 @@ export default function MahsnNav() {
   };
 
   return (
-    <nav className={styles.stickySubnav} aria-label="MAHSN section navigation">
+    <nav className="mahsn-stickySubnav" aria-label="MAHSN section navigation">
       <div className="container">
-        <div className={styles.subnavWrapper}>
-          <ul className={styles.subnavList} ref={navListRef}>
+        <div className="mahsn-subnavWrapper">
+          <ul className="mahsn-subnavList" ref={navListRef}>
             {NAV_ITEMS.map((item) => (
-              <li key={item.id} className={styles.subnavItem}>
+              <li key={item.id} className="mahsn-subnavItem">
                 <a
                   href={`#${item.id}`}
                   data-nav-id={item.id}
-                  className={`${styles.subnavLink} ${activeId === item.id ? styles.subnavLinkActive : ""}`}
+                  className={`mahsn-subnavLink ${activeId === item.id ? "mahsn-subnavLinkActive" : ""}`}
                   onClick={(e) => scrollToSection(e, item.id)}
                 >
                   {item.label}

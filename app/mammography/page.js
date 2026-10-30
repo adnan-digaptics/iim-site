@@ -1,7 +1,6 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
 import MammographyNav from "./MammographyNav";
-import styles from "./mammography.module.css";
 
 export const metadata = {
   title:
@@ -267,48 +266,48 @@ const OBJECTIVES = [
 
 export default function MammographyPage() {
   return (
-    <div className={styles.pageWrapper}>
+    <div className="mammography-page mm-pageWrapper">
       {/* 01 HERO SECTION */}
-      <header className={styles.hero}>
-        <div className={styles.heroBgWrapper}>
+      <header className="mm-hero">
+        <div className="mm-heroBgWrapper">
           <img
             src={asset("/images/research/mammography-hero.jpg")}
             alt="Female healthcare provider and patient hands resting in consultation"
-            className={styles.heroBgImg}
+            className="mm-heroBgImg"
             loading="eager"
           />
-          <div className={styles.heroGradientOverlay} />
+          <div className="mm-heroGradientOverlay" />
         </div>
 
-        <div className={`container ${styles.heroContainer}`}>
+        <div className={`container mm-heroContainer`}>
           <div className="row align-items-center">
             <div className="col-lg-7 col-xl-6">
-              <p className={styles.heroEyebrow}>
+              <p className="mm-heroEyebrow">
                 RESEARCH PROJECT / WOMEN&apos;S HEALTH
               </p>
-              <h1 className={styles.heroTitle}>
+              <h1 className="mm-heroTitle">
                 A Religiously-Tailored <br />
                 <em>Mammography Intervention</em> <br />
                 for American Muslims
               </h1>
-              <p className={styles.heroLead}>
+              <p className="mm-heroLead">
                 Understanding the influence of religion on breast cancer
                 screening—and developing a community-engaged, mosque-based
                 educational intervention for Muslim women in the United States.
               </p>
 
-              <div className={styles.heroActions}>
-                <a href="#outcomes" className={styles.btnMaroon}>
+              <div className="mm-heroActions">
+                <a href="#outcomes" className="mm-btnMaroon">
                   EXPLORE OUTCOMES <span className="ms-1">↓</span>
                 </a>
-                <a href="#publications" className={styles.btnOutline}>
+                <a href="#publications" className="mm-btnOutline">
                   RESEARCH PUBLICATIONS <span className="ms-1">↗</span>
                 </a>
               </div>
 
-              <div className={styles.heroTags}>
+              <div className="mm-heroTags">
                 {HERO_TAGS.map((tag) => (
-                  <span key={tag} className={styles.heroTag}>
+                  <span key={tag} className="mm-heroTag">
                     {tag}
                   </span>
                 ))}
@@ -317,11 +316,11 @@ export default function MammographyPage() {
 
             <div className="col-lg-5 col-xl-6 position-relative">
               <aside
-                className={styles.heroQuotePanel}
+                className="mm-heroQuotePanel"
                 aria-label="Project quote"
               >
-                <p className={styles.heroQuoteEyebrow}>FAITH &amp; HEALTH EQUITY</p>
-                <p className={styles.heroQuoteText}>
+                <p className="mm-heroQuoteEyebrow">FAITH &amp; HEALTH EQUITY</p>
+                <p className="mm-heroQuoteText">
                   Community-informed. <br />
                   Evidence-based. <br />
                   Real-world impact.
@@ -336,28 +335,28 @@ export default function MammographyPage() {
       <MammographyNav />
 
       {/* 03 MAIN CONTENT + RIGHT SIDEBAR */}
-      <section className={styles.mainSection}>
+      <section className="mm-mainSection">
         <div className="container">
           <div className="row g-4 g-lg-5">
             {/* MAIN CONTENT COLUMN (~70%) */}
             <main className="col-lg-8">
               {/* SECTION 01 — OVERVIEW */}
-              <article id="overview" className={styles.sectionBlock}>
-                <div className={styles.sectionHead}>
-                  <div className={styles.sectionHeadLeft}>
-                    <h2 className={styles.sectionTitle}>Overview</h2>
-                    <div className={styles.accentBar} />
+              <article id="overview" className="mm-sectionBlock">
+                <div className="mm-sectionHead">
+                  <div className="mm-sectionHeadLeft">
+                    <h2 className="mm-sectionTitle">Overview</h2>
+                    <div className="mm-accentBar" />
                   </div>
                 </div>
                 <div className="row align-items-center g-3 g-md-4">
                   <div className="col-md-7">
-                    <p className={styles.text}>
+                    <p className="mm-text">
                       American Muslims form a diverse population, yet the absence
                       of religious affiliation data in many national health
                       surveys limits the evidence available about breast cancer
                       outcomes for Muslim women.
                     </p>
-                    <p className={`${styles.text} mb-0`}>
+                    <p className={`mm-text mb-0`}>
                       Earlier research suggested low mammography adherence among
                       Muslim women in the United States. The project explored how
                       religious beliefs and healthcare experiences shape
@@ -366,16 +365,16 @@ export default function MammographyPage() {
                     </p>
                   </div>
                   <div className="col-md-5">
-                    <div className={styles.mediaWrapper}>
+                    <div className="mm-mediaWrapper">
                       <img
                         src={asset(
                           "/images/research/muslim-physicians-overview.jpg"
                         )}
                         alt="Physician in white coat with stethoscope holding a smartphone"
-                        className={styles.editorialImg}
+                        className="mm-editorialImg"
                         loading="lazy"
                       />
-                      <span className={styles.mediaBadge}>
+                      <span className="mm-mediaBadge">
                         COMMUNITY HEALTH RESEARCH
                       </span>
                     </div>
@@ -384,15 +383,15 @@ export default function MammographyPage() {
               </article>
 
               {/* SECTION 02 — BACKGROUND */}
-              <article id="background" className={styles.sectionBlock}>
-                <div className={styles.sectionHead}>
-                  <div className={styles.sectionHeadLeft}>
-                    <h2 className={styles.sectionTitle}>Background</h2>
-                    <div className={styles.accentBar} />
+              <article id="background" className="mm-sectionBlock">
+                <div className="mm-sectionHead">
+                  <div className="mm-sectionHeadLeft">
+                    <h2 className="mm-sectionTitle">Background</h2>
+                    <div className="mm-accentBar" />
                   </div>
                 </div>
 
-                <p className={styles.text}>
+                <p className="mm-text">
                   Breast cancer screening can reduce breast cancer mortality.
                   The project&apos;s formative research identified how
                   faith-related beliefs and care experiences can influence
@@ -400,15 +399,15 @@ export default function MammographyPage() {
                 </p>
 
                 {/* Highlight Callout Stat Box */}
-                <div className={styles.highlightStatBox}>
-                  <span className={styles.highlightStatNum}>37%</span>
-                  <p className={styles.highlightStatText}>
+                <div className="mm-highlightStatBox">
+                  <span className="mm-highlightStatNum">37%</span>
+                  <p className="mm-highlightStatText">
                     of surveyed women in the Chicago-area sample (n=254) had not
                     received a mammogram during the preceding two years.
                   </p>
                 </div>
 
-                <h3 className={styles.subheading}>
+                <h3 className="mm-subheading">
                   Factors explored in the research
                 </h3>
 
@@ -419,12 +418,12 @@ export default function MammographyPage() {
                       key={factor.num}
                       className={factor.num === "05" ? "col-md-6" : "col-md-6"}
                     >
-                      <div className={styles.factorCard}>
-                        <div className={styles.factorHeader}>
-                          <span className={styles.factorNum}>{factor.num}</span>
-                          <h4 className={styles.factorTitle}>{factor.title}</h4>
+                      <div className="mm-factorCard">
+                        <div className="mm-factorHeader">
+                          <span className="mm-factorNum">{factor.num}</span>
+                          <h4 className="mm-factorTitle">{factor.title}</h4>
                         </div>
-                        <p className={styles.factorText}>{factor.text}</p>
+                        <p className="mm-factorText">{factor.text}</p>
                       </div>
                     </div>
                   ))}
@@ -432,16 +431,16 @@ export default function MammographyPage() {
 
                 {/* Sub-section: A Religiously-Tailored Approach */}
                 <div className="mt-4 pt-2">
-                  <div className={styles.sectionHead}>
-                    <div className={styles.sectionHeadLeft}>
-                      <h3 className={styles.sectionTitle}>
+                  <div className="mm-sectionHead">
+                    <div className="mm-sectionHeadLeft">
+                      <h3 className="mm-sectionTitle">
                         A Religiously-Tailored Approach
                       </h3>
-                      <div className={styles.accentBar} />
+                      <div className="mm-accentBar" />
                     </div>
                   </div>
 
-                  <p className={styles.leadText}>
+                  <p className="mm-leadText">
                     Findings from formative research informed faith-sensitive,
                     culturally responsive breast cancer education delivered
                     through peer-led group workshops in mosque communities.
@@ -450,12 +449,12 @@ export default function MammographyPage() {
                   <div className="row g-3">
                     {APPROACH_PILLARS.map((pillar) => (
                       <div key={pillar.badge} className="col-md-4">
-                        <div className={styles.pillarCard}>
-                          <div className={styles.circleBadge}>
+                        <div className="mm-pillarCard">
+                          <div className="mm-circleBadge">
                             {pillar.badge}
                           </div>
-                          <h4 className={styles.pillarTitle}>{pillar.title}</h4>
-                          <p className={styles.pillarText}>{pillar.text}</p>
+                          <h4 className="mm-pillarTitle">{pillar.title}</h4>
+                          <p className="mm-pillarText">{pillar.text}</p>
                         </div>
                       </div>
                     ))}
@@ -464,15 +463,15 @@ export default function MammographyPage() {
               </article>
 
               {/* SECTION 03 — METHODOLOGY */}
-              <article id="methodology" className={styles.sectionBlock}>
-                <div className={styles.sectionHead}>
-                  <div className={styles.sectionHeadLeft}>
-                    <h2 className={styles.sectionTitle}>Methodology</h2>
-                    <div className={styles.accentBar} />
+              <article id="methodology" className="mm-sectionBlock">
+                <div className="mm-sectionHead">
+                  <div className="mm-sectionHeadLeft">
+                    <h2 className="mm-sectionTitle">Methodology</h2>
+                    <div className="mm-accentBar" />
                   </div>
                 </div>
 
-                <p className={styles.leadText}>
+                <p className="mm-leadText">
                   The program began with community research into screening
                   beliefs and barriers among ethnically and racially diverse
                   Muslim women. Findings were used to design religiously tailored
@@ -484,21 +483,21 @@ export default function MammographyPage() {
                 <div className="row g-2 g-md-3">
                   {METHODOLOGY_STEPS.map((step) => (
                     <div key={step.badge} className="col-6 col-md-3">
-                      <div className={styles.stepCard}>
-                        <div className={styles.circleBadge}>{step.badge}</div>
-                        <h4 className={styles.stepTitle}>{step.title}</h4>
-                        <p className={styles.stepText}>{step.text}</p>
+                      <div className="mm-stepCard">
+                        <div className="mm-circleBadge">{step.badge}</div>
+                        <h4 className="mm-stepTitle">{step.title}</h4>
+                        <p className="mm-stepText">{step.text}</p>
                       </div>
                     </div>
                   ))}
                 </div>
 
                 {/* Quote Callout Banner */}
-                <div className={styles.quoteBanner}>
-                  <span className={styles.quoteMark} aria-hidden="true">
+                <div className="mm-quoteBanner">
+                  <span className="mm-quoteMark" aria-hidden="true">
                     “
                   </span>
-                  <p className={styles.quoteBannerText}>
+                  <p className="mm-quoteBannerText">
                     Research and community partnerships informing faith-consistent
                     preventive healthcare.
                   </p>
@@ -506,32 +505,32 @@ export default function MammographyPage() {
               </article>
 
               {/* SECTION 04 — KEY OUTCOMES */}
-              <article id="outcomes" className={styles.sectionBlock}>
-                <div className={styles.sectionHead}>
-                  <div className={styles.sectionHeadLeft}>
-                    <h2 className={styles.sectionTitle}>Key Outcomes</h2>
-                    <div className={styles.accentBar} />
+              <article id="outcomes" className="mm-sectionBlock">
+                <div className="mm-sectionHead">
+                  <div className="mm-sectionHeadLeft">
+                    <h2 className="mm-sectionTitle">Key Outcomes</h2>
+                    <div className="mm-accentBar" />
                   </div>
                 </div>
 
-                <p className={styles.leadText}>
+                <p className="mm-leadText">
                   The published project summary reports increased breast cancer
                   and mammography knowledge and improved stated likelihood of
                   screening following the intervention.
                 </p>
 
-                <div className={`row g-2 g-md-3 ${styles.outcomesRow}`}>
+                <div className={`row g-2 g-md-3 mm-outcomesRow`}>
                   {KEY_OUTCOMES.map((stat) => (
                     <div key={stat.num} className="col-sm-4">
-                      <div className={styles.outcomeCard}>
-                        <span className={styles.outcomeNum}>{stat.num}</span>
-                        <p className={styles.outcomeLabel}>{stat.label}</p>
+                      <div className="mm-outcomeCard">
+                        <span className="mm-outcomeNum">{stat.num}</span>
+                        <p className="mm-outcomeLabel">{stat.label}</p>
                       </div>
                     </div>
                   ))}
                 </div>
 
-                <p className={styles.outcomesFootnote}>
+                <p className="mm-outcomesFootnote">
                   Of the 58 participants, 29 had never obtained a mammogram and
                   29 had not received one within the previous two years. These
                   figures refer to the study cohort, not to all American Muslim
@@ -540,29 +539,29 @@ export default function MammographyPage() {
               </article>
 
               {/* SECTION 05 — PUBLICATIONS & PRESENTATIONS */}
-              <article id="publications" className={styles.sectionBlock}>
-                <div className={styles.sectionHead}>
-                  <div className={styles.sectionHeadLeft}>
-                    <h2 className={styles.sectionTitle}>Publications</h2>
-                    <div className={styles.accentBar} />
+              <article id="publications" className="mm-sectionBlock">
+                <div className="mm-sectionHead">
+                  <div className="mm-sectionHeadLeft">
+                    <h2 className="mm-sectionTitle">Publications</h2>
+                    <div className="mm-accentBar" />
                   </div>
-                  <span className={styles.counterTag}>11 RESEARCH PAPERS</span>
+                  <span className="mm-counterTag">11 RESEARCH PAPERS</span>
                 </div>
 
-                <div className={styles.papersList}>
+                <div className="mm-papersList">
                   {PUBLICATIONS.map((pub) => (
-                    <div key={pub.num} className={pub.num === "11" ? styles.paperItem : styles.paperItem}>
-                      <span className={styles.paperNum}>{pub.num}</span>
-                      <div className={styles.paperContent}>
-                        <div className={styles.paperTag}>
+                    <div key={pub.num} className={pub.num === "11" ? "mm-paperItem" : "mm-paperItem"}>
+                      <span className="mm-paperNum">{pub.num}</span>
+                      <div className="mm-paperContent">
+                        <div className="mm-paperTag">
                           RESEARCH PUBLICATION
                         </div>
-                        <h4 className={styles.paperTitle}>{pub.title}</h4>
+                        <h4 className="mm-paperTitle">{pub.title}</h4>
                         <a
                           href={pub.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={styles.paperLink}
+                          className="mm-paperLink"
                         >
                           VIEW ON ORIGINAL PROJECT PAGE{" "}
                           <span className="ms-1">↗</span>
@@ -574,24 +573,24 @@ export default function MammographyPage() {
 
                 {/* Sub-section: Presentations */}
                 <div className="mt-5 pt-2">
-                  <div className={styles.sectionHead}>
-                    <div className={styles.sectionHeadLeft}>
-                      <h3 className={styles.sectionTitle}>Presentations</h3>
-                      <div className={styles.accentBar} />
+                  <div className="mm-sectionHead">
+                    <div className="mm-sectionHeadLeft">
+                      <h3 className="mm-sectionTitle">Presentations</h3>
+                      <div className="mm-accentBar" />
                     </div>
                   </div>
 
-                  <p className={styles.leadText}>
+                  <p className="mm-leadText">
                     Full list of presentations documented on the original project
                     page.
                   </p>
 
                   <div className="row g-3">
                     <div className="col-md-6">
-                      <ul className={styles.presentationList}>
+                      <ul className="mm-presentationList">
                         {PRESENTATIONS_COL1.map((item, idx) => (
-                          <li key={idx} className={styles.presentationItem}>
-                            <span className={styles.presentationNum}>
+                          <li key={idx} className="mm-presentationItem">
+                            <span className="mm-presentationNum">
                               {idx + 1}.
                             </span>
                             <span>{item}</span>
@@ -600,10 +599,10 @@ export default function MammographyPage() {
                       </ul>
                     </div>
                     <div className="col-md-6">
-                      <ul className={styles.presentationList}>
+                      <ul className="mm-presentationList">
                         {PRESENTATIONS_COL2.map((item, idx) => (
-                          <li key={idx} className={styles.presentationItem}>
-                            <span className={styles.presentationNum}>
+                          <li key={idx} className="mm-presentationItem">
+                            <span className="mm-presentationNum">
                               {idx + 10}.
                             </span>
                             <span>{item}</span>
@@ -616,10 +615,10 @@ export default function MammographyPage() {
 
                 {/* Sub-section: Posters */}
                 <div className="mt-5 pt-2">
-                  <div className={styles.sectionHead}>
-                    <div className={styles.sectionHeadLeft}>
-                      <h3 className={styles.sectionTitle}>Posters</h3>
-                      <div className={styles.accentBar} />
+                  <div className="mm-sectionHead">
+                    <div className="mm-sectionHeadLeft">
+                      <h3 className="mm-sectionTitle">Posters</h3>
+                      <div className="mm-accentBar" />
                     </div>
                   </div>
 
@@ -627,10 +626,10 @@ export default function MammographyPage() {
                     <div className="col-md-6">
                       <div className="d-flex flex-column gap-3">
                         {POSTERS_COL1.map((item, idx) => (
-                          <div key={idx} className={styles.posterCard}>
-                            <div className={styles.posterHeader}>
-                              <span className={styles.posterNum}>{idx + 1}.</span>
-                              <p className={styles.posterText}>{item}</p>
+                          <div key={idx} className="mm-posterCard">
+                            <div className="mm-posterHeader">
+                              <span className="mm-posterNum">{idx + 1}.</span>
+                              <p className="mm-posterText">{item}</p>
                             </div>
                           </div>
                         ))}
@@ -639,10 +638,10 @@ export default function MammographyPage() {
                     <div className="col-md-6">
                       <div className="d-flex flex-column gap-3">
                         {POSTERS_COL2.map((item, idx) => (
-                          <div key={idx} className={styles.posterCard}>
-                            <div className={styles.posterHeader}>
-                              <span className={styles.posterNum}>{idx + 4}.</span>
-                              <p className={styles.posterText}>{item}</p>
+                          <div key={idx} className="mm-posterCard">
+                            <div className="mm-posterHeader">
+                              <span className="mm-posterNum">{idx + 4}.</span>
+                              <p className="mm-posterText">{item}</p>
                             </div>
                           </div>
                         ))}
@@ -653,12 +652,12 @@ export default function MammographyPage() {
 
                 {/* Sub-section: Community Conferences */}
                 <div className="mt-5 pt-2">
-                  <div className={styles.sectionHead}>
-                    <div className={styles.sectionHeadLeft}>
-                      <h3 className={styles.sectionTitle}>
+                  <div className="mm-sectionHead">
+                    <div className="mm-sectionHeadLeft">
+                      <h3 className="mm-sectionTitle">
                         Community Conferences
                       </h3>
-                      <div className={styles.accentBar} />
+                      <div className="mm-accentBar" />
                     </div>
                   </div>
 
@@ -666,8 +665,8 @@ export default function MammographyPage() {
                     <div className="col-md-6">
                       <div className="d-flex flex-column gap-3">
                         {CONFERENCES_COL1.map((item, idx) => (
-                          <div key={idx} className={styles.conferenceCard}>
-                            <p className={styles.conferenceText}>
+                          <div key={idx} className="mm-conferenceCard">
+                            <p className="mm-conferenceText">
                               <strong>{idx + 1}.</strong> {item}
                             </p>
                           </div>
@@ -677,8 +676,8 @@ export default function MammographyPage() {
                     <div className="col-md-6">
                       <div className="d-flex flex-column gap-3">
                         {CONFERENCES_COL2.map((item, idx) => (
-                          <div key={idx} className={styles.conferenceCard}>
-                            <p className={styles.conferenceText}>
+                          <div key={idx} className="mm-conferenceCard">
+                            <p className="mm-conferenceText">
                               <strong>{idx + 3}.</strong> {item}
                             </p>
                           </div>
@@ -690,10 +689,10 @@ export default function MammographyPage() {
 
                 {/* Sub-section: Media Highlights */}
                 <div className="mt-5 pt-2">
-                  <div className={styles.sectionHead}>
-                    <div className={styles.sectionHeadLeft}>
-                      <h3 className={styles.sectionTitle}>Media Highlights</h3>
-                      <div className={styles.accentBar} />
+                  <div className="mm-sectionHead">
+                    <div className="mm-sectionHeadLeft">
+                      <h3 className="mm-sectionTitle">Media Highlights</h3>
+                      <div className="mm-accentBar" />
                     </div>
                   </div>
 
@@ -711,10 +710,10 @@ export default function MammographyPage() {
                           href={item.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={styles.mediaCard}
+                          className="mm-mediaCard"
                         >
-                          <h4 className={styles.mediaOutlet}>{item.outlet}</h4>
-                          <p className={styles.mediaHeadline}>
+                          <h4 className="mm-mediaOutlet">{item.outlet}</h4>
+                          <p className="mm-mediaHeadline">
                             {item.headline} <span className="ms-1">↗</span>
                           </p>
                         </a>
@@ -725,17 +724,17 @@ export default function MammographyPage() {
               </article>
 
               {/* SECTION 06 — DISSEMINATION PRODUCTS & TOOLKITS */}
-              <article id="resources" className={styles.sectionBlock}>
-                <div className={styles.sectionHead}>
-                  <div className={styles.sectionHeadLeft}>
-                    <h2 className={styles.sectionTitle}>
+              <article id="resources" className="mm-sectionBlock">
+                <div className="mm-sectionHead">
+                  <div className="mm-sectionHeadLeft">
+                    <h2 className="mm-sectionTitle">
                       Dissemination Products &amp; Toolkits
                     </h2>
-                    <div className={styles.accentBar} />
+                    <div className="mm-accentBar" />
                   </div>
                 </div>
 
-                <p className={styles.leadText}>
+                <p className="mm-leadText">
                   The original project includes a dissemination products area.
                   Its toolkit section is listed as forthcoming; no downloadable
                   toolkit has been invented for this design.
@@ -748,10 +747,10 @@ export default function MammographyPage() {
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`${styles.toolkitCard} d-block text-decoration-none`}
+                        className={`mm-toolkitCard d-block text-decoration-none`}
                       >
-                        <h4 className={styles.toolkitTitle}>{item.title}</h4>
-                        <p className={styles.toolkitDesc}>
+                        <h4 className="mm-toolkitTitle">{item.title}</h4>
+                        <p className="mm-toolkitDesc">
                           {item.desc} <span className="ms-1">↗</span>
                         </p>
                       </a>
@@ -761,24 +760,24 @@ export default function MammographyPage() {
               </article>
 
               {/* SECTION 07 — MEET THE PROJECT TEAM */}
-              <article id="team" className={styles.sectionBlock}>
-                <div className={styles.sectionHead}>
-                  <div className={styles.sectionHeadLeft}>
-                    <h2 className={styles.sectionTitle}>Meet the Project Team</h2>
-                    <div className={styles.accentBar} />
+              <article id="team" className="mm-sectionBlock">
+                <div className="mm-sectionHead">
+                  <div className="mm-sectionHeadLeft">
+                    <h2 className="mm-sectionTitle">Meet the Project Team</h2>
+                    <div className="mm-accentBar" />
                   </div>
                 </div>
 
                 <div className="row g-3">
                   {TEAM_MEMBERS.map((member) => (
                     <div key={member.name} className="col-md-6">
-                      <div className={styles.teamCard}>
-                        <div className={styles.teamBadge} aria-hidden="true">
+                      <div className="mm-teamCard">
+                        <div className="mm-teamBadge" aria-hidden="true">
                           {member.initials}
                         </div>
                         <div>
-                          <h4 className={styles.teamName}>{member.name}</h4>
-                          <p className={styles.teamRole}>{member.role}</p>
+                          <h4 className="mm-teamName">{member.name}</h4>
+                          <p className="mm-teamRole">{member.role}</p>
                         </div>
                       </div>
                     </div>
@@ -788,61 +787,61 @@ export default function MammographyPage() {
             </main>
 
             {/* RIGHT SIDEBAR COLUMN (~30%) */}
-            <aside className={`col-lg-4 ${styles.sidebarColumn}`}>
+            <aside className={`col-lg-4 mm-sidebarColumn`}>
               {/* SIDEBAR CARD 01: Project Objectives */}
-              <div className={styles.sidebarCard}>
-                <h3 className={styles.sidebarTitle}>Project Objectives</h3>
-                <div className={styles.accentBar} />
-                <ul className={styles.objectivesList}>
+              <div className="mm-sidebarCard">
+                <h3 className="mm-sidebarTitle">Project Objectives</h3>
+                <div className="mm-accentBar" />
+                <ul className="mm-objectivesList">
                   {OBJECTIVES.map((obj, idx) => (
-                    <li key={idx} className={styles.objectiveItem}>
-                      <span className={styles.objectiveNum}>
+                    <li key={idx} className="mm-objectiveItem">
+                      <span className="mm-objectiveNum">
                         0{idx + 1}
                       </span>
-                      <p className={styles.objectiveText}>{obj}</p>
+                      <p className="mm-objectiveText">{obj}</p>
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* SIDEBAR CARD 02: Project at a Glance */}
-              <div className={styles.sidebarCard}>
-                <h3 className={styles.sidebarTitle}>Project at a Glance</h3>
-                <div className={styles.accentBar} />
-                <dl className={styles.glanceList}>
-                  <div className={styles.glanceItem}>
-                    <dt className={styles.glanceDt}>
-                      <span className={styles.bullet} aria-hidden="true" />
+              <div className="mm-sidebarCard">
+                <h3 className="mm-sidebarTitle">Project at a Glance</h3>
+                <div className="mm-accentBar" />
+                <dl className="mm-glanceList">
+                  <div className="mm-glanceItem">
+                    <dt className="mm-glanceDt">
+                      <span className="mm-bullet" aria-hidden="true" />
                       Focus
                     </dt>
-                    <dd className={styles.glanceDd}>
+                    <dd className="mm-glanceDd">
                       Breast cancer and mammography
                     </dd>
                   </div>
-                  <div className={styles.glanceItem}>
-                    <dt className={styles.glanceDt}>
-                      <span className={styles.bullet} aria-hidden="true" />
+                  <div className="mm-glanceItem">
+                    <dt className="mm-glanceDt">
+                      <span className="mm-bullet" aria-hidden="true" />
                       Audience
                     </dt>
-                    <dd className={styles.glanceDd}>
+                    <dd className="mm-glanceDd">
                       American Muslim women
                     </dd>
                   </div>
-                  <div className={styles.glanceItem}>
-                    <dt className={styles.glanceDt}>
-                      <span className={styles.bullet} aria-hidden="true" />
+                  <div className="mm-glanceItem">
+                    <dt className="mm-glanceDt">
+                      <span className="mm-bullet" aria-hidden="true" />
                       Research setting
                     </dt>
-                    <dd className={styles.glanceDd}>
+                    <dd className="mm-glanceDd">
                       Chicago-area formative research and mosque communities
                     </dd>
                   </div>
-                  <div className={styles.glanceItem}>
-                    <dt className={styles.glanceDt}>
-                      <span className={styles.bullet} aria-hidden="true" />
+                  <div className="mm-glanceItem">
+                    <dt className="mm-glanceDt">
+                      <span className="mm-bullet" aria-hidden="true" />
                       Approach
                     </dt>
-                    <dd className={styles.glanceDd}>
+                    <dd className="mm-glanceDd">
                       Religiously tailored peer education
                     </dd>
                   </div>
@@ -850,54 +849,54 @@ export default function MammographyPage() {
               </div>
 
               {/* SIDEBAR CARD 03: Research Findings */}
-              <div className={styles.sidebarCard}>
-                <h3 className={styles.sidebarTitle}>Research Findings</h3>
-                <div className={styles.accentBar} />
-                <div className={styles.sidebarStatItem}>
-                  <span className={styles.sidebarStatNum}>37%</span>
-                  <p className={styles.sidebarStatLabel}>
+              <div className="mm-sidebarCard">
+                <h3 className="mm-sidebarTitle">Research Findings</h3>
+                <div className="mm-accentBar" />
+                <div className="mm-sidebarStatItem">
+                  <span className="mm-sidebarStatNum">37%</span>
+                  <p className="mm-sidebarStatLabel">
                     No mammogram in previous two years in surveyed Chicago sample
                   </p>
                 </div>
-                <div className={styles.sidebarStatItem}>
-                  <span className={styles.sidebarStatNum}>58</span>
-                  <p className={styles.sidebarStatLabel}>
+                <div className="mm-sidebarStatItem">
+                  <span className="mm-sidebarStatNum">58</span>
+                  <p className="mm-sidebarStatLabel">
                     Workshop participants
                   </p>
                 </div>
-                <div className={styles.sidebarStatItem}>
-                  <span className={styles.sidebarStatNum}>38%</span>
-                  <p className={styles.sidebarStatLabel}>
+                <div className="mm-sidebarStatItem">
+                  <span className="mm-sidebarStatNum">38%</span>
+                  <p className="mm-sidebarStatLabel">
                     Obtained mammography within one year
                   </p>
                 </div>
               </div>
 
               {/* SIDEBAR CARD 04: Explore Research */}
-              <div className={styles.sidebarCard}>
-                <h3 className={styles.sidebarTitle}>Explore Research</h3>
-                <div className={styles.accentBar} />
-                <ul className={styles.exploreList}>
+              <div className="mm-sidebarCard">
+                <h3 className="mm-sidebarTitle">Explore Research</h3>
+                <div className="mm-accentBar" />
+                <ul className="mm-exploreList">
                   <li>
-                    <a href="#publications" className={styles.exploreLink}>
+                    <a href="#publications" className="mm-exploreLink">
                       <span>11 publications</span>
                       <span>↗</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#publications" className={styles.exploreLink}>
+                    <a href="#publications" className="mm-exploreLink">
                       <span>18 presentations</span>
                       <span>↗</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#publications" className={styles.exploreLink}>
+                    <a href="#publications" className="mm-exploreLink">
                       <span>6 posters</span>
                       <span>↗</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#team" className={styles.exploreLink}>
+                    <a href="#team" className="mm-exploreLink">
                       <span>Project team</span>
                       <span>↗</span>
                     </a>
@@ -906,17 +905,17 @@ export default function MammographyPage() {
               </div>
 
               {/* SIDEBAR CARD 05: Support Meaningful Research (Solid Burgundy) */}
-              <div className={`${styles.sidebarCard} ${styles.cardBurgundy}`}>
-                <p className={styles.heroQuoteEyebrow}>STAY CONNECTED</p>
+              <div className={`mm-sidebarCard mm-cardBurgundy`}>
+                <p className="mm-heroQuoteEyebrow">STAY CONNECTED</p>
                 <h3 className="text-white fs-5 fw-bold mb-2">
                   Support meaningful research
                 </h3>
                 <div className="bg-white opacity-75 mb-3" style={{ height: 2, width: 28 }} />
-                <p className={`${styles.textLight} small mb-3`}>
+                <p className={`mm-textLight small mb-3`}>
                   Partner with II&amp;M to advance culturally informed, equitable
                   care.
                 </p>
-                <Link href="/consultation" className={styles.btnWhiteOutline}>
+                <Link href="/consultation" className="mm-btnWhiteOutline">
                   GET IN TOUCH <span className="ms-1">↗</span>
                 </Link>
               </div>
@@ -926,33 +925,33 @@ export default function MammographyPage() {
       </section>
 
       {/* 04 BOTTOM CALL TO ACTION BANNER */}
-      <section className={styles.bottomCta}>
-        <div className={styles.bottomCtaBg}>
+      <section className="mm-bottomCta">
+        <div className="mm-bottomCtaBg">
           <img
             src={asset("/images/our-impact/cta-mosque.jpg")}
             alt="Mosque dome and minarets against twilight sky"
-            className={styles.bottomCtaImg}
+            className="mm-bottomCtaImg"
             loading="lazy"
           />
-          <div className={styles.bottomCtaOverlay} />
+          <div className="mm-bottomCtaOverlay" />
         </div>
-        <div className={`container ${styles.bottomCtaContainer}`}>
+        <div className={`container mm-bottomCtaContainer`}>
           <div className="row">
             <div className="col-lg-8 col-xl-7">
-              <p className={styles.ctaEyebrow}>ADVANCING KNOWLEDGE TOGETHER</p>
-              <h2 className={styles.ctaHeading}>
+              <p className="mm-ctaEyebrow">ADVANCING KNOWLEDGE TOGETHER</p>
+              <h2 className="mm-ctaHeading">
                 Research that connects faith, <br className="d-none d-md-inline" />
                 community and better healthcare.
               </h2>
-              <p className={styles.ctaSubtext}>
+              <p className="mm-ctaSubtext">
                 Explore more II&amp;M projects and work with us to translate
                 evidence into education, clinical care, and community impact.
               </p>
-              <div className={styles.ctaActions}>
-                <Link href="/consultation" className={`${styles.btnMaroon} ${styles.btnCta}`}>
+              <div className="mm-ctaActions">
+                <Link href="/consultation" className={`mm-btnMaroon mm-btnCta`}>
                   GET IN TOUCH <span className="ms-1">↗</span>
                 </Link>
-                <Link href="/consultation" className={`${styles.btnWhiteOutline} ${styles.btnCta}`}>
+                <Link href="/consultation" className={`mm-btnWhiteOutline mm-btnCta`}>
                   EXPLORE RESEARCH <span className="ms-1">↗</span>
                 </Link>
               </div>

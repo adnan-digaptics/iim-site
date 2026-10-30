@@ -3,7 +3,6 @@ import Link from "next/link";
 import { asset } from "../../lib/asset";
 import ExploringBioscienceNav from "./ExploringBioscienceNav";
 import { PartnersTabs, FaqAccordion } from "./ExploringBioscienceInteractive";
-import styles from "./exploring-bioscience.module.css";
 
 export const metadata = {
   title: "Exploring Bioscience and Islam | II&M Curriculum Project",
@@ -92,6 +91,9 @@ const CURRICULUM_UNITS = [
     desc: "Core concepts, sources of knowledge, and application exercises.",
     image: asset("/images/exploring-bioscience/unit-01.jpg"),
   },
+
+
+
   {
     unit: "UNIT 02",
     title: "What Do We Know and How Do We Know It?",
@@ -132,54 +134,54 @@ const CURRICULUM_UNITS = [
 
 export default function ExploringBiosciencePage() {
   return (
-    <div className={styles.pageWrapper}>
+    <div className="eb-pageWrapper">
       {/* ====================================================================
           1. HERO SECTION
           ==================================================================== */}
-      <section className={styles.heroSection} aria-label="Hero">
+      <section className="eb-heroSection" aria-label="Hero">
         <div className="container">
-          <div className={styles.heroRow}>
+          <div className="eb-heroRow">
             {/* Left Content */}
-            <div className={styles.heroContentCol}>
-              <div className={styles.heroEyebrow}>
+            <div className="eb-heroContentCol">
+              <div className="eb-heroEyebrow">
                 <span>II&amp;M CURRICULUM PROJECT</span>
                 <span aria-hidden="true">—</span>
               </div>
-              <h1 className={styles.heroTitle}>
+              <h1 className="eb-heroTitle">
                 Exploring <br />
-                <span className={styles.burgundyItalic}>Bioscience</span> <br />
+                <span className="eb-burgundyItalic">Bioscience</span> <br />
                 and Islam
               </h1>
-              <h2 className={styles.heroSubtitle}>
+              <h2 className="eb-heroSubtitle">
                 A Curriculum on Fundamental Questions About the Human Being
               </h2>
-              <p className={styles.heroLead}>
+              <p className="eb-heroLead">
                 Explore the intersection of modern bioscience and Islamic tradition through
                 a thoughtfully designed curriculum fostering critical engagement between scientific
                 inquiry and human purpose.
               </p>
-              <div className={styles.heroBtnGroup}>
-                <a href="#curriculum-units" className={styles.btnBurgundy}>
+              <div className="eb-heroBtnGroup">
+                <a href="#curriculum-units" className="eb-btnBurgundy">
                   Access the Curriculum ↗
                 </a>
-                <a href="#five-questions" className={styles.btnOutline}>
+                <a href="#five-questions" className="eb-btnOutline">
                   Explore the Units ↗
                 </a>
               </div>
-              <div className={styles.heroTagline}>
+              <div className="eb-heroTagline">
                 Science · Faith · Understanding
               </div>
             </div>
 
             {/* Right Photograph */}
-            <div className={styles.heroImageCol}>
-              <div className={styles.heroImageWrapper}>
+            <div className="eb-heroImageCol">
+              <div className="eb-heroImageWrapper">
                 <Image
                   src={asset("/images/exploring-bioscience/hero-lab.jpg")}
                   alt="Laboratory glassware with clear liquid and scientific pipettes"
                   fill
                   priority
-                  className={styles.heroImage}
+                  className="eb-heroImage"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -196,41 +198,41 @@ export default function ExploringBiosciencePage() {
       {/* ====================================================================
           3. PROJECT OVERVIEW
           ==================================================================== */}
-      <section id="overview" className={styles.overviewSection} aria-label="Project Overview">
+      <section id="overview" className="eb-overviewSection" aria-label="Project Overview">
         <div className="container">
-          <div className={styles.overviewGrid}>
+          <div className="eb-overviewGrid">
             {/* Left Column */}
             <div>
-              <span className={styles.eyebrow}>Project Overview</span>
-              <h2 className={styles.overviewHeading}>
+              <span className="eb-eyebrow">Project Overview</span>
+              <h2 className="eb-overviewHeading">
                 Exploring Fundamental Questions at the Intersection of{" "}
-                <span className={styles.burgundyItalic}>Bioscience</span> and Theology
+                <span className="eb-burgundyItalic">Bioscience</span> and Theology
               </h2>
-              <p className={styles.overviewBody}>
+              <p className="eb-overviewBody">
                 The Exploring Bioscience and Islam curriculum was developed to promote critical reflection
                 on the intersection of bioscience and Islamic theology. Students examine real-world issues
                 and evaluate how scientific discoveries intersect with Islamic perspectives on human dignity and morality.
               </p>
-              <p className={styles.overviewBody}>
+              <p className="eb-overviewBody">
                 Designed for diverse and international audiences, this curriculum provides an intellectual
                 framework that bridges empirical science and contemporary theological inquiry, addressing
                 fundamental questions about the human being. This curriculum is designed to help students foster
                 an appreciation of how the biosciences and Islamic thought can inform one another.
               </p>
-              <p className={styles.overviewCitation}>
+              <p className="eb-overviewCitation">
                 A project of the Initiative on Islam and Medicine, supported by funding from the John Templeton Foundation.
               </p>
             </div>
 
             {/* Right Cream Feature Card */}
             <div>
-              <div className={styles.overviewCard}>
-                <span className={styles.overviewCardEyebrow}>Designed to Help Students</span>
-                <h3 className={styles.overviewCardTitle}>Learn to ask better questions.</h3>
-                <ul className={styles.objectivesList}>
+              <div className="eb-overviewCard">
+                <span className="eb-overviewCardEyebrow">Designed to Help Students</span>
+                <h3 className="eb-overviewCardTitle">Learn to ask better questions.</h3>
+                <ul className="eb-objectivesList">
                   {LEARNING_OBJECTIVES.map((obj, idx) => (
-                    <li key={idx} className={styles.objectiveItem}>
-                      <span className={styles.objectiveIcon} aria-hidden="true">
+                    <li key={idx} className="eb-objectiveItem">
+                      <span className="eb-objectiveIcon" aria-hidden="true">
                         ✓
                       </span>
                       <span>{obj}</span>
@@ -246,26 +248,26 @@ export default function ExploringBiosciencePage() {
       {/* ====================================================================
           4. FIVE FUNDAMENTAL QUESTIONS
           ==================================================================== */}
-      <section id="five-questions" className={styles.fiveQuestionsSection} aria-label="Five Fundamental Questions">
+      <section id="five-questions" className="eb-fiveQuestionsSection" aria-label="Five Fundamental Questions">
         <div className="container">
-          <div className={styles.sectionHeaderCenter}>
-            <span className={styles.eyebrow}>The Foundational Inquiries</span>
-            <h2 className={styles.sectionTitle}>
-              Five Questions About the <span className={styles.burgundyItalic}>Human Being</span>
+          <div className="eb-sectionHeaderCenter">
+            <span className="eb-eyebrow">The Foundational Inquiries</span>
+            <h2 className="eb-sectionTitle">
+              Five Questions About the <span className="eb-burgundyItalic">Human Being</span>
             </h2>
-            <p className={styles.sectionSubtitle}>
+            <p className="eb-sectionSubtitle">
               Guiding explorations into scientific inquiry and theological reflection
             </p>
           </div>
 
-          <div className={styles.fiveQuestionsRow}>
+          <div className="eb-fiveQuestionsRow">
             {FIVE_QUESTIONS.map((q) => (
-              <div key={q.num} className={styles.questionCard}>
-                <span className={styles.questionNumber}>{q.num}</span>
-                <div className={styles.questionIconCircle} aria-hidden="true">
+              <div key={q.num} className="eb-questionCard">
+                <span className="eb-questionNumber">{q.num}</span>
+                <div className="eb-questionIconCircle" aria-hidden="true">
                   {q.icon}
                 </div>
-                <p className={styles.questionText}>{q.question}</p>
+                <p className="eb-questionText">{q.question}</p>
               </div>
             ))}
           </div>
@@ -275,69 +277,69 @@ export default function ExploringBiosciencePage() {
       {/* ====================================================================
           5. LEARNING TO UNDERSTAND KNOWLEDGE (FRAMEWORK)
           ==================================================================== */}
-      <section id="framework" className={styles.frameworkSection} aria-label="Epistemological Framework">
+      <section id="framework" className="eb-frameworkSection" aria-label="Epistemological Framework">
         <div className="container">
-          <div className={styles.sectionHeaderCenter}>
-            <span className={styles.eyebrow}>Epistemological Framework</span>
-            <h2 className={styles.sectionTitle}>
-              Learning to Understand <span className={styles.burgundyItalic}>Knowledge</span>
+          <div className="eb-sectionHeaderCenter">
+            <span className="eb-eyebrow">Epistemological Framework</span>
+            <h2 className="eb-sectionTitle">
+              Learning to Understand <span className="eb-burgundyItalic">Knowledge</span>
             </h2>
-            <p className={styles.sectionSubtitle}>
+            <p className="eb-sectionSubtitle">
               To evaluate bioscience and religion, know where ideas come from and how different traditions consider truth.
             </p>
           </div>
 
           {/* 4 Feature Columns */}
-          <div className={styles.frameworkColumnsGrid}>
-            <div className={styles.frameworkCol}>
-              <div className={styles.frameworkTag}>01 / Foundations</div>
-              <h3 className={styles.frameworkHeading}>Sources of Knowledge</h3>
-              <p className={styles.frameworkDesc}>
+          <div className="eb-frameworkColumnsGrid">
+            <div className="eb-frameworkCol">
+              <div className="eb-frameworkTag">01 / Foundations</div>
+              <h3 className="eb-frameworkHeading">Sources of Knowledge</h3>
+              <p className="eb-frameworkDesc">
                 Differentiate empirical, rational, and revelatory knowledge—and examine how certainty is established.
               </p>
             </div>
-            <div className={styles.frameworkCol}>
-              <div className={styles.frameworkTag}>02 / Certainty</div>
-              <h3 className={styles.frameworkHeading}>Evaluating Certainty</h3>
-              <p className={styles.frameworkDesc}>
+            <div className="eb-frameworkCol">
+              <div className="eb-frameworkTag">02 / Certainty</div>
+              <h3 className="eb-frameworkHeading">Evaluating Certainty</h3>
+              <p className="eb-frameworkDesc">
                 Distinguish between interpretations and fundamental tenets, and evaluate the weight of evidence.
               </p>
             </div>
-            <div className={styles.frameworkCol}>
-              <div className={styles.frameworkTag}>03 / Inquiry</div>
-              <h3 className={styles.frameworkHeading}>Critical Evaluation</h3>
-              <p className={styles.frameworkDesc}>
+            <div className="eb-frameworkCol">
+              <div className="eb-frameworkTag">03 / Inquiry</div>
+              <h3 className="eb-frameworkHeading">Critical Evaluation</h3>
+              <p className="eb-frameworkDesc">
                 Develop critical thinking skills to analyze claims without prejudice while honoring core convictions.
               </p>
             </div>
-            <div className={styles.frameworkCol}>
-              <div className={styles.frameworkTag}>04 / Integration</div>
-              <h3 className={styles.frameworkHeading}>Human Knowledge &amp; Revelation</h3>
-              <p className={styles.frameworkDesc}>
+            <div className="eb-frameworkCol">
+              <div className="eb-frameworkTag">04 / Integration</div>
+              <h3 className="eb-frameworkHeading">Human Knowledge &amp; Revelation</h3>
+              <p className="eb-frameworkDesc">
                 How revelation and reasoned human inquiry can be brought together constructively.
               </p>
             </div>
           </div>
 
           {/* Dark Navy Panel with Responsive Connected SVG Diagram */}
-          <div className={styles.navyFrameworkPanel}>
-            <div className={styles.navyContent}>
-              <span className={styles.navyEyebrow}>Integrated Learning</span>
-              <h3 className={styles.navyTitle}>
+          <div className="eb-navyFrameworkPanel">
+            <div className="eb-navyContent">
+              <span className="eb-navyEyebrow">Integrated Learning</span>
+              <h3 className="eb-navyTitle">
                 How the Curriculum{" "}
-                <span className={styles.navyTitleItalic}>Fits Together</span>
+                <span className="eb-navyTitleItalic">Fits Together</span>
               </h3>
-              <p className={styles.navyText}>
+              <p className="eb-navyText">
                 Seven connected instructional stages build on each other through a shared epistemological framework.
               </p>
             </div>
 
-            <div className={styles.navyDiagramWrapper}>
+            <div className="eb-navyDiagramWrapper">
               <svg
                 viewBox="0 0 460 210"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className={styles.navySvgDiagram}
+                className="eb-navySvgDiagram"
                 aria-label="Connected Epistemological Diagram: Reason, The Human Being, Revelation, Empirical Inquiry"
               >
                 {/* Connectors */}
@@ -392,41 +394,41 @@ export default function ExploringBiosciencePage() {
       {/* ====================================================================
           6. EXPLORE THE CURRICULUM (3x3 Grid)
           ==================================================================== */}
-      <section id="curriculum-units" className={styles.curriculumSection} aria-label="Curriculum Units">
+      <section id="curriculum-units" className="eb-curriculumSection" aria-label="Curriculum Units">
         <div className="container">
-          <div className={styles.curriculumHeaderRow}>
-            <div className={styles.curriculumHeaderLeft}>
-              <span className={styles.eyebrow}>Curriculum Units</span>
-              <h2 className={styles.sectionTitle}>
-                Explore the <span className={styles.burgundyItalic}>Curriculum</span>
+          <div className="eb-curriculumHeaderRow">
+            <div className="eb-curriculumHeaderLeft">
+              <span className="eb-eyebrow">Curriculum Units</span>
+              <h2 className="eb-sectionTitle">
+                Explore the <span className="eb-burgundyItalic">Curriculum</span>
               </h2>
-              <p className={styles.sectionSubtitle}>
+              <p className="eb-sectionSubtitle">
                 Six thematic units plus an introductory framework and application activities.
               </p>
             </div>
-            <Link href="/research" className={styles.curriculumLinkRight}>
+            <Link href="/research" className="eb-curriculumLinkRight">
               Explore original curriculum ↗
             </Link>
           </div>
 
-          <div className={styles.curriculumGrid}>
+          <div className="eb-curriculumGrid">
             {/* 7 Curriculum Units */}
             {CURRICULUM_UNITS.map((u) => (
-              <div key={u.unit} className={styles.unitCard}>
-                <div className={styles.unitImageContainer}>
+              <div key={u.unit} className="eb-unitCard">
+                <div className="eb-unitImageContainer">
                   <Image
                     src={u.image}
                     alt={u.title}
                     fill
-                    className={styles.unitImage}
+                    className="eb-unitImage"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className={styles.unitContent}>
-                  <h3 className={styles.unitTitle}>{u.title}</h3>
-                  <p className={styles.unitDesc}>{u.desc}</p>
-                  <div className={styles.unitFooter}>
-                    <span className={styles.unitArrowBtn} aria-hidden="true">
+                <div className="eb-unitContent">
+                  <h3 className="eb-unitTitle">{u.title}</h3>
+                  <p className="eb-unitDesc">{u.desc}</p>
+                  <div className="eb-unitFooter">
+                    <span className="eb-unitArrowBtn" aria-hidden="true">
                       ↗
                     </span>
                   </div>
@@ -435,37 +437,37 @@ export default function ExploringBiosciencePage() {
             ))}
 
             {/* Card 08: For Educators */}
-            <div id="for-educators" className={styles.audienceCard}>
-              <div className={styles.audienceIconCircle} aria-hidden="true">
+            <div id="for-educators" className="eb-audienceCard">
+              <div className="eb-audienceIconCircle" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
                   <path d="M8 7h6" />
                   <path d="M8 11h8" />
                 </svg>
               </div>
-              <h3 className={styles.audienceTitle}>For Educators</h3>
-              <p className={styles.audienceDesc}>
+              <h3 className="eb-audienceTitle">For Educators</h3>
+              <p className="eb-audienceDesc">
                 Lesson plans, presentations, worksheets, and teaching resources for schools and learning communities.
               </p>
-              <Link href="/educate" className={styles.audienceBtn}>
+              <Link href="/educate" className="eb-audienceBtn">
                 Access Educator Curriculum ↗
               </Link>
             </div>
 
             {/* Card 09: For Individual Learners */}
-            <div className={styles.audienceCard}>
-              <div className={styles.audienceIconCircle} aria-hidden="true">
+            <div className="eb-audienceCard">
+              <div className="eb-audienceIconCircle" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10" />
                   <circle cx="12" cy="12" r="6" />
                   <circle cx="12" cy="12" r="2" />
                 </svg>
               </div>
-              <h3 className={styles.audienceTitle}>For Individual Learners</h3>
-              <p className={styles.audienceDesc}>
+              <h3 className="eb-audienceTitle">For Individual Learners</h3>
+              <p className="eb-audienceDesc">
                 Learn at your own pace through the Exploring Bioscience &amp; Islam online course.
               </p>
-              <Link href="/courses" className={styles.audienceBtn}>
+              <Link href="/courses" className="eb-audienceBtn">
                 Explore Online Course ↗
               </Link>
             </div>
@@ -476,42 +478,42 @@ export default function ExploringBiosciencePage() {
       {/* ====================================================================
           7. BUILT FOR THOUGHTFUL LEARNING
           ==================================================================== */}
-      <section className={styles.thoughtfulSection} aria-label="Built for Thoughtful Learning">
+      <section className="eb-thoughtfulSection" aria-label="Built for Thoughtful Learning">
         <div className="container">
-          <div className={styles.sectionHeaderCenter}>
-            <span className={styles.eyebrow}>Teaching &amp; Learning</span>
-            <h2 className={styles.sectionTitle}>
-              Built for <span className={styles.burgundyItalic}>Thoughtful Learning</span>
+          <div className="eb-sectionHeaderCenter">
+            <span className="eb-eyebrow">Teaching &amp; Learning</span>
+            <h2 className="eb-sectionTitle">
+              Built for <span className="eb-burgundyItalic">Thoughtful Learning</span>
             </h2>
           </div>
 
-          <div className={styles.thoughtfulGrid}>
-            <div className={styles.thoughtfulCard}>
-              <div className={styles.thoughtfulIcon} aria-hidden="true">
+          <div className="eb-thoughtfulGrid">
+            <div className="eb-thoughtfulCard">
+              <div className="eb-thoughtfulIcon" aria-hidden="true">
                 ◇
               </div>
-              <h3 className={styles.thoughtfulTitle}>Sources of Knowledge</h3>
-              <p className={styles.thoughtfulDesc}>
+              <h3 className="eb-thoughtfulTitle">Sources of Knowledge</h3>
+              <p className="eb-thoughtfulDesc">
                 Differentiate empirical, rational, and revelatory knowledge—and consider how certainty is established.
               </p>
             </div>
 
-            <div className={styles.thoughtfulCard}>
-              <div className={styles.thoughtfulIcon} aria-hidden="true">
+            <div className="eb-thoughtfulCard">
+              <div className="eb-thoughtfulIcon" aria-hidden="true">
                 ✧
               </div>
-              <h3 className={styles.thoughtfulTitle}>Thought-Provoking Questions</h3>
-              <p className={styles.thoughtfulDesc}>
+              <h3 className="eb-thoughtfulTitle">Thought-Provoking Questions</h3>
+              <p className="eb-thoughtfulDesc">
                 Stimulate meaningful inquiry into the intersection of scientific reasoning, ethics, and Islamic theology.
               </p>
             </div>
 
-            <div className={styles.thoughtfulCard}>
-              <div className={styles.thoughtfulIcon} aria-hidden="true">
+            <div className="eb-thoughtfulCard">
+              <div className="eb-thoughtfulIcon" aria-hidden="true">
                 ⚙
               </div>
-              <h3 className={styles.thoughtfulTitle}>Practical Teaching Features</h3>
-              <p className={styles.thoughtfulDesc}>
+              <h3 className="eb-thoughtfulTitle">Practical Teaching Features</h3>
+              <p className="eb-thoughtfulDesc">
                 Vocabulary journals, guided activities, presentations, supporting materials, and assessment resources.
               </p>
             </div>
@@ -522,49 +524,49 @@ export default function ExploringBiosciencePage() {
       {/* ====================================================================
           8. ACROSS EVERY LEARNING ENVIRONMENT
           ==================================================================== */}
-      <section className={styles.environmentsSection} aria-label="Learning Environments">
+      <section className="eb-environmentsSection" aria-label="Learning Environments">
         <div className="container">
-          <div className={styles.sectionHeaderCenter}>
-            <span className={styles.eyebrow}>Flexible Settings</span>
-            <h2 className={styles.sectionTitle}>
-              Across Every <span className={styles.burgundyItalic}>Learning Environment</span>
+          <div className="eb-sectionHeaderCenter">
+            <span className="eb-eyebrow">Flexible Settings</span>
+            <h2 className="eb-sectionTitle">
+              Across Every <span className="eb-burgundyItalic">Learning Environment</span>
             </h2>
           </div>
 
-          <div className={styles.environmentsGrid}>
+          <div className="eb-environmentsGrid">
             {/* Classroom */}
-            <div className={styles.envCard}>
-              <div className={styles.envImageWrapper}>
+            <div className="eb-envCard">
+              <div className="eb-envImageWrapper">
                 <Image
                   src={asset("/images/exploring-bioscience/env-classroom-hq.jpg")}
                   alt="Students in university library"
                   fill
-                  className={styles.envImage}
+                  className="eb-envImage"
                   sizes="(max-width: 768px) 100vw, 300px"
                 />
               </div>
-              <div className={styles.envContent}>
-                <h3 className={styles.envTitle}>In the Classroom</h3>
-                <p className={styles.envDesc}>
+              <div className="eb-envContent">
+                <h3 className="eb-envTitle">In the Classroom</h3>
+                <p className="eb-envDesc">
                   Classroom instruction, flipped learning, biology enrichment, and Islamic studies integration.
                 </p>
               </div>
             </div>
 
             {/* Beyond the Classroom */}
-            <div className={styles.envCard}>
-              <div className={styles.envImageWrapper}>
+            <div className="eb-envCard">
+              <div className="eb-envImageWrapper">
                 <Image
                   src={asset("/images/exploring-bioscience/env-beyond-hq.jpg")}
                   alt="Study desk with textbooks and learning materials"
                   fill
-                  className={styles.envImage}
+                  className="eb-envImage"
                   sizes="(max-width: 768px) 100vw, 300px"
                 />
               </div>
-              <div className={styles.envContent}>
-                <h3 className={styles.envTitle}>Beyond the Classroom</h3>
-                <p className={styles.envDesc}>
+              <div className="eb-envContent">
+                <h3 className="eb-envTitle">Beyond the Classroom</h3>
+                <p className="eb-envDesc">
                   Weekend schools, youth groups, Islamic circles, independent study, and community learning.
                 </p>
               </div>
@@ -576,42 +578,42 @@ export default function ExploringBiosciencePage() {
       {/* ====================================================================
           9. LEARNER REFLECTIONS
           ==================================================================== */}
-      <section id="testimonials" className={styles.reflectionsSection} aria-label="Learner Reflections">
+      <section id="testimonials" className="eb-reflectionsSection" aria-label="Learner Reflections">
         <div className="container">
-          <div className={styles.sectionHeaderCenter}>
-            <span className={styles.eyebrow}>Voices from Our Community</span>
-            <h2 className={styles.sectionTitle}>
-              Learner <span className={styles.burgundyItalic}>Reflections</span>
+          <div className="eb-sectionHeaderCenter">
+            <span className="eb-eyebrow">Voices from Our Community</span>
+            <h2 className="eb-sectionTitle">
+              Learner <span className="eb-burgundyItalic">Reflections</span>
             </h2>
-            <p className={styles.sectionSubtitle}>
+            <p className="eb-sectionSubtitle">
               Experiences from learners engaging with questions at the intersection of faith and science.
             </p>
           </div>
 
-          <div className={styles.reflectionsGrid}>
+          <div className="eb-reflectionsGrid">
             {/* Left Burgundy Banner */}
-            <div className={styles.reflectionLeftPanel}>
+            <div className="eb-reflectionLeftPanel">
               <div>
-                <span className={styles.reflectionLeftEyebrow}>Exploring Bioscience &amp; Islam</span>
-                <h3 className={styles.reflectionLeftTitle}>
+                <span className="eb-reflectionLeftEyebrow">Exploring Bioscience &amp; Islam</span>
+                <h3 className="eb-reflectionLeftTitle">
                   Bringing scientific inquiry and faith into conversation.
                 </h3>
               </div>
-              <Link href="/research" className={styles.reflectionLeftLink}>
+              <Link href="/research" className="eb-reflectionLeftLink">
                 Explore project reflections ↗
               </Link>
             </div>
 
             {/* Right Testimonial Card */}
-            <div className={styles.reflectionRightCard}>
-              <div className={styles.quoteMark} aria-hidden="true">
+            <div className="eb-reflectionRightCard">
+              <div className="eb-quoteMark" aria-hidden="true">
                 &ldquo;
               </div>
-              <blockquote className={styles.reflectionQuote}>
+              <blockquote className="eb-reflectionQuote">
                 The seminars largely changed my stance on the bioscience–Islam relationship, from two opposing realms to one that complements each other.
               </blockquote>
-              <div className={styles.reflectionAuthor}>Student reflection</div>
-              <div className={styles.reflectionSource}>
+              <div className="eb-reflectionAuthor">Student reflection</div>
+              <div className="eb-reflectionSource">
                 Exploring Bioscience and Islam seminar series
               </div>
             </div>
@@ -622,14 +624,14 @@ export default function ExploringBiosciencePage() {
       {/* ====================================================================
           10. PARTNERS & SUPPORT
           ==================================================================== */}
-      <section className={styles.partnersSection} aria-label="Partners and Support">
+      <section className="eb-partnersSection" aria-label="Partners and Support">
         <div className="container">
-          <div className={styles.sectionHeaderCenter}>
-            <span className={styles.eyebrow}>In Collaboration for a Brighter Tomorrow</span>
-            <h2 className={styles.sectionTitle}>
-              Partners &amp; <span className={styles.burgundyItalic}>Support</span>
+          <div className="eb-sectionHeaderCenter">
+            <span className="eb-eyebrow">In Collaboration for a Brighter Tomorrow</span>
+            <h2 className="eb-sectionTitle">
+              Partners &amp; <span className="eb-burgundyItalic">Support</span>
             </h2>
-            <p className={styles.sectionSubtitle}>
+            <p className="eb-sectionSubtitle">
               Exploring Bioscience and Islam is part of II&amp;M&apos;s broader work connecting scholarship, education, and communities.
             </p>
           </div>
@@ -641,17 +643,17 @@ export default function ExploringBiosciencePage() {
       {/* ====================================================================
           11. FREQUENTLY ASKED QUESTIONS
           ==================================================================== */}
-      <section id="faqs" className={styles.faqSection} aria-label="Frequently Asked Questions">
+      <section id="faqs" className="eb-faqSection" aria-label="Frequently Asked Questions">
         <div className="container">
-          <div className={styles.faqGrid}>
+          <div className="eb-faqGrid">
             <div>
-              <span className={styles.eyebrow}>Have Questions?</span>
-              <h2 className={styles.faqTitle}>
+              <span className="eb-eyebrow">Have Questions?</span>
+              <h2 className="eb-faqTitle">
                 Frequently <br />
                 Asked <br />
-                <span className={styles.burgundyItalic}>Questions</span>
+                <span className="eb-burgundyItalic">Questions</span>
               </h2>
-              <p className={styles.faqDesc}>
+              <p className="eb-faqDesc">
                 Everything you need to know about accessing and using this curriculum.
               </p>
             </div>

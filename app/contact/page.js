@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { asset } from "../../lib/asset";
 import ContactForm from "./ContactForm";
-import "./contact.css";
 
 export const metadata = {
   title: "Contact | Initiative on Islam & Medicine",

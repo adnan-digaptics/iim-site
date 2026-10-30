@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import styles from "./exploring-bioscience.module.css";
 
 const FAQ_ITEMS = [
   {
@@ -41,15 +40,15 @@ export function PartnersTabs() {
   const [activeTab, setActiveTab] = useState("partners");
 
   return (
-    <div className={styles.partnersWrapper}>
-      <div className={styles.partnersTabButtons} role="tablist" aria-label="Partners and Support">
+    <div className="eb-partnersWrapper">
+      <div className="eb-partnersTabButtons" role="tablist" aria-label="Partners and Support">
         <button
           role="tab"
           type="button"
           aria-selected={activeTab === "partners"}
           aria-controls="panel-partners"
           id="tab-partners"
-          className={`${styles.partnerTabBtn} ${activeTab === "partners" ? styles.partnerTabBtnActive : ""}`}
+          className={`eb-partnerTabBtn ${activeTab === "partners" ? "eb-partnerTabBtnActive" : ""}`}
           onClick={() => setActiveTab("partners")}
         >
           Partner Organizations
@@ -60,25 +59,25 @@ export function PartnersTabs() {
           aria-selected={activeTab === "funding"}
           aria-controls="panel-funding"
           id="tab-funding"
-          className={`${styles.partnerTabBtn} ${activeTab === "funding" ? styles.partnerTabBtnActive : ""}`}
+          className={`eb-partnerTabBtn ${activeTab === "funding" ? "eb-partnerTabBtnActive" : ""}`}
           onClick={() => setActiveTab("funding")}
         >
           Funding
         </button>
       </div>
 
-      <div className={styles.partnersContentCard}>
+      <div className="eb-partnersContentCard">
         {activeTab === "partners" ? (
           <div
             id="panel-partners"
             role="tabpanel"
             aria-labelledby="tab-partners"
-            className={styles.partnerTabPanel}
+            className="eb-partnerTabPanel"
           >
-            <p className={styles.partnerText}>
+            <p className="eb-partnerText">
               Explore collaborating organizations and project details on the original II&amp;M research project page.
             </p>
-            <Link href="/research" className={styles.partnerLink}>
+            <Link href="/research" className="eb-partnerLink">
               View project partners ↗
             </Link>
           </div>
@@ -87,12 +86,12 @@ export function PartnersTabs() {
             id="panel-funding"
             role="tabpanel"
             aria-labelledby="tab-funding"
-            className={styles.partnerTabPanel}
+            className="eb-partnerTabPanel"
           >
-            <p className={styles.partnerText}>
+            <p className="eb-partnerText">
               Supported by generous grant funding from the John Templeton Foundation and institutional backing from academic partners dedicated to advancing science and religion dialogue.
             </p>
-            <Link href="/research" className={styles.partnerLink}>
+            <Link href="/research" className="eb-partnerLink">
               Learn about our funders ↗
             </Link>
           </div>
@@ -113,24 +112,24 @@ export function FaqAccordion() {
   };
 
   return (
-    <div className={styles.faqAccordion} role="region" aria-label="Frequently Asked Questions">
+    <div className="eb-faqAccordion" role="region" aria-label="Frequently Asked Questions">
       {FAQ_ITEMS.map((item) => {
         const isOpen = openIds.includes(item.id);
         return (
           <div
             key={item.id}
-            className={`${styles.faqItem} ${isOpen ? styles.faqItemOpen : ""}`}
+            className={`eb-faqItem ${isOpen ? "eb-faqItemOpen" : ""}`}
           >
             <button
               type="button"
-              className={styles.faqQuestionBtn}
+              className="eb-faqQuestionBtn"
               onClick={() => toggleItem(item.id)}
               aria-expanded={isOpen}
               aria-controls={`answer-${item.id}`}
               id={`question-${item.id}`}
             >
-              <span className={styles.faqQuestionText}>{item.question}</span>
-              <span className={`${styles.faqChevron} ${isOpen ? styles.faqChevronOpen : ""}`} aria-hidden="true">
+              <span className="eb-faqQuestionText">{item.question}</span>
+              <span className={`eb-faqChevron ${isOpen ? "eb-faqChevronOpen" : ""}`} aria-hidden="true">
                 <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 1.5L7 7.5L13 1.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
@@ -140,9 +139,9 @@ export function FaqAccordion() {
               id={`answer-${item.id}`}
               role="region"
               aria-labelledby={`question-${item.id}`}
-              className={`${styles.faqAnswerWrapper} ${isOpen ? styles.faqAnswerVisible : ""}`}
+              className={`eb-faqAnswerWrapper ${isOpen ? "eb-faqAnswerVisible" : ""}`}
             >
-              <div className={styles.faqAnswerContent}>
+              <div className="eb-faqAnswerContent">
                 <p>{item.answer}</p>
               </div>
             </div>

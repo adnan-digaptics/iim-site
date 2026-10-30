@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { asset } from "../../lib/asset";
-import styles from "./mahsn.module.css";
 
 const VIDEO_LIST = [
   {
@@ -56,7 +55,7 @@ export default function MahsnVideoSection() {
         {VIDEO_LIST.map((video) => (
           <div key={video.id} className="col-md-6">
             <div
-              className={styles.videoCard}
+              className="mahsn-videoCard"
               role="button"
               tabIndex={0}
               aria-label={`Play video: ${video.title}`}
@@ -68,22 +67,22 @@ export default function MahsnVideoSection() {
                 }
               }}
             >
-              <div className={styles.videoThumbWrap}>
+              <div className="mahsn-videoThumbWrap">
                 <img
                   src={video.thumbnail}
                   alt={video.alt}
-                  className={styles.videoThumb}
+                  className="mahsn-videoThumb"
                   loading="lazy"
                 />
-                <div className={styles.playOverlay}>
-                  <div className={styles.playCircle} aria-hidden="true">
+                <div className="mahsn-playOverlay">
+                  <div className="mahsn-playCircle" aria-hidden="true">
                     <i className="fa-solid fa-play" />
                   </div>
                 </div>
               </div>
-              <div className={styles.videoBody}>
-                <h4 className={styles.videoTitle}>{video.title}</h4>
-                <p className={styles.videoLabel}>{video.label}</p>
+              <div className="mahsn-videoBody">
+                <h4 className="mahsn-videoTitle">{video.title}</h4>
+                <p className="mahsn-videoLabel">{video.label}</p>
               </div>
             </div>
           </div>
@@ -93,7 +92,7 @@ export default function MahsnVideoSection() {
       {/* Video Lightbox Modal */}
       {activeVideo && (
         <div
-          className={styles.videoModalBackdrop}
+          className="mahsn-videoModalBackdrop"
           role="dialog"
           aria-modal="true"
           aria-label={activeVideo.title}
@@ -103,18 +102,18 @@ export default function MahsnVideoSection() {
             }
           }}
         >
-          <div className={styles.videoModalDialog}>
+          <div className="mahsn-videoModalDialog">
             {/* Modal Header */}
-            <div className={styles.videoModalHeader}>
-              <div className={styles.videoModalHeaderInfo}>
-                <span className={styles.videoModalBadge}>
+            <div className="mahsn-videoModalHeader">
+              <div className="mahsn-videoModalHeaderInfo">
+                <span className="mahsn-videoModalBadge">
                   {activeVideo.label}
                 </span>
-                <h3 className={styles.videoModalTitle}>{activeVideo.title}</h3>
+                <h3 className="mahsn-videoModalTitle">{activeVideo.title}</h3>
               </div>
               <button
                 type="button"
-                className={styles.videoModalCloseBtn}
+                className="mahsn-videoModalCloseBtn"
                 onClick={() => setActiveVideo(null)}
                 aria-label="Close video player"
               >
@@ -123,27 +122,27 @@ export default function MahsnVideoSection() {
             </div>
 
             {/* Responsive 16:9 Video Frame */}
-            <div className={styles.videoModalFrameWrap}>
+            <div className="mahsn-videoModalFrameWrap">
               <iframe
                 src={`https://www.youtube-nocookie.com/embed/${activeVideo.videoId}?autoplay=1&rel=0&modestbranding=1`}
                 title={activeVideo.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
-                className={styles.videoModalIframe}
+                className="mahsn-videoModalIframe"
               />
             </div>
 
             {/* Modal Footer with Video Caption & YouTube Link */}
-            <div className={styles.videoModalFooter}>
-              <p className={styles.videoModalCaption}>
+            <div className="mahsn-videoModalFooter">
+              <p className="mahsn-videoModalCaption">
                 {activeVideo.subtitle}
               </p>
               <a
                 href={`https://www.youtube.com/watch?v=${activeVideo.videoId}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.videoModalYoutubeLink}
+                className="mahsn-videoModalYoutubeLink"
               >
                 <i className="fa-brands fa-youtube" /> Watch on YouTube{" "}
                 <i className="fa-solid fa-arrow-up-right-from-square" />

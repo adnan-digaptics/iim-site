@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import styles from "./exploring-bioscience.module.css";
 
 const NAV_ITEMS = [
   { id: "overview", label: "Overview" },
@@ -21,7 +20,7 @@ export default function ExploringBioscienceNav() {
     if (typeof window === "undefined") return 120;
     const isMobile = window.innerWidth <= 991;
     const headerHeight = isMobile ? 72 : 83;
-    const subnavEl = document.querySelector(`.${styles.stickySubnav}`);
+    const subnavEl = document.querySelector(".eb-stickySubnav");
     const subnavHeight = subnavEl ? subnavEl.offsetHeight : 48;
     return headerHeight + subnavHeight + 14;
   };
@@ -80,18 +79,18 @@ export default function ExploringBioscienceNav() {
   };
 
   return (
-    <nav className={styles.stickySubnav} aria-label="Exploring Bioscience Section Navigation">
+    <nav className="eb-stickySubnav" aria-label="Exploring Bioscience Section Navigation">
       <div className="container">
-        <div className={styles.subnavContainer} ref={navListRef}>
-          <ul className={styles.subnavList}>
+        <div className="eb-subnavContainer" ref={navListRef}>
+          <ul className="eb-subnavList">
             {NAV_ITEMS.map((item) => {
               const isActive = activeId === item.id;
               return (
-                <li key={item.id} className={styles.subnavItem}>
+                <li key={item.id} className="eb-subnavItem">
                   <a
                     href={`#${item.id}`}
                     data-nav-id={item.id}
-                    className={`${styles.subnavLink} ${isActive ? styles.subnavLinkActive : ""}`}
+                    className={`eb-subnavLink ${isActive ? "eb-subnavLinkActive" : ""}`}
                     onClick={(e) => scrollToSection(e, item.id)}
                   >
                     {item.label}

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import FosteringConnectionsNav from "./FosteringConnectionsNav";
-import styles from "./fostering-connections.module.css";
 
 export const metadata = {
   title: "Fostering Connections Between Bioscience & Theology | Initiative on Islam & Medicine",
@@ -376,41 +375,41 @@ const TEAM_MEMBERS = [
 
 export default function FosteringConnectionsPage() {
   return (
-    <div className={styles.pageWrap}>
+    <div className="fostering-connections-page fc-pageWrap">
       {/* ===================================================================
           01 HERO SECTION
           =================================================================== */}
-      <section className={styles.hero}>
-        <div className={styles.heroBgCircles} aria-hidden="true">
-          <div className={styles.heroCircleOuter} />
-          <div className={styles.heroCircleInner} />
-          <div className={styles.heroCircleCore} />
+      <section className="fc-hero">
+        <div className="fc-heroBgCircles" aria-hidden="true">
+          <div className="fc-heroCircleOuter" />
+          <div className="fc-heroCircleInner" />
+          <div className="fc-heroCircleCore" />
         </div>
 
         <div className="container">
-          <div className={styles.heroContainer}>
-            <div className={styles.heroEyebrowWrap}>
-              <span className={styles.heroEyebrowLine} />
-              <p className={styles.heroEyebrow}>EDUCATION &amp; RESEARCH PROJECT · EST. 2022</p>
+          <div className="fc-heroContainer">
+            <div className="fc-heroEyebrowWrap">
+              <span className="fc-heroEyebrowLine" />
+              <p className="fc-heroEyebrow">EDUCATION &amp; RESEARCH PROJECT · EST. 2022</p>
             </div>
 
-            <h1 className={styles.heroTitle}>
+            <h1 className="fc-heroTitle">
               Fostering Connections<br />
               Between <em>Bioscience &amp;</em><br />
               <em>Theology</em>
             </h1>
 
-            <p className={styles.heroLead}>
+            <p className="fc-heroLead">
               Exploring Bioscience and Islam — an educational initiative helping Muslim students and
               teachers engage life&apos;s big questions through scientific inquiry and Islamic theological
               perspectives.
             </p>
 
-            <div className={styles.heroActions}>
-              <a href="#materials" className={styles.btnPrimary}>
+            <div className="fc-heroActions">
+              <a href="#materials" className="fc-btnPrimary">
                 EXPLORE PROJECT MATERIALS ↗
               </a>
-              <a href="#events" className={styles.btnOutline}>
+              <a href="#events" className="fc-btnOutline">
                 VIEW SEMINARS &amp; EVENTS ↗
               </a>
             </div>
@@ -426,48 +425,48 @@ export default function FosteringConnectionsPage() {
       {/* ===================================================================
           03 MAIN EDITORIAL SECTION (TWO-COLUMN WITH RIGHT SIDEBAR)
           =================================================================== */}
-      <section className={styles.mainLayoutSection}>
+      <section className="fc-mainLayoutSection">
         <div className="container">
-          <div className={styles.layoutGrid}>
+          <div className="fc-layoutGrid">
             {/* ----------------- LEFT MAIN CONTENT COLUMN ----------------- */}
-            <div className={styles.mainColumn}>
+            <div className="fc-mainColumn">
               {/* SECTION 01: OVERVIEW */}
-              <div id="overview" className={styles.sectionBlock}>
+              <div id="overview" className="fc-sectionBlock">
                 {/* Heading hidden per user request */}
-                {/* <div className={styles.sectionEyebrow}>THE PROJECT</div>
-                <h2 className={styles.sectionTitle}>Overview</h2>
-                <div className={styles.burgundyBar} /> */}
-                <p className={styles.bodyParagraph}>
+                {/* <div className="fc-sectionEyebrow">THE PROJECT</div>
+                <h2 className="fc-sectionTitle">Overview</h2>
+                <div className="fc-burgundyBar" /> */}
+                <p className="fc-bodyParagraph">
                   The project &ldquo;Fostering Connections between Bioscience and Theology for Medical Track Muslim
                   Students,&rdquo; also known as the &ldquo;Exploring Bioscience and Islam&rdquo; Seminar Series, launched in 2022 with
                   support from the John Templeton Foundation.
                 </p>
-                <p className={styles.bodyParagraph}>
+                <p className="fc-bodyParagraph">
                   As Muslim students explore bioscience, they encounter questions about religious identity, scientific discovery,
                   human origins, consciousness and moral agency. This initiative creates opportunities to examine these
                   questions constructively through dialogue between bioscientists, Islamic scholars and educators.
                 </p>
-                <p className={styles.bodyParagraph}>
+                <p className="fc-bodyParagraph">
                   The project aims to build conceptual literacy about key questions concerning the human being, and to equip
                   educators with classroom-ready teaching resources.
                 </p>
 
                 {/* OVERVIEW VIDEO */}
-                <div className={styles.overviewVideoWrap}>
-                  <div className={styles.videoFrameWrap}>
+                <div className="fc-overviewVideoWrap">
+                  <div className="fc-videoFrameWrap">
                     <iframe
                       src="https://www.youtube-nocookie.com/embed/WkqPDZHKljQ?rel=0&modestbranding=1"
                       title="Fostering Connections Between Science And Theology For Medical Track Muslim Students"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
-                      className={styles.videoIframe}
+                      className="fc-videoIframe"
                     />
                   </div>
-                  <div className={styles.videoCaptionBar}>
-                    <div className={styles.videoCaptionInfo}>
-                      <span className={styles.videoTag}>Featured Project Video</span>
-                      <p className={styles.videoCaptionTitle}>
+                  <div className="fc-videoCaptionBar">
+                    <div className="fc-videoCaptionInfo">
+                      <span className="fc-videoTag">Featured Project Video</span>
+                      <p className="fc-videoCaptionTitle">
                         Fostering Connections Between Science and Theology for Medical Track Muslim Students
                       </p>
                     </div>
@@ -475,7 +474,7 @@ export default function FosteringConnectionsPage() {
                       href="https://www.youtube.com/watch?v=WkqPDZHKljQ"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={styles.videoYoutubeLink}
+                      className="fc-videoYoutubeLink"
                     >
                       <i className="fa-brands fa-youtube" aria-hidden="true" />
                       <span>Watch on YouTube</span>
@@ -486,85 +485,85 @@ export default function FosteringConnectionsPage() {
               </div>
 
               {/* SECTION 02: PROJECT OBJECTIVES */}
-              <div id="objectives" className={styles.sectionBlock}>
-                <div className={styles.sectionEyebrow}>PURPOSE &amp; IMPACT</div>
-                <h2 className={styles.sectionTitle}>Project Objectives</h2>
-                <div className={styles.burgundyBar} />
-                <div className={styles.objectivesGrid}>
+              <div id="objectives" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">PURPOSE &amp; IMPACT</div>
+                <h2 className="fc-sectionTitle">Project Objectives</h2>
+                <div className="fc-burgundyBar" />
+                <div className="fc-objectivesGrid">
                   {OBJECTIVES.map((obj) => (
-                    <div key={obj.num} className={styles.objectiveCard}>
-                      <div className={styles.objectiveNum}>{obj.num}</div>
-                      <p className={styles.objectiveText}>{obj.text}</p>
+                    <div key={obj.num} className="fc-objectiveCard">
+                      <div className="fc-objectiveNum">{obj.num}</div>
+                      <p className="fc-objectiveText">{obj.text}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* SECTION 03: PROGRAM DESIGN & SEVEN SEMINAR TOPICS */}
-              <div id="seminar-topics" className={styles.sectionBlock}>
-                <div className={styles.sectionEyebrow}>A MULTIMODAL APPROACH</div>
-                <h2 className={styles.sectionTitle}>Program Design &amp; Seven Seminar Topics</h2>
-                <div className={styles.burgundyBar} />
-                <p className={styles.sectionSubtext}>
+              <div id="seminar-topics" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">A MULTIMODAL APPROACH</div>
+                <h2 className="fc-sectionTitle">Program Design &amp; Seven Seminar Topics</h2>
+                <div className="fc-burgundyBar" />
+                <p className="fc-sectionSubtext">
                   The multidisciplinary team developed seminars for Muslim high-school and university students,
                   followed by instructional resources for educators.
                 </p>
-                <div className={styles.topicsList}>
+                <div className="fc-topicsList">
                   {SEMINAR_TOPICS.map((topic) => (
-                    <div key={topic.num} className={styles.topicRow}>
-                      <span className={styles.topicNum}>{topic.num}</span>
-                      <h3 className={styles.topicTitle}>{topic.title}</h3>
+                    <div key={topic.num} className="fc-topicRow">
+                      <span className="fc-topicNum">{topic.num}</span>
+                      <h3 className="fc-topicTitle">{topic.title}</h3>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* SECTION 04: PROJECT MATERIALS */}
-              <div id="materials" className={styles.sectionBlock}>
-                <div className={styles.sectionEyebrow}>OPEN EDUCATIONAL MATERIALS</div>
-                <h2 className={styles.sectionTitle}>Project Materials</h2>
-                <div className={styles.burgundyBar} />
-                <p className={styles.sectionSubtext}>
+              <div id="materials" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">OPEN EDUCATIONAL MATERIALS</div>
+                <h2 className="fc-sectionTitle">Project Materials</h2>
+                <div className="fc-burgundyBar" />
+                <p className="fc-sectionSubtext">
                   Teaching modules, companion resources, symposium proceedings and student-facing material
                   developed through the project.
                 </p>
-                <div className={styles.materialsGrid}>
+                <div className="fc-materialsGrid">
                   {PROJECT_MATERIALS.map((mat) => (
-                    <div key={mat.num} className={styles.cardItem}>
+                    <div key={mat.num} className="fc-cardItem">
                       <div>
-                        <div className={styles.cardTopRow}>
-                          <h3 className={styles.cardTitle}>{mat.title}</h3>
-                          <span className={styles.cardTopNum}>{mat.num}</span>
+                        <div className="fc-cardTopRow">
+                          <h3 className="fc-cardTitle">{mat.title}</h3>
+                          <span className="fc-cardTopNum">{mat.num}</span>
                         </div>
-                        <p className={styles.cardMeta}>{mat.desc}</p>
+                        <p className="fc-cardMeta">{mat.desc}</p>
                       </div>
-                      <a href={mat.href} className={styles.cardLink}>
+                      <a href={mat.href} className="fc-cardLink">
                         {mat.linkText}
                       </a>
                     </div>
                   ))}
                 </div>
-                <div className={styles.noticeBox}>
+                <div className="fc-noticeBox">
                   Individual files are accessed via the official project page. This template does not invent download URLs.
                 </div>
               </div>
 
               {/* SECTION 05: PROJECT EVENTS */}
-              <div id="events" className={styles.sectionBlock}>
-                <div className={styles.sectionEyebrow}>LEARNING IN COMMUNITY</div>
-                <h2 className={styles.sectionTitle}>Project Events</h2>
-                <div className={styles.burgundyBar} />
-                <div className={styles.materialsGrid}>
+              <div id="events" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">LEARNING IN COMMUNITY</div>
+                <h2 className="fc-sectionTitle">Project Events</h2>
+                <div className="fc-burgundyBar" />
+                <div className="fc-materialsGrid">
                   {PROJECT_EVENTS.map((evt) => (
-                    <div key={evt.num} className={styles.cardItem}>
+                    <div key={evt.num} className="fc-cardItem">
                       <div>
-                        <div className={styles.cardTopRow}>
-                          <h3 className={styles.cardTitle}>{evt.title}</h3>
-                          <span className={styles.cardTopNum}>{evt.num}</span>
+                        <div className="fc-cardTopRow">
+                          <h3 className="fc-cardTitle">{evt.title}</h3>
+                          <span className="fc-cardTopNum">{evt.num}</span>
                         </div>
-                        <p className={styles.cardMeta}>{evt.meta}</p>
+                        <p className="fc-cardMeta">{evt.meta}</p>
                       </div>
-                      <a href={evt.href} className={styles.cardLink}>
+                      <a href={evt.href} className="fc-cardLink">
                         {evt.linkText}
                       </a>
                     </div>
@@ -573,21 +572,21 @@ export default function FosteringConnectionsPage() {
               </div>
 
               {/* SECTION 06: STUDENT SEMINARS */}
-              <div id="student-seminars" className={styles.sectionBlock}>
-                <div className={styles.sectionEyebrow}>EDUCATIONAL REACH</div>
-                <h2 className={styles.sectionTitle}>Student Seminars</h2>
-                <div className={styles.burgundyBar} />
-                <div className={styles.materialsGrid}>
+              <div id="student-seminars" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">EDUCATIONAL REACH</div>
+                <h2 className="fc-sectionTitle">Student Seminars</h2>
+                <div className="fc-burgundyBar" />
+                <div className="fc-materialsGrid">
                   {STUDENT_SEMINARS.map((sem) => (
-                    <div key={sem.num} className={`${styles.cardItem} ${styles.cardWhite}`}>
+                    <div key={sem.num} className={`fc-cardItem fc-cardWhite`}>
                       <div>
-                        <div className={styles.cardTopRow}>
-                          <h3 className={styles.cardTitle}>{sem.title}</h3>
-                          <span className={styles.cardTopNum}>{sem.num}</span>
+                        <div className="fc-cardTopRow">
+                          <h3 className="fc-cardTitle">{sem.title}</h3>
+                          <span className="fc-cardTopNum">{sem.num}</span>
                         </div>
-                        <p className={styles.cardMeta}>{sem.meta}</p>
+                        <p className="fc-cardMeta">{sem.meta}</p>
                       </div>
-                      <a href={sem.href} className={styles.cardLink}>
+                      <a href={sem.href} className="fc-cardLink">
                         {sem.linkText}
                       </a>
                     </div>
@@ -596,21 +595,21 @@ export default function FosteringConnectionsPage() {
               </div>
 
               {/* SECTION 07: TEACHER TRAINING & SYMPOSIA */}
-              <div id="teacher-training" className={styles.sectionBlock}>
-                <div className={styles.sectionEyebrow}>SUPPORTING EDUCATORS</div>
-                <h2 className={styles.sectionTitle}>Teacher Training &amp; Symposia</h2>
-                <div className={styles.burgundyBar} />
-                <div className={styles.materialsGrid}>
+              <div id="teacher-training" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">SUPPORTING EDUCATORS</div>
+                <h2 className="fc-sectionTitle">Teacher Training &amp; Symposia</h2>
+                <div className="fc-burgundyBar" />
+                <div className="fc-materialsGrid">
                   {TEACHER_TRAINING.map((trn) => (
-                    <div key={trn.num} className={`${styles.cardItem} ${styles.cardWhite}`}>
+                    <div key={trn.num} className={`fc-cardItem fc-cardWhite`}>
                       <div>
-                        <div className={styles.cardTopRow}>
-                          <h3 className={styles.cardTitle}>{trn.title}</h3>
-                          <span className={styles.cardTopNum}>{trn.num}</span>
+                        <div className="fc-cardTopRow">
+                          <h3 className="fc-cardTitle">{trn.title}</h3>
+                          <span className="fc-cardTopNum">{trn.num}</span>
                         </div>
-                        <p className={styles.cardMeta}>{trn.meta}</p>
+                        <p className="fc-cardMeta">{trn.meta}</p>
                       </div>
-                      <a href={trn.href} className={styles.cardLink}>
+                      <a href={trn.href} className="fc-cardLink">
                         {trn.linkText}
                       </a>
                     </div>
@@ -619,21 +618,21 @@ export default function FosteringConnectionsPage() {
               </div>
 
               {/* SECTION 08: PUBLICATIONS */}
-              <div id="publications" className={styles.sectionBlock}>
-                <div className={styles.sectionEyebrow}>KNOWLEDGE &amp; EVIDENCE</div>
-                <h2 className={styles.sectionTitle}>Publications</h2>
-                <div className={styles.burgundyBar} />
-                <div className={styles.materialsGrid}>
+              <div id="publications" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">KNOWLEDGE &amp; EVIDENCE</div>
+                <h2 className="fc-sectionTitle">Publications</h2>
+                <div className="fc-burgundyBar" />
+                <div className="fc-materialsGrid">
                   {PUBLICATIONS.map((pub) => (
-                    <div key={pub.num} className={`${styles.cardItem} ${styles.cardWhite}`}>
+                    <div key={pub.num} className={`fc-cardItem fc-cardWhite`}>
                       <div>
-                        <div className={styles.cardTopRow}>
-                          <h3 className={styles.cardTitle}>{pub.title}</h3>
-                          <span className={styles.cardTopNum}>{pub.num}</span>
+                        <div className="fc-cardTopRow">
+                          <h3 className="fc-cardTitle">{pub.title}</h3>
+                          <span className="fc-cardTopNum">{pub.num}</span>
                         </div>
-                        <p className={styles.cardMeta}>{pub.meta}</p>
+                        <p className="fc-cardMeta">{pub.meta}</p>
                       </div>
-                      <Link href={pub.href} className={styles.cardLink}>
+                      <Link href={pub.href} className="fc-cardLink">
                         {pub.linkText}
                       </Link>
                     </div>
@@ -642,21 +641,21 @@ export default function FosteringConnectionsPage() {
               </div>
 
               {/* SECTION 09: REPORTS */}
-              <div id="reports" className={styles.sectionBlock}>
-                <div className={styles.sectionEyebrow}>SYMPOSIUM OUTPUTS</div>
-                <h2 className={styles.sectionTitle}>Reports</h2>
-                <div className={styles.burgundyBar} />
-                <div className={styles.materialsGrid}>
+              <div id="reports" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">SYMPOSIUM OUTPUTS</div>
+                <h2 className="fc-sectionTitle">Reports</h2>
+                <div className="fc-burgundyBar" />
+                <div className="fc-materialsGrid">
                   {REPORTS.map((rep) => (
-                    <div key={rep.num} className={`${styles.cardItem} ${styles.cardWhite}`}>
+                    <div key={rep.num} className={`fc-cardItem fc-cardWhite`}>
                       <div>
-                        <div className={styles.cardTopRow}>
-                          <h3 className={styles.cardTitle}>{rep.title}</h3>
-                          <span className={styles.cardTopNum}>{rep.num}</span>
+                        <div className="fc-cardTopRow">
+                          <h3 className="fc-cardTitle">{rep.title}</h3>
+                          <span className="fc-cardTopNum">{rep.num}</span>
                         </div>
-                        <p className={styles.cardMeta}>{rep.meta}</p>
+                        <p className="fc-cardMeta">{rep.meta}</p>
                       </div>
-                      <Link href={rep.href} className={styles.cardLink}>
+                      <Link href={rep.href} className="fc-cardLink">
                         {rep.linkText}
                       </Link>
                     </div>
@@ -665,21 +664,21 @@ export default function FosteringConnectionsPage() {
               </div>
 
               {/* SECTION 10: CONFERENCE PRESENTATIONS */}
-              <div id="presentations" className={styles.sectionBlock}>
-                <div className={styles.sectionEyebrow}>SHARING THE WORK</div>
-                <h2 className={styles.sectionTitle}>Conference Presentations</h2>
-                <div className={styles.burgundyBar} />
-                <div className={styles.materialsGrid}>
+              <div id="presentations" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">SHARING THE WORK</div>
+                <h2 className="fc-sectionTitle">Conference Presentations</h2>
+                <div className="fc-burgundyBar" />
+                <div className="fc-materialsGrid">
                   {PRESENTATIONS.map((pres) => (
-                    <div key={pres.num} className={`${styles.cardItem} ${styles.cardWhite}`}>
+                    <div key={pres.num} className={`fc-cardItem fc-cardWhite`}>
                       <div>
-                        <div className={styles.cardTopRow}>
-                          <h3 className={styles.cardTitle}>{pres.title}</h3>
-                          <span className={styles.cardTopNum}>{pres.num}</span>
+                        <div className="fc-cardTopRow">
+                          <h3 className="fc-cardTitle">{pres.title}</h3>
+                          <span className="fc-cardTopNum">{pres.num}</span>
                         </div>
-                        <p className={styles.cardMeta}>{pres.meta}</p>
+                        <p className="fc-cardMeta">{pres.meta}</p>
                       </div>
-                      <a href={pres.href} className={styles.cardLink}>
+                      <a href={pres.href} className="fc-cardLink">
                         {pres.linkText}
                       </a>
                     </div>
@@ -688,66 +687,66 @@ export default function FosteringConnectionsPage() {
               </div>
 
               {/* SECTION 11: PODCAST */}
-              <div id="podcast" className={styles.sectionBlock}>
-                <div className={styles.sectionEyebrow}>LISTEN &amp; LEARN</div>
-                <h2 className={styles.sectionTitle}>Podcast</h2>
-                <div className={styles.burgundyBar} />
-                <div className={styles.podcastPanel}>
-                  <h3 className={styles.podcastPanelTitle}>
+              <div id="podcast" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">LISTEN &amp; LEARN</div>
+                <h2 className="fc-sectionTitle">Podcast</h2>
+                <div className="fc-burgundyBar" />
+                <div className="fc-podcastPanel">
+                  <h3 className="fc-podcastPanelTitle">
                     Big Questions About the Human Being — Islam and Biomedicine in Dialogue
                   </h3>
-                  <p className={styles.podcastPanelDesc}>
+                  <p className="fc-podcastPanelDesc">
                     The Medic &amp; The Mufti podcast · Listen via the II&amp;M project page.
                   </p>
-                  <Link href="/podcast" className={styles.podcastBtn}>
+                  <Link href="/podcast" className="fc-podcastBtn">
                     LISTEN NOW ↗
                   </Link>
                 </div>
               </div>
 
               {/* SECTION 12: EVENTS GALLERY & TESTIMONIALS */}
-              <div id="gallery" className={styles.sectionBlock}>
-                <div className={styles.sectionEyebrow}>A GLOBAL CONVERSATION</div>
-                <h2 className={styles.sectionTitle}>Events Gallery &amp; Testimonials</h2>
-                <div className={styles.burgundyBar} />
-                <p className={styles.sectionSubtext}>
+              <div id="gallery" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">A GLOBAL CONVERSATION</div>
+                <h2 className="fc-sectionTitle">Events Gallery &amp; Testimonials</h2>
+                <div className="fc-burgundyBar" />
+                <p className="fc-sectionSubtext">
                   Six documented event groups across the United States, Malaysia, Pakistan and Indonesia, along with
                   recorded student testimonials.
                 </p>
-                <div className={styles.materialsGrid}>
+                <div className="fc-materialsGrid">
                   {GALLERY_ITEMS.map((gal) => (
-                    <div key={gal.num} className={`${styles.cardItem} ${styles.cardWhite}`}>
+                    <div key={gal.num} className={`fc-cardItem fc-cardWhite`}>
                       <div>
-                        <div className={styles.cardTopRow}>
-                          <h3 className={styles.cardTitle}>{gal.title}</h3>
-                          <span className={styles.cardTopNum}>{gal.num}</span>
+                        <div className="fc-cardTopRow">
+                          <h3 className="fc-cardTitle">{gal.title}</h3>
+                          <span className="fc-cardTopNum">{gal.num}</span>
                         </div>
-                        <p className={styles.cardMeta}>{gal.meta}</p>
+                        <p className="fc-cardMeta">{gal.meta}</p>
                       </div>
-                      <a href={gal.href} className={styles.cardLink}>
+                      <a href={gal.href} className="fc-cardLink">
                         {gal.linkText}
                       </a>
                     </div>
                   ))}
                 </div>
-                <div className={styles.noticeBox}>
+                <div className="fc-noticeBox">
                   Original event photographs and testimonial videos remain on the source project page.
                 </div>
               </div>
 
               {/* SECTION 13: MEET THE PROJECT TEAM */}
-              <div id="team" className={styles.sectionBlock}>
-                <div className={styles.sectionEyebrow}>MULTIDISCIPLINARY EXPERTISE</div>
-                <h2 className={styles.sectionTitle}>Meet the Project Team</h2>
-                <div className={styles.burgundyBar} />
-                <p className={styles.sectionSubtext}>
+              <div id="team" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">MULTIDISCIPLINARY EXPERTISE</div>
+                <h2 className="fc-sectionTitle">Meet the Project Team</h2>
+                <div className="fc-burgundyBar" />
+                <p className="fc-sectionSubtext">
                   Bioscientists, theologians and educators from institutions around the world.
                 </p>
-                <div className={styles.teamGrid}>
+                <div className="fc-teamGrid">
                   {TEAM_MEMBERS.map((member) => (
-                    <div key={member.name} className={styles.teamCard}>
-                      <h3 className={styles.teamName}>{member.name}</h3>
-                      <p className={styles.teamAffiliation}>{member.affiliation}</p>
+                    <div key={member.name} className="fc-teamCard">
+                      <h3 className="fc-teamName">{member.name}</h3>
+                      <p className="fc-teamAffiliation">{member.affiliation}</p>
                     </div>
                   ))}
                 </div>
@@ -755,74 +754,74 @@ export default function FosteringConnectionsPage() {
             </div>
 
             {/* ----------------- RIGHT SIDEBAR COLUMN ----------------- */}
-            <aside className={styles.sidebarColumn}>
-              <div className={styles.sidebarStickyWrap}>
+            <aside className="fc-sidebarColumn">
+              <div className="fc-sidebarStickyWrap">
                 {/* CARD 01: PROJECT AT A GLANCE */}
-                <div className={styles.sidebarCard}>
-                  <h3 className={styles.sidebarCardTitle}>Project at a Glance</h3>
-                  <div className={styles.sidebarBar} />
-                  <dl className={styles.glanceList}>
-                    <div className={styles.glanceItem}>
-                      <dt className={styles.glanceLabel}>Project</dt>
-                      <dd className={styles.glanceValue}>Exploring Bioscience and Islam</dd>
+                <div className="fc-sidebarCard">
+                  <h3 className="fc-sidebarCardTitle">Project at a Glance</h3>
+                  <div className="fc-sidebarBar" />
+                  <dl className="fc-glanceList">
+                    <div className="fc-glanceItem">
+                      <dt className="fc-glanceLabel">Project</dt>
+                      <dd className="fc-glanceValue">Exploring Bioscience and Islam</dd>
                     </div>
-                    <div className={styles.glanceItem}>
-                      <dt className={styles.glanceLabel}>Launched</dt>
-                      <dd className={styles.glanceValue}>2022</dd>
+                    <div className="fc-glanceItem">
+                      <dt className="fc-glanceLabel">Launched</dt>
+                      <dd className="fc-glanceValue">2022</dd>
                     </div>
-                    <div className={styles.glanceItem}>
-                      <dt className={styles.glanceLabel}>Audience</dt>
-                      <dd className={styles.glanceValue}>Muslim students &amp; educators</dd>
+                    <div className="fc-glanceItem">
+                      <dt className="fc-glanceLabel">Audience</dt>
+                      <dd className="fc-glanceValue">Muslim students &amp; educators</dd>
                     </div>
-                    <div className={styles.glanceItem}>
-                      <dt className={styles.glanceLabel}>Disciplines</dt>
-                      <dd className={styles.glanceValue}>Bioscience, theology &amp; education</dd>
+                    <div className="fc-glanceItem">
+                      <dt className="fc-glanceLabel">Disciplines</dt>
+                      <dd className="fc-glanceValue">Bioscience, theology &amp; education</dd>
                     </div>
-                    <div className={styles.glanceItem}>
-                      <dt className={styles.glanceLabel}>Approach</dt>
-                      <dd className={styles.glanceValue}>Seminars, curriculum &amp; teacher training</dd>
+                    <div className="fc-glanceItem">
+                      <dt className="fc-glanceLabel">Approach</dt>
+                      <dd className="fc-glanceValue">Seminars, curriculum &amp; teacher training</dd>
                     </div>
-                    <div className={styles.glanceItem}>
-                      <dt className={styles.glanceLabel}>Support</dt>
-                      <dd className={styles.glanceValue}>John Templeton Foundation</dd>
+                    <div className="fc-glanceItem">
+                      <dt className="fc-glanceLabel">Support</dt>
+                      <dd className="fc-glanceValue">John Templeton Foundation</dd>
                     </div>
                   </dl>
                 </div>
 
                 {/* CARD 02: PROJECT ACTIVITIES */}
-                <div className={styles.sidebarCard}>
-                  <h3 className={styles.sidebarCardTitle}>Project Activities</h3>
-                  <div className={styles.sidebarBar} />
-                  <ul className={styles.activitiesList}>
-                    <li className={styles.activityItem}>Student seminar series</li>
-                    <li className={styles.activityItem}>Curriculum &amp; teaching modules</li>
-                    <li className={styles.activityItem}>Teacher training workshops</li>
-                    <li className={styles.activityItem}>Student reflections &amp; podcast</li>
+                <div className="fc-sidebarCard">
+                  <h3 className="fc-sidebarCardTitle">Project Activities</h3>
+                  <div className="fc-sidebarBar" />
+                  <ul className="fc-activitiesList">
+                    <li className="fc-activityItem">Student seminar series</li>
+                    <li className="fc-activityItem">Curriculum &amp; teaching modules</li>
+                    <li className="fc-activityItem">Teacher training workshops</li>
+                    <li className="fc-activityItem">Student reflections &amp; podcast</li>
                   </ul>
                 </div>
 
                 {/* CARD 03: QUICK LINKS */}
-                <div className={styles.sidebarCard}>
-                  <h3 className={styles.sidebarCardTitle}>Quick Links</h3>
-                  <div className={styles.sidebarBar} />
-                  <ul className={styles.quickLinksList}>
-                    <li className={styles.quickLinkItem}>
-                      <a href="#materials" className={styles.quickLink}>
+                <div className="fc-sidebarCard">
+                  <h3 className="fc-sidebarCardTitle">Quick Links</h3>
+                  <div className="fc-sidebarBar" />
+                  <ul className="fc-quickLinksList">
+                    <li className="fc-quickLinkItem">
+                      <a href="#materials" className="fc-quickLink">
                         Teaching resources ↗
                       </a>
                     </li>
-                    <li className={styles.quickLinkItem}>
-                      <a href="#events" className={styles.quickLink}>
+                    <li className="fc-quickLinkItem">
+                      <a href="#events" className="fc-quickLink">
                         Events &amp; seminars ↗
                       </a>
                     </li>
-                    <li className={styles.quickLinkItem}>
-                      <a href="#publications" className={styles.quickLink}>
+                    <li className="fc-quickLinkItem">
+                      <a href="#publications" className="fc-quickLink">
                         Academic publications ↗
                       </a>
                     </li>
-                    <li className={styles.quickLinkItem}>
-                      <a href="#gallery" className={styles.quickLink}>
+                    <li className="fc-quickLinkItem">
+                      <a href="#gallery" className="fc-quickLink">
                         Gallery &amp; testimonials ↗
                       </a>
                     </li>
@@ -830,15 +829,15 @@ export default function FosteringConnectionsPage() {
                 </div>
 
                 {/* CARD 04: EXPLORE THE ORIGINAL PROJECT */}
-                <div id="original-project" className={styles.sidebarCardBurgundy}>
-                  <h3 className={styles.sidebarCardTitle}>Explore the Original Project</h3>
-                  <div className={styles.sidebarBarWhite} />
-                  <p className={styles.sidebarBurgundyText}>
+                <div id="original-project" className="fc-sidebarCardBurgundy">
+                  <h3 className="fc-sidebarCardTitle">Explore the Original Project</h3>
+                  <div className="fc-sidebarBarWhite" />
+                  <p className="fc-sidebarBurgundyText">
                     Access the full gallery, downloadable files and video recordings on the official II&amp;M page.
                   </p>
                   <a
                     href="#overview"
-                    className={styles.sidebarOutlineBtn}
+                    className="fc-sidebarOutlineBtn"
                   >
                     OPEN ORIGINAL PAGE ↗
                   </a>
@@ -852,22 +851,22 @@ export default function FosteringConnectionsPage() {
       {/* ===================================================================
           10 FINAL DARK GREEN FULL-WIDTH CTA SECTION
           =================================================================== */}
-      <section className={styles.finalCtaSection}>
+      <section className="fc-finalCtaSection">
         <div className="container">
-          <div className={styles.finalCtaInner}>
-            <p className={styles.finalCtaEyebrow}>ADVANCING KNOWLEDGE TOGETHER</p>
-            <h2 className={styles.finalCtaTitle}>
+          <div className="fc-finalCtaInner">
+            <p className="fc-finalCtaEyebrow">ADVANCING KNOWLEDGE TOGETHER</p>
+            <h2 className="fc-finalCtaTitle">
               Bridging scientific discovery and faith-informed understanding.
             </h2>
-            <p className={styles.finalCtaDesc}>
+            <p className="fc-finalCtaDesc">
               Connect with II&amp;M to explore educational resources, faculty support, and research initiatives
               at the intersection of bioscience and Islamic thought.
             </p>
-            <div className={styles.finalCtaActions}>
-              <Link href="/education" className={styles.btnCtaPrimary}>
+            <div className="fc-finalCtaActions">
+              <Link href="/education" className="fc-btnCtaPrimary">
                 EXPLORE EDUCATION ↗
               </Link>
-              <Link href="/contact" className={styles.btnCtaOutline}>
+              <Link href="/contact" className="fc-btnCtaOutline">
                 GET IN TOUCH ↗
               </Link>
             </div>

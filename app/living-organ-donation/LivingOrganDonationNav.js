@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import styles from "./living-organ-donation.module.css";
 
 const NAV_ITEMS = [
   { id: "overview", label: "Overview" },
@@ -29,7 +28,7 @@ export default function LivingOrganDonationNav() {
         offset = Math.max(offset, rect.height + 20);
       }
     }
-    const subnavEl = document.querySelector(`.${styles.stickySubnav}`);
+    const subnavEl = document.querySelector(".lod-stickySubnav");
     if (subnavEl) {
       const subnavRect = subnavEl.getBoundingClientRect();
       offset += subnavRect.height;
@@ -100,18 +99,18 @@ export default function LivingOrganDonationNav() {
 
   return (
     <nav
-      className={styles.stickySubnav}
+      className="lod-stickySubnav"
       aria-label="Living organ donation section navigation"
     >
       <div className="container">
-        <div className={styles.subnavWrapper} ref={navListRef}>
+        <div className="lod-subnavWrapper" ref={navListRef}>
           {NAV_ITEMS.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
               data-id={item.id}
-              className={`${styles.subnavLink} ${
-                activeId === item.id ? styles.activeNavLink : ""
+              className={`lod-subnavLink ${
+                activeId === item.id ? "lod-activeNavLink" : ""
               }`}
               onClick={(e) => scrollToSection(e, item.id)}
             >

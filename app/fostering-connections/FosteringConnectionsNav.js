@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import styles from "./fostering-connections.module.css";
 
 const NAV_ITEMS = [
   { id: "overview", label: "Overview" },
@@ -21,7 +20,7 @@ export default function FosteringConnectionsNav() {
     if (typeof window === "undefined") return 130;
     const isMobile = window.innerWidth <= 991;
     const headerHeight = isMobile ? 72 : 83;
-    const subnavEl = document.querySelector(`.${styles.stickySubnav}`);
+    const subnavEl = document.querySelector(".fc-stickySubnav");
     const subnavHeight = subnavEl ? subnavEl.offsetHeight : 48;
     return headerHeight + subnavHeight + 16;
   };
@@ -81,10 +80,10 @@ export default function FosteringConnectionsNav() {
   };
 
   return (
-    <nav className={styles.stickySubnav} aria-label="Page navigation">
+    <nav className="fc-stickySubnav" aria-label="Page navigation">
       <div className="container">
-        <div className={styles.subnavContainer} ref={navListRef}>
-          <ul className={styles.subnavList}>
+        <div className="fc-subnavContainer" ref={navListRef}>
+          <ul className="fc-subnavList">
             {NAV_ITEMS.map((item) => {
               const isActive = activeId === item.id;
               return (
@@ -92,7 +91,7 @@ export default function FosteringConnectionsNav() {
                   <a
                     href={`#${item.id}`}
                     data-nav-id={item.id}
-                    className={`${styles.subnavLink} ${isActive ? styles.subnavLinkActive : ""}`}
+                    className={`fc-subnavLink ${isActive ? "fc-subnavLinkActive" : ""}`}
                     onClick={(e) => scrollToSection(e, item.id)}
                   >
                     {item.label}

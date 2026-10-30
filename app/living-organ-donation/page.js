@@ -1,7 +1,6 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
 import LivingOrganDonationNav from "./LivingOrganDonationNav";
-import styles from "./living-organ-donation.module.css";
 
 export const metadata = {
   title:
@@ -329,26 +328,26 @@ const SIDEBAR_RESOURCES = [
 
 export default function LivingOrganDonationPage() {
   return (
-    <div className={styles.pageWrap}>
+    <div className="living-organ-donation-page lod-pageWrap">
       {/* 01 HERO SECTION */}
-      <header className={styles.hero}>
-        <div className={styles.heroBgWrapper}>
+      <header className="lod-hero">
+        <div className="lod-heroBgWrapper">
           <img
             src={asset("/images/living-organ-donation/organ-hero-brain.jpg")}
             alt="Anatomical model illustrating living organ donation and bioethics"
-            className={styles.heroBgImg}
+            className="lod-heroBgImg"
             loading="eager"
           />
-          <div className={styles.heroGradientOverlay} />
+          <div className="lod-heroGradientOverlay" />
         </div>
 
-        <div className={`container ${styles.heroContainer}`}>
+        <div className={`container lod-heroContainer`}>
           <div className="row align-items-center">
             <div className="col-lg-7 col-xl-6">
-              <p className={styles.heroEyebrow}>
+              <p className="lod-heroEyebrow">
                 RESEARCH PROJECT / ISLAMIC BIOETHICS
               </p>
-              <h1 className={styles.heroTitle}>
+              <h1 className="lod-heroTitle">
                 Informing American <br />
                 Muslims <br />
                 <em>
@@ -356,24 +355,24 @@ export default function LivingOrganDonationPage() {
                   Organ Donation
                 </em>
               </h1>
-              <p className={styles.heroLead}>
+              <p className="lod-heroLead">
                 Faith-sensitive, evidence-informed education that helps Muslim
                 communities navigate the biomedical and Islamic ethical
                 dimensions of living organ donation.
               </p>
 
-              <div className={styles.heroActions}>
-                <a href="#overview" className={styles.btnMaroon}>
+              <div className="lod-heroActions">
+                <a href="#overview" className="lod-btnMaroon">
                   EXPLORE RESEARCH <span className="ms-1">↓</span>
                 </a>
-                <a href="#resources" className={styles.btnOutline}>
+                <a href="#resources" className="lod-btnOutline">
                   EDUCATIONAL RESOURCES <span className="ms-1">↗</span>
                 </a>
               </div>
 
-              <div className={styles.heroTags}>
+              <div className="lod-heroTags">
                 {HERO_TAGS.map((tag) => (
-                  <span key={tag} className={styles.heroTag}>
+                  <span key={tag} className="lod-heroTag">
                     {tag}
                   </span>
                 ))}
@@ -382,13 +381,13 @@ export default function LivingOrganDonationPage() {
 
             <div className="col-lg-5 col-xl-6 position-relative">
               <aside
-                className={styles.heroQuotePanel}
+                className="lod-heroQuotePanel"
                 aria-label="Project quote"
               >
-                <p className={styles.heroQuoteEyebrow}>
+                <p className="lod-heroQuoteEyebrow">
                   FAITH • ETHICS • COMMUNITY
                 </p>
-                <p className={styles.heroQuoteText}>
+                <p className="lod-heroQuoteText">
                   Informed choices. <br />
                   Balanced education. <br />
                   Meaningful dialogue.
@@ -403,33 +402,33 @@ export default function LivingOrganDonationPage() {
       <LivingOrganDonationNav />
 
       {/* MAIN TWO-COLUMN CONTENT */}
-      <div className={`container ${styles.mainContainer}`}>
+      <div className={`container lod-mainContainer`}>
         <div className="row g-5">
           {/* LEFT COLUMN: MAIN RESEARCH CONTENT (col-lg-8) */}
           <main className="col-lg-8">
             {/* SECTION 01 — OVERVIEW */}
-            <article id="overview" className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>Overview</h2>
-                <div className={styles.accentBar} />
+            <article id="overview" className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">Overview</h2>
+                <div className="lod-accentBar" />
               </div>
 
               <div className="row g-4 align-items-start">
                 <div className="col-md-7">
-                  <p className={styles.leadText}>
+                  <p className="lod-leadText">
                     Muslims share beliefs, values and experiences that can
                     influence healthcare decisions across ethnic and racial
                     backgrounds. Some turn to Islamic ethico-legal guidance when
                     considering whether medical procedures are permissible.
                   </p>
-                  <p className={styles.leadText}>
+                  <p className="lod-leadText">
                     Differences of opinion among Muslim scholars regarding
                     organ donation can contribute to knowledge gaps. This
                     project sought to understand those gaps and develop
                     religiously tailored, peer-led group workshops delivered in
                     mosques.
                   </p>
-                  <p className={styles.leadText}>
+                  <p className="lod-leadText">
                     The workshops addressed both biomedical and religious
                     dimensions of living organ donation and end-of-life care,
                     supporting informed, ethically considered decisions.
@@ -437,16 +436,16 @@ export default function LivingOrganDonationPage() {
                 </div>
 
                 <div className="col-md-5">
-                  <div className={styles.overviewMediaWrap}>
+                  <div className="lod-overviewMediaWrap">
                     <img
                       src={asset(
                         "/images/living-organ-donation/organ-overview-doctor.jpg"
                       )}
                       alt="Doctor holding phone and reviewing clinical materials"
-                      className={styles.overviewImage}
+                      className="lod-overviewImage"
                       loading="lazy"
                     />
-                    <span className={styles.overviewCaptionBar}>
+                    <span className="lod-overviewCaptionBar">
                       COMMUNITY-ENGAGED HEALTH EDUCATION
                     </span>
                   </div>
@@ -455,13 +454,13 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 02 — PROJECT AIMS */}
-            <article id="aims" className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>Project Aims</h2>
-                <div className={styles.accentBar} />
+            <article id="aims" className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">Project Aims</h2>
+                <div className="lod-accentBar" />
               </div>
 
-              <p className={styles.leadText}>
+              <p className="lod-leadText">
                 The project developed educational workshops intended to help
                 Muslim communities make informed decisions through balanced
                 religious and biomedical education.
@@ -470,10 +469,10 @@ export default function LivingOrganDonationPage() {
               <div className="row g-3">
                 {PROJECT_AIMS.map((aim) => (
                   <div key={aim.num} className="col-md-4">
-                    <div className={styles.aimCard}>
-                      <div className={styles.aimBadge}>{aim.num}</div>
-                      <h3 className={styles.aimTitle}>{aim.title}</h3>
-                      <p className={styles.aimText}>{aim.text}</p>
+                    <div className="lod-aimCard">
+                      <div className="lod-aimBadge">{aim.num}</div>
+                      <h3 className="lod-aimTitle">{aim.title}</h3>
+                      <p className="lod-aimText">{aim.text}</p>
                     </div>
                   </div>
                 ))}
@@ -481,19 +480,19 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 03 — WHY ORGAN DONATION? (CONTEXT) */}
-            <article id="context" className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>Why Organ Donation?</h2>
-                <div className={styles.accentBar} />
+            <article id="context" className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">Why Organ Donation?</h2>
+                <div className="lod-accentBar" />
               </div>
 
-              <p className={styles.leadText}>
+              <p className="lod-leadText">
                 The shortage of life-saving organs has important consequences
                 for people waiting for transplants. Matching needs can be
                 especially challenging for ethnic and racial minority populations
                 that have lower rates of donation.
               </p>
-              <p className={styles.leadText}>
+              <p className="lod-leadText">
                 The original project presents a 2017 ethnic breakdown of organ
                 donors and waiting-list recipients, alongside a caution:
                 available organ-donation datasets did not identify Muslims as a
@@ -501,11 +500,11 @@ export default function LivingOrganDonationPage() {
                 reported in the cited analysis.
               </p>
 
-              <div className={styles.quoteBox}>
-                <span className={styles.quoteMark} aria-hidden="true">
+              <div className="lod-quoteBox">
+                <span className="lod-quoteMark" aria-hidden="true">
                   &ldquo;
                 </span>
-                <p className={styles.quoteText}>
+                <p className="lod-quoteText">
                   Addressing religious and biomedical questions together can
                   help communities engage in informed decision-making.
                 </p>
@@ -515,7 +514,7 @@ export default function LivingOrganDonationPage() {
                 href="https://www.islamandmedicine.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.btnOutline}
+                className="lod-btnOutline"
               >
                 VIEW NATIONAL TRANSPLANT DATA{" "}
                 <i className="fa-solid fa-arrow-up-right-from-square" />
@@ -523,13 +522,13 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 04 — AMERICAN MUSLIM ATTITUDES */}
-            <article className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>American Muslim Attitudes</h2>
-                <div className={styles.accentBar} />
+            <article className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">American Muslim Attitudes</h2>
+                <div className="lod-accentBar" />
               </div>
 
-              <p className={styles.leadText}>
+              <p className="lod-leadText">
                 Community surveys in Michigan and Chicago explored Muslim
                 perspectives on donation. The original study highlights less
                 positive attitudes toward donation than those observed in the
@@ -540,12 +539,12 @@ export default function LivingOrganDonationPage() {
               <div className="row g-3">
                 {ATTITUDES.map((att) => (
                   <div key={att.num} className="col-12">
-                    <div className={styles.attitudeCard}>
-                      <div className={styles.attitudeHeader}>
-                        <span className={styles.attitudeNum}>{att.num}</span>
-                        <h3 className={styles.attitudeTitle}>{att.title}</h3>
+                    <div className="lod-attitudeCard">
+                      <div className="lod-attitudeHeader">
+                        <span className="lod-attitudeNum">{att.num}</span>
+                        <h3 className="lod-attitudeTitle">{att.title}</h3>
                       </div>
-                      <p className={styles.attitudeText}>{att.text}</p>
+                      <p className="lod-attitudeText">{att.text}</p>
                     </div>
                   </div>
                 ))}
@@ -555,7 +554,7 @@ export default function LivingOrganDonationPage() {
                 href="https://www.islamandmedicine.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.inlineTextLink}
+                className="lod-inlineTextLink"
               >
                 View original community survey charts and findings{" "}
                 <i className="fa-solid fa-arrow-up-right-from-square" />
@@ -563,15 +562,15 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 05 — THE MOSQUE-BASED EDUCATION MODEL */}
-            <article id="approach" className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>
+            <article id="approach" className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">
                   The Mosque-Based Education Model
                 </h2>
-                <div className={styles.accentBar} />
+                <div className="lod-accentBar" />
               </div>
 
-              <p className={styles.leadText}>
+              <p className="lod-leadText">
                 The project designed and evaluated religiously tailored,
                 peer-led group education workshops conducted in mosque settings.
                 Participants could engage both biomedical information and
@@ -579,14 +578,14 @@ export default function LivingOrganDonationPage() {
                 donation.
               </p>
 
-              <div className={styles.processBox}>
+              <div className="lod-processBox">
                 <div className="row g-0">
                   {PROCESS_STEPS.map((step) => (
                     <div key={step.num} className="col-md-3">
-                      <div className={styles.processStep}>
-                        <div className={styles.processCircle}>{step.num}</div>
-                        <h4 className={styles.processTitle}>{step.title}</h4>
-                        <p className={styles.processDesc}>{step.desc}</p>
+                      <div className="lod-processStep">
+                        <div className="lod-processCircle">{step.num}</div>
+                        <h4 className="lod-processTitle">{step.title}</h4>
+                        <p className="lod-processDesc">{step.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -595,13 +594,13 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 06 — WHY END-OF-LIFE CARE? */}
-            <article className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>Why End-of-Life Care?</h2>
-                <div className={styles.accentBar} />
+            <article className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">Why End-of-Life Care?</h2>
+                <div className="lod-accentBar" />
               </div>
 
-              <p className={styles.leadText}>
+              <p className="lod-leadText">
                 Views on living organ donation and end-of-life care are shaped
                 by interconnected medical and religious questions. The project
                 therefore addressed both topics in its educational intervention,
@@ -611,13 +610,13 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 07 — ACADEMIC PAPERS */}
-            <article id="publications" className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>Academic Papers</h2>
-                <div className={styles.accentBar} />
+            <article id="publications" className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">Academic Papers</h2>
+                <div className="lod-accentBar" />
               </div>
 
-              <p className={styles.leadText}>
+              <p className="lod-leadText">
                 All eleven academic papers listed on the original project page
                 are retained below. Open the source project page to access each
                 publication&apos;s original external link.
@@ -625,16 +624,16 @@ export default function LivingOrganDonationPage() {
 
               <div>
                 {ACADEMIC_PAPERS.map((paper) => (
-                  <div key={paper.num} className={styles.numberedRow}>
-                    <div className={styles.rowNumber}>{paper.num}</div>
-                    <div className={styles.rowBody}>
-                      <span className={styles.rowBadge}>RESEARCH PAPER</span>
-                      <h3 className={styles.rowTitle}>{paper.title}</h3>
+                  <div key={paper.num} className="lod-numberedRow">
+                    <div className="lod-rowNumber">{paper.num}</div>
+                    <div className="lod-rowBody">
+                      <span className="lod-rowBadge">RESEARCH PAPER</span>
+                      <h3 className="lod-rowTitle">{paper.title}</h3>
                       <a
                         href={paper.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={styles.rowLink}
+                        className="lod-rowLink"
                       >
                         VIEW ON ORIGINAL PROJECT PAGE{" "}
                         <i className="fa-solid fa-arrow-up-right-from-square" />
@@ -646,26 +645,26 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 08 — OP-EDS */}
-            <article className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>Op-Eds</h2>
-                <div className={styles.accentBar} />
+            <article className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">Op-Eds</h2>
+                <div className="lod-accentBar" />
               </div>
 
               <div>
                 {OP_EDS.map((item) => (
-                  <div key={item.num} className={styles.numberedRow}>
-                    <div className={styles.rowNumber}>{item.num}</div>
-                    <div className={styles.rowBody}>
-                      <span className={styles.rowBadge}>
+                  <div key={item.num} className="lod-numberedRow">
+                    <div className="lod-rowNumber">{item.num}</div>
+                    <div className="lod-rowBody">
+                      <span className="lod-rowBadge">
                         COMMENTARY / OP-ED
                       </span>
-                      <h3 className={styles.rowTitle}>{item.title}</h3>
+                      <h3 className="lod-rowTitle">{item.title}</h3>
                       <a
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={styles.rowLink}
+                        className="lod-rowLink"
                       >
                         VIEW ON ORIGINAL PROJECT PAGE{" "}
                         <i className="fa-solid fa-arrow-up-right-from-square" />
@@ -677,15 +676,15 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 09 — POWERPOINT PRESENTATIONS */}
-            <article className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>
+            <article className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">
                   PowerPoint Presentations
                 </h2>
-                <div className={styles.accentBar} />
+                <div className="lod-accentBar" />
               </div>
 
-              <p className={styles.leadText}>
+              <p className="lod-leadText">
                 Three PowerPoint resources are listed by II&amp;M for public
                 use. Download them from the original page using their individual
                 resource links.
@@ -693,18 +692,18 @@ export default function LivingOrganDonationPage() {
 
               <div>
                 {PPT_PRESENTATIONS.map((item) => (
-                  <div key={item.num} className={styles.numberedRow}>
-                    <div className={styles.rowNumber}>{item.num}</div>
-                    <div className={styles.rowBody}>
-                      <span className={styles.rowBadge}>
+                  <div key={item.num} className="lod-numberedRow">
+                    <div className="lod-rowNumber">{item.num}</div>
+                    <div className="lod-rowBody">
+                      <span className="lod-rowBadge">
                         POWERPOINT / PUBLIC RESOURCE
                       </span>
-                      <h3 className={styles.rowTitle}>{item.title}</h3>
+                      <h3 className="lod-rowTitle">{item.title}</h3>
                       <a
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={styles.rowLink}
+                        className="lod-rowLink"
                       >
                         VIEW ON ORIGINAL PROJECT PAGE{" "}
                         <i className="fa-solid fa-arrow-up-right-from-square" />
@@ -716,28 +715,28 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 10 — CONFERENCE PRESENTATIONS */}
-            <article className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>
+            <article className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">
                   Conference Presentations
                 </h2>
-                <div className={styles.accentBar} />
+                <div className="lod-accentBar" />
               </div>
 
               <div>
                 {CONF_PRESENTATIONS.map((item) => (
-                  <div key={item.num} className={styles.numberedRow}>
-                    <div className={styles.rowNumber}>{item.num}</div>
-                    <div className={styles.rowBody}>
-                      <span className={styles.rowBadge}>
+                  <div key={item.num} className="lod-numberedRow">
+                    <div className="lod-rowNumber">{item.num}</div>
+                    <div className="lod-rowBody">
+                      <span className="lod-rowBadge">
                         CONFERENCE / PRESENTATION
                       </span>
-                      <h3 className={styles.rowTitle}>{item.title}</h3>
+                      <h3 className="lod-rowTitle">{item.title}</h3>
                       <a
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={styles.rowLink}
+                        className="lod-rowLink"
                       >
                         VIEW ON ORIGINAL PROJECT PAGE{" "}
                         <i className="fa-solid fa-arrow-up-right-from-square" />
@@ -749,13 +748,13 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 11 — DISSEMINATION PRODUCTS */}
-            <article id="resources" className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>Dissemination Products</h2>
-                <div className={styles.accentBar} />
+            <article id="resources" className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">Dissemination Products</h2>
+                <div className="lod-accentBar" />
               </div>
 
-              <p className={styles.leadText}>
+              <p className="lod-leadText">
                 The following downloadable educational materials are provided
                 on the original II&amp;M project page. Their original assets and
                 links should be connected during site integration.
@@ -764,31 +763,31 @@ export default function LivingOrganDonationPage() {
               <div className="row g-3">
                 {DISSEMINATION_PRODUCTS.map((prod) => (
                   <div key={prod.idx} className="col-md-6">
-                    <div className={styles.disseminationCard}>
-                      <div className={styles.bookletWrap}>
-                        <div className={styles.bookletMockup}>
+                    <div className="lod-disseminationCard">
+                      <div className="lod-bookletWrap">
+                        <div className="lod-bookletMockup">
                           <div>
-                            <span className={styles.bookletIndex}>
+                            <span className="lod-bookletIndex">
                               {prod.idx}
                             </span>
-                            <h4 className={styles.bookletHeading}>
+                            <h4 className="lod-bookletHeading">
                               {prod.heading}
                             </h4>
                           </div>
-                          <span className={styles.bookletTag}>
+                          <span className="lod-bookletTag">
                             EDUCATIONAL MATERIAL
                           </span>
                         </div>
                       </div>
-                      <div className={styles.disseminationBody}>
-                        <h4 className={styles.disseminationTitle}>
+                      <div className="lod-disseminationBody">
+                        <h4 className="lod-disseminationTitle">
                           {prod.title}
                         </h4>
                         <a
                           href={prod.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={styles.disseminationLink}
+                          className="lod-disseminationLink"
                         >
                           VIEW RESOURCE ON ORIGINAL PAGE{" "}
                           <i className="fa-solid fa-arrow-up-right-from-square" />
@@ -801,15 +800,15 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 12 — ISLAMIC BIOETHICAL DISCOURSE */}
-            <article id="media" className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>
+            <article id="media" className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">
                   Introduction to Islamic Bioethical Discourse
                 </h2>
-                <div className={styles.accentBar} />
+                <div className="lod-accentBar" />
               </div>
 
-              <p className={styles.leadText}>
+              <p className="lod-leadText">
                 The original project page includes the following speakers and
                 discussion topics. Access embedded media through the original
                 project page.
@@ -817,18 +816,18 @@ export default function LivingOrganDonationPage() {
 
               <div className="row g-2 mb-3">
                 <div className="col-md-6">
-                  <ul className={styles.discourseList}>
+                  <ul className="lod-discourseList">
                     {DISCOURSE_COL1.map((item, i) => (
-                      <li key={i} className={styles.discourseItem}>
+                      <li key={i} className="lod-discourseItem">
                         {item}
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="col-md-6">
-                  <ul className={styles.discourseList}>
+                  <ul className="lod-discourseList">
                     {DISCOURSE_COL2.map((item, i) => (
-                      <li key={i} className={styles.discourseItem}>
+                      <li key={i} className="lod-discourseItem">
                         {item}
                       </li>
                     ))}
@@ -840,7 +839,7 @@ export default function LivingOrganDonationPage() {
                 href="https://www.islamandmedicine.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.btnOutline}
+                className="lod-btnOutline"
               >
                 EXPLORE ORIGINAL MEDIA{" "}
                 <i className="fa-solid fa-arrow-up-right-from-square" />
@@ -848,24 +847,24 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 13 — COMMUNITY GALLERY */}
-            <article className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>Community Gallery</h2>
-                <div className={styles.accentBar} />
+            <article className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">Community Gallery</h2>
+                <div className="lod-accentBar" />
               </div>
 
               <div className="row g-3">
                 {GALLERY_CARDS.map((card, i) => (
                   <div key={i} className="col-md-4">
-                    <div className={styles.galleryCard}>
-                      <h4 className={styles.galleryLocation}>{card.location}</h4>
-                      <p className={styles.gallerySpeaker}>{card.speaker}</p>
+                    <div className="lod-galleryCard">
+                      <h4 className="lod-galleryLocation">{card.location}</h4>
+                      <p className="lod-gallerySpeaker">{card.speaker}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <p className={styles.galleryCaption}>
+              <p className="lod-galleryCaption">
                 Photo captions reflect original project gallery. Image thumbnails
                 should be replaced with the project&apos;s approved photographs.
               </p>
@@ -874,7 +873,7 @@ export default function LivingOrganDonationPage() {
                 href="https://www.islamandmedicine.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.btnOutline}
+                className="lod-btnOutline"
               >
                 OPEN FULL GALLERY{" "}
                 <i className="fa-solid fa-arrow-up-right-from-square" />
@@ -882,25 +881,25 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 14 — PROJECT TEAM & SUPPORT */}
-            <article id="support" className={styles.sectionBlock}>
-              <div className={styles.sectionHead}>
-                <h2 className={styles.sectionTitle}>Project Team &amp; Support</h2>
-                <div className={styles.accentBar} />
+            <article id="support" className="lod-sectionBlock">
+              <div className="lod-sectionHead">
+                <h2 className="lod-sectionTitle">Project Team &amp; Support</h2>
+                <div className="lod-accentBar" />
               </div>
 
-              <p className={styles.leadText}>
+              <p className="lod-leadText">
                 The original page includes a project team section and
                 acknowledges the following supporters. No unverified positions
                 or affiliations have been assigned.
               </p>
 
-              <h3 className={styles.supportSubtitle}>Acknowledged Supporters</h3>
+              <h3 className="lod-supportSubtitle">Acknowledged Supporters</h3>
 
-              <div className={styles.supportTable}>
+              <div className="lod-supportTable">
                 {SUPPORTERS.map((row, rIdx) => (
-                  <div key={rIdx} className={styles.supportRow}>
+                  <div key={rIdx} className="lod-supportRow">
                     {row.map((name, cIdx) => (
-                      <div key={cIdx} className={styles.supportCell}>
+                      <div key={cIdx} className="lod-supportCell">
                         {name}
                       </div>
                     ))}
@@ -912,32 +911,32 @@ export default function LivingOrganDonationPage() {
 
           {/* RIGHT COLUMN: SIDEBAR (col-lg-4) */}
           <aside className="col-lg-4">
-            <div className={styles.sidebarSticky}>
+            <div className="lod-sidebarSticky">
               {/* Card 1: Project Objectives */}
-              <div className={styles.sidebarCard}>
-                <h3 className={styles.sidebarCardHead}>Project Objectives</h3>
-                <div className={styles.sidebarObjList}>
+              <div className="lod-sidebarCard">
+                <h3 className="lod-sidebarCardHead">Project Objectives</h3>
+                <div className="lod-sidebarObjList">
                   {SIDEBAR_OBJECTIVES.map((obj, i) => (
-                    <div key={i} className={styles.sidebarObjItem}>
-                      <span className={styles.sidebarObjNum}>0{i + 1}</span>
-                      <p className={styles.sidebarObjText}>{obj}</p>
+                    <div key={i} className="lod-sidebarObjItem">
+                      <span className="lod-sidebarObjNum">0{i + 1}</span>
+                      <p className="lod-sidebarObjText">{obj}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Card 2: Project at a Glance */}
-              <div className={styles.sidebarCard}>
-                <h3 className={styles.sidebarCardHead}>Project at a Glance</h3>
-                <div className={styles.glanceList}>
+              <div className="lod-sidebarCard">
+                <h3 className="lod-sidebarCardHead">Project at a Glance</h3>
+                <div className="lod-glanceList">
                   {SIDEBAR_GLANCE.map((item, i) => (
-                    <div key={i} className={styles.glanceItem}>
-                      <span className={styles.glanceIcon}>
+                    <div key={i} className="lod-glanceItem">
+                      <span className="lod-glanceIcon">
                         <i className={`fa-solid ${item.icon}`} />
                       </span>
                       <div>
-                        <p className={styles.glanceLabel}>{item.label}</p>
-                        <p className={styles.glanceValue}>{item.value}</p>
+                        <p className="lod-glanceLabel">{item.label}</p>
+                        <p className="lod-glanceValue">{item.value}</p>
                       </div>
                     </div>
                   ))}
@@ -945,12 +944,12 @@ export default function LivingOrganDonationPage() {
               </div>
 
               {/* Card 3: Research Library */}
-              <div className={styles.sidebarCard}>
-                <h3 className={styles.sidebarCardHead}>Research Library</h3>
-                <ul className={styles.libraryList}>
+              <div className="lod-sidebarCard">
+                <h3 className="lod-sidebarCardHead">Research Library</h3>
+                <ul className="lod-libraryList">
                   {SIDEBAR_LIBRARY.map((item, i) => (
                     <li key={i}>
-                      <a href={item.href} className={styles.libraryLink}>
+                      <a href={item.href} className="lod-libraryLink">
                         {item.label}{" "}
                         <i className="fa-solid fa-arrow-up-right-from-square" />
                       </a>
@@ -960,11 +959,11 @@ export default function LivingOrganDonationPage() {
               </div>
 
               {/* Card 4: Featured Resources */}
-              <div className={styles.sidebarCard}>
-                <h3 className={styles.sidebarCardHead}>Featured Resources</h3>
-                <ul className={styles.resourceList}>
+              <div className="lod-sidebarCard">
+                <h3 className="lod-sidebarCardHead">Featured Resources</h3>
+                <ul className="lod-resourceList">
                   {SIDEBAR_RESOURCES.map((res, i) => (
-                    <li key={i} className={styles.resourceItem}>
+                    <li key={i} className="lod-resourceItem">
                       {res}
                     </li>
                   ))}
@@ -972,16 +971,16 @@ export default function LivingOrganDonationPage() {
               </div>
 
               {/* Card 5: Collaborate with II&M */}
-              <div className={styles.collaborateCard}>
-                <span className={styles.collabEyebrow}>
+              <div className="lod-collaborateCard">
+                <span className="lod-collabEyebrow">
                   COMMUNITY-ENGAGED RESEARCH
                 </span>
-                <h3 className={styles.collabTitle}>Collaborate with II&amp;M</h3>
-                <p className={styles.collabText}>
+                <h3 className="lod-collabTitle">Collaborate with II&amp;M</h3>
+                <p className="lod-collabText">
                   Connect with our team to support scholarship and
                   faith-sensitive healthcare education.
                 </p>
-                <Link href="/contact" className={styles.btnCollab}>
+                <Link href="/contact" className="lod-btnCollab">
                   GET IN TOUCH{" "}
                   <i className="fa-solid fa-arrow-up-right-from-square" />
                 </Link>
@@ -992,37 +991,37 @@ export default function LivingOrganDonationPage() {
       </div>
 
       {/* FINAL CALL TO ACTION (CTA) BANNER */}
-      <section className={styles.ctaSection} aria-label="Call to action">
+      <section className="lod-ctaSection" aria-label="Call to action">
         <div className="container-fluid p-0">
           <div className="row g-0 align-items-stretch">
             <div className="col-lg-5">
-              <div className={styles.ctaMosqueWrap}>
+              <div className="lod-ctaMosqueWrap">
                 <img
                   src={asset("/images/donation/cta-mosque.jpg")}
                   alt="Historic mosque dome and minarets against golden sunset"
-                  className={styles.ctaMosqueImg}
+                  className="lod-ctaMosqueImg"
                   loading="lazy"
                 />
               </div>
             </div>
             <div className="col-lg-7">
-              <div className={styles.ctaContentWrap}>
-                <span className={styles.ctaEyebrow}>
+              <div className="lod-ctaContentWrap">
+                <span className="lod-ctaEyebrow">
                   ADVANCING KNOWLEDGE TOGETHER
                 </span>
-                <h2 className={styles.ctaHeading}>
+                <h2 className="lod-ctaHeading">
                   Building understanding for better healthcare decisions.
                 </h2>
-                <p className={styles.ctaDesc}>
+                <p className="lod-ctaDesc">
                   Explore the research, use educational resources, and connect
                   with II&amp;M to support community-informed health education.
                 </p>
-                <div className={styles.ctaBtnGroup}>
-                  <Link href="/contact" className={styles.ctaBtnCrimson}>
+                <div className="lod-ctaBtnGroup">
+                  <Link href="/contact" className="lod-ctaBtnCrimson">
                     GET IN TOUCH{" "}
                     <i className="fa-solid fa-arrow-up-right-from-square" />
                   </Link>
-                  <a href="#overview" className={styles.ctaBtnOutline}>
+                  <a href="#overview" className="lod-ctaBtnOutline">
                     EXPLORE RESEARCH{" "}
                     <i className="fa-solid fa-arrow-up-right-from-square" />
                   </a>
