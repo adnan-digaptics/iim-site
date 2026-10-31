@@ -1860,7 +1860,7 @@ a {
 .btn-seamless-outline {
   background-color: #faf7f2;
   border: 1px solid #7d7265;
-  color: #10243a !important;
+  color: #10243a;
   font-family: 'DM Sans', sans-serif;
   font-size: 10.5px;
   font-weight: 800;
@@ -1869,7 +1869,7 @@ a {
   padding: 13px 22px;
   display: inline-flex;
   align-items: center;
-  border-radius: 1px;
+  border-radius: var(--hero-btn-radius, 6px);
   text-decoration: none;
   transition: all 0.25s ease;
 }
@@ -2061,14 +2061,14 @@ a {
 .btn-story-mission {
   background-color: #ffffff;
   border: 1px solid #b78a94;
-  color: #800000 !important;
+  color: #800000;
   font-family: 'DM Sans', sans-serif;
   font-size: 10.5px;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 13px 24px;
-  border-radius: 1px;
+  border-radius: var(--hero-btn-radius, 6px);
   display: inline-flex;
   align-items: center;
   text-decoration: none;
@@ -2077,10 +2077,15 @@ a {
 }
 
 .btn-story-mission:hover {
-  background-color: #fdf5f7;
-  border-color: #800000;
-  color: #800000 !important;
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+  color: #ffffff !important;
   transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(128, 0, 0, 0.28);
+}
+.btn-story-mission:hover * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
 }
 
 @media (max-width: 991px) {
@@ -10549,8 +10554,15 @@ section.section-values-cards .row {
 }
 
 .rs-btn-outline:hover {
-  background: #fdf5f7;
-  color: var(--rs-burgundy) !important;
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(128, 0, 0, 0.28);
+}
+.rs-btn-outline:hover * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
 }
 
 .rs-btn-light {
@@ -10632,7 +10644,7 @@ section.section-values-cards .row {
 
 .research-page .hero-research-seamless .btn-seamless-outline {
   border-color: var(--rs-burgundy);
-  color: var(--rs-navy) !important;
+  color: var(--rs-navy);
   gap: 8px;
 }
 
@@ -30766,4 +30778,223 @@ section.section-values-cards .row {
 
 .skip-to-content:focus {
   top: 16px;
+}
+
+
+/* ==========================================================================
+   MASTER HOVER CONTRAST ENFORCEMENT (100% VISIBILITY GUARANTEED)
+   Ensures highest specificity for all buttons, links, cards, and subnav tabs.
+   ========================================================================== */
+
+/* 1. ALL OUTLINE BUTTONS — Maroon Background + Pure White Text on Hover */
+.btn-seamless-outline:hover,
+.ae-btnOutline:hover,
+.mm-btnOutline:hover,
+.mp-btn-outline:hover,
+.lod-btnOutline:hover,
+.mahsn-btnOutline:hover,
+.fc-btnOutline:hover,
+.consult-btn-outline:hover,
+.btn-outline-burgundy:hover,
+.btn-story-mission:hover,
+.crs-btn-outline:hover,
+.tm-btn-outline:hover,
+.rs-btn-outline:hover,
+.mp-btn-cream-outline:hover,
+.bu3-btnLessonMaterials:hover,
+.books-page .books-btn-outline:hover,
+.bio-btn-outline:hover,
+.research-page .hero-research-seamless .btn-seamless-outline:hover,
+.mission-page .hero-mission-seamless .btn-seamless-outline:hover,
+.impact-page .hero-impact-seamless .btn-seamless-outline:hover,
+.educate-page .hero-educate-seamless .btn-seamless-outline:hover,
+.team-page .hero-team-seamless .btn-seamless-outline:hover,
+.resources-page .hero-resources-seamless .btn-seamless-outline:hover,
+.speaking-page .hero-speaking-seamless .btn-seamless-outline:hover,
+.podcast-page .pod-host .btn-seamless-outline:hover,
+.contact-page .hero-contact-seamless .btn-seamless-outline:hover {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+  color: #ffffff !important;
+  transform: translateY(-2.5px) !important;
+  box-shadow: 0 8px 22px -2px rgba(128, 0, 0, 0.28) !important;
+  cursor: pointer;
+}
+
+.btn-seamless-outline:hover *,
+.ae-btnOutline:hover *,
+.mm-btnOutline:hover *,
+.mp-btn-outline:hover *,
+.lod-btnOutline:hover *,
+.mahsn-btnOutline:hover *,
+.fc-btnOutline:hover *,
+.consult-btn-outline:hover *,
+.btn-outline-burgundy:hover *,
+.btn-story-mission:hover *,
+.crs-btn-outline:hover *,
+.tm-btn-outline:hover *,
+.rs-btn-outline:hover *,
+.mp-btn-cream-outline:hover *,
+.bu3-btnLessonMaterials:hover *,
+.books-page .books-btn-outline:hover *,
+.bio-btn-outline:hover *,
+.research-page .hero-research-seamless .btn-seamless-outline:hover *,
+.mission-page .hero-mission-seamless .btn-seamless-outline:hover *,
+.impact-page .hero-impact-seamless .btn-seamless-outline:hover *,
+.educate-page .hero-educate-seamless .btn-seamless-outline:hover *,
+.team-page .hero-team-seamless .btn-seamless-outline:hover *,
+.resources-page .hero-resources-seamless .btn-seamless-outline:hover *,
+.speaking-page .hero-speaking-seamless .btn-seamless-outline:hover *,
+.podcast-page .pod-host .btn-seamless-outline:hover *,
+.contact-page .hero-contact-seamless .btn-seamless-outline:hover * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* 2. ALL SOLID MAROON BUTTONS — Deep Maroon Background + Pure White Text on Hover */
+.btn-seamless-maroon:hover,
+.btn-solid-maroon:hover,
+.ae-btnPrimary:hover,
+.mm-btnMaroon:hover,
+.mp-btn-maroon:hover,
+.lod-btnMaroon:hover,
+.mahsn-btnMaroon:hover,
+.eb-btnBurgundy:hover,
+.fc-btnPrimary:hover,
+.consult-btn-fill:hover,
+.btn-burgundy:hover,
+.books-btn-maroon:hover,
+.bio-btn-maroon:hover,
+.msn-btn-fill:hover,
+.imp-btn-fill:hover,
+.edu-btn-fill:hover,
+.crs-btn-fill:hover,
+.donate-cta-btn:hover,
+.tm-btn-fill:hover,
+.rs-btn-fill:hover,
+.ae-btnCtaPrimary:hover,
+.fc-btnCtaPrimary:hover,
+.iim-footer-cta:hover,
+.books-page .books-btn-maroon:hover,
+.research-page .hero-research-seamless .btn-seamless-maroon:hover,
+.mission-page .hero-mission-seamless .btn-seamless-maroon:hover,
+.impact-page .hero-impact-seamless .btn-seamless-maroon:hover,
+.educate-page .hero-educate-seamless .btn-seamless-maroon:hover,
+.team-page .hero-team-seamless .btn-seamless-maroon:hover,
+.resources-page .hero-resources-seamless .btn-seamless-maroon:hover,
+.speaking-page .hero-speaking-seamless .btn-seamless-maroon:hover,
+.contact-page .hero-contact-seamless .btn-seamless-maroon:hover {
+  background-color: #600000 !important;
+  border-color: #600000 !important;
+  color: #ffffff !important;
+  transform: translateY(-2.5px) !important;
+  box-shadow: 0 8px 24px -2px rgba(128, 0, 0, 0.32), 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+  cursor: pointer;
+}
+
+.btn-seamless-maroon:hover *,
+.btn-solid-maroon:hover *,
+.ae-btnPrimary:hover *,
+.mm-btnMaroon:hover *,
+.mp-btn-maroon:hover *,
+.lod-btnMaroon:hover *,
+.mahsn-btnMaroon:hover *,
+.eb-btnBurgundy:hover *,
+.fc-btnPrimary:hover *,
+.consult-btn-fill:hover *,
+.btn-burgundy:hover *,
+.books-btn-maroon:hover *,
+.bio-btn-maroon:hover *,
+.msn-btn-fill:hover *,
+.imp-btn-fill:hover *,
+.edu-btn-fill:hover *,
+.crs-btn-fill:hover *,
+.donate-cta-btn:hover *,
+.tm-btn-fill:hover *,
+.rs-btn-fill:hover *,
+.ae-btnCtaPrimary:hover *,
+.fc-btnCtaPrimary:hover *,
+.iim-footer-cta:hover *,
+.books-page .books-btn-maroon:hover *,
+.research-page .hero-research-seamless .btn-seamless-maroon:hover *,
+.mission-page .hero-mission-seamless .btn-seamless-maroon:hover *,
+.impact-page .hero-impact-seamless .btn-seamless-maroon:hover *,
+.educate-page .hero-educate-seamless .btn-seamless-maroon:hover *,
+.team-page .hero-team-seamless .btn-seamless-maroon:hover *,
+.resources-page .hero-resources-seamless .btn-seamless-maroon:hover *,
+.speaking-page .hero-speaking-seamless .btn-seamless-maroon:hover *,
+.contact-page .hero-contact-seamless .btn-seamless-maroon:hover * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* 3. DARK BORDER / NAVY OUTLINE BUTTONS — Dark Navy Background + Pure White Text */
+.btn-outline-bordered:hover,
+.eb-btnOutline:hover {
+  background-color: #10243a !important;
+  border-color: #10243a !important;
+  color: #ffffff !important;
+  transform: translateY(-2.5px) !important;
+  box-shadow: 0 8px 22px -2px rgba(16, 36, 58, 0.25) !important;
+  cursor: pointer;
+}
+
+.btn-outline-bordered:hover *,
+.eb-btnOutline:hover * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* 4. WHITE OUTLINE / CTA BUTTONS — Pure White Background + Maroon Text */
+.mp-btn-white-outline:hover,
+.mm-btnWhiteOutline:hover,
+.mahsn-btnWhiteOutline:hover,
+.fc-btnCtaOutline:hover,
+.ae-btnCtaOutline:hover,
+.lod-btnCollab:hover,
+.workshops-page .ws-paper-cta .btn-seamless-outline:hover,
+.workshops-page .ws-final-actions .btn-seamless-outline:hover,
+.podcast-page .pod-final .btn-seamless-outline:hover {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #800000 !important;
+  transform: translateY(-2.5px) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2) !important;
+  cursor: pointer;
+}
+
+.mp-btn-white-outline:hover *,
+.mm-btnWhiteOutline:hover *,
+.mahsn-btnWhiteOutline:hover *,
+.fc-btnCtaOutline:hover *,
+.ae-btnCtaOutline:hover *,
+.lod-btnCollab:hover *,
+.workshops-page .ws-paper-cta .btn-seamless-outline:hover *,
+.workshops-page .ws-final-actions .btn-seamless-outline:hover *,
+.podcast-page .pod-final .btn-seamless-outline:hover * {
+  color: #800000 !important;
+  fill: #800000 !important;
+}
+
+/* 5. SUBNAV TABS — Crystal-Clear Maroon Highlight on Light Rose Background (8.7:1 WCAG AAA) */
+.mm-subnavLink:hover,
+.ae-subnavLink:hover,
+.mp-subnav-link:hover,
+.mahsn-subnavLink:hover,
+.lod-subnavLink:hover,
+.bmd-navLink:hover,
+.eb-subnavLink:hover,
+.fc-subnavLink:hover {
+  color: #800000 !important;
+  background-color: #f7eef0 !important;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+/* 6. MAIN NAVBAR & DROPDOWNS — Clean Contrast */
+.nav-link:hover,
+.main-nav .dropdown-item:hover,
+.main-nav .dropdown-item:focus {
+  color: #800000 !important;
+  background-color: #faf7f2 !important;
 }

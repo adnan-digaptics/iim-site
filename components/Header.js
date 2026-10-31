@@ -20,12 +20,19 @@ const NAV = [
       ["Mission & Vision", "/mission"],
       ["Our Team", "/team"],
       ["Our Impact", "/impact"],
+      ["Contact", "/contact"],
     ],
   },
   {
     label: "Research",
     href: "/research",
-    items: [["Research & Impact", "/research"]],
+    items: [
+      ["Research & Impact", "/research"],
+      ["Advancing Equity", "/advancing-equity"],
+      ["Living Organ Donation", "/living-organ-donation"],
+      ["MAHSN Pro", "/mahsn-pro"],
+      ["Mammography", "/mammography"],
+    ],
   },
   {
     label: "Resources",
@@ -38,6 +45,10 @@ const NAV = [
     items: [
       ["Education Overview", "/education"],
       ["Courses", "/courses"],
+      ["Becoming a Muslim Doctor", "/becoming-a-muslim-doctor"],
+      ["Exploring Bioscience & Islam", "/exploring-bioscience"],
+      ["Bioscience Unit 3", "/bioscience-unit-3"],
+      ["Fostering Connections", "/fostering-connections"],
     ],
   },
   {
