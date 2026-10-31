@@ -30998,3 +30998,18 @@ section.section-values-cards .row {
   color: #800000 !important;
   background-color: #faf7f2 !important;
 }
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+[role="button"],
+a[class*="btn" i],
+a[class*="button" i],
+a[class*="cta" i] {
+  border-radius: 4px !important;
+}
+
+img {
+  border-radius: 6px !important;
+}
