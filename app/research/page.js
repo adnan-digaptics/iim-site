@@ -61,7 +61,7 @@ const projects = [
     href: "/empart-research",
   },
   {
-    img: asset("/images/e-march/community-health-research.svg"),
+    img: asset("/images/research/project-emarch.jpg"),
     title: "Engaging Muslim Americans for Research on Community Health [E-MARCH]",
     text: "A multi-year project that advances patient-centered outcomes research (PCOR) with Muslim communities to address health priorities, reduce disparities, and inform culturally responsive care.",
     href: "/community-health-research",
