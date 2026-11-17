@@ -13,7 +13,7 @@ const SESSIONS_DATA = [
     speaker: "Dr. Asim I. Padela",
     affiliation: "University of Chicago",
     thumbnail: asset("/images/symposium/video-welcome-padela.jpg"),
-    videoId: "JAwBx3WjAuA",
+    videoId: "h1pCcY8RSsg",
     duration: "18:42",
   },
   {
@@ -27,14 +27,14 @@ const SESSIONS_DATA = [
         name: "Prof. Peter E. Pormann",
         affiliation: "University of Manchester",
         thumbnail: asset("/images/symposium/video-medical-pormann.jpg"),
-        videoId: "mh_DaIA0E1Y",
+        videoId: "xOKur52YafI",
         duration: "32:15",
       },
       {
         name: "Prof. Ahmed Ragab",
         affiliation: "Harvard University",
         thumbnail: asset("/images/symposium/video-medical-ragab.jpg"),
-        videoId: "JAwBx3WjAuA",
+        videoId: "Lx3y9NQHbbw",
         duration: "29:40",
       },
     ],
@@ -77,7 +77,7 @@ const SESSIONS_DATA = [
     speaker: "Prof. Muhammad Afifi al-Akiti",
     affiliation: "University of Oxford",
     thumbnail: asset("/images/symposium/video-keynote-akiti.jpg"),
-    videoId: "JAwBx3WjAuA",
+    videoId: "vH81tweNTOg",
     duration: "46:18",
   },
   {
@@ -118,7 +118,7 @@ const SESSIONS_DATA = [
     speaker: "Prof. Omar Qureshi",
     affiliation: "Zaytuna College",
     thumbnail: asset("/images/symposium/video-keynote-qureshi.jpg"),
-    videoId: "JAwBx3WjAuA",
+    videoId: "NG9LODLEPGQ",
     duration: "41:30",
   },
 ];
@@ -150,13 +150,6 @@ export default function SymposiumPageClient() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
-  // Guarantee that no header styling/gap is applied
-  useEffect(() => {
-    document.body.classList.add("symp-no-header-override");
-    return () => {
-      document.body.classList.remove("symp-no-header-override");
-    };
-  }, []);
 
   // Modal keyboard handling (Escape to close) and body scroll lock
   useEffect(() => {

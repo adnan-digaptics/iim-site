@@ -36812,34 +36812,9 @@ img {
 
 
 /* ==========================================================================
-   31. MULTIDISCIPLINARY SYMPOSIUM PAGE (STANDALONE — NO HEADER)
-   Cleanly scoped under .symp-root and body overrides
+   31. MULTIDISCIPLINARY SYMPOSIUM PAGE
+   Cleanly scoped under .symp-root
    ========================================================================== */
-
-/* Strict Requirement: Suppress Header Completely and eliminate all gaps */
-body:has(.symp-root) .topbar,
-body:has(.symp-root) .main-nav,
-body:has(.symp-root) header,
-body.symp-no-header-override .topbar,
-body.symp-no-header-override .main-nav,
-body.symp-no-header-override header {
-  display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  min-height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-  pointer-events: none !important;
-}
-
-body:has(.symp-root),
-body:has(.symp-root) main,
-body.symp-no-header-override,
-body.symp-no-header-override main {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-}
 
 .symp-root {
   width: 100%;
@@ -37063,7 +37038,7 @@ body.symp-no-header-override main {
   background-color: #faf8f5;
   border: 1px solid #f0eae1;
   border-radius: 12px;
-  padding: 18px 24px;
+  padding: 22px 26px;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
@@ -37094,10 +37069,10 @@ body.symp-no-header-override main {
   margin: 0;
 }
 
-/* Video Thumbnail Element */
+/* Video Thumbnail Element — Proper Dimensions and Natural Proportions */
 .symp-videoThumbWrap {
   position: relative;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   background-color: #102a43;
   cursor: pointer;
@@ -37107,30 +37082,43 @@ body.symp-no-header-override main {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.symp-singleRow .symp-cardVideoCol {
+  display: flex;
+  justify-content: center;
+}
+
 .symp-singleRow .symp-videoThumbWrap {
-  height: 84px;
   width: 100%;
+  max-width: 360px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 160px;
 }
 
 .symp-speakersGrid--2 .symp-videoThumbWrap {
-  height: 80px;
   width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 150px;
 }
 
 .symp-speakersGrid--3 .symp-videoThumbWrap {
-  height: 72px;
   width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 110px;
 }
 
 .symp-videoThumbWrap:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 
 .symp-videoThumbImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -37145,31 +37133,32 @@ body.symp-no-header-override main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.15);
   transition: background 0.2s ease;
 }
 
 .symp-videoThumbWrap:hover .symp-playOverlay {
-  background: rgba(0, 0, 0, 0.24);
+  background: rgba(0, 0, 0, 0.28);
 }
 
 .symp-playCircle {
-  width: 34px;
-  height: 34px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.5);
-  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  background: rgba(11, 27, 61, 0.65);
+  border: 2px solid rgba(255, 255, 255, 0.95);
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
-  padding-left: 2px;
+  font-size: 13px;
+  padding-left: 3px;
   transition: transform 0.2s ease, background 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .symp-videoThumbWrap:hover .symp-playCircle {
-  transform: scale(1.1);
+  transform: scale(1.12);
   background: #781d2a;
   border-color: #ffffff;
 }
@@ -37180,10 +37169,10 @@ body.symp-no-header-override main {
 }
 
 .symp-speakerName {
-  font-size: 14px;
+  font-size: 14.5px;
   font-weight: 700;
   color: #0b1b3d;
-  margin: 0 0 2px 0;
+  margin: 0 0 3px 0;
   line-height: 1.3;
 }
 
@@ -37208,10 +37197,12 @@ body.symp-no-header-override main {
 
 .symp-speakersGrid--2 {
   grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .symp-speakersGrid--3 {
   grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
 .symp-speakerGridItem {
@@ -37220,16 +37211,19 @@ body.symp-no-header-override main {
 }
 
 .symp-speakerDetailsUnder {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .symp-speakerDetailsUnder .symp-speakerName {
-  font-size: 13px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0b1b3d;
   margin-bottom: 2px;
 }
 
 .symp-speakerDetailsUnder .symp-speakerAffil {
   font-size: 11.5px;
+  color: #64748b;
 }
 
 /* 4. OUR SPONSORS */
@@ -37667,6 +37661,15 @@ body.symp-no-header-override main {
     margin-top: 10px;
   }
 
+  .symp-singleRow .symp-videoThumbWrap {
+    max-width: 100%;
+    min-height: 180px;
+  }
+
+  .symp-speakersGrid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .symp-singleRow .symp-speakerDetails {
     padding-left: 0;
   }
@@ -37709,18 +37712,25 @@ body.symp-no-header-override main {
   }
 
   .symp-singleRow .symp-videoThumbWrap {
-    height: 140px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    min-height: 160px;
+    max-width: 100%;
   }
 
   .symp-speakersGrid--2,
   .symp-speakersGrid--3 {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 18px;
   }
 
   .symp-speakersGrid--2 .symp-videoThumbWrap,
   .symp-speakersGrid--3 .symp-videoThumbWrap {
-    height: 140px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    min-height: 160px;
   }
 
   .symp-sessionCard {
@@ -37798,5 +37808,484 @@ body.symp-no-header-override main {
 
   .symp-hero-btn {
     width: 100%;
+  }
+}
+
+/* Religious Dimensions of Healthcare Delivery workshop */
+.religious-workshop-page {
+  --rwd-burgundy: #800000;
+  --rwd-navy: #10243a;
+  --rwd-cream: #fbf8f2;
+  --rwd-line: #e8e3dc;
+  width: 100%;
+  overflow: hidden;
+  color: #293845;
+  background: #fff;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+.religious-workshop-page .rwd-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 360px;
+  background-color: var(--rwd-cream);
+  background-image: var(--iim-pattern);
+  background-size: 420px;
+  overflow: hidden;
+}
+
+.religious-workshop-page .rwd-hero-copy {
+  align-self: center;
+  justify-self: end;
+  width: min(100%, 820px);
+  padding: 48px clamp(32px, 5vw, 78px);
+}
+
+.religious-workshop-page .rwd-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: var(--rwd-burgundy);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.religious-workshop-page .rwd-eyebrow-rule {
+  width: 28px;
+  height: 1px;
+  background: var(--rwd-burgundy);
+}
+
+.religious-workshop-page .rwd-hero h1 {
+  margin: 0;
+  color: var(--rwd-navy);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(29px, 3.25vw, 46px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.16;
+}
+
+.religious-workshop-page .rwd-hero-subtitle {
+  margin: 7px 0 24px;
+  color: var(--rwd-navy);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(16px, 1.55vw, 21px);
+  line-height: 1.4;
+}
+
+.religious-workshop-page .rwd-event-details {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.religious-workshop-page .rwd-event-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--rwd-navy);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.religious-workshop-page .rwd-event-detail i {
+  flex: 0 0 auto;
+  color: var(--rwd-burgundy);
+  font-size: 16px;
+}
+
+.religious-workshop-page .rwd-event-divider {
+  width: 1px;
+  height: 30px;
+  background: #d3c7bd;
+}
+
+.religious-workshop-page .rwd-hero-image {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+}
+
+.religious-workshop-page .rwd-hero-image img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.religious-workshop-page .rwd-content {
+  width: min(100% - 48px, 1120px);
+  margin: 0 auto;
+}
+
+.religious-workshop-page .rwd-overview {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.32fr) minmax(0, 0.68fr);
+  align-items: center;
+  gap: 32px;
+  padding: 30px 0 28px;
+}
+
+.religious-workshop-page .rwd-section-heading h2,
+.religious-workshop-page .rwd-objectives-heading h2 {
+  margin: 0;
+  color: var(--rwd-navy);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(22px, 2.2vw, 29px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.religious-workshop-page .rwd-heading-rule {
+  display: block;
+  width: 32px;
+  height: 2px;
+  margin-top: 12px;
+  background: var(--rwd-burgundy);
+}
+
+.religious-workshop-page .rwd-overview > p {
+  margin: 0;
+  padding-left: 24px;
+  border-left: 1px solid #b65b61;
+  color: #3e454b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.religious-workshop-page .rwd-objectives {
+  display: grid;
+  grid-template-columns: minmax(205px, 0.34fr) minmax(0, 0.66fr);
+  gap: 30px;
+  padding: 24px 30px;
+  border-radius: 12px;
+  background: #f8f4ef;
+}
+
+.religious-workshop-page .rwd-objectives-heading {
+  padding: 8px 26px 8px 0;
+  border-right: 1px solid #c47b7c;
+}
+
+.religious-workshop-page .rwd-objectives-content > p {
+  margin: 0 0 12px;
+  color: #3e454b;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.religious-workshop-page .rwd-objectives-content ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.religious-workshop-page .rwd-objectives-content li {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr);
+  align-items: start;
+  gap: 9px;
+  color: #343c42;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.religious-workshop-page .rwd-objectives-content li i {
+  display: grid;
+  width: 15px;
+  height: 15px;
+  margin-top: 1px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--rwd-burgundy);
+  color: #fff;
+  font-size: 8px;
+}
+
+.religious-workshop-page .rwd-speakers,
+.religious-workshop-page .rwd-sponsors {
+  padding: 26px 0 0;
+}
+
+.religious-workshop-page .rwd-speaker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.religious-workshop-page .rwd-speaker-placeholder {
+  display: flex;
+  min-height: 126px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid var(--rwd-line);
+  border-radius: 9px;
+  background: #f7f5f2;
+  color: #676d72;
+  font-size: 12px;
+  text-align: center;
+}
+
+.religious-workshop-page .rwd-speaker-placeholder i {
+  color: #9a8b80;
+  font-size: 20px;
+}
+
+.religious-workshop-page .rwd-sponsors {
+  padding-bottom: 28px;
+}
+
+.religious-workshop-page .rwd-sponsor-list {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 8px;
+}
+
+.religious-workshop-page .rwd-sponsor-list p {
+  margin: 0;
+  color: #53606b;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.religious-workshop-page .rwd-newsletter {
+  padding: 18px 24px;
+  background-color: #800000;
+  background-image: var(--iim-pattern);
+  background-position: right center;
+  background-size: 360px;
+  color: #fff;
+}
+
+.religious-workshop-page .rwd-newsletter-inner {
+  display: flex;
+  width: min(100%, 1120px);
+  min-height: 62px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin: 0 auto;
+}
+
+.religious-workshop-page .rwd-newsletter-intro {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.religious-workshop-page .rwd-newsletter-intro > i {
+  font-size: 23px;
+}
+
+.religious-workshop-page .rwd-newsletter-divider {
+  width: 1px;
+  height: 42px;
+  background: rgb(255 255 255 / 45%);
+}
+
+.religious-workshop-page .rwd-newsletter h2 {
+  margin: 0 0 3px;
+  color: #fff;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.religious-workshop-page .rwd-newsletter p {
+  max-width: 360px;
+  margin: 0;
+  color: rgb(255 255 255 / 88%);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.religious-workshop-page .rwd-newsletter-link {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border: 1px solid rgb(255 255 255 / 70%);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.religious-workshop-page .rwd-newsletter-link:hover {
+  background: #fff;
+  color: var(--rwd-burgundy);
+}
+
+.religious-workshop-page a:focus-visible {
+  outline: 3px solid #e8b879;
+  outline-offset: 3px;
+}
+
+@media (max-width: 991.98px) {
+  .religious-workshop-page .rwd-hero {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    min-height: 330px;
+  }
+
+  .religious-workshop-page .rwd-hero-copy {
+    padding: 38px 30px;
+  }
+
+  .religious-workshop-page .rwd-title-break {
+    display: none;
+  }
+
+  .religious-workshop-page .rwd-hero-image {
+    min-height: 330px;
+  }
+
+  .religious-workshop-page .rwd-overview,
+  .religious-workshop-page .rwd-objectives {
+    grid-template-columns: minmax(0, 0.35fr) minmax(0, 0.65fr);
+    gap: 22px;
+  }
+}
+
+@media (max-width: 850px) {
+  .religious-workshop-page .rwd-event-details {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .religious-workshop-page .rwd-event-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .religious-workshop-page .rwd-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .religious-workshop-page .rwd-hero-copy {
+    justify-self: stretch;
+    width: 100%;
+    padding: 34px 24px 28px;
+  }
+
+  .religious-workshop-page .rwd-hero h1 {
+    font-size: clamp(28px, 7vw, 38px);
+  }
+
+  .religious-workshop-page .rwd-hero-image {
+    min-height: 230px;
+  }
+
+  .religious-workshop-page .rwd-event-details {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+
+  .religious-workshop-page .rwd-event-detail {
+    font-size: 11px;
+  }
+
+  .religious-workshop-page .rwd-content {
+    width: min(100% - 36px, 560px);
+  }
+
+  .religious-workshop-page .rwd-overview,
+  .religious-workshop-page .rwd-objectives {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .religious-workshop-page .rwd-overview {
+    padding: 28px 0;
+  }
+
+  .religious-workshop-page .rwd-overview > p {
+    padding: 0 0 0 16px;
+  }
+
+  .religious-workshop-page .rwd-objectives {
+    padding: 22px;
+  }
+
+  .religious-workshop-page .rwd-objectives-heading {
+    padding: 0 0 14px;
+    border-right: 0;
+    border-bottom: 1px solid #c47b7c;
+  }
+
+  .religious-workshop-page .rwd-objectives-content > p,
+  .religious-workshop-page .rwd-objectives-content li {
+    font-size: 12px;
+  }
+
+  .religious-workshop-page .rwd-speaker-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .religious-workshop-page .rwd-speaker-placeholder {
+    min-height: 110px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .religious-workshop-page .rwd-sponsor-list {
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  .religious-workshop-page .rwd-sponsor-list p {
+    max-width: 48%;
+    font-size: 12px;
+  }
+
+  .religious-workshop-page .rwd-newsletter-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .religious-workshop-page .rwd-newsletter-link {
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  .religious-workshop-page .rwd-event-details {
+    flex-direction: column;
+  }
+
+  .religious-workshop-page .rwd-event-divider {
+    display: none;
+  }
+
+  .religious-workshop-page .rwd-speaker-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .religious-workshop-page .rwd-hero h1 {
+    font-size: 25px;
+    line-height: 1.1;
   }
 }
