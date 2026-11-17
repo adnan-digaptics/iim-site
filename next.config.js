@@ -6,6 +6,9 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
+  experimental: {
+    agentUpgrade: "security",
+  },
 };
 
 module.exports = nextConfig;
