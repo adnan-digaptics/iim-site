@@ -104,6 +104,15 @@ export default function Header() {
     setMenu(null);
   }, [path]);
 
+  // Exclude header completely on the standalone Multidisciplinary Symposium page
+  if (
+    path &&
+    (normalizePath(path) === "/multidisciplinary-symposium" ||
+      path.startsWith("/multidisciplinary-symposium"))
+  ) {
+    return null;
+  }
+
   function hoverOpen(label) {
     if (window.matchMedia("(min-width: 992px)").matches) setMenu(label);
   }
