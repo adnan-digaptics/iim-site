@@ -60,7 +60,11 @@ const NAV = [
   {
     label: "Workshops",
     href: "/workshops",
-    items: [["Workshops", "/workshops"]],
+    items: [
+      ["Workshops Overview", "/workshops"],
+      ["Religious Dimensions Workshop", "/religious-dimensions-workshop"],
+      ["Multidisciplinary Symposium", "/multidisciplinary-symposium"],
+    ],
   },
   {
     label: "Podcast",

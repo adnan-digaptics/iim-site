@@ -10,11 +10,13 @@ const SESSIONS_DATA = [
     type: "single",
     eyebrow: "WELCOME",
     title: "Welcoming Remarks",
-    speaker: "Dr. Asim I. Padela",
+    talkTitle: "Welcoming Remarks",
+    speaker: "Dr. Asim I. Padela, MD, MSc",
     affiliation: "University of Chicago",
     thumbnail: asset("/images/symposium/video-welcome-padela.jpg"),
     videoId: "h1pCcY8RSsg",
-    duration: "18:42",
+    youtubeUrl: "https://www.youtube.com/watch?v=h1pCcY8RSsg",
+    duration: "5:06",
   },
   {
     id: "medical-knowledge",
@@ -24,18 +26,22 @@ const SESSIONS_DATA = [
     title: "Medical Knowledge and Concepts of Health in Medieval Islamic History",
     speakers: [
       {
-        name: "Prof. Peter E. Pormann",
+        name: "Prof. Peter E. Pormann, MA, DLitt, DPhil",
+        talkTitle: "Medical Epistemology in Arabic Discourse",
         affiliation: "University of Manchester",
         thumbnail: asset("/images/symposium/video-medical-pormann.jpg"),
         videoId: "xOKur52YafI",
-        duration: "32:15",
+        youtubeUrl: "https://www.youtube.com/watch?v=xOKur52YafI",
+        duration: "29:32",
       },
       {
-        name: "Prof. Ahmed Ragab",
+        name: "Prof. Ahmed Ragab, MD, PhD",
+        talkTitle: "The Piety of Health",
         affiliation: "Harvard University",
         thumbnail: asset("/images/symposium/video-medical-ragab.jpg"),
-        videoId: "Lx3y9NQHbbw",
-        duration: "29:40",
+        videoId: "Za6giPQxxe8",
+        youtubeUrl: "https://www.youtube.com/watch?v=Za6giPQxxe8",
+        duration: "20:15",
       },
     ],
   },
@@ -48,24 +54,30 @@ const SESSIONS_DATA = [
     speakers: [
       {
         name: "Prof. Ayman Shabana",
+        talkTitle: "Interface Between Law and Science",
         affiliation: "Georgetown University",
         thumbnail: asset("/images/symposium/video-biomed-shabana.jpg"),
-        videoId: "mh_DaIA0E1Y",
-        duration: "27:10",
+        videoId: "UX84Yqt7Myw",
+        youtubeUrl: "https://www.youtube.com/watch?v=UX84Yqt7Myw",
+        duration: "23:37",
       },
       {
-        name: "Shaykh Kamaluddin Ahmed",
+        name: "Shaykh Kamaluddin Ahmed, DPhil(c)",
+        talkTitle: "Biomedicine at Intersection of Islamic Theology, Law, & Spirituality",
         affiliation: "University of Oxford",
         thumbnail: asset("/images/symposium/video-biomed-kamaluddin.jpg"),
-        videoId: "JAwBx3WjAuA",
-        duration: "34:55",
+        videoId: "vqW6fQUMifQ",
+        youtubeUrl: "https://www.youtube.com/watch?v=vqW6fQUMifQ",
+        duration: "23:26",
       },
       {
-        name: "Dr. Asim I. Padela",
+        name: "Dr. Asim I. Padela, MD, MSc",
+        talkTitle: "Biomedical Constructions of Islamic Notions of Dire Necessity & Public Good",
         affiliation: "University of Chicago",
         thumbnail: asset("/images/symposium/video-biomed-padela.jpg"),
-        videoId: "mh_DaIA0E1Y",
-        duration: "31:20",
+        videoId: "MOnRf2gcyZw",
+        youtubeUrl: "https://www.youtube.com/watch?v=MOnRf2gcyZw",
+        duration: "23:55",
       },
     ],
   },
@@ -74,11 +86,13 @@ const SESSIONS_DATA = [
     type: "single",
     eyebrow: "KEYNOTE ADDRESS",
     title: "A Ghazalian Approach to Integrating Science and Theology",
-    speaker: "Prof. Muhammad Afifi al-Akiti",
+    talkTitle: "A Ghazalian Approach to Integrating Science & Theology",
+    speaker: "Prof. Muhammad Afifi al-Akiti, DPhil",
     affiliation: "University of Oxford",
     thumbnail: asset("/images/symposium/video-keynote-akiti.jpg"),
     videoId: "vH81tweNTOg",
-    duration: "46:18",
+    youtubeUrl: "https://www.youtube.com/watch?v=vH81tweNTOg",
+    duration: "49:19",
   },
   {
     id: "soul-psyche",
@@ -88,25 +102,31 @@ const SESSIONS_DATA = [
     title: "The Soul, The Psyche, and The Reality of Death",
     speakers: [
       {
-        name: "Dr. Mehrunisha Suleman",
+        name: "Dr. Mehrunisha Suleman, BMBCh, MSc, DPhil",
+        talkTitle: "Muslim values & End of Life Healthcare Decision-Making",
         affiliation: "University of Cambridge",
         thumbnail: asset("/images/symposium/video-soul-suleman.jpg"),
-        videoId: "mh_DaIA0E1Y",
-        duration: "28:50",
+        videoId: "b_3xeDU695E",
+        youtubeUrl: "https://www.youtube.com/watch?v=b_3xeDU695E",
+        duration: "18:58",
       },
       {
-        name: "Shaykh Dr. Asim Yusuf",
+        name: "Shaykh Dr. Asim Yusuf, BMBCh",
+        talkTitle: "At the Meeting of the Two Seas",
         affiliation: "Royal College of Psychiatrists",
         thumbnail: asset("/images/symposium/video-soul-yusuf.jpg"),
-        videoId: "JAwBx3WjAuA",
-        duration: "33:14",
+        videoId: "OObpXfkEwXQ",
+        youtubeUrl: "https://www.youtube.com/watch?v=OObpXfkEwXQ",
+        duration: "20:46",
       },
       {
-        name: "Dr. Rafaqat Rashid",
+        name: "Dr. Rafaqat Rashid, MBBS, MA",
+        talkTitle: "Intersections between Science, Philosophy, & Sunni Discourse on Death",
         affiliation: "AlBalagh Academy",
         thumbnail: asset("/images/symposium/video-soul-rashid.jpg"),
-        videoId: "mh_DaIA0E1Y",
-        duration: "30:05",
+        videoId: "NG9LODLEPGQ",
+        youtubeUrl: "https://www.youtube.com/watch?v=NG9LODLEPGQ",
+        duration: "21:12",
       },
     ],
   },
@@ -115,11 +135,13 @@ const SESSIONS_DATA = [
     type: "single",
     eyebrow: "KEYNOTE ADDRESS",
     title: "Reconsidering Religion vs Science Debate",
-    speaker: "Prof. Omar Qureshi",
+    talkTitle: "Reconsidering Religion vs. Science Debate",
+    speaker: "Prof. Omar Qureshi, PhD",
     affiliation: "Zaytuna College",
     thumbnail: asset("/images/symposium/video-keynote-qureshi.jpg"),
-    videoId: "NG9LODLEPGQ",
-    duration: "41:30",
+    videoId: "O8Zgmu7mRf4",
+    youtubeUrl: "https://www.youtube.com/watch?v=O8Zgmu7mRf4",
+    duration: "36:01",
   },
 ];
 
@@ -180,64 +202,80 @@ export default function SymposiumPageClient() {
 
   return (
     <div className="symp-root">
-      {/* 1. SYMPOSIUM HERO */}
-      <section className="symp-hero" aria-label="Symposium Hero">
-        <div className="container symp-hero-container">
-          <div className="row align-items-center g-0">
-            <div className="col-lg-7 symp-hero-copyCol">
-              <div className="symp-hero-eyebrow">
-                <span className="symp-hero-eyebrow-text">SYMPOSIUM</span>
-                <span className="symp-hero-eyebrow-line" aria-hidden="true" />
-              </div>
+      {/* 1. SEAMLESS HERO (MATCHING HOMEPAGE & INNER PAGES) */}
+      <header className="hero-seamless hero-symposium-seamless">
+        <div className="hero-bg-wrapper">
+          <img
+            src={asset("/images/symposium/hero-campus-uchicago.jpg")}
+            alt="Historic Gothic Quadrangle, University of Chicago"
+            className="hero-bg-img"
+            loading="eager"
+          />
+          <div className="hero-gradient-overlay" />
+          <div className="hero-watermark-overlay" />
+        </div>
+        <div className="container hero-container-relative">
+          <div className="hero-content-inner">
+            <p className="hero-eyebrow-text-gold">MULTIDISCIPLINARY SYMPOSIUM · UNIVERSITY OF CHICAGO</p>
+            <div className="hero-eyebrow-bar-maroon" />
+            <h1 className="hero-seamless-title">
+              Multidisciplinary Symposium on <em>Islam &amp; Biomedicine</em>
+            </h1>
+            <p className="hero-seamless-lead">
+              Bringing together an international cohort of academicians, clinicians, and Islamic seminarians to explore the interfaces between Islamic scholastic traditions and contemporary biomedical science.
+            </p>
+            <div className="hero-seamless-actions">
+              <button
+                type="button"
+                className="btn-seamless-maroon"
+                onClick={() => setShowBrochure(true)}
+              >
+                VIEW PROGRAM BROCHURE &gt;
+              </button>
+              <a href="#sessions" className="btn-seamless-outline">
+                EXPLORE SESSIONS &amp; VIDEOS
+              </a>
+            </div>
+          </div>
+          <div className="hero-seamless-quote">
+            <p className="quote-text">
+              Faith, Ethics<br />&amp;<br />Biomedicine.
+            </p>
+            <div className="quote-gold-bar" />
+          </div>
+        </div>
+      </header>
 
-              <h1 className="symp-hero-title">
-                Multidisciplinary<br />
-                Symposium on Islam<br />
-                and Biomedicine
-              </h1>
-
-              <div className="symp-hero-meta">
-                <div className="symp-hero-meta-item">
-                  <span className="symp-hero-meta-icon" aria-hidden="true">
-                    <i className="fa-regular fa-calendar-days" />
-                  </span>
-                  <span className="symp-hero-meta-text">Sept 8–9, 2018</span>
-                </div>
-
-                <div className="symp-hero-meta-divider" aria-hidden="true" />
-
-                <div className="symp-hero-meta-item">
-                  <span className="symp-hero-meta-icon" aria-hidden="true">
-                    <i className="fa-solid fa-location-dot" />
-                  </span>
-                  <span className="symp-hero-meta-text">
-                    <strong>Gordon Center,</strong>
-                    <br />
-                    University of Chicago
-                  </span>
-                </div>
-              </div>
-
-              <div className="symp-hero-action">
-                <button
-                  type="button"
-                  className="symp-hero-btn"
-                  onClick={() => setShowBrochure(true)}
-                >
-                  View Conference Brochure <i className="fa-solid fa-arrow-right ms-2" />
-                </button>
+      {/* 1B. HIGHLIGHTS STRIP (MATCHING HOMEPAGE FOUR-VALUES STRIP) */}
+      <section className="strip-four-values-exact fullwidth-strip">
+        <div className="container-fluid px-0">
+          <div className="row g-0 align-items-center">
+            <div className="col-6 col-lg-3 four-values-col">
+              <div className="value-exact-item">
+                <i className="fa-regular fa-calendar-days value-exact-icon" />
+                <h3 className="value-exact-title">Sept 8–9, 2018</h3>
+                <p className="value-exact-text">Two-Day Scholarly Symposium</p>
               </div>
             </div>
-
-            <div className="col-lg-5 symp-hero-mediaCol">
-              <div className="symp-hero-imageWrap">
-                <img
-                  src={asset("/images/symposium/hero-uchicago.jpg")}
-                  alt="University of Chicago historic Gothic campus tower with green trees"
-                  className="symp-hero-img"
-                  loading="eager"
-                />
-                <div className="symp-hero-gradientOverlay" aria-hidden="true" />
+            <div className="col-6 col-lg-3 four-values-col">
+              <div className="value-exact-item">
+                <i className="fa-solid fa-location-dot value-exact-icon" />
+                <h3 className="value-exact-title">Gordon Center</h3>
+                <p className="value-exact-text">University of Chicago, IL</p>
+              </div>
+            </div>
+            <div className="col-6 col-lg-3 four-values-col">
+              <div className="value-exact-item">
+                <i className="fa-solid fa-building-columns value-exact-icon" />
+                <h3 className="value-exact-title">Interdisciplinary</h3>
+                <p className="value-exact-text">Theology, Law, Metaphysics &amp; Care</p>
+              </div>
+            </div>
+            <div className="col-6 col-lg-3 four-values-col">
+              <div className="value-exact-item">
+                <i className="fa-solid fa-circle-play value-exact-icon" />
+                <h3 className="value-exact-title">11 Presentations</h3>
+                <p className="value-exact-text">Recorded Lectures &amp; Keynotes</p>
               </div>
             </div>
           </div>
@@ -268,7 +306,7 @@ export default function SymposiumPageClient() {
       </section>
 
       {/* 3. SESSIONS & KEYNOTES */}
-      <section className="symp-sessions" aria-label="Symposium Sessions and Keynotes">
+      <section className="symp-sessions" id="sessions" aria-label="Symposium Sessions and Keynotes">
         <div className="container">
           <div className="symp-cards-stack">
             {SESSIONS_DATA.map((item) => (
@@ -290,30 +328,41 @@ export default function SymposiumPageClient() {
                         tabIndex={0}
                         onClick={() =>
                           setActiveVideo({
+                            sessionTitle: item.eyebrow,
                             title: item.title,
+                            talkTitle: item.talkTitle || item.title,
                             speaker: item.speaker,
                             affiliation: item.affiliation,
                             videoId: item.videoId,
+                            youtubeUrl: item.youtubeUrl || `https://www.youtube.com/watch?v=${item.videoId}`,
                           })
                         }
                         onKeyDown={(e) => {
                           if (e.key === "Enter" || e.key === " ") {
                             e.preventDefault();
                             setActiveVideo({
+                              sessionTitle: item.eyebrow,
                               title: item.title,
+                              talkTitle: item.talkTitle || item.title,
                               speaker: item.speaker,
                               affiliation: item.affiliation,
                               videoId: item.videoId,
+                              youtubeUrl: item.youtubeUrl || `https://www.youtube.com/watch?v=${item.videoId}`,
                             });
                           }
                         }}
-                        aria-label={`Play presentation: ${item.title} by ${item.speaker}`}
+                        aria-label={`Play presentation: ${item.talkTitle || item.title} by ${item.speaker}`}
+                        title={`Watch: ${item.talkTitle || item.title} - ${item.speaker}`}
                       >
                         <img
                           src={item.thumbnail}
                           alt={`${item.speaker} - ${item.title}`}
                           className="symp-videoThumbImg"
                           loading="eager"
+                          onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src = `https://i.ytimg.com/vi/${item.videoId}/hqdefault.jpg`;
+                          }}
                         />
                         <div className="symp-playOverlay" aria-hidden="true">
                           <span className="symp-playCircle">
@@ -327,6 +376,16 @@ export default function SymposiumPageClient() {
                       <div className="symp-speakerDetails">
                         <h4 className="symp-speakerName">{item.speaker}</h4>
                         <p className="symp-speakerAffil">{item.affiliation}</p>
+                        <a
+                          href={item.youtubeUrl || `https://www.youtube.com/watch?v=${item.videoId}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="symp-speakerYtLink"
+                          title={`Watch "${item.talkTitle || item.title}" on YouTube`}
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <i className="fa-brands fa-youtube" /> Watch Video
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -354,30 +413,41 @@ export default function SymposiumPageClient() {
                               tabIndex={0}
                               onClick={() =>
                                 setActiveVideo({
+                                  sessionTitle: item.title,
                                   title: item.title,
+                                  talkTitle: spk.talkTitle || item.title,
                                   speaker: spk.name,
                                   affiliation: spk.affiliation,
                                   videoId: spk.videoId,
+                                  youtubeUrl: spk.youtubeUrl || `https://www.youtube.com/watch?v=${spk.videoId}`,
                                 })
                               }
                               onKeyDown={(e) => {
                                 if (e.key === "Enter" || e.key === " ") {
                                   e.preventDefault();
                                   setActiveVideo({
+                                    sessionTitle: item.title,
                                     title: item.title,
+                                    talkTitle: spk.talkTitle || item.title,
                                     speaker: spk.name,
                                     affiliation: spk.affiliation,
                                     videoId: spk.videoId,
+                                    youtubeUrl: spk.youtubeUrl || `https://www.youtube.com/watch?v=${spk.videoId}`,
                                   });
                                 }
                               }}
-                              aria-label={`Play presentation by ${spk.name}`}
+                              aria-label={`Play presentation: ${spk.talkTitle || item.title} by ${spk.name}`}
+                              title={`Watch: ${spk.talkTitle || item.title} - ${spk.name}`}
                             >
                               <img
                                 src={spk.thumbnail}
                                 alt={`${spk.name} - ${spk.affiliation}`}
                                 className="symp-videoThumbImg"
                                 loading="eager"
+                                onError={(e) => {
+                                  e.target.onerror = null;
+                                  e.target.src = `https://i.ytimg.com/vi/${spk.videoId}/hqdefault.jpg`;
+                                }}
                               />
                               <div className="symp-playOverlay" aria-hidden="true">
                                 <span className="symp-playCircle">
@@ -388,6 +458,16 @@ export default function SymposiumPageClient() {
                             <div className="symp-speakerDetailsUnder">
                               <h4 className="symp-speakerName">{spk.name}</h4>
                               <p className="symp-speakerAffil">{spk.affiliation}</p>
+                              <a
+                                href={spk.youtubeUrl || `https://www.youtube.com/watch?v=${spk.videoId}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="symp-speakerYtLink"
+                                title={`Watch "${spk.talkTitle || item.title}" on YouTube`}
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <i className="fa-brands fa-youtube" /> Watch Video
+                              </a>
                             </div>
                           </div>
                         ))}
@@ -508,11 +588,28 @@ export default function SymposiumPageClient() {
             </div>
 
             <div className="symp-modalInfo">
-              <span className="symp-modalEyebrow">SYMPOSIUM PRESENTATION</span>
-              <h3 className="symp-modalTitle">{activeVideo.title}</h3>
-              <p className="symp-modalSpeaker">
-                <strong>{activeVideo.speaker}</strong> · {activeVideo.affiliation}
-              </p>
+              <div className="d-flex flex-column flex-sm-row justify-content-between align-items-sm-start gap-3">
+                <div>
+                  <span className="symp-modalEyebrow">
+                    {activeVideo.sessionTitle
+                      ? activeVideo.sessionTitle.toUpperCase()
+                      : "SYMPOSIUM PRESENTATION"}
+                  </span>
+                  <h3 className="symp-modalTitle">{activeVideo.talkTitle || activeVideo.title}</h3>
+                  <p className="symp-modalSpeaker">
+                    <strong>{activeVideo.speaker}</strong> · {activeVideo.affiliation}
+                  </p>
+                </div>
+                <a
+                  href={activeVideo.youtubeUrl || `https://www.youtube.com/watch?v=${activeVideo.videoId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="symp-modalYtBtn"
+                  title="Watch on YouTube (opens in new tab)"
+                >
+                  <i className="fa-brands fa-youtube me-2" /> Watch on YouTube
+                </a>
+              </div>
             </div>
           </div>
         </div>
