@@ -30,7 +30,7 @@ const SPEAKERS = [
     affiliation: "University of Basel",
     tag: "FACULTY PRESENTATION",
     topic: "Hospital Chaplaincy, Spiritual Care Resources, and Patient Advocacy in Acute Settings",
-    image: asset("/images/symposium/speaker-andrea-bieler.jpg"),
+    image: asset("/images/symposium/speaker-andrea-bieler-hq.jpg"),
   },
   {
     name: "Dr. Cynthia G. Lindner, DMin",
@@ -38,7 +38,7 @@ const SPEAKERS = [
     affiliation: "University of Chicago Divinity School",
     tag: "ROUNDTABLE WORKSHOP",
     topic: "Facilitating Patients' Faith Perspectives in Shared Decision-Making and Complex Care",
-    image: asset("/images/symposium/speaker-cynthia-lindner.jpg"),
+    image: asset("/images/symposium/speaker-cynthia-lindner-hq.jpg"),
   },
 ];
 
