@@ -5822,6 +5822,12 @@ section.section-values-cards .row {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.imp-media-card:hover {
+  box-shadow: 0 8px 24px rgba(16, 36, 58, 0.08);
+  transform: translateY(-2px);
 }
 
 .imp-teaching .imp-media-card {
@@ -5833,11 +5839,22 @@ section.section-values-cards .row {
   overflow: hidden;
 }
 
+.imp-media-card-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .imp-media-card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.35s ease;
+}
+
+.imp-media-card:hover .imp-media-card-img img {
+  transform: scale(1.03);
 }
 
 .imp-media-card-body {
@@ -5854,6 +5871,18 @@ section.section-values-cards .row {
   color: #800000;
   font-weight: 700;
   margin: 0 0 8px;
+}
+
+.imp-card-title-link {
+  color: #800000;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.imp-card-title-link:hover,
+.imp-media-card:hover .imp-card-title-link {
+  color: #10243a;
+  text-decoration: underline;
 }
 
 .imp-media-card-body p {
@@ -5931,6 +5960,13 @@ section.section-values-cards .row {
   text-decoration: none;
   font-size: 13px;
   margin-top: auto;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.imp-card-arrow:hover,
+.imp-media-card:hover .imp-card-arrow {
+  color: #10243a !important;
+  transform: translateX(4px);
 }
 
 /* --------------------------------------------------------------------------
@@ -36309,8 +36345,11 @@ img {
 
 .internship-page .intern-overview-photo {
   width: 100%;
-  height: 400px;
+  height: 420px;
   object-fit: cover;
+  object-position: center 20%;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   display: block;
 }
 
@@ -36336,16 +36375,29 @@ img {
 .internship-page .intern-profile-card {
   background: #fff;
   border: 1px solid var(--line);
+  border-radius: 6px;
   overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.internship-page .intern-profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 .internship-page .intern-profile-photo {
   width: 100%;
-  height: 240px;
+  height: 300px;
   object-fit: cover;
-  object-position: top center;
+  object-position: center 25%;
   display: block;
   background: #e8e2d8;
+  transition: transform 0.35s ease;
+}
+
+.internship-page .intern-profile-card:hover .intern-profile-photo {
+  transform: scale(1.03);
 }
 
 .internship-page .intern-profile-body {
@@ -36464,48 +36516,182 @@ img {
 
 /* ── Past Interns ── */
 .internship-page .intern-past {
-  padding: 72px 0;
-  background: var(--cream);
+  padding: 80px 0;
+  background: var(--cream, #faf7f2);
+  overflow: hidden;
 }
 
 .internship-page .intern-past-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: start;
-  gap: 56px;
+  grid-template-columns: 280px 1fr;
+  align-items: center;
+  gap: 48px;
 }
 
-.internship-page .intern-past-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.internship-page .intern-past-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.internship-page .intern-slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.internship-page .intern-slider-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--maroon, #800000);
+  background: transparent;
+  color: var(--maroon, #800000);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.internship-page .intern-slider-btn:hover {
+  background: var(--maroon, #800000);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(128, 0, 0, 0.2);
+}
+
+.internship-page .intern-slider-counter {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #4a5a6a;
+}
+
+.internship-page .intern-slider-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 18px;
+}
+
+.internship-page .intern-slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: #d8cfc4;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.internship-page .intern-slider-dot.active {
+  width: 24px;
+  background: var(--maroon, #800000);
+}
+
+.internship-page .intern-slider-viewport {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.internship-page .intern-slider-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.internship-page .intern-slider-card-wrap {
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .internship-page .intern-past-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  padding: 14px 14px 18px;
   text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.internship-page .intern-past-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.internship-page .intern-past-photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  background: #eae5dc;
 }
 
 .internship-page .intern-past-photo {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center 20%;
   display: block;
-  margin-bottom: 14px;
-  background: #ddd;
+  transition: transform 0.4s ease;
+}
+
+.internship-page .intern-past-card:hover .intern-past-photo {
+  transform: scale(1.04);
 }
 
 .internship-page .intern-past-name {
   font-family: 'Libre Baskerville', Georgia, serif;
   font-size: 15px;
-  color: var(--ink);
-  margin: 0 0 4px;
+  font-weight: 700;
+  color: var(--ink, #10243a);
+  margin: 0 0 6px;
+  line-height: 1.3;
 }
 
 .internship-page .intern-past-role {
+  font-family: 'DM Sans', sans-serif;
   font-size: 11.5px;
-  color: #888;
+  font-weight: 700;
+  color: var(--maroon, #800000);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 4px;
+}
+
+.internship-page .intern-past-school {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11.5px;
+  color: #6a7888;
   margin: 0;
+  line-height: 1.4;
+  margin-top: auto;
+}
+
+@media (max-width: 991px) {
+  .internship-page .intern-past-copy {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .internship-page .intern-slider-controls {
+    justify-content: center;
+  }
+
+  .internship-page .intern-slider-dots {
+    justify-content: center;
+  }
 }
 
 /* ── Internship Outputs ── */
@@ -36844,6 +37030,186 @@ img {
 .hero-symposium-seamless .btn-seamless-maroon:hover {
   background-color: #701a27;
   border-color: #701a27;
+}
+
+.hero-deol-seamless {
+  position: relative;
+  background-color: #faf7f2;
+  min-height: 520px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee5da;
+}
+
+.hero-deol-seamless .hero-bg-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 52%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right 30%;
+  display: block;
+}
+
+.hero-deol-seamless .hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #faf7f2 0%,
+    #faf7f2 44%,
+    rgba(250, 247, 242, 0.96) 54%,
+    rgba(250, 247, 242, 0.6) 68%,
+    rgba(250, 247, 242, 0) 84%
+  );
+}
+
+.hero-deol-seamless .hero-watermark-overlay {
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  width: 180px;
+  height: 180px;
+  background-image: var(--iim-pattern);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.32;
+  pointer-events: none;
+}
+
+.deol-hero-content-exact {
+  max-width: 650px;
+  padding: 68px 0 72px;
+}
+
+/* 1. Eyebrow: EVENT — */
+.deol-hero-eyebrow-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.deol-hero-eyebrow-badge {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #800000;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.deol-hero-eyebrow-rule {
+  display: inline-block;
+  width: 44px;
+  height: 2px;
+  background-color: #800000;
+  border-radius: 1px;
+}
+
+/* 2. Title */
+.deol-hero-title-exact {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(34px, 4.4vw, 54px);
+  line-height: 1.15;
+  color: #0b2238;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.015em;
+}
+
+/* 3. Subtitle */
+.deol-hero-subtitle-exact {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(16px, 1.4vw, 19.5px);
+  line-height: 1.45;
+  color: #4b5563;
+  font-weight: 500;
+  margin-bottom: 26px;
+}
+
+/* 4. Meta Row with Icons */
+.deol-hero-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-bottom: 0;
+  padding: 4px 0;
+}
+
+.deol-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.deol-meta-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.deol-meta-icon-cal i {
+  font-size: 24px;
+  color: #800000;
+}
+
+.deol-meta-icon-pin i {
+  font-size: 24px;
+  color: #800000;
+}
+
+.deol-meta-divider {
+  width: 1.5px;
+  height: 32px;
+  background-color: #800000;
+  opacity: 0.45;
+}
+
+.deol-meta-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.deol-meta-bold {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #10243a;
+  line-height: 1.25;
+}
+
+.deol-meta-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #64748b;
+  line-height: 1.25;
+  margin-top: 2px;
+}
+
+.hero-deol-seamless .btn-seamless-maroon {
+  background-color: #800000;
+  border-color: #800000;
+}
+
+.hero-deol-seamless .btn-seamless-maroon:hover {
+  background-color: #660000;
+  border-color: #660000;
+}
+
+@media (max-width: 575px) {
+  .deol-hero-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .deol-meta-divider {
+    display: none;
+  }
 }
 
 /* 1. HERO SECTION */
@@ -37276,7 +37642,7 @@ img {
 /* 4. OUR SPONSORS */
 .symp-sponsors {
   background-color: #ffffff;
-  padding: 36px 0 48px 0;
+  padding: 44px 0;
   border-top: 1px solid #f0eae1;
 }
 
@@ -37284,53 +37650,59 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 40px;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .symp-sponsors-titleWrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   flex-shrink: 0;
 }
 
 .symp-sponsors-title {
   font-family: var(--font-libre), 'Libre Baskerville', Georgia, serif;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
   color: #0b1b3d;
   margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  white-space: nowrap;
 }
 
-.symp-sponsors-dash {
-  display: inline-block;
-  width: 36px;
-  height: 2px;
+.symp-sponsors-rule {
+  width: 2px;
+  height: 38px;
   background-color: #8b2131;
+  flex-shrink: 0;
 }
 
 .symp-sponsors-list {
   display: flex;
   align-items: center;
-  gap: 26px;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
 .symp-sponsor-group {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 28px;
 }
 
 .symp-sponsor-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.95;
 }
 
 .symp-sponsor-item:hover {
   transform: translateY(-2px);
+  opacity: 1;
 }
 
 .symp-sponsor-img {
@@ -37339,23 +37711,23 @@ img {
 }
 
 .symp-sponsor-logo-cmma {
-  height: 58px;
+  height: 56px;
   width: auto;
 }
 
 .symp-sponsor-logo-oxford {
-  height: 50px;
+  height: 52px;
   width: auto;
 }
 
 .symp-sponsor-logo-templeton {
-  height: 38px;
+  height: 42px;
   width: auto;
 }
 
 .symp-sponsor-divider {
   width: 1px;
-  height: 42px;
+  height: 38px;
   background-color: #d8cfc4;
 }
 
@@ -37818,6 +38190,14 @@ img {
     text-align: center;
   }
 
+  .symp-sponsors-titleWrap {
+    justify-content: center;
+  }
+
+  .symp-sponsors-rule {
+    display: none;
+  }
+
   .symp-sponsors-title {
     justify-content: center;
   }
@@ -38123,6 +38503,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -38173,15 +38554,22 @@ img {
 }
 
 .religious-workshop-page .rwd-sponsors {
-  padding-bottom: 38px;
+  padding-bottom: 44px;
 }
 
 .religious-workshop-page .rwd-sponsors-container {
-  margin-top: 18px;
+  margin-top: 20px;
   background: #ffffff;
-  border: 1px solid #f0eae1;
-  border-radius: 8px;
-  padding: 26px 36px;
+  border: 1px solid #ede5da;
+  border-radius: 10px;
+  padding: 34px 44px;
+  box-shadow: 0 4px 18px rgba(16, 36, 58, 0.04);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .religious-workshop-page .rwd-sponsors-list {
@@ -38189,44 +38577,85 @@ img {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 48px;
+  width: 100%;
 }
 
 .religious-workshop-page .rwd-sponsor-group {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 48px;
 }
 
 .religious-workshop-page .rwd-sponsor-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.22s ease, opacity 0.2s ease;
 }
 
 .religious-workshop-page .rwd-sponsor-item:hover {
   transform: translateY(-2px);
+  opacity: 0.92;
 }
 
 .religious-workshop-page .rwd-sponsor-img {
   height: auto;
-  max-height: 60px;
   width: auto;
-  max-width: 280px;
   object-fit: contain;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.religious-workshop-page .rwd-sponsor-logo-pmr {
+  height: 88px;
+  max-height: 88px;
+  max-width: 80px;
+}
+
+.religious-workshop-page .rwd-sponsor-logo-divinity-dsa {
+  height: 80px;
+  max-height: 80px;
+  max-width: 320px;
+}
+
+.religious-workshop-page .rwd-sponsor-logo-ccme {
+  height: 80px;
+  max-height: 80px;
+  max-width: 330px;
 }
 
 .religious-workshop-page .rwd-sponsor-divider {
-  width: 1px;
-  height: 48px;
-  background-color: #ebdccb;
+  width: 1.5px;
+  height: 60px;
+  background-color: #d8c8b6;
+  flex-shrink: 0;
 }
 
 @media (max-width: 991px) {
   .religious-workshop-page .rwd-speaker-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .religious-workshop-page .rwd-sponsors-container {
+    padding: 28px 24px;
+  }
+  .religious-workshop-page .rwd-sponsors-list,
+  .religious-workshop-page .rwd-sponsor-group {
+    gap: 32px;
+  }
+  .religious-workshop-page .rwd-sponsor-logo-pmr {
+    height: 76px;
+    max-height: 76px;
+  }
+  .religious-workshop-page .rwd-sponsor-logo-divinity-dsa {
+    height: 68px;
+    max-height: 68px;
+    max-width: 270px;
+  }
+  .religious-workshop-page .rwd-sponsor-logo-ccme {
+    height: 68px;
+    max-height: 68px;
+    max-width: 280px;
   }
 }
 
@@ -38234,12 +38663,43 @@ img {
   .religious-workshop-page .rwd-speaker-grid {
     grid-template-columns: 1fr;
   }
+  .religious-workshop-page .rwd-sponsors-container {
+    padding: 26px 20px;
+  }
   .religious-workshop-page .rwd-sponsors-list {
     flex-direction: column;
-    gap: 22px;
+    gap: 28px;
+  }
+  .religious-workshop-page .rwd-sponsor-group {
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
   }
   .religious-workshop-page .rwd-sponsor-divider {
-    display: none;
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: #d8c8b6;
+  }
+  .religious-workshop-page .rwd-sponsor-item {
+    width: 100%;
+  }
+  .religious-workshop-page .rwd-sponsor-img {
+    margin: 0 auto;
+  }
+  .religious-workshop-page .rwd-sponsor-logo-pmr {
+    height: 80px;
+    max-height: 80px;
+  }
+  .religious-workshop-page .rwd-sponsor-logo-divinity-dsa {
+    height: 72px;
+    max-height: 72px;
+    max-width: 280px;
+  }
+  .religious-workshop-page .rwd-sponsor-logo-ccme {
+    height: 72px;
+    max-height: 72px;
+    max-width: 290px;
   }
 }
 
@@ -38468,5 +38928,1395 @@ img {
   .religious-workshop-page .rwd-hero h1 {
     font-size: 25px;
     line-height: 1.1;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DIGNITY & HEALTHCARE AT END-OF-LIFE EVENT PAGE
+   Scoped under .dignity-event-page
+═══════════════════════════════════════════════════════════════ */
+
+/* ── HERO ── */
+.dignity-event-page .deol-hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.dignity-event-page .deol-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.dignity-event-page .deol-hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+.dignity-event-page .deol-hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10, 10, 10, 0.88) 0%,
+    rgba(10, 10, 10, 0.72) 40%,
+    rgba(10, 10, 10, 0.3) 70%,
+    rgba(10, 10, 10, 0.1) 100%
+  );
+}
+
+.dignity-event-page .deol-hero-inner {
+  position: relative;
+  z-index: 1;
+  padding: 72px 0 56px;
+  max-width: 1440px;
+}
+
+.dignity-event-page .deol-hero-content {
+  max-width: 640px;
+}
+
+.dignity-event-page .deol-hero-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #c8906a;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dignity-event-page .deol-hero-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: var(--maroon);
+}
+
+.dignity-event-page .deol-hero-title {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.dignity-event-page .deol-hero-subtitle {
+  font-size: 18px;
+  color: rgba(255,255,255,0.78);
+  font-weight: 400;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+.dignity-event-page .deol-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.dignity-event-page .deol-hero-meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.86);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.dignity-event-page .deol-hero-meta-item i {
+  color: #c8906a;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.dignity-event-page .deol-hero-meta-sub {
+  display: block;
+  color: rgba(255,255,255,0.6);
+  font-size: 12px;
+}
+
+/* ── MAIN CONTAINER ── */
+.dignity-event-page .deol-main {
+  max-width: 1440px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* ── SECTION SPACING ── */
+.dignity-event-page .deol-section {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.dignity-event-page .deol-section:last-child {
+  border-bottom: none;
+}
+
+/* ── EVENT OVERVIEW ── */
+.dignity-event-page .deol-overview-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 44px;
+}
+
+.dignity-event-page .deol-section-heading {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 26px;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  position: relative;
+  padding-bottom: 14px;
+}
+
+.dignity-event-page .deol-section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--maroon);
+}
+
+.dignity-event-page .deol-overview-body-col p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #3a4a5a;
+  margin: 0;
+}
+
+/* ── FOUR THEMES ── */
+.dignity-event-page .deol-themes-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  border-top: 1px solid var(--line);
+  padding-top: 36px;
+}
+
+.dignity-event-page .deol-theme-item {
+  flex: 1 1 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.dignity-event-page .deol-theme-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(128,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dignity-event-page .deol-theme-icon-wrap i {
+  font-size: 22px;
+  color: var(--maroon);
+}
+
+.dignity-event-page .deol-theme-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* ── PANEL HEADING ── */
+.dignity-event-page .deol-panel-heading {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--maroon);
+  display: inline-block;
+}
+
+/* ── FEATURED VIDEO ROW ── */
+.dignity-event-page .deol-featured-row {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 36px;
+  align-items: center;
+  background: #faf8f4;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.dignity-event-page .deol-featured-thumb-wrap {
+  flex-shrink: 0;
+}
+
+.dignity-event-page .deol-featured-thumb-link {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dignity-event-page .deol-featured-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.dignity-event-page .deol-featured-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.dignity-event-page .deol-featured-thumb-link:hover img {
+  transform: scale(1.03);
+}
+
+.dignity-event-page .deol-featured-info {
+  padding: 28px 32px 28px 0;
+}
+
+.dignity-event-page .deol-featured-eyebrow {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: var(--maroon);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.dignity-event-page .deol-featured-title {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.dignity-event-page .deol-featured-speaker {
+  font-size: 14px;
+  font-weight: 600;
+  color: #3a4a5a;
+  margin-bottom: 4px;
+}
+
+.dignity-event-page .deol-featured-affil {
+  font-size: 13px;
+  color: #6b7c8d;
+  margin-bottom: 20px;
+}
+
+.dignity-event-page .deol-watch-btn {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--maroon);
+  background: transparent;
+  border: 1.5px solid var(--maroon);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.dignity-event-page .deol-watch-btn:hover {
+  background: var(--maroon);
+  color: #fff;
+}
+
+/* ── PLAY OVERLAY ── */
+.dignity-event-page .deol-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.25);
+  transition: background 0.25s ease;
+}
+
+.dignity-event-page .deol-featured-thumb-link:hover .deol-play-overlay,
+.dignity-event-page .deol-video-thumb-link:hover .deol-play-overlay {
+  background: rgba(0,0,0,0.42);
+}
+
+.dignity-event-page .deol-play-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.dignity-event-page .deol-play-btn i {
+  font-size: 14px;
+  color: var(--maroon);
+  margin-left: 2px;
+}
+
+.dignity-event-page .deol-play-btn--lg {
+  width: 56px;
+  height: 56px;
+}
+
+.dignity-event-page .deol-play-btn--lg i {
+  font-size: 18px;
+}
+
+/* ── VIDEO GRID ── */
+.dignity-event-page .deol-video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.dignity-event-page .deol-video-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.dignity-event-page .deol-video-thumb-link {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dignity-event-page .deol-video-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.dignity-event-page .deol-video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.dignity-event-page .deol-video-thumb-link:hover img {
+  transform: scale(1.04);
+}
+
+.dignity-event-page .deol-video-info {
+  padding: 16px;
+  flex: 1;
+}
+
+.dignity-event-page .deol-video-title {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+.dignity-event-page .deol-video-title:hover,
+.dignity-event-page .deol-featured-title:hover {
+  color: #800000;
+}
+
+.dignity-event-page .deol-video-speaker {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3a4a5a;
+  margin-bottom: 2px;
+}
+
+.dignity-event-page .deol-video-affil {
+  font-size: 12px;
+  color: #6b7c8d;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.dignity-event-page .deol-card-yt-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #800000;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-top: 14px;
+  transition: all 0.2s ease;
+}
+
+.dignity-event-page .deol-card-yt-link i {
+  color: #ff0000;
+  font-size: 14px;
+}
+
+.dignity-event-page .deol-card-yt-link:hover {
+  color: #10243a;
+  transform: translateX(3px);
+}
+
+/* ── CTA BANNER ── */
+.dignity-event-page .deol-cta-banner {
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+}
+
+.dignity-event-page .deol-cta-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.dignity-event-page .deol-cta-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dignity-event-page .deol-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(100, 10, 10, 0.82);
+}
+
+.dignity-event-page .deol-cta-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 56px 0;
+  flex-wrap: wrap;
+}
+
+.dignity-event-page .deol-cta-eyebrow {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.65);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.dignity-event-page .deol-cta-title {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 32px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.dignity-event-page .deol-cta-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.78);
+  margin: 0;
+  max-width: 540px;
+}
+
+.dignity-event-page .deol-cta-btn {
+  display: inline-block;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--maroon);
+  background: #fff;
+  padding: 14px 28px;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.dignity-event-page .deol-cta-btn:hover {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .dignity-event-page .deol-featured-row {
+    grid-template-columns: 260px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dignity-event-page .deol-hero-inner {
+    padding: 60px 0 44px;
+  }
+
+  .dignity-event-page .deol-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dignity-event-page .deol-themes-row {
+    gap: 16px;
+  }
+
+  .dignity-event-page .deol-theme-item {
+    flex: 1 1 120px;
+  }
+
+  .dignity-event-page .deol-featured-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dignity-event-page .deol-featured-info {
+    padding: 20px;
+  }
+
+  .dignity-event-page .deol-video-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .dignity-event-page .deol-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dignity-event-page .deol-hero {
+    min-height: 360px;
+  }
+
+  .dignity-event-page .deol-hero-title {
+    font-size: 30px;
+  }
+
+  .dignity-event-page .deol-hero-subtitle {
+    font-size: 15px;
+  }
+
+  .dignity-event-page .deol-hero-meta {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .dignity-event-page .deol-video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dignity-event-page .deol-panel-heading {
+    font-size: 17px;
+  }
+
+  .dignity-event-page .deol-section {
+    padding: 36px 0;
+  }
+
+  .dignity-event-page .deol-cta-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 360px) {
+  .dignity-event-page .deol-hero-title {
+    font-size: 26px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   INTERFACES AND DISCOURSES CONFERENCE PAGE
+   Scoped under .interfaces-conference-page
+═══════════════════════════════════════════════════════════════ */
+
+/* ── HERO ── */
+.interfaces-conference-page .idc-hero {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.interfaces-conference-page .idc-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.interfaces-conference-page .idc-hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.interfaces-conference-page .idc-hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(250, 247, 240, 0.97) 0%,
+    rgba(250, 247, 240, 0.92) 35%,
+    rgba(250, 247, 240, 0.65) 55%,
+    rgba(250, 247, 240, 0.15) 75%,
+    transparent 100%
+  );
+}
+
+.interfaces-conference-page .idc-hero-inner {
+  position: relative;
+  z-index: 1;
+  padding: 72px 0 60px;
+  max-width: 1440px;
+}
+
+.interfaces-conference-page .idc-hero-content {
+  max-width: 560px;
+}
+
+.interfaces-conference-page .idc-hero-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: var(--maroon);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.interfaces-conference-page .idc-hero-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: var(--maroon);
+  flex-shrink: 0;
+}
+
+.interfaces-conference-page .idc-hero-title {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.interfaces-conference-page .idc-hero-subtitle {
+  font-size: 17px;
+  color: #4a5a6a;
+  font-weight: 400;
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+
+.interfaces-conference-page .idc-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.interfaces-conference-page .idc-hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  color: #3a4a5a;
+  font-weight: 500;
+}
+
+.interfaces-conference-page .idc-hero-meta-item i {
+  color: var(--maroon);
+  font-size: 13px;
+}
+
+.interfaces-conference-page .idc-hero-meta-divider {
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background: #c0c8d0;
+}
+
+.interfaces-conference-page .idc-hero-cta {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--maroon);
+  padding: 13px 24px;
+  transition: all 0.25s ease;
+}
+
+.interfaces-conference-page .idc-hero-cta:hover {
+  background: #600000;
+  transform: translateY(-1px);
+}
+
+/* ── MAIN ── */
+.interfaces-conference-page .idc-main {
+  max-width: 1440px;
+}
+
+.interfaces-conference-page .idc-section {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.interfaces-conference-page .idc-section:last-child {
+  border-bottom: none;
+}
+
+/* ── EVENT OVERVIEW ── */
+.interfaces-conference-page .idc-overview-grid {
+  display: grid;
+  grid-template-columns: 200px 2px 1fr;
+  gap: 0 36px;
+  align-items: start;
+}
+
+.interfaces-conference-page .idc-overview-heading {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.interfaces-conference-page .idc-overview-divider {
+  background: var(--maroon);
+  width: 2px;
+  align-self: stretch;
+  min-height: 60px;
+}
+
+.interfaces-conference-page .idc-overview-body-col p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #3a4a5a;
+  margin: 0;
+}
+
+/* ── KEYNOTE ── */
+.interfaces-conference-page .idc-keynote-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.interfaces-conference-page .idc-keynote-thumb-link {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.interfaces-conference-page .idc-keynote-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.interfaces-conference-page .idc-keynote-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.interfaces-conference-page .idc-keynote-thumb-link:hover img {
+  transform: scale(1.03);
+}
+
+.interfaces-conference-page .idc-keynote-info-col {
+  padding: 8px 0;
+}
+
+.interfaces-conference-page .idc-keynote-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #3a4a5a;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.interfaces-conference-page .idc-keynote-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--maroon);
+  display: block;
+}
+
+.interfaces-conference-page .idc-keynote-title {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.interfaces-conference-page .idc-keynote-speaker {
+  font-size: 15px;
+  color: #4a5a6a;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.interfaces-conference-page .idc-watch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--maroon);
+  background: none;
+  border: none;
+  border-bottom: 1.5px solid var(--maroon);
+  padding: 0;
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.interfaces-conference-page .idc-watch-btn:hover {
+  color: #600000;
+  border-color: #600000;
+}
+
+/* ── PLAY OVERLAY ── */
+.interfaces-conference-page .idc-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.22);
+  transition: background 0.25s ease;
+}
+
+.interfaces-conference-page .idc-keynote-thumb-link:hover .idc-play-overlay,
+.interfaces-conference-page .idc-session-card:hover .idc-play-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.interfaces-conference-page .idc-play-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+  transition: transform 0.2s ease;
+}
+
+.interfaces-conference-page .idc-play-btn i {
+  font-size: 14px;
+  color: var(--maroon);
+  margin-left: 2px;
+}
+
+.interfaces-conference-page .idc-play-btn--lg {
+  width: 58px;
+  height: 58px;
+}
+
+.interfaces-conference-page .idc-play-btn--lg i {
+  font-size: 20px;
+}
+
+.interfaces-conference-page .idc-keynote-thumb-link:hover .idc-play-btn,
+.interfaces-conference-page .idc-session-card:hover .idc-play-btn {
+  transform: scale(1.08);
+}
+
+/* ── CONFERENCE SESSIONS ── */
+.interfaces-conference-page .idc-sessions-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.interfaces-conference-page .idc-sessions-heading {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.interfaces-conference-page .idc-sessions-rule {
+  flex: 1;
+  height: 2px;
+  background: var(--maroon);
+}
+
+.interfaces-conference-page .idc-toggle-add-btn {
+  background: #ffffff;
+  border: 1px solid #c8b9a6;
+  color: #800000;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.interfaces-conference-page .idc-toggle-add-btn:hover {
+  background: #800000;
+  color: #ffffff;
+  border-color: #800000;
+}
+
+.interfaces-conference-page .idc-add-video-bar {
+  background: #fdfcf9;
+  border: 1.5px dashed #c8b9a6;
+  border-radius: 4px;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.interfaces-conference-page .idc-add-video-input {
+  flex: 1 1 200px;
+  padding: 9px 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  border: 1px solid #dcd3c8;
+  border-radius: 2px;
+  color: #10243a;
+  outline: none;
+  background: #ffffff;
+}
+
+.interfaces-conference-page .idc-add-video-input:focus {
+  border-color: #800000;
+  box-shadow: 0 0 0 2px rgba(128, 0, 0, 0.1);
+}
+
+.interfaces-conference-page .idc-add-video-btn {
+  background-color: #800000;
+  border: 1px solid #800000;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 9px 18px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.interfaces-conference-page .idc-add-video-btn:hover {
+  background-color: #600000;
+  border-color: #600000;
+}
+
+.interfaces-conference-page .idc-sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.interfaces-conference-page .idc-session-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  padding-bottom: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.interfaces-conference-page .idc-session-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.interfaces-conference-page .idc-session-thumb-link {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.interfaces-conference-page .idc-session-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.interfaces-conference-page .idc-session-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.interfaces-conference-page .idc-session-card:hover .idc-session-thumb img {
+  transform: scale(1.04);
+}
+
+.interfaces-conference-page .idc-session-info {
+  padding: 0 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.interfaces-conference-page .idc-session-title {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+  margin-bottom: 6px;
+  transition: color 0.2s ease;
+}
+
+.interfaces-conference-page .idc-session-title:hover {
+  color: #800000;
+}
+
+.interfaces-conference-page .idc-session-speaker {
+  font-size: 13px;
+  color: #6b7c8d;
+  margin: 0;
+}
+
+.interfaces-conference-page .idc-card-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #800000;
+  background: rgba(128, 0, 0, 0.08);
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+.interfaces-conference-page .idc-session-affil {
+  font-size: 11.5px;
+  color: #8a9ba8;
+  margin: 3px 0 0 0;
+  font-style: italic;
+}
+
+/* Category Filter Pills */
+.interfaces-conference-page .idc-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.interfaces-conference-page .idc-filter-pill {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a5a6a;
+  background: #f4efe6;
+  border: 1px solid #e2d9cd;
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.interfaces-conference-page .idc-filter-pill:hover {
+  background: #eae2d5;
+  color: #10243a;
+}
+
+.interfaces-conference-page .idc-filter-pill.active {
+  background: #800000;
+  color: #ffffff;
+  border-color: #800000;
+}
+
+.interfaces-conference-page .idc-card-yt-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #800000;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-top: auto;
+  padding-top: 12px;
+  transition: all 0.2s ease;
+}
+
+.interfaces-conference-page .idc-card-yt-link i {
+  color: #ff0000;
+  font-size: 14px;
+}
+
+.interfaces-conference-page .idc-card-yt-link:hover {
+  color: #10243a;
+  transform: translateX(3px);
+}
+
+/* ── SPONSORS ── */
+.interfaces-conference-page .idc-sponsors-section {
+  background: #faf8f4;
+  border-top: 1px solid var(--line);
+  padding: 48px 0;
+}
+
+.interfaces-conference-page .idc-sponsors-inner {
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.interfaces-conference-page .idc-sponsors-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.interfaces-conference-page .idc-sponsors-heading {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+  margin: 0;
+}
+
+.interfaces-conference-page .idc-sponsors-rule {
+  width: 2px;
+  height: 36px;
+  background: var(--maroon);
+  flex-shrink: 0;
+}
+
+.interfaces-conference-page .idc-sponsors-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+
+.interfaces-conference-page .idc-sponsor-item img {
+  display: block;
+  height: 46px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.95;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.interfaces-conference-page .idc-sponsor-item img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.interfaces-conference-page .idc-sponsor-umma img {
+  height: 42px;
+}
+
+.interfaces-conference-page .idc-sponsor-aic img {
+  height: 46px;
+}
+
+.interfaces-conference-page .idc-sponsor-templeton img {
+  height: 52px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .interfaces-conference-page .idc-keynote-row {
+    gap: 32px;
+  }
+
+  .interfaces-conference-page .idc-keynote-title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .interfaces-conference-page .idc-hero-inner {
+    padding: 60px 0 48px;
+  }
+
+  .interfaces-conference-page .idc-hero-gradient {
+    background: linear-gradient(
+      to bottom,
+      rgba(250, 247, 240, 0.95) 0%,
+      rgba(250, 247, 240, 0.92) 60%,
+      rgba(250, 247, 240, 0.7) 100%
+    );
+  }
+
+  .interfaces-conference-page .idc-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .interfaces-conference-page .idc-overview-divider {
+    display: none;
+  }
+
+  .interfaces-conference-page .idc-keynote-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .interfaces-conference-page .idc-sessions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .interfaces-conference-page .idc-sponsors-inner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .interfaces-conference-page .idc-hero-title {
+    font-size: 32px;
+  }
+
+  .interfaces-conference-page .idc-hero-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .interfaces-conference-page .idc-hero-meta-divider {
+    display: none;
+  }
+
+  .interfaces-conference-page .idc-sessions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interfaces-conference-page .idc-section {
+    padding: 36px 0;
+  }
+
+  .interfaces-conference-page .idc-keynote-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 360px) {
+  .interfaces-conference-page .idc-hero-title {
+    font-size: 28px;
   }
 }

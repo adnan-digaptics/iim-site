@@ -52,21 +52,25 @@ const conferences = [
     img: asset("/images/our-impact/conf-1.jpg"),
     title: "Dignity and Healthcare at End-of-Life: Abrahamic Faiths in a Bioethics Conversation",
     text: "A multidisciplinary dialogue on dignity, care, and faith traditions at the end of life.",
+    href: "/dignity-healthcare-end-of-life/",
   },
   {
     img: asset("/images/our-impact/conf-2.jpg"),
     title: "Interfaces and Discourses: A Multidisciplinary Conference on Islamic Theology, Law, and Biomedicine",
     text: "Scholars and clinicians examining the intersections of theology, law, and biomedicine.",
+    href: "/interfaces-and-discourses/",
   },
   {
     img: asset("/images/our-impact/conf-3.jpg"),
     title: "Multidisciplinary Symposium on Islam and Biomedicine",
     text: "Advancing research and conversation across medicine, ethics, and Islamic studies.",
+    href: "/multidisciplinary-symposium/",
   },
   {
     img: asset("/images/our-impact/conf-4.jpg"),
     title: "Religious Dimensions of Healthcare Delivery: A Multidisciplinary Workshop",
     text: "Practical workshop exploring faith, values, and healthcare delivery.",
+    href: "/religious-dimensions-workshop/",
   },
 ];
 
@@ -277,12 +281,18 @@ export default function ImpactPage() {
             {conferences.map((item) => (
               <article className="imp-media-card" key={item.title}>
                 <div className="imp-media-card-img">
-                  <img src={item.img} alt="" />
+                  <Link href={item.href} aria-label={item.title}>
+                    <img src={item.img} alt={item.title} />
+                  </Link>
                 </div>
                 <div className="imp-media-card-body">
-                  <h3>{item.title}</h3>
+                  <h3>
+                    <Link href={item.href} className="imp-card-title-link">
+                      {item.title}
+                    </Link>
+                  </h3>
                   <p>{item.text}</p>
-                  <Link href="/speaking" className="imp-card-arrow" aria-label={`Learn more about ${item.title}`}>
+                  <Link href={item.href} className="imp-card-arrow" aria-label={`Learn more about ${item.title}`}>
                     <i className="fa-solid fa-arrow-right" />
                   </Link>
                 </div>

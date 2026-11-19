@@ -486,9 +486,8 @@ export default function SymposiumPageClient() {
         <div className="container">
           <div className="symp-sponsors-inner">
             <div className="symp-sponsors-titleWrap">
-              <h2 className="symp-sponsors-title">
-                Our Sponsors <span className="symp-sponsors-dash" aria-hidden="true">—</span>
-              </h2>
+              <h2 className="symp-sponsors-title">Our Sponsors</h2>
+              <div className="symp-sponsors-rule" />
             </div>
 
             <div className="symp-sponsors-list">

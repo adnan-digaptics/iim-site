@@ -64,6 +64,8 @@ const NAV = [
       ["Workshops Overview", "/workshops"],
       ["Religious Dimensions Workshop", "/religious-dimensions-workshop"],
       ["Multidisciplinary Symposium", "/multidisciplinary-symposium"],
+      ["Dignity & Healthcare at End-of-Life", "/dignity-healthcare-end-of-life"],
+      ["Interfaces & Discourses", "/interfaces-and-discourses"],
     ],
   },
   {

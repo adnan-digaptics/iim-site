@@ -1,5 +1,6 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
+import PastInternsSlider from "./PastInternsSlider";
 
 export const metadata = {
   title: "Medical Student Internship | Initiative on Islam & Medicine",
@@ -9,18 +10,20 @@ export const metadata = {
 
 const currentInterns = [
   {
-    img: asset("/images/our-team/portrait-placeholder.svg"),
+    img: asset("/images/interns/intern-nasar-qureshi.jpg"),
     name: "Nasar Qureshi",
     role: "Summer Intern 2026",
-    school: "",
-    isPlaceholder: true,
+    school: "Medical Student",
+    objectPosition: "center 25%",
+    isPlaceholder: false,
   },
   {
-    img: asset("/images/our-team/portrait-placeholder.svg"),
+    img: asset("/images/interns/intern-sajid-fahumy.jpg"),
     name: "Sajid H. Fahumy",
     role: "Summer Intern 2026",
     school: "Rowan-Virtua School of Osteopathic Medicine",
-    isPlaceholder: true,
+    objectPosition: "center 20%",
+    isPlaceholder: false,
   },
 ];
 
@@ -176,8 +179,8 @@ export default function MedicalStudentInternshipPage() {
             </div>
             <div className="intern-overview-media">
               <img
-                src={asset("/images/bio-student-speak.jpg")}
-                alt="Interns presenting research at an academic poster session"
+                src={asset("/images/interns/internship-program-overview.jpg")}
+                alt="II&M Medical Student Interns and Faculty with Community Workshop Banner"
                 className="intern-overview-photo"
                 loading="lazy"
               />
@@ -204,6 +207,7 @@ export default function MedicalStudentInternshipPage() {
                     src={intern.img}
                     alt={intern.name}
                     className={`intern-profile-photo ${intern.isPlaceholder ? "intern-profile-photo-placeholder" : ""}`}
+                    style={intern.objectPosition ? { objectPosition: intern.objectPosition } : undefined}
                     loading="lazy"
                   />
                   <div className="intern-profile-body">
@@ -270,30 +274,7 @@ export default function MedicalStudentInternshipPage() {
       {/* ── PAST INTERNS ───────────────────────────────────────── */}
       <section className="intern-past">
         <div className="container">
-          <div className="intern-past-grid">
-            <div className="intern-past-copy">
-              <h2 className="intern-section-h2">Past Interns</h2>
-              <p className="intern-section-body">
-                Our alumni have gone on to make meaningful contributions in medicine, research, and
-                service.
-              </p>
-            </div>
-            <div className="intern-past-cards">
-              {pastInterns.map((intern) => (
-                <article className="intern-past-card" key={intern.name}>
-                  <img
-                    src={intern.img}
-                    alt={intern.name}
-                    className="intern-past-photo"
-                    style={intern.objectPosition ? { objectPosition: intern.objectPosition } : undefined}
-                    loading="lazy"
-                  />
-                  <p className="intern-past-name">{intern.name}</p>
-                  <p className="intern-past-role">{intern.role}</p>
-                </article>
-              ))}
-            </div>
-          </div>
+          <PastInternsSlider />
         </div>
       </section>
 
