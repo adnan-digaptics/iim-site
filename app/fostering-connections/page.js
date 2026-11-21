@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { asset } from "../../lib/asset";
 import FosteringConnectionsNav from "./FosteringConnectionsNav";
+import EventsPhotoGallery from "./EventsPhotoGallery";
 
 export const metadata = {
   title: "Fostering Connections Between Bioscience & Theology | Initiative on Islam & Medicine",
@@ -67,50 +69,6 @@ const SEMINAR_TOPICS = [
   },
 ];
 
-const PROJECT_MATERIALS = [
-  {
-    num: "01",
-    title: "Bridging Bioscience and Islam — Engaging Big Questions about the Human Being",
-    desc: "Resource available from the II&M project page",
-    linkText: "VIEW ORIGINAL RESOURCE ↗",
-    href: "#original-project",
-  },
-  {
-    num: "02",
-    title: "Teaching Modules",
-    desc: "Resource available from the II&M project page",
-    linkText: "VIEW ORIGINAL RESOURCE ↗",
-    href: "#original-project",
-  },
-  {
-    num: "03",
-    title: "Teacher's Companion",
-    desc: "Resource available from the II&M project page",
-    linkText: "VIEW ORIGINAL RESOURCE ↗",
-    href: "#original-project",
-  },
-  {
-    num: "04",
-    title: "Symposium Proceedings & Policy Recommendations — Biomedicine, Religion & Education",
-    desc: "Resource available from the II&M project page",
-    linkText: "VIEW ORIGINAL RESOURCE ↗",
-    href: "#original-project",
-  },
-  {
-    num: "05",
-    title: "Student Reflection Booklet",
-    desc: "Resource available from the II&M project page",
-    linkText: "VIEW ORIGINAL RESOURCE ↗",
-    href: "#original-project",
-  },
-  {
-    num: "06",
-    title: "Promotional Brochure",
-    desc: "Resource available from the II&M project page",
-    linkText: "VIEW ORIGINAL RESOURCE ↗",
-    href: "#original-project",
-  },
-];
 
 const PROJECT_EVENTS = [
   {
@@ -118,28 +76,28 @@ const PROJECT_EVENTS = [
     title: "Scientific Inquiry, Evolution, and the Human Experience",
     meta: "ISNA Education Forum · April 2025",
     linkText: "EVENT DETAILS ↗",
-    href: "#events",
+    href: "https://medicineandislam.org/wp-content/uploads/2026/04/Scientific-inquiry-evolution-and-the-human-experience-April-2025.pdf",
   },
   {
     num: "02",
     title: "Intensive Seminar Series for Medical, Dental and Health-Allied Students",
     meta: "IIIT, Virginia · Aug–Sep 2025",
     linkText: "EVENT DETAILS ↗",
-    href: "#events",
+    href: "https://youtube.com/playlist?list=PLKPFd4mBCvIiBATy5byNPqcULglmHafQi",
   },
   {
     num: "03",
     title: "Islam, Science & the Human Being",
     meta: "Riphah University, Lahore · July 2025",
     linkText: "EVENT DETAILS ↗",
-    href: "#events",
+    href: "https://medicineandislam.org/wp-content/uploads/2026/04/riphah-university-lhr-25.pdf",
   },
   {
     num: "04",
     title: "Biomedicine, Religion, and Education",
     meta: "Aga Khan University, Karachi · July 2025",
     linkText: "EVENT DETAILS ↗",
-    href: "#events",
+    href: "https://youtu.be/CLf46yPKbS0",
   },
 ];
 
@@ -149,21 +107,21 @@ const STUDENT_SEMINARS = [
     title: "International Institute of Islamic Thought",
     meta: "Herndon, VA · Aug 29–Sep 1, 2025 · Medical, dental, nursing and allied-health students",
     linkText: "VIEW PROGRAM ↗",
-    href: "#student-seminars",
+    href: "https://www.youtube.com/playlist?list=PLKPFd4mBCvIiBATy5byNPqcULglmHafQi",
   },
   {
     num: "02",
     title: "International Islamic University Malaysia",
     meta: "IIUM Gambang Campus · Jul 17–20, 2023 · Pre-university foundation students",
     linkText: "VIEW PROGRAM ↗",
-    href: "#student-seminars",
+    href: "https://www.youtube.com/playlist?list=PLKPFd4mBCvIhsZjB0RnDRMROZqHPJ2Pf2",
   },
   {
     num: "03",
     title: "Chicago, Illinois",
     meta: "Jan 14–15 and Feb 18–19, 2023 · Islamic high-school students, Grades 11–12",
     linkText: "VIEW PROGRAM ↗",
-    href: "#student-seminars",
+    href: "https://www.youtube.com/playlist?list=PLKPFd4mBCvIhE3oZJBRPb2vB208MOEyic",
   },
 ];
 
@@ -173,21 +131,21 @@ const TEACHER_TRAINING = [
     title: "Teaching Bioscience Through an Islamic Lens",
     meta: "II&M + ISLA · May 20, 2024",
     linkText: "WATCH / LEARN MORE ↗",
-    href: "#teacher-training",
+    href: "https://www.youtube.com/playlist?list=PLKPFd4mBCvIhxHEc-xetB1MnFDQT9qhAV",
   },
   {
     num: "02",
     title: "Reimagining Bioscience for Muslim Students",
     meta: "II&M + ISLA · Jan 31 & Feb 3, 2025",
     linkText: "WATCH / LEARN MORE ↗",
-    href: "#teacher-training",
+    href: "https://www.youtube.com/playlist?list=PLKPFd4mBCvIhvq40ccvRkJ2KT_4HLaTRP",
   },
   {
     num: "03",
     title: "Special Symposium on Islam & Bioscience",
     meta: "II&M + IIUM · Feb 24, 2025",
     linkText: "WATCH / LEARN MORE ↗",
-    href: "#teacher-training",
+    href: "https://medicineandislam.org/wp-content/uploads/2025/01/Dr.-Raudah-Yunus-Slide-deck.pptx",
   },
 ];
 
@@ -197,28 +155,28 @@ const PUBLICATIONS = [
     title: "Exploring Muslim Student Learning Experiences at the Bioscience–Islam Interface: Insights from Two Cultural Contexts",
     meta: "Journal of Education in Muslim Societies · Apr 2026",
     linkText: "READ PUBLICATION ↗",
-    href: "/research",
+    href: "https://www.academia.edu/166760336/Exploring_Muslim_Student_Learning_Experiences_at_the_Bioscience_Islam_Interface_Insights_from_Two_Cultural_Contexts",
   },
   {
     num: "02",
     title: "Reimagining Bioscience Curriculum for Muslim High School Students",
     meta: "Islamic Horizons · May/June 2025",
     linkText: "READ PUBLICATION ↗",
-    href: "/research",
+    href: "https://issuu.com/isnacreative/docs/islamic_horizons_may_june_2025/14",
   },
   {
     num: "03",
     title: 'Tackling "Big" Questions at the Bioscience–Islam Interface: Reporting on the Efficacy of an Educational Programme Designed for Muslim High School Students',
     meta: "International Journal of Science Education · 2024",
     linkText: "READ PUBLICATION ↗",
-    href: "/research",
+    href: "https://www.tandfonline.com/doi/abs/10.1080/09500693.2024.2367774",
   },
   {
     num: "04",
     title: "Can We Live Longer and Should We? Radical Life Extension, Biomedicine, and Islamic Bioethics",
     meta: "Journal of Ethics and Emerging Technologies · 2024",
     linkText: "READ PUBLICATION ↗",
-    href: "/research",
+    href: "https://jeet.ieet.org/index.php/home/issue/view/22",
   },
 ];
 
@@ -228,7 +186,7 @@ const REPORTS = [
     title: "Symposium Proceedings & Policy Recommendations — Biomedicine, Religion & Education",
     meta: "Symposium on Biomedicine, Religion, and Education · July 2025",
     linkText: "READ REPORT ↗",
-    href: "/research",
+    href: "https://medicineandislam.org/wp-content/uploads/2026/08/Symposium-Paper-Final-Draft-13.8.26.pdf",
   },
 ];
 
@@ -238,138 +196,162 @@ const PRESENTATIONS = [
     title: "Addressing Fundamental Questions about the Human Being through Bioscientific and Theological Discussions",
     meta: "MCW IHER · Milwaukee · Sep 2023",
     linkText: "VIEW PRESENTATION ↗",
-    href: "#presentations",
+    href: "https://www.mcw.edu/-/media/MCW/Education/Academic-Affairs/IHER/2023-MCW-Innovations-in-Healthcare-Education-Research-Conference-Program.pdf",
   },
   {
     num: "02",
     title: "Exploring Fundamental Questions about the Human Being through Bioscience and Islam",
     meta: "World Congress of Bioethics · Doha · Jun 2024",
     linkText: "VIEW PRESENTATION ↗",
-    href: "#presentations",
+    href: "https://medicineandislam.org/exploring-fundamental-questions-qatar/",
   },
   {
     num: "03",
     title: 'Addressing "Big" Questions About the Human Being',
     meta: "ASBH · St. Louis · Sep 2024",
     linkText: "VIEW PRESENTATION ↗",
-    href: "#presentations",
+    href: "https://medicineandislam.org/addressing-big-questions-asbh-2024/",
   },
   {
     num: "04",
     title: "Where Bioscience, Islam, and Education Intersect",
     meta: "ISLA Research Symposium · Dec 2024 · Recording",
     linkText: "VIEW PRESENTATION ↗",
-    href: "#presentations",
+    href: "https://www.youtube.com/watch?v=0HmDBo64HDI",
   },
   {
     num: "05",
     title: "Where Bioscience, Islam, and Education Intersect",
     meta: "ISLA Research Symposium · Dec 2024 · Slides",
     linkText: "VIEW PRESENTATION ↗",
-    href: "#presentations",
+    href: "https://www.youtube.com/watch?v=3pzjRR38a_8",
   },
   {
     num: "06",
     title: "Scientific Inquiry, Evolution, and the Human Experience",
     meta: "ISNA Education Forum · Apr 2025",
     linkText: "VIEW PRESENTATION ↗",
-    href: "#presentations",
+    href: "https://medicineandislam.org/wp-content/uploads/2026/04/Scientific-inquiry-evolution-and-the-human-experience-April-2025.pdf",
   },
 ];
 
 const GALLERY_ITEMS = [
   {
     num: "01",
-    title: "Chicagoland student seminars",
-    meta: "USA · Jan–Feb 2023",
-    linkText: "VIEW GALLERY ↗",
-    href: "#gallery",
+    title: "Bridging Bioscience and Islam — Engaging Big Questions about the Human Being",
+    meta: "Curriculum overview and project guide",
+    linkText: "VIEW RESOURCE ↗",
+    href: "https://medicineandislam.org/bridging-bioscience-and-islam-2/",
   },
   {
     num: "02",
-    title: "International Islamic University Malaysia",
-    meta: "Malaysia · July 2023",
-    linkText: "VIEW GALLERY ↗",
-    href: "#gallery",
+    title: "Exploring Bioscience and Islam",
+    meta: "Project resource page",
+    linkText: "VIEW RESOURCE ↗",
+    href: "https://medicineandislam.org/bioscience-and-islam/",
   },
   {
     num: "03",
-    title: "Riphah International University",
-    meta: "Pakistan · July 2025",
-    linkText: "VIEW GALLERY ↗",
-    href: "#gallery",
+    title: "Teaching Modules — Interactive Access",
+    meta: "Seven seminar teaching modules",
+    linkText: "VIEW MODULES ↗",
+    href: "https://medicineandislam.org/fostering-connections-between-science-and-theology-2/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE2ODE4IiwidG9nZ2xlIjpmYWxzZX0%3D",
   },
   {
     num: "04",
-    title: "Aga Khan University — IED",
-    meta: "Pakistan · July 2025",
-    linkText: "VIEW GALLERY ↗",
-    href: "#gallery",
+    title: "Symposium Proceedings & Policy Recommendations",
+    meta: "Biomedicine, Religion & Education · July 2025",
+    linkText: "VIEW PROCEEDINGS ↗",
+    href: "https://medicineandislam.org/wp-content/uploads/2026/09/Symposium-Proceedings-Policy-Recommendations.pdf",
   },
   {
     num: "05",
-    title: "IIIT Intensive Seminar Series",
-    meta: "USA · September 2025",
-    linkText: "VIEW GALLERY ↗",
-    href: "#gallery",
+    title: "Student Reflection Booklet",
+    meta: "Student-facing reflection and activity resource",
+    linkText: "VIEW BOOKLET ↗",
+    href: "https://go.fliplink.me/view/E21B175C-A0FD-4217-BE09-88018472B342",
   },
   {
     num: "06",
-    title: "FIMA Scientific Convention, Syiah Kuala University",
-    meta: "Indonesia · September 2025",
-    linkText: "VIEW GALLERY ↗",
-    href: "#gallery",
+    title: "Promotional Brochure",
+    meta: "Project overview brochure",
+    linkText: "VIEW BROCHURE ↗",
+    href: "https://medicineandislam.org/wp-content/uploads/2026/03/bridging-bioscience-and-islam.pdf",
   },
 ];
 
 const TEAM_MEMBERS = [
   {
     name: "Dr. Aasim I. Padela, MD, MSc",
+    role: "Lead Investigator & Project Director",
     affiliation: "Medical College of Wisconsin",
+    img: "/images/our-team/padela-portrait.jpg",
   },
   {
     name: "Dr. Shoaib Ahmed Malik, PhD",
+    role: "Science & Theology Scholar",
     affiliation: "University of Edinburgh",
+    img: "/images/podcast/guest-malik.png",
   },
   {
     name: "Dr. Macksood Aftab, DO",
+    role: "Bioethics & Neuroethics Specialist",
     affiliation: "Michigan State University",
+    img: "/images/podcast/guest-aftab.png",
   },
   {
     name: "Prof. Abdurezak Hashi, PhD",
+    role: "Islamic Thought & Ethics Scholar",
     affiliation: "International Islamic University Malaysia",
+    img: "/images/podcast/guest-hashi.png",
   },
   {
-    name: "Dr. Mohd Yusof, PhD",
+    name: "Dr. Mohd Yusof Mohamad, PhD",
+    role: "Biosciences & Applied Ethics",
     affiliation: "International Islamic University Malaysia",
+    img: "/images/podcast/guest-mohamad.png",
   },
   {
     name: "Shaykh Hamza Karamali, MASc",
+    role: "Theology & Rational Sciences",
     affiliation: "Basira Education",
+    img: "/images/podcast/guest-karamali.png",
   },
   {
     name: "Dr. Omar Qureshi, PhD",
+    role: "Philosophy & Religious Studies",
     affiliation: "Cambridge Muslim College",
+    img: "/images/podcast/guest-qureshi.png",
   },
   {
     name: "Dr. Ahsan M. Arozullah, MD, MPH",
+    role: "Clinical Epidemiology & Bioethics",
     affiliation: "Darul Qasim College",
+    img: "/images/podcast/guest-ahsan.jpg",
   },
   {
     name: "Shaykh Bilal Ansari",
+    role: "Chaplaincy & Practical Theology",
     affiliation: "Darul Qasim College",
+    img: "/images/podcast/guest-ansari.png",
   },
   {
     name: "Habeeb Quadri",
+    role: "Educational Pedagogy Consultant",
     affiliation: "High Quality Educational Consulting",
+    img: "/images/bio-team-3.jpg",
   },
   {
     name: "Dr. Shaza Khan, PhD",
+    role: "Curriculum & Educational Leadership",
     affiliation: "Islamic Schools League of America",
+    img: "/images/bio-team-5.jpg",
   },
   {
     name: "Dr. Raudah Yunus, MBBCh, DrPH",
+    role: "Community Health & Qualitative Researcher",
     affiliation: "Medical College of Wisconsin",
+    img: "/images/our-team/raudah.jpg",
   },
 ];
 
@@ -437,26 +419,18 @@ export default function FosteringConnectionsPage() {
                 <h2 className="fc-sectionTitle">Overview</h2>
                 <div className="fc-burgundyBar" /> */}
                 <p className="fc-bodyParagraph">
-                  The project &ldquo;Fostering Connections between Bioscience and Theology for Medical Track Muslim
-                  Students,&rdquo; also known as the &ldquo;Exploring Bioscience and Islam&rdquo; Seminar Series, launched in 2022 with
-                  support from the John Templeton Foundation.
+                  The project &lsquo;Fostering Connections between Bioscience and Theology for Medical Track Muslim Students&rsquo; is also known as the &lsquo;Exploring Bioscience and Islam&rsquo; Seminar Series. This project was launched by II&amp;M in 2022 with the generous support of the John Templeton Foundation (JTF). We aim to help teachers and students gain conceptual literacy on some critical topics at the intersection of bioscience and theology through addressing the five fundamental questions about the human being.
                 </p>
                 <p className="fc-bodyParagraph">
-                  As Muslim students explore bioscience, they encounter questions about religious identity, scientific discovery,
-                  human origins, consciousness and moral agency. This initiative creates opportunities to examine these
-                  questions constructively through dialogue between bioscientists, Islamic scholars and educators.
-                </p>
-                <p className="fc-bodyParagraph">
-                  The project aims to build conceptual literacy about key questions concerning the human being, and to equip
-                  educators with classroom-ready teaching resources.
+                  As Muslim students explore the biosciences, they may encounter difficult questions and wonder how their religious identity intersects with scientific discoveries: Does affirming scientific facts compromise religious beliefs? Does religion explain scientific findings? How can they navigate these domains constructively? We believe that conflicts are not inevitable, and that knowledge integration is possible and can shape stable professional identities in the future.
                 </p>
 
                 {/* OVERVIEW VIDEO */}
                 <div className="fc-overviewVideoWrap">
                   <div className="fc-videoFrameWrap">
                     <iframe
-                      src="https://www.youtube-nocookie.com/embed/WkqPDZHKljQ?rel=0&modestbranding=1"
-                      title="Fostering Connections Between Science And Theology For Medical Track Muslim Students"
+                      src="https://www.youtube.com/embed/0HmDBo64HDI"
+                      title="Exploring Bioscience & Islam | Curriculum on Fundamental Questions About the Human Being"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
@@ -467,11 +441,11 @@ export default function FosteringConnectionsPage() {
                     <div className="fc-videoCaptionInfo">
                       <span className="fc-videoTag">Featured Project Video</span>
                       <p className="fc-videoCaptionTitle">
-                        Fostering Connections Between Science and Theology for Medical Track Muslim Students
+                        Exploring Bioscience &amp; Islam: Curriculum on Fundamental Questions About the Human Being
                       </p>
                     </div>
                     <a
-                      href="https://www.youtube.com/watch?v=WkqPDZHKljQ"
+                      href="https://www.youtube.com/watch?v=0HmDBo64HDI"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="fc-videoYoutubeLink"
@@ -515,36 +489,6 @@ export default function FosteringConnectionsPage() {
                       <h3 className="fc-topicTitle">{topic.title}</h3>
                     </div>
                   ))}
-                </div>
-              </div>
-
-              {/* SECTION 04: PROJECT MATERIALS */}
-              <div id="materials" className="fc-sectionBlock">
-                <div className="fc-sectionEyebrow">OPEN EDUCATIONAL MATERIALS</div>
-                <h2 className="fc-sectionTitle">Project Materials</h2>
-                <div className="fc-burgundyBar" />
-                <p className="fc-sectionSubtext">
-                  Teaching modules, companion resources, symposium proceedings and student-facing material
-                  developed through the project.
-                </p>
-                <div className="fc-materialsGrid">
-                  {PROJECT_MATERIALS.map((mat) => (
-                    <div key={mat.num} className="fc-cardItem">
-                      <div>
-                        <div className="fc-cardTopRow">
-                          <h3 className="fc-cardTitle">{mat.title}</h3>
-                          <span className="fc-cardTopNum">{mat.num}</span>
-                        </div>
-                        <p className="fc-cardMeta">{mat.desc}</p>
-                      </div>
-                      <a href={mat.href} className="fc-cardLink">
-                        {mat.linkText}
-                      </a>
-                    </div>
-                  ))}
-                </div>
-                <div className="fc-noticeBox">
-                  Individual files are accessed via the official project page. This template does not invent download URLs.
                 </div>
               </div>
 
@@ -704,14 +648,14 @@ export default function FosteringConnectionsPage() {
                 </div>
               </div>
 
-              {/* SECTION 12: EVENTS GALLERY & TESTIMONIALS */}
-              <div id="gallery" className="fc-sectionBlock">
-                <div className="fc-sectionEyebrow">A GLOBAL CONVERSATION</div>
-                <h2 className="fc-sectionTitle">Events Gallery &amp; Testimonials</h2>
+              {/* SECTION 12: PROJECT MATERIALS */}
+              <div id="materials" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">OPEN EDUCATIONAL MATERIALS</div>
+                <h2 className="fc-sectionTitle">Project Materials</h2>
                 <div className="fc-burgundyBar" />
                 <p className="fc-sectionSubtext">
-                  Six documented event groups across the United States, Malaysia, Pakistan and Indonesia, along with
-                  recorded student testimonials.
+                  Teaching modules, companion resources, symposium proceedings and student-facing material
+                  developed through the project.
                 </p>
                 <div className="fc-materialsGrid">
                   {GALLERY_ITEMS.map((gal) => (
@@ -729,8 +673,21 @@ export default function FosteringConnectionsPage() {
                     </div>
                   ))}
                 </div>
-                <div className="fc-noticeBox">
-                  Original event photographs and testimonial videos remain on the source project page.
+              </div>
+
+              {/* SECTION 13: EVENTS GALLERY & TESTIMONIALS */}
+              <div id="gallery" className="fc-sectionBlock">
+                <div className="fc-sectionEyebrow">A GLOBAL CONVERSATION</div>
+                <h2 className="fc-sectionTitle">Events Gallery &amp; Testimonials</h2>
+                <div className="fc-burgundyBar" />
+                <p className="fc-sectionSubtext">
+                  Six documented event groups across the United States, Malaysia, Pakistan and Indonesia, along with recorded student testimonials. Click any photo to expand.
+                </p>
+
+                <EventsPhotoGallery />
+
+                <div className="fc-galleryNotice" style={{ marginTop: "24px" }}>
+                  <p>Original event photographs and testimonial videos remain on the source project page.</p>
                 </div>
               </div>
 
@@ -744,10 +701,21 @@ export default function FosteringConnectionsPage() {
                 </p>
                 <div className="fc-teamGrid">
                   {TEAM_MEMBERS.map((member) => (
-                    <div key={member.name} className="fc-teamCard">
-                      <h3 className="fc-teamName">{member.name}</h3>
-                      <p className="fc-teamAffiliation">{member.affiliation}</p>
-                    </div>
+                    <article key={member.name} className="fc-teamCard">
+                      <div className="fc-teamMedia">
+                        <img
+                          src={asset(member.img)}
+                          alt={member.name}
+                          className="fc-teamImg"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="fc-teamInfo">
+                        <h3 className="fc-teamName">{member.name}</h3>
+                        <p className="fc-teamRole">{member.role}</p>
+                        <p className="fc-teamAffiliation">{member.affiliation}</p>
+                      </div>
+                    </article>
                   ))}
                 </div>
               </div>
@@ -800,35 +768,30 @@ export default function FosteringConnectionsPage() {
                   </ul>
                 </div>
 
-                {/* CARD 03: QUICK LINKS */}
+                {/* CARD 04: RELATED PROGRAMS */}
                 <div className="fc-sidebarCard">
-                  <h3 className="fc-sidebarCardTitle">Quick Links</h3>
+                  <h3 className="fc-sidebarCardTitle">Related Programs</h3>
                   <div className="fc-sidebarBar" />
                   <ul className="fc-quickLinksList">
                     <li className="fc-quickLinkItem">
-                      <a href="#materials" className="fc-quickLink">
-                        Teaching resources ↗
-                      </a>
+                      <a href="/courses" className="fc-quickLink">Courses ↗</a>
                     </li>
                     <li className="fc-quickLinkItem">
-                      <a href="#events" className="fc-quickLink">
-                        Events &amp; seminars ↗
-                      </a>
+                      <a href="/speaking" className="fc-quickLink">Speaking ↗</a>
                     </li>
                     <li className="fc-quickLinkItem">
-                      <a href="#publications" className="fc-quickLink">
-                        Academic publications ↗
-                      </a>
+                      <a href="/consultation" className="fc-quickLink">Consulting ↗</a>
                     </li>
                     <li className="fc-quickLinkItem">
-                      <a href="#gallery" className="fc-quickLink">
-                        Gallery &amp; testimonials ↗
-                      </a>
+                      <a href="/workshops" className="fc-quickLink">Workshops ↗</a>
+                    </li>
+                    <li className="fc-quickLinkItem">
+                      <a href="/research" className="fc-quickLink">Research ↗</a>
                     </li>
                   </ul>
                 </div>
 
-                {/* CARD 04: EXPLORE THE ORIGINAL PROJECT */}
+                {/* CARD 05: EXPLORE THE ORIGINAL PROJECT */}
                 <div id="original-project" className="fc-sidebarCardBurgundy">
                   <h3 className="fc-sidebarCardTitle">Explore the Original Project</h3>
                   <div className="fc-sidebarBarWhite" />

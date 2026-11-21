@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { asset } from "../../lib/asset";
 
 export const PAST_INTERNS_DATA = [
@@ -90,14 +90,21 @@ export const PAST_INTERNS_DATA = [
   },
 ];
 
+const CLONES_COUNT = 4;
+
 export default function PastInternsSlider({ interns = PAST_INTERNS_DATA }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
+  const [virtualIndex, setVirtualIndex] = useState(CLONES_COUNT);
+  const [enableTransition, setEnableTransition] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
+  const isTransitioningRef = useRef(false);
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
+  const timerRef = useRef(null);
 
-  // Update visible items count based on window width
+  const n = interns.length;
+
+  // Responsive itemsPerView
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth < 640) {
@@ -113,31 +120,101 @@ export default function PastInternsSlider({ interns = PAST_INTERNS_DATA }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const maxIndex = Math.max(0, interns.length - itemsPerView);
+  // Compute clones array for seamless circular loop
+  const slides = [
+    ...interns.slice(-CLONES_COUNT).map((item, i) => ({ ...item, _key: `pre-${i}` })),
+    ...interns.map((item, i) => ({ ...item, _key: `real-${i}` })),
+    ...interns.slice(0, CLONES_COUNT).map((item, i) => ({ ...item, _key: `post-${i}` })),
+  ];
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
-  };
+  // Active real index for counter & dots (0 to n - 1)
+  const realIndex = ((virtualIndex - CLONES_COUNT) % n + n) % n;
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  };
+  const nextSlide = useCallback(() => {
+    if (isTransitioningRef.current) return;
+    isTransitioningRef.current = true;
+    setEnableTransition(true);
+    setVirtualIndex((prev) => prev + 1);
+  }, []);
+
+  const prevSlide = useCallback(() => {
+    if (isTransitioningRef.current) return;
+    isTransitioningRef.current = true;
+    setEnableTransition(true);
+    setVirtualIndex((prev) => prev - 1);
+  }, []);
 
   const goToSlide = (idx) => {
-    setCurrentIndex(Math.min(idx, maxIndex));
+    if (isTransitioningRef.current || idx === realIndex) return;
+    isTransitioningRef.current = true;
+    setEnableTransition(true);
+    setVirtualIndex(CLONES_COUNT + idx);
   };
 
-  // Autoplay every 4.5 seconds when not hovered
+  const handleTransitionEnd = () => {
+    if (virtualIndex >= CLONES_COUNT + n) {
+      // Slid past the end -> snap back to corresponding start clone without transition
+      setEnableTransition(false);
+      setVirtualIndex(CLONES_COUNT + (virtualIndex - (CLONES_COUNT + n)));
+      setTimeout(() => {
+        setEnableTransition(true);
+        isTransitioningRef.current = false;
+      }, 40);
+    } else if (virtualIndex < CLONES_COUNT) {
+      // Slid before the start -> snap to corresponding end clone without transition
+      setEnableTransition(false);
+      setVirtualIndex(CLONES_COUNT + n - (CLONES_COUNT - virtualIndex));
+      setTimeout(() => {
+        setEnableTransition(true);
+        isTransitioningRef.current = false;
+      }, 40);
+    } else {
+      isTransitioningRef.current = false;
+    }
+  };
+
+  // Safety fallback in case transitionend is canceled/skipped by browser
   useEffect(() => {
-    if (isPaused) return;
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    }, 4500);
-    return () => clearInterval(timer);
-  }, [isPaused, maxIndex]);
+    if (isTransitioningRef.current) {
+      const fallback = setTimeout(() => {
+        isTransitioningRef.current = false;
+      }, 550);
+      return () => clearTimeout(fallback);
+    }
+  }, [virtualIndex]);
+
+  // Autoplay loop every 3.5s when not hovered
+  useEffect(() => {
+    if (isPaused) {
+      if (timerRef.current) clearInterval(timerRef.current);
+      return;
+    }
+
+    timerRef.current = setInterval(() => {
+      nextSlide();
+    }, 3500);
+
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [isPaused, nextSlide]);
+
+  // Pause autoplay when browser tab is inactive
+  useEffect(() => {
+    function handleVisibility() {
+      if (document.hidden) {
+        setIsPaused(true);
+      } else {
+        setIsPaused(false);
+      }
+    }
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () => document.removeEventListener("visibilitychange", handleVisibility);
+  }, []);
 
   // Touch swipe support
   const handleTouchStart = (e) => {
+    setIsPaused(true);
     touchStartX.current = e.touches[0].clientX;
   };
 
@@ -146,15 +223,17 @@ export default function PastInternsSlider({ interns = PAST_INTERNS_DATA }) {
   };
 
   const handleTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) return;
-    const diff = touchStartX.current - touchEndX.current;
-    if (diff > 50) {
-      nextSlide();
-    } else if (diff < -50) {
-      prevSlide();
+    if (touchStartX.current !== null && touchEndX.current !== null) {
+      const diff = touchStartX.current - touchEndX.current;
+      if (diff > 45) {
+        nextSlide();
+      } else if (diff < -45) {
+        prevSlide();
+      }
     }
     touchStartX.current = null;
     touchEndX.current = null;
+    setIsPaused(false);
   };
 
   return (
@@ -184,7 +263,7 @@ export default function PastInternsSlider({ interns = PAST_INTERNS_DATA }) {
             </button>
 
             <span className="intern-slider-counter">
-              {String(currentIndex + 1).padStart(2, "0")} / {String(interns.length).padStart(2, "0")}
+              {String(realIndex + 1).padStart(2, "0")} / {String(n).padStart(2, "0")}
             </span>
 
             <button
@@ -199,12 +278,12 @@ export default function PastInternsSlider({ interns = PAST_INTERNS_DATA }) {
           </div>
 
           <div className="intern-slider-dots">
-            {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
+            {interns.map((_, idx) => (
               <button
                 key={idx}
                 type="button"
                 onClick={() => goToSlide(idx)}
-                className={`intern-slider-dot ${currentIndex === idx ? "active" : ""}`}
+                className={`intern-slider-dot ${realIndex === idx ? "active" : ""}`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}
@@ -220,13 +299,17 @@ export default function PastInternsSlider({ interns = PAST_INTERNS_DATA }) {
         >
           <div
             className="intern-slider-track"
+            onTransitionEnd={handleTransitionEnd}
             style={{
-              transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
+              transform: `translateX(-${virtualIndex * (100 / itemsPerView)}%)`,
+              transition: enableTransition
+                ? "transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)"
+                : "none",
             }}
           >
-            {interns.map((intern, idx) => (
+            {slides.map((intern) => (
               <div
-                key={intern.name || idx}
+                key={intern._key}
                 className="intern-slider-card-wrap"
                 style={{ flex: `0 0 ${100 / itemsPerView}%` }}
               >

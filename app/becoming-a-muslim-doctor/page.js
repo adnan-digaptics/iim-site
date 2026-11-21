@@ -38,18 +38,19 @@ export const metadata = {
   },
 };
 
-// 10 Numbered Course Modules (Verified Curriculum)
+// 11 Numbered Course Sessions
 const CURRICULUM_MODULES = [
   { num: "01", title: "Health and Illness" },
   { num: "02", title: "Medicine & Physicianship" },
   { num: "03", title: "Professional Journey and Destination" },
   { num: "04", title: "Who/What is my Patient?" },
-  { num: "05", title: "Act, Agent, and Outcome-based Ethics in Healthcare Practice" },
+  { num: "05", title: "Act, Agent, and Outcome-based Ethics in the Islamic Tradition" },
   { num: "06", title: "The TIIV and Classical Moral Psychology" },
   { num: "07", title: "Adab: Cultivating the Self and Habituating Virtue" },
   { num: "08", title: "Reflections with Exemplary Muslim Doctors (Part I)" },
   { num: "09", title: "Reflections with Exemplary Muslim Doctors (Part II)" },
   { num: "10", title: "Reflections with Exemplary Muslim Doctors (Part III)" },
+  { num: "11", title: "Identity-based Healthcare Dilemmas" },
 ];
 
 const FAQS = [
@@ -168,6 +169,14 @@ export default function BecomingAMuslimDoctorPage() {
               <p className="bmd-heroSubNote">
                 Course dates, availability, and fees: confirm with II&amp;M.
               </p>
+              <a
+                href="https://muslimedex.org/courses/becoming-a-muslim-doctor-foundations-of-identity-ethics-and-practice"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bmd-muslimedexLink"
+              >
+                View on Muslim EdEx <i className="fa-solid fa-arrow-up-right-from-square" />
+              </a>
             </div>
 
             {/* Right Still Life Photographic Framing */}
@@ -318,7 +327,7 @@ export default function BecomingAMuslimDoctorPage() {
         <div className="container">
           <div className="bmd-sectionHeader">
             <div className="bmd-eyebrow">CURRICULUM</div>
-            <h2 className="bmd-sectionTitle">Course Curriculum</h2>
+            <h2 className="bmd-sectionTitle">What You&apos;ll Learn</h2>
             <p className="bmd-sectionIntro">
               Sessions connect classical sources, contemporary issues, and real-world applications.
             </p>

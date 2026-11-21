@@ -53,7 +53,7 @@ export default function ContactPage() {
             </p>
             <div className="hero-seamless-actions">
               <a href="#message" className="btn-seamless-maroon">SEND US A MESSAGE <i className="fa-solid fa-arrow-right" aria-hidden="true" /></a>
-              <a href="#collaborate" className="btn-seamless-outline">EXPLORE WAYS TO COLLABORATE <i className="fa-solid fa-arrow-right" aria-hidden="true" /></a>
+              <a href="#collaborate" className="btn-seamless-outline">Let&apos;s Collaborate <i className="fa-solid fa-arrow-right" aria-hidden="true" /></a>
             </div>
           </div>
           <div className="hero-seamless-quote ct-hero-quote">

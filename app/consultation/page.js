@@ -27,6 +27,8 @@ const areas = [
   [asset("/images/story-consultation.jpg"), "Islamic Bioethics", "Guidance on ethical decision-making in clinical care."],
   [asset("/images/bio-faculty-talk.jpg"), "Cultural & Religious Competency", "Strategies for more inclusive, culturally responsive care."],
   [asset("/images/expertise-consultation.jpg"), "Institutional Policy & Guidance", "Review and development of policies, protocols, and systems of care."],
+  [asset("/images/expertise-consultation.jpg"), "Organ Donation & Religion", "Faith-sensitive guidance on organ donation decisions for Muslim individuals and communities."],
+  [asset("/images/story-consultation.jpg"), "End of Life Care", "Islamically informed support for end-of-life care planning, hospice, and palliative decisions."],
   [asset("/images/learning-lecture.jpg"), "Program Development & Training", "Custom educational programs for healthcare professionals."],
   [asset("/images/audience-community.jpg"), "Community Engagement", "Building bridges between healthcare institutions and Muslim communities."],
 ];
@@ -164,6 +166,20 @@ export default function ConsultationPage() {
         </div>
       </section>
 
+      <section className="consult-about-section">
+        <div className="container">
+          <div className="consult-about-inner">
+            <p className="consult-eyebrow">CONSULTING AT II&amp;M</p>
+            <p className="consult-about-body">
+              Over the past 15 years, II&amp;M has developed innovative community health research methodologies, crafted research-tested implementation toolkits, informed nuanced Islamic bioethical guidelines, designed effective workshops and courses, and authored data-driven policy reports. This knowledge and expertise is available to community leaders, researchers, policy-makers, patients, and others through our dedicated consultation services. You will meet with vetted experts and scholars and obtain high-quality insights and tools to assist you in the domains. Please click the form below to start an initial inquiry.
+            </p>
+            <a href="https://links.360growthlab.com/widget/form/CstJIHikubJG75Zv16TR" target="_blank" rel="noopener noreferrer" className="consult-btn consult-btn-fill">
+              CLICK TO CONSULT II&amp;M <i className="fa-solid fa-arrow-right" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="consult-cta" id="request">
         <div className="consult-cta-media">
           <img src={asset("/images/distinct-building.jpg")} alt="Academic medical institution" />
@@ -179,7 +195,7 @@ export default function ConsultationPage() {
             We welcome the opportunity to learn more about your needs and explore how II&amp;M can support your institution or organization.
           </p>
           <div className="consult-actions">
-            <a href="mailto:info@initiativeonislamandmedicine.org" className="consult-btn consult-btn-fill">SUBMIT A CONSULTATION REQUEST</a>
+            <a href="https://links.360growthlab.com/widget/form/CstJIHikubJG75Zv16TR" target="_blank" rel="noopener noreferrer" className="consult-btn consult-btn-fill">CLICK TO CONSULT II&amp;M <i className="fa-solid fa-arrow-right" /></a>
             <a href="mailto:info@initiativeonislamandmedicine.org" className="consult-btn consult-btn-outline">OR EMAIL US</a>
           </div>
         </div>

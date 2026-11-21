@@ -88,66 +88,66 @@ const ACADEMIC_PAPERS = [
     num: "01",
     title:
       "A Randomized Controlled Cross-Over Trial Evaluating the Effect of Religiously-Tailored Health Education",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.academia.edu/43849317/Informing_American_Muslims_about_Living_Donation_Through_Tailored_Health_Education_A_Randomized_Controlled_Cross_Over_Trial_Evaluating_Increase_in_Biomedical_and_Religious_Knowledge",
   },
   {
     num: "02",
     title:
       "The Ethics of Organ Donation After Circulatory Determination of Death and Xenotransplantation from an Islamic Perspective",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.academia.edu/45143004/The_ethics_of_organ_donation_donation_after_circulatory_determination_of_death_and_xenotransplantation_from_an_Islamic_perspective",
   },
   {
     num: "03",
     title:
       "Factors Associated with Positive Attitudes Towards Organ Donation in Arab Americans",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.academia.edu/52817418/Factors_associated_with_positive_attitudes_toward_organ_donation_in_Arab_Americans",
   },
   {
     num: "04",
     title:
       "Relationships between Islamic religiosity and attitude toward deceased organ donation among American Muslims: a pilot study",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.academia.edu/6983369/Relationships_Between_Islamic_Religiosity_and_Attitude_Toward_Deceased_Organ_Donation_Among_American_Muslims_A_Pilot_Study",
   },
   {
     num: "05",
     title: "American Muslim Physician Attitudes Toward Organ Donation",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.academia.edu/37280197/American_Muslim_Physician_Attitudes_Toward_Organ_Donation",
   },
   {
     num: "06",
     title:
       "A Mosque-Based Qualitative Study on American Muslim Women's Organ Donation Beliefs",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.academia.edu/88187265/A_Mosque_Based_Qualitative_Study_on_American_Muslim_Women_s_Organ_Donation_Beliefs",
   },
   {
     num: "07",
     title:
       "Informing American Muslims about living donation through tailored health education: A randomized controlled crossover trial evaluating increase in biomedical and religious knowledge",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.academia.edu/43849317/Informing_American_Muslims_about_Living_Donation_Through_Tailored_Health_Education_A_Randomized_Controlled_Cross_Over_Trial_Evaluating_Increase_in_Biomedical_and_Religious_Knowledge",
   },
   {
     num: "08",
     title:
       "The Development and Validation of the Islamic Knowledge of Living Organ Donation Knowledge Scale for Measuring Organ Donation Knowledge Among Muslim Communities",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.academia.edu/44133955/The_Development_and_Validation_of_the_Islamic_Knowledge_of_Living_Organ_Donation_Knowledge_Scale_for_Measuring_Organ_Donation_Knowledge_Among_Muslim_Communities",
   },
   {
     num: "09",
     title:
       "The Impact of Religiously-Tailored and Ethically-Balanced Education on Intention for Living Organ Donation among Muslim Americans",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.academia.edu/45143024/The_impact_of_religiously_tailored_and_ethically_balanced_education_on_intention_for_living_organ_donation_among_Muslim_Americans",
   },
   {
     num: "10",
     title:
       "Muslims, Islam, and Organ Donation: Righting Social Narratives and Designing Ethically Balanced Educational Interventions",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.academia.edu/92246033/Muslims_Islam_and_Organ_Donation_Righting_Social_Narratives_and_Designing_Ethically_Balanced_Educational_Interventions",
   },
   {
     num: "11",
     title:
       "Increasing Solid Organ Donation: A Role for Emergency Physicians",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.academia.edu/94261961/Increasing_Solid_Organ_Donation_A_Role_for_Emergency_Physicians",
   },
 ];
 
@@ -156,18 +156,18 @@ const OP_EDS = [
     num: "01",
     title:
       "Perspectives on Organ Donation and Transplantation: Practical steps to moving forward in light of the latest legal opinion — Islamic Horizons, October 2019",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://medicineandislam.org/wp-content/uploads/2024/11/Perspectives-on-Organ-Donation-and-Transplantation-1-1.pdf",
   },
   {
     num: "02",
     title:
       "Helping Those You Know: The possibilities of deceased directed donation — Islamic Horizons, December 2019",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://medicineandislam.org/wp-content/uploads/2024/11/Abu_Fahad_Abaasi.pdf",
   },
   {
     num: "03",
     title: "Muslim American Views on Organ Donation — October 2020",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://medicineandislam.org/wp-content/uploads/2024/11/IHSeptember-October20.pdf",
   },
 ];
 
@@ -175,17 +175,17 @@ const PPT_PRESENTATIONS = [
   {
     num: "01",
     title: "Biomedical Aspects of Living Donation",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://medicineandislam.org/wp-content/uploads/2024/11/Final-Biomedicals.pptx",
   },
   {
     num: "02",
     title: "Organ Procurement Process",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://earthworm-chicory-9jkn.squarespace.com/s/Final-OPO.pptx",
   },
   {
     num: "03",
     title: "Islamic Perspectives on Living Organ Donation",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://medicineandislam.org/wp-content/uploads/2024/11/FCNA-Finals.pptx",
   },
 ];
 
@@ -194,24 +194,24 @@ const CONF_PRESENTATIONS = [
     num: "01",
     title:
       "Developing Religiously-Tailored Health Education to Inform American Muslims about Organ Donation — September 17, 2019",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://medicineandislam.org/wp-content/uploads/2024/11/Conference-Book-Agenda.pdf",
   },
   {
     num: "02",
     title:
       "American Muslim Attitudes Towards Common Fertility Treatment Options: A Mosque-Based Cross Sectional Study — October 18–20, 2019",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://medicineandislam.org/advancing-muslim-american-health-priorities/",
   },
   {
     num: "03",
     title: "Working with Muslim Patients — Fall 2023",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.nkfi.org/interd",
   },
   {
     num: "04",
     title:
       "Bringing Theory to Community Education: Faith, Muslims, and Living Organ Donation — September 17, 2020",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.youtube.com/watch?v=flFX7pJ_EvY",
   },
 ];
 
@@ -220,25 +220,25 @@ const DISSEMINATION_PRODUCTS = [
     idx: "II&M / RESOURCE 01",
     heading: "An Organ Donation Decisional Guide for Muslim Americans",
     title: "An Organ Donation Decisional Guide for Muslim Americans",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://medicineandislam.org/wp-content/uploads/2024/11/OrganDonationGuide_Modified.pdf",
   },
   {
     idx: "II&M / RESOURCE 02",
     heading: "Sample Peer Educator Training Manual",
     title: "Sample Peer Educator Training Manual",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://medicineandislam.org/wp-content/uploads/2024/11/Peer-Educator-Training-Manual-1.pdf",
   },
   {
     idx: "II&M / RESOURCE 03",
     heading: "Replication Guide",
     title: "Replication Guide",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://medicineandislam.org/wp-content/uploads/2024/11/Final-Replication-Guide.pdf",
   },
   {
     idx: "II&M / RESOURCE 04",
     heading: "Sample Participant Course Booklet",
     title: "Sample Participant Course Booklet",
-    link: "https://www.islamandmedicine.org/",
+    link: "https://www.medicineandislam.org/living-organ-donation",
   },
 ];
 
@@ -416,22 +416,10 @@ export default function LivingOrganDonationPage() {
               <div className="row g-4 align-items-start">
                 <div className="col-md-7">
                   <p className="lod-leadText">
-                    Muslims share beliefs, values and experiences that can
-                    influence healthcare decisions across ethnic and racial
-                    backgrounds. Some turn to Islamic ethico-legal guidance when
-                    considering whether medical procedures are permissible.
+                    Many studies note that Muslims share health beliefs, values, and experiences that impact healthcare behaviors across ethnic and racial lines. For example, some Muslims turn to ethico-legal guidance before having a medical procedure to understand whether a procedure is Islamically permissible.
                   </p>
                   <p className="lod-leadText">
-                    Differences of opinion among Muslim scholars regarding
-                    organ donation can contribute to knowledge gaps. This
-                    project sought to understand those gaps and develop
-                    religiously tailored, peer-led group workshops delivered in
-                    mosques.
-                  </p>
-                  <p className="lod-leadText">
-                    The workshops addressed both biomedical and religious
-                    dimensions of living organ donation and end-of-life care,
-                    supporting informed, ethically considered decisions.
+                    For the topic of organ donation, different Muslim scholars hold different opinions, contributing to knowledge gaps in Muslim communities. This project aimed to understand what knowledge and belief gaps exist and develop religiously-tailored, peer-led group education workshops to be delivered in mosque settings that discuss both the biomedical and religious aspects of organ donation and end-of-life care.
                   </p>
                 </div>
 
@@ -487,17 +475,7 @@ export default function LivingOrganDonationPage() {
               </div>
 
               <p className="lod-leadText">
-                The shortage of life-saving organs has important consequences
-                for people waiting for transplants. Matching needs can be
-                especially challenging for ethnic and racial minority populations
-                that have lower rates of donation.
-              </p>
-              <p className="lod-leadText">
-                The original project presents a 2017 ethnic breakdown of organ
-                donors and waiting-list recipients, alongside a caution:
-                available organ-donation datasets did not identify Muslims as a
-                distinct group, and South Asians and Arabs were not separately
-                reported in the cited analysis.
+                The disparity between supply and demand for life-saving and/or life-sustaining organs is well-known and contributes to over 140 people on the waiting list per week dying in the United States. Living organ donation entails the donation of a non-vital paired organ (most commonly a kidney) or a portion of the liver or lung to someone in need. Living organ donation can be from a living family member, a known non-relative, or a stranger.
               </p>
 
               <div className="lod-quoteBox">
@@ -510,15 +488,6 @@ export default function LivingOrganDonationPage() {
                 </p>
               </div>
 
-              <a
-                href="https://www.islamandmedicine.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="lod-btnOutline"
-              >
-                VIEW NATIONAL TRANSPLANT DATA{" "}
-                <i className="fa-solid fa-arrow-up-right-from-square" />
-              </a>
             </article>
 
             {/* SECTION 04 — AMERICAN MUSLIM ATTITUDES */}
@@ -529,11 +498,7 @@ export default function LivingOrganDonationPage() {
               </div>
 
               <p className="lod-leadText">
-                Community surveys in Michigan and Chicago explored Muslim
-                perspectives on donation. The original study highlights less
-                positive attitudes toward donation than those observed in the
-                general U.S. population, and identifies religious and
-                biomedical knowledge gaps as possible contributors.
+                American Muslim attitudes towards organ donation are more negative compared to the general US population which has a &gt; 95% support rate. The gaps can be contributed towards lack of religious and biomedical knowledge to make informed decisions regarding organ donation.
               </p>
 
               <div className="row g-3">
@@ -550,15 +515,6 @@ export default function LivingOrganDonationPage() {
                 ))}
               </div>
 
-              <a
-                href="https://www.islamandmedicine.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="lod-inlineTextLink"
-              >
-                View original community survey charts and findings{" "}
-                <i className="fa-solid fa-arrow-up-right-from-square" />
-              </a>
             </article>
 
             {/* SECTION 05 — THE MOSQUE-BASED EDUCATION MODEL */}
@@ -601,11 +557,7 @@ export default function LivingOrganDonationPage() {
               </div>
 
               <p className="lod-leadText">
-                Views on living organ donation and end-of-life care are shaped
-                by interconnected medical and religious questions. The project
-                therefore addressed both topics in its educational intervention,
-                rather than treating donation decisions as solely clinical or
-                solely theological.
+                Organ donation and end-of-life care attitudes are impacted by biomedical and religious knowledge gaps. This project aimed to deliver and test the effectiveness of religiously-tailored, mosque-based educational workshops that discuss the biomedical and religious aspects of end-of-life care and living organ donation.
               </p>
             </article>
 
@@ -869,15 +821,6 @@ export default function LivingOrganDonationPage() {
                 should be replaced with the project&apos;s approved photographs.
               </p>
 
-              <a
-                href="https://www.islamandmedicine.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="lod-btnOutline"
-              >
-                OPEN FULL GALLERY{" "}
-                <i className="fa-solid fa-arrow-up-right-from-square" />
-              </a>
             </article>
 
             {/* SECTION 14 — PROJECT TEAM & SUPPORT */}

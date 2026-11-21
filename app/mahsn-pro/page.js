@@ -79,7 +79,7 @@ const PUBLICATIONS = [
     title:
       "Muslim Patients' Religious & Spiritual Resource Needs in US Hospitals: Findings from a National Survey",
     desc: "National survey findings concerning the importance and availability of religious and spiritual resources for Muslim patients.",
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
+    href: "https://link.springer.com/article/10.1007/s11606-024-08748-2",
   },
   {
     num: "02",
@@ -87,7 +87,7 @@ const PUBLICATIONS = [
     title:
       "Associations Between Every-day and Medical Setting-Based Discrimination on Religion and Sociodemographic Characteristics of Muslim Americans: Findings from a National Survey",
     desc: "Research examining experiences of everyday and healthcare-related discrimination among Muslim Americans.",
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
+    href: "https://link.springer.com/article/10.1007/s10903-024-01587-3",
   },
 ];
 
@@ -474,7 +474,7 @@ export default function MahsnPage() {
                           Religious &amp; Spiritual Needs
                         </h4>
                         <a
-                          href="https://pubmed.ncbi.nlm.nih.gov/"
+                          href="https://link.springer.com/article/10.1007/s11606-024-08960-y"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="mahsn-productLink"
@@ -504,7 +504,7 @@ export default function MahsnPage() {
                           Discrimination &amp; Healthcare
                         </h4>
                         <a
-                          href="https://pubmed.ncbi.nlm.nih.gov/"
+                          href="https://link.springer.com/article/10.1007/s10903-024-01633-2"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="mahsn-productLink"
@@ -533,6 +533,25 @@ export default function MahsnPage() {
                   &ldquo;I&amp;M—Here for the Muslim Community&rdquo; video.
                   Click on either video to launch the high-definition video player.
                 </p>
+
+                <div className="mahsn-videoGrid">
+                  <div className="mahsn-videoEmbed">
+                    <iframe
+                      src="https://www.youtube.com/embed/Uy7PQPDnlNU"
+                      title="MAHSN Video 1"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                  <div className="mahsn-videoEmbed">
+                    <iframe
+                      src="https://www.youtube.com/embed/mxiMOnIXitg"
+                      title="MAHSN Video 2"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
 
                 <MahsnVideoSection />
               </article>

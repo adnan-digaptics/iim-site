@@ -104,67 +104,67 @@ const PUBLICATIONS = [
     num: "01",
     title:
       "Associations between religion-related factors and breast cancer screening among American Muslims",
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
+    href: "https://www.academia.edu/6983361/Associations_Between_Religion_Related_Factors_and_Breast_Cancer_Screening_Among_American_Muslims",
   },
   {
     num: "02",
     title:
       'Developing religiously-tailored health messages for behavioral change: Introducing the reframe, reprioritize, and reform ("3R") model',
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
+    href: "https://www.academia.edu/76591873/Developing_religiously_tailored_health_messages_for_behavioral_change_Introducing_the_reframe_reprioritize_and_reform_3R_model",
   },
   {
     num: "03",
     title:
       "Changing Mammography-Related Beliefs Among American Muslim Women: Findings from a Religiously-Tailored Mosque-Based Intervention",
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
+    href: "https://www.academia.edu/45141136/Changing_Mammography_Related_Beliefs_Among_American_Muslim_Women_Findings_from_a_Religiously_Tailored_Mosque_Based_Intervention",
   },
   {
     num: "04",
     title:
       "Reducing Muslim Mammography Disparities: Outcomes From a Religiously Tailored Mosque-Based Intervention",
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
+    href: "https://www.academia.edu/36507539/Reducing_Muslim_Mammography_Disparities_Outcomes_From_a_Religiously_Tailored_Mosque_Based_Interv",
   },
   {
     num: "05",
     title:
       "Religious beliefs and mammography intention: findings from a qualitative study of a diverse group of American Muslim women",
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
+    href: "https://www.academia.edu/27569477/Religious_Beliefs_and_Mammography_Intention_Findings_from_a_Qualitative_Study_of_a_Diverse_Group_of_American_Muslim_Women",
   },
   {
     num: "06",
     title:
       "Muslim women's perspectives on designing mosque-based women's health intervention—An exploratory qualitative study",
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
+    href: "https://www.academia.edu/33380405/Muslim_Womens_Perspectives_on_Designing_Mosque_Based_Womens_Health_Interventions_An_Exploratory_Qualitative_Study",
   },
   {
     num: "07",
     title:
       "Acceptability of Friday Sermons as a Modality for Health Promotion and Education",
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
+    href: "https://www.academia.edu/34294305/Acceptability_of_Friday_Sermons_as_a_Modality_for_Health_Promotion_and_Education",
   },
   {
     num: "08",
     title:
       "Adapting a religious health fatalism measure for use in Muslim populations",
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
+    href: "https://www.academia.edu/55389047/Adapting_a_religious_health_fatalism_measure_for_use_in_Muslim_populations",
   },
   {
     num: "09",
     title:
       "The Development and Validation of a Modesty Measure for Diverse Muslim Populations",
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
+    href: "https://www.academia.edu/45142996/The_Development_and_Validation_of_a_Modesty_Measure_for_Diverse_Muslim_Populations",
   },
   {
     num: "10",
     title:
       "Predictors of Delayed Healthcare Seeking Among American Muslim Women",
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
+    href: "https://www.academia.edu/88187244/Predictors_of_Delayed_Healthcare_Seeking_Among_American_Muslim_Women",
   },
   {
     num: "11",
     title:
       "Associations between religion-related factors and cervical cancer screening among Muslims in greater Chicago",
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
+    href: "https://www.academia.edu/7734915/Associations_Between_Religion_Related_Factors_and_Cervical_Cancer_Screening_Among_Muslims_in_Greater_Chicago",
   },
 ];
 
@@ -193,24 +193,24 @@ const PRESENTATIONS_COL2 = [
 ];
 
 const POSTERS_COL1 = [
-  "Reducing Muslim mammography disparities: Outcomes from a religiously tailored mosque-based intervention",
-  "Outcomes from a Religiously Tailored Intervention to Enhance Mammography Uptake among American Muslims",
-  "A Religiously Tailored Intervention to Enhance Mammography Uptake among American Muslims—Design Elements, Feasibility & Outcomes",
+  { title: "Reducing Muslim mammography disparities: Outcomes from a religiously tailored mosque-based intervention", href: "https://medicineandislam.org/wp-content/uploads/2024/11/AACR-2017-Outcomes.pdf" },
+  { title: "Outcomes from a Religiously Tailored Intervention to Enhance Mammography Uptake among American Muslims", href: "https://medicineandislam.org/wp-content/uploads/2024/11/AACR-2018.pdf" },
+  { title: "A Religiously Tailored Intervention to Enhance Mammography Uptake among American Muslims—Design Elements, Feasibility & Outcomes", href: "https://medicineandislam.org/wp-content/uploads/2024/11/Modesty-Poster-Final.pdf" },
 ];
 
 const POSTERS_COL2 = [
-  "Development and Validation of a Modesty Measure for Diverse Muslim Populations",
-  "Reducing Disparities in Mammography Screening among American Muslim Women through a religiously-tailored mosque-based intervention",
-  "Religion-Related Factors and Breast Cancer Screening among American Muslims",
+  { title: "Development and Validation of a Modesty Measure for Diverse Muslim Populations", href: "https://medicineandislam.org/wp-content/uploads/2024/11/Modesty-Poster-Final.pdf" },
+  { title: "Reducing Disparities in Mammography Screening among American Muslim Women through a religiously-tailored mosque-based intervention", href: "https://medicineandislam.org/wp-content/uploads/2024/11/SAA-CUGH-Poster-draft-.pdf" },
+  { title: "Religion-Related Factors and Breast Cancer Screening among American Muslims", href: "https://medicineandislam.org/wp-content/uploads/2024/11/SABCS-2014-Poster.pdf" },
 ];
 
 const CONFERENCES_COL1 = [
-  "Muslim Clinicians in the Medical Academy — Medical College of Wisconsin, 2022",
-  "Being Muslim in Academic Medicine — NIIMS, 2022",
+  { title: "Muslim Clinicians in the Medical Academy — Medical College of Wisconsin, 2022", href: "https://www.youtube.com/watch?v=BfXF6wQL40A" },
+  { title: "Being Muslim in Academic Medicine — NIIMS, 2022", href: "https://m.facebook.com/NIIMS.org/videos/being-muslim-in-academic-medicine/1183676399093794/" },
 ];
 
 const CONFERENCES_COL2 = [
-  "Accommodating Muslim Values in Healthcare — Medical College of Wisconsin, 2022",
+  { title: "Accommodating Muslim Values in Healthcare — Medical College of Wisconsin, 2022", href: "https://muslimadvocates.org/files/2018.05.24-Ramadan-Workplace-KYR.pdf" },
 ];
 
 const MEDIA_HIGHLIGHTS = [
@@ -218,17 +218,17 @@ const MEDIA_HIGHLIGHTS = [
     outlet: "Newsweek",
     headline:
       "Muslim Women More Likely to Skip Breast Cancer Screening, But Mosques Can Help",
-    href: "https://www.newsweek.com/",
+    href: "https://www.newsweek.com/breast-cancer-screening-mammography-muslim-women-670881",
   },
   {
     outlet: "American Association for Cancer Research",
     headline: "Encouraging Muslim Women to Get Mammograms",
-    href: "https://www.aacr.org/",
+    href: "https://www.aacr.org/patients-caregivers/progress-against-cancer/encouraging-muslim-women-get-mammograms-breast-cancer/",
   },
   {
-    outlet: "Additional coverage",
-    headline: "Access all original media highlights",
-    href: "https://www.islamandmedicine.org/",
+    outlet: "ScienceDirect",
+    headline: "Research Article — Journal of Immigrant and Minority Health",
+    href: "https://www.sciencedirect.com/science/article/abs/pii/S0027968423000366?dgcid=coauthor",
   },
 ];
 
@@ -351,17 +351,10 @@ export default function MammographyPage() {
                 <div className="row align-items-center g-3 g-md-4">
                   <div className="col-md-7">
                     <p className="mm-text">
-                      American Muslims form a diverse population, yet the absence
-                      of religious affiliation data in many national health
-                      surveys limits the evidence available about breast cancer
-                      outcomes for Muslim women.
+                      Generally mistaken for a small homogenous group, American Muslims are many and diverse. Because of this diversity, and because national health care surveys and databases typically do not collect religious affiliation data, there is limited data on aggregate female American Muslim breast cancer incidence and outcomes. Despite this, there are reasons to believe disparities may exist. First, earlier work suggests that American Muslim women have lower mammography adherence than the national average. Second, there is evidence to suggest that religious beliefs and health care experiences related to Muslim identity may adversely impact screening behaviors among American Muslim women.
                     </p>
                     <p className={`mm-text mb-0`}>
-                      Earlier research suggested low mammography adherence among
-                      Muslim women in the United States. The project explored how
-                      religious beliefs and healthcare experiences shape
-                      screening decisions and translated the findings into
-                      peer-led educational workshops in mosques.
+                      To address this disparity, the Initiative on Islam and Medicine conducted a series of studies to understand the influence of religion-related factors on mammography adherence among American Muslim women, and to develop and test a mosque-based educational intervention to increase screening rates.
                     </p>
                   </div>
                   <div className="col-md-5">
@@ -593,7 +586,7 @@ export default function MammographyPage() {
                             <span className="mm-presentationNum">
                               {idx + 1}.
                             </span>
-                            <span>{item}</span>
+                            <a href="https://www.medicineandislam.org/mammography" target="_blank" rel="noopener noreferrer" className="mm-presentationLink">{item}</a>
                           </li>
                         ))}
                       </ul>
@@ -605,7 +598,7 @@ export default function MammographyPage() {
                             <span className="mm-presentationNum">
                               {idx + 10}.
                             </span>
-                            <span>{item}</span>
+                            <a href="https://www.medicineandislam.org/mammography" target="_blank" rel="noopener noreferrer" className="mm-presentationLink">{item}</a>
                           </li>
                         ))}
                       </ul>
@@ -626,24 +619,24 @@ export default function MammographyPage() {
                     <div className="col-md-6">
                       <div className="d-flex flex-column gap-3">
                         {POSTERS_COL1.map((item, idx) => (
-                          <div key={idx} className="mm-posterCard">
+                          <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer" className="mm-posterCard d-block text-decoration-none">
                             <div className="mm-posterHeader">
                               <span className="mm-posterNum">{idx + 1}.</span>
-                              <p className="mm-posterText">{item}</p>
+                              <p className="mm-posterText">{item.title}</p>
                             </div>
-                          </div>
+                          </a>
                         ))}
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="d-flex flex-column gap-3">
                         {POSTERS_COL2.map((item, idx) => (
-                          <div key={idx} className="mm-posterCard">
+                          <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer" className="mm-posterCard d-block text-decoration-none">
                             <div className="mm-posterHeader">
                               <span className="mm-posterNum">{idx + 4}.</span>
-                              <p className="mm-posterText">{item}</p>
+                              <p className="mm-posterText">{item.title}</p>
                             </div>
-                          </div>
+                          </a>
                         ))}
                       </div>
                     </div>
@@ -665,22 +658,22 @@ export default function MammographyPage() {
                     <div className="col-md-6">
                       <div className="d-flex flex-column gap-3">
                         {CONFERENCES_COL1.map((item, idx) => (
-                          <div key={idx} className="mm-conferenceCard">
+                          <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer" className="mm-conferenceCard d-block text-decoration-none">
                             <p className="mm-conferenceText">
-                              <strong>{idx + 1}.</strong> {item}
+                              <strong>{idx + 1}.</strong> {item.title}
                             </p>
-                          </div>
+                          </a>
                         ))}
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="d-flex flex-column gap-3">
                         {CONFERENCES_COL2.map((item, idx) => (
-                          <div key={idx} className="mm-conferenceCard">
+                          <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer" className="mm-conferenceCard d-block text-decoration-none">
                             <p className="mm-conferenceText">
-                              <strong>{idx + 3}.</strong> {item}
+                              <strong>{idx + 3}.</strong> {item.title}
                             </p>
-                          </div>
+                          </a>
                         ))}
                       </div>
                     </div>

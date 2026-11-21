@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 const values = [
-  ["fa-book-open", "burgundy", "Scholarship", "A commitment to rigorous research, critical inquiry, and lifelong learning."],
+  ["fa-book-open", "burgundy", "Education", "A commitment to rigorous research, critical inquiry, and lifelong learning."],
   ["fa-heart", "green", "Compassion", "Centering human dignity, care, and empathy in all we do."],
   ["fa-shield-halved", "burgundy", "Integrity", "Upholding honesty, ethical practice, and trust in our work and relationships."],
   ["fa-people-group", "green", "Collaboration", "Working across disciplines and communities to achieve greater impact."],
@@ -20,7 +20,7 @@ const pillars = [
     img: asset("/images/our-mission/pillar-research.jpg"),
     icon: "fa-chart-line",
     title: "Research & Impact",
-    text: "We generate evidence that informs clinical practice, policy, and education on issues at the intersection of Islam and healthcare.",
+    text: "Our past research initiatives have helped advance understanding, inform clinical practice, and shape conversations around healthcare policy and education, particularly where Islamic values and healthcare intersect.",
     href: "/impact",
     cta: "EXPLORE RESEARCH",
   },
@@ -112,15 +112,15 @@ export default function MissionPage() {
               Advancing understanding. <em>Transforming care.</em>
             </h1>
             <p className="hero-seamless-lead">
-              The Initiative on Islam &amp; Medicine (II&amp;M) advances knowledge, education, and compassionate care at the intersection of Islam, medicine, and the diverse communities we serve.
+              The Initiative on Islam &amp; Medicine (II&amp;M) advances knowledge, education, and compassionate care for Muslims at the intersection of Islam, medicine, and the diverse communities we serve.
             </p>
             <div className="hero-seamless-actions">
-              <Link href="/education" className="btn-seamless-maroon">
+              <Link href="/research" className="btn-seamless-maroon">
                 EXPLORE OUR WORK <i className="fa-solid fa-arrow-right" />
               </Link>
-              <Link href="/consultation" className="btn-seamless-outline">
+              <a href="https://links.360growthlab.com/widget/form/CstJIHikubJG75Zv16TR" target="_blank" rel="noopener noreferrer" className="btn-seamless-outline">
                 PARTNER WITH II&amp;M <i className="fa-solid fa-arrow-right" />
-              </Link>
+              </a>
             </div>
           </div>
           <div className="hero-seamless-quote msn-hero-quote">
@@ -178,11 +178,13 @@ export default function MissionPage() {
           </div>
           <div className="col-lg-3 msn-vision-quote">
             <p>
-            faith to 
+              Faith-Informed
               <br />
-              religion
+              Understanding.
               <br />
-              Compassion.
+              Compassionate
+              <br />
+              Care.
               <br />
               A Healthier
               <br />
@@ -318,12 +320,18 @@ export default function MissionPage() {
               </p>
             </div>
             <div className="msn-cta-actions">
-              <Link href="/consultation" className="msn-btn msn-btn-fill">
+              <a href="https://links.360growthlab.com/widget/form/CstJIHikubJG75Zv16TR" target="_blank" rel="noopener noreferrer" className="msn-btn msn-btn-fill">
                 REQUEST A CONSULTATION <i className="fa-solid fa-arrow-right" />
-              </Link>
-              <Link href="/consultation" className="msn-btn msn-btn-light">
+              </a>
+              <a
+                href="#donate"
+                data-open-donation-modal="true"
+                className="msn-btn msn-btn-light"
+                role="button"
+                style={{ cursor: "pointer" }}
+              >
                 INVITE A SPEAKER <i className="fa-solid fa-arrow-right" />
-              </Link>
+              </a>
             </div>
           </div>
           <div className="msn-cta-media">

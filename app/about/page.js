@@ -1,5 +1,8 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
+import AboutPrograms from "./AboutPrograms";
+import JourneyToolsDropup from "./JourneyToolsDropup";
+import PastPartners from "./PastPartners";
 
 export const metadata = {
   title: "About II&M | Initiative on Islam & Medicine",
@@ -20,14 +23,14 @@ export default function AboutPage() {
           <p className="hero-eyebrow-text-gold">PEOPLE | KNOWLEDGE | MORE COMPASSIONATE CARE</p>
           <div className="hero-eyebrow-bar-maroon" />
           <h1 className="hero-seamless-title">
-            About II&amp;M Rooted in research. <em>Transforming care.</em>
+            Transforming <em>Care.</em>
           </h1>
-          <p className="hero-seamless-lead">The Initiative on Islam &amp; Medicine (II&amp;M) works at the intersection of Islam and healthcare to build a more informed, equitable, and compassionate healthcare system for all.</p>
+          <p className="hero-seamless-lead">The Initiative on Islam &amp; Medicine (II&amp;M) works at the intersection of Muslims and Healthcare to build a more informed, equitable, and compassionate healthcare system for all.</p>
           <div className="hero-seamless-actions">
             <a href="#story" className="btn-seamless-maroon">
 OUR STORY{' '}              <i className="fa-solid fa-arrow-down ms-2" />
 {' '}            </a>
-            <Link href="/research" className="btn-seamless-outline">OUR RESEARCH FOUNDATION</Link>
+            <Link href="/research" className="btn-seamless-outline">Our Research Work</Link>
           </div>
         </div>
         <div className="hero-seamless-quote">
@@ -54,7 +57,7 @@ OUR STORY{' '}              <i className="fa-solid fa-arrow-down ms-2" />
             </div>
             <div className="mt-3">
               <Link href="/research" className="btn-outline-bordered">
-OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-right ms-2" />
+Our Research Work{' '}                <i className="fa-solid fa-arrow-right ms-2" />
 {' '}              </Link>
             </div>
           </div>
@@ -73,6 +76,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
         </div>
       </div>
     </section>
+    <AboutPrograms />
     <section className="section-journey">
       <div className="container">
         <div className="row align-items-end mb-4">
@@ -100,6 +104,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
               <div className="journey-step-dot" />
               <h3 className="journey-step-title">Research &amp; Tools</h3>
               <p className="journey-step-text">Developing replicable, verifiable, and vetted tools to understand needs and experiences.</p>
+              <JourneyToolsDropup />
             </div>
             <div className="col-6 col-md-4 col-lg-2 journey-step-col">
               <i className="fa-solid fa-magnifying-glass journey-step-icon" />
@@ -149,7 +154,7 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
                 <i className="fa-solid fa-bullseye" />
               </div>
               <h3 className="purpose-card-title">Our Mission</h3>
-              <p className="purpose-card-text">To improve healthcare understanding and responsiveness at the intersection of Islam and medicine through research, education, consultation, and collaboration.</p>
+              <p className="purpose-card-text">To improve healthcare understanding and responsiveness for Muslims at the intersection of Islam and medicine through research, education, consultation, and collaboration.</p>
             </div>
           </div>
           <div className="col-md-4">
@@ -299,6 +304,54 @@ OUR RESEARCH FOUNDATION{' '}                <i className="fa-solid fa-arrow-righ
               </div>
             </div>
           </div>
+          <div className="col-6 col-md-4 col-lg-2">
+            <Link href="/advancing-equity" className="audience-card audience-card-link">
+              <img src={asset("/images/research/project-equity.jpg")} alt="Muslim Physicians and Healthcare Workers" className="audience-card-img" loading="lazy" />
+              <div className="audience-card-body">
+                <i className="fa-solid fa-user-doctor audience-icon" />
+                <h3 className="audience-title">Muslim Physicians &amp; Healthcare Workers</h3>
+                <p className="audience-text">Advancing equity and inclusion for Muslim healthcare professionals</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="section-about-quicklinks">
+      <div className="container">
+        <div className="expertise-eyebrow-wrap mb-1">
+          <span className="expertise-eyebrow-text">EXPLORE OUR PROGRAMS</span>
+        </div>
+        <h2 className="expertise-heading mb-4">Quick Links</h2>
+        <div className="row g-3">
+          <div className="col-6 col-md-3">
+            <Link href="/courses" className="about-quicklink-card">
+              <i className="fa-solid fa-graduation-cap about-quicklink-icon" />
+              <h3>Courses</h3>
+              <p>Online courses for healthcare professionals and community members</p>
+            </Link>
+          </div>
+          <div className="col-6 col-md-3">
+            <Link href="/medical-student-internship" className="about-quicklink-card">
+              <i className="fa-solid fa-stethoscope about-quicklink-icon" />
+              <h3>Medical Student Rotation</h3>
+              <p>Clinical rotation program for medical students at the intersection of Islam and medicine</p>
+            </Link>
+          </div>
+          <div className="col-6 col-md-3">
+            <Link href="/fostering-connections" className="about-quicklink-card">
+              <i className="fa-solid fa-dna about-quicklink-icon" />
+              <h3>Fostering Connections</h3>
+              <p>Bioscience and theology seminar series for Muslim students</p>
+            </Link>
+          </div>
+          <div className="col-6 col-md-3">
+            <Link href="/advancing-equity" className="about-quicklink-card">
+              <i className="fa-solid fa-scale-balanced about-quicklink-icon" />
+              <h3>Advancing Equity</h3>
+              <p>Research and initiatives advancing equity for Muslim physicians and patients</p>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
@@ -391,6 +444,7 @@ Different              <br />
         </div>
       </div>
     </section>
+    <PastPartners />
     <section className="section-about-cta">
       <div className="container-fluid p-0">
         <div className="row g-0 align-items-stretch">
@@ -410,12 +464,12 @@ Different              <br />
                 <Link href="/education" className="btn-solid-maroon">
 EXPLORE EDUCATION{' '}                  <i className="fa-solid fa-arrow-right ms-2" />
 {' '}                </Link>
-                <Link href="/consultation" className="btn-outline-trans-white">
+                <a href="https://360growthlab.com/" target="_blank" rel="noopener noreferrer" className="btn-outline-trans-white">
 REQUEST A CONSULTATION{' '}                  <i className="fa-solid fa-arrow-right ms-2" />
-{' '}                </Link>
-                <Link href="/speaking" className="btn-outline-trans-white">
+{' '}                </a>
+                <a href="#donate" data-open-donation-modal="true" className="btn-outline-trans-white" role="button" style={{ cursor: "pointer" }}>
 INVITE A SPEAKER{' '}                  <i className="fa-solid fa-arrow-right ms-2" />
-{' '}                </Link>
+{' '}                </a>
               </div>
             </div>
           </div>

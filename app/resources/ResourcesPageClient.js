@@ -73,7 +73,7 @@ const RESOURCES = [
   },
   {
     id: "bioethics-primer",
-    title: "Islamic Bioethics — A Primer for Muslim Physicians",
+    title: "Islamic Bioethics — A Primer for Muslim Physicians (CME credits available)",
     description: "An educational course exploring foundational bioethical frameworks for clinical practice.",
     type: "courses",
     audiences: ["clinicians", "educators"],
@@ -415,7 +415,6 @@ export default function ResourcesPageClient() {
         <div className="container">
           <div className="res-section-head">
             <div>
-              <p className="res-eyebrow">FEATURED RESOURCES</p>
               <h2>Practical Tools. Lasting Impact.</h2>
             </div>
             <button type="button" className="res-text-link" onClick={clearFilters}>
@@ -460,7 +459,7 @@ export default function ResourcesPageClient() {
                 <div className="res-audience-body">
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                  <button type="button" className="res-text-link" onClick={() => chooseAudience(item.id)}>
+                  <button type="button" className="res-text-link" onClick={() => { chooseAudience(item.id); document.getElementById("find-resources")?.scrollIntoView({ behavior: "smooth" }); }}>
                     {item.cta} <i className="fa-solid fa-arrow-right" />
                   </button>
                 </div>
@@ -567,6 +566,14 @@ export default function ResourcesPageClient() {
                   EXPLORE WORKSHOP MATERIALS <i className="fa-solid fa-arrow-right" />
                 </Link>
               </div>
+              <a
+                href="https://medicineandislam.org/resources"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="res-external-link"
+              >
+                More resources on medicineandislam.org <i className="fa-solid fa-arrow-up-right-from-square" />
+              </a>
             </div>
           </div>
         </div>

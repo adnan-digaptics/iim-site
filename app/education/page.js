@@ -13,7 +13,7 @@ const pathways = [
     icon: "fa-graduation-cap",
     title: "Medical Students & Trainees",
     text: "Foundational learning that builds ethical awareness and culturally informed clinical judgment early in training.",
-    href: "/courses",
+    href: "/medical-student-internship",
   },
   {
     img: asset("/images/educate/path-clinicians.jpg"),
@@ -48,7 +48,7 @@ const pathways = [
 const featured = [
   {
     img: asset("/images/educate/course-bioethics-primer.jpg"),
-    title: "Islamic Bioethics: A Primer for Muslim Physicians",
+    title: "Islamic Bioethics: A Primer for Muslim Physicians (CME credits available)",
     text: "Core ethical principles, real-world cases, and practical guidance for contemporary healthcare.",
     href: "/courses",
   },
@@ -56,19 +56,19 @@ const featured = [
     img: asset("/images/educate/course-muslim-doctor.jpg"),
     title: "Becoming a Muslim Doctor",
     text: "Identity, purpose, and practical guidance for navigating medical training and professional life as a Muslim.",
-    href: "/courses",
+    href: "/becoming-a-muslim-doctor",
   },
   {
     img: asset("/images/educate/course-patients.jpg"),
     title: "Muslim Patients & Healthcare Needs",
     text: "Culturally informed, evidence-based approaches to common clinical, ethical, and communication issues.",
-    href: "/courses",
+    href: "/mahsn-pro",
   },
   {
     img: asset("/images/educate/course-workshops.jpg"),
     title: "Custom Workshops & Faculty Development",
     text: "Tailored training for institutions, departments, and professional organizations.",
-    href: "/consultation",
+    href: "/workshops",
   },
 ];
 
@@ -274,6 +274,11 @@ export default function EducationPage() {
                 </div>
               </article>
             ))}
+          </div>
+          <div className="edu-view-all-wrap">
+            <Link href="/courses" className="edu-view-all-link">
+              VIEW ALL COURSES <i className="fa-solid fa-arrow-right" />
+            </Link>
           </div>
         </div>
       </section>

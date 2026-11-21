@@ -52,54 +52,41 @@ const publications = [
   {
     img: asset("/images/work-islam-biomedicine.png"),
     title: "Islamic Dimensions of End-of-Life Healthcare",
-    href: "/research",
+    href: "https://go.fliplink.me/view/059A3FB8-0738-4DAE-ADC6-84FA79329749",
   },
   {
     img: asset("/images/work-maqasid.png"),
     title: "The Unbreakable Relationship: Bioethical Perspectives on Human Breast Milk",
-    href: "/research",
+    href: "https://www.academia.edu/45143065/The_Unbreakable_Relationship_Are_Muslims_aware_of_the_Islamic_bioethical_perspectives_on_human_breast_milk_banking",
   },
   {
     img: asset("/images/work-organ-donation.png"),
     title: "Homeopathy and Muslim Patients: Islamic Ethics – Legal Perspectives",
-    href: "/research",
+    href: "https://www.academia.edu/34181117/Hymenoplasty_and_Muslim_Patients_Islamic_Ethico_Legal_Perspectives",
   },
   {
     img: asset("/images/work-medicine-shariah.png"),
     title: "Predictors of Perceived Discrimination in Medical Settings among Muslim Women in the USA",
-    href: "/research",
+    href: "https://www.academia.edu/95317821/Predictors_of_Perceived_Discrimination_in_Medical_Settings_Among_Muslim_Women_in_the_USA",
   },
   {
     img: asset("/images/work-covid.png"),
     title: "Islamic Bioethical Perspectives on Gender Identity for Intersex Patients",
-    href: "/research",
+    href: "https://www.academia.edu/45177642/Islamic_Bioethical_Perspectives_on_Gender_Identity_for_Intersex_Patients",
   },
   {
     img: asset("/images/book-bridging-cover.jpg"),
     title: "Faculty of Responsibility: Ethical Challenges for Muslim Students in Healthcare",
-    href: "/research",
+    href: "https://www.academia.edu/42914945/FACULTY_OF_RESPONSIBILITY_A_Key_Concept_to_Cope_with_The_Ethical_Challenges_Medical_Students_Face",
   },
   {
     img: asset("/images/book-faith-health.jpg"),
     title: "Medicine, Morals and Female Genital Cutting",
-    href: "/research",
+    href: "https://www.academia.edu/45141758/Medicine_Morals_and_Female_Genital_Cutting",
   },
 ];
 
-const galleryPhotos = [
-  {
-    img: asset("/images/bio-way-seminar.jpg"),
-    alt: "Internship seminar presentation",
-  },
-  {
-    img: asset("/images/bio-student-group.jpg"),
-    alt: "Intern group discussion",
-  },
-  {
-    img: asset("/images/bio-student-speak.jpg"),
-    alt: "Intern research presentation",
-  },
-];
+
 
 export default function MedicalStudentInternshipPage() {
   return (
@@ -164,17 +151,16 @@ export default function MedicalStudentInternshipPage() {
                 Cultivating Knowledge, Character and Service in Medicine
               </h2>
               <p className="intern-section-body">
-                The Initiative on Islam and Medicine's Medical Student Internship is a competitive
-                enrichment program that provides directed learning experiences and tailored support for
-                Muslim medical students. Interns undertake a variety of academic, research, and service
-                activities to explore the convergence of Islamic thought and contemporary healthcare.
+                The Initiative on Islam and Medicine&apos;s Medical Student Internship is a competitive enrichment
+                program that provides directed learning experiences and tailored support for Muslim medical
+                students. Interns undertake a variety of academic, research, and service activities to explore the
+                convergence of Islamic thought and contemporary healthcare.
               </p>
               <p className="intern-section-body">
-                In addition to structured projects, interns engage with faculty, participate in
-                discussions and workshops, contribute to II&amp;M's research and educational initiatives,
-                and develop practical skills in writing, research, and outreach. The program aims to
-                inspire interns to integrate clinical excellence with ethical reflection and a commitment
-                to serving their communities.
+                In addition to structured projects, interns engage with faculty, participate in discussions and
+                workshops, contribute to II&amp;M&apos;s research and educational initiatives, and develop practical skills in
+                writing, research, and outreach. The program aims to inspire interns to integrate clinical excellence
+                with ethical reflection and a commitment to serving their communities.
               </p>
             </div>
             <div className="intern-overview-media">
@@ -279,7 +265,7 @@ export default function MedicalStudentInternshipPage() {
       </section>
 
       {/* ── INTERNSHIP OUTPUTS ─────────────────────────────────── */}
-      <section className="intern-outputs">
+      <section className="intern-outputs" id="outcomes">
         <div className="container">
           <div className="intern-outputs-header">
             <div>
@@ -293,9 +279,9 @@ export default function MedicalStudentInternshipPage() {
                 II&amp;M's mission and serve the wider community.
               </p>
             </div>
-            <Link href="/research" className="intern-view-all-link">
+            <a href="https://medicineandislam.org/resources" target="_blank" rel="noopener noreferrer" className="intern-view-all-link">
               VIEW ALL PUBLICATIONS <i className="fa-solid fa-arrow-right" />
-            </Link>
+            </a>
           </div>
           <div className="intern-pub-grid">
             {publications.map((pub) => (
@@ -309,37 +295,16 @@ export default function MedicalStudentInternshipPage() {
                   />
                 </div>
                 <p className="intern-pub-title">{pub.title}</p>
-                <Link href={pub.href} className="intern-pub-btn">
-                  Read More
-                </Link>
+                <a
+                  href={pub.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="intern-pub-btn"
+                >
+                  READ MORE
+                </a>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── PHOTOS & HIGHLIGHTS ────────────────────────────────── */}
-      <section className="intern-gallery">
-        <div className="container">
-          <div className="intern-gallery-grid">
-            <div className="intern-gallery-copy">
-              <h2 className="intern-gallery-heading">Photos &amp; Highlights</h2>
-              <p className="intern-gallery-desc">
-                Moments from our internship program, including presentations, discussions, and community
-                engagement.
-              </p>
-            </div>
-            <div className="intern-gallery-photos">
-              {galleryPhotos.map((photo) => (
-                <img
-                  key={photo.alt}
-                  src={photo.img}
-                  alt={photo.alt}
-                  className="intern-gallery-photo"
-                  loading="lazy"
-                />
-              ))}
-            </div>
           </div>
         </div>
       </section>

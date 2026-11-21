@@ -75,7 +75,7 @@ export default function BooksPage() {
               </p>
               <div className="books-featured-actions">
                 <Link href="/education" className="books-btn-outline">LEARN MORE</Link>
-                <Link href="/education" className="books-btn-maroon">BUY NOW</Link>
+                <a href="https://link.springer.com/book/10.1007/978-3-031-50003-1" target="_blank" rel="noopener noreferrer" className="books-btn-maroon">BUY NOW</a>
               </div>
             </div>
           </div>
@@ -89,9 +89,6 @@ export default function BooksPage() {
               <p className="books-eyebrow">ADDITIONAL WORKS BY DR. AASIM PADELA</p>
               <h2 className="books-h2">Additional Works by Dr. Aasim Padela</h2>
             </div>
-            <Link href="/resources" className="books-text-link">
-              VIEW ALL BOOKS <i className="fa-solid fa-arrow-right" />
-            </Link>
           </div>
           <div className="books-grid">
             {works.map(([src, title, text]) => (

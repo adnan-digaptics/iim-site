@@ -77,7 +77,7 @@ export function PartnersTabs() {
             <p className="eb-partnerText">
               Explore collaborating organizations and project details on the original II&amp;M research project page.
             </p>
-            <Link href="/research" className="eb-partnerLink">
+            <Link href="/partners" className="eb-partnerLink">
               View project partners ↗
             </Link>
           </div>

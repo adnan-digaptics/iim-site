@@ -164,16 +164,11 @@ export default function SpeakingPage() {
                 We offer a range of engaging and evidence-informed presentations tailored to the needs of your audience.
               </p>
               <div className="spk-topic-table">
-                {TOPICS.map(([left, right]) => (
-                  <div className="spk-topic-row" key={left}>
-                    <span>
-                      {left} <i className="fa-solid fa-arrow-right" />
-                    </span>
-                    <span>
-                      {right} <i className="fa-solid fa-arrow-right" />
-                    </span>
-                  </div>
-                ))}
+                <ul className="spk-topic-list">
+                  {TOPICS.flatMap(([left, right]) => [left, right]).map((topic) => (
+                    <li key={topic}>{topic}</li>
+                  ))}
+                </ul>
               </div>
               <figure className="spk-audience-photo">
                 <img
@@ -205,7 +200,6 @@ export default function SpeakingPage() {
                         <strong>{title}</strong>
                         <em>{text}</em>
                       </span>
-                      <i className="fa-solid fa-arrow-right" aria-hidden="true" />
                     </span>
                   </li>
                 ))}

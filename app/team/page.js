@@ -11,19 +11,7 @@ export const metadata = {
 
 const operations = [
   {
-    name: "Sarah Ahmed",
-    role: "Director of Strategic Partnerships",
-    img: asset("/images/our-team/sarah.jpg"),
-    text: "Supports partnerships that expand II&M’s reach across healthcare, academic, and community settings.",
-  },
-  {
-    name: "Nabeel Palla",
-    role: "Operations / Technology & Growth Support",
-    img: asset("/images/our-team/nabeel.jpg"),
-    text: "Helps strengthen II&M’s operational systems, technology, and growth infrastructure.",
-  },
-  {
-    name: "Hiba Bawa",
+    name: "Ahmer Faisal",
     role: "Project Manager",
     img: asset("/images/our-team/hiba.jpg"),
     text: "Coordinates programs and projects that advance II&M’s research, education, and engagement goals.",
@@ -32,7 +20,7 @@ const operations = [
 
 const advisors = [
   { name: "Aasim I. Padela, MD, MSc, FACEP", detail: "Advisor", img: asset("/images/our-team/padela-portrait.jpg") },
-  { name: "Faisal Qazi, DO", detail: "Advisor", img: asset("/images/our-team/advisor-faisal-portrait.jpg") },
+  { name: "Faisal Qazi, DO", detail: "President", img: asset("/images/our-team/faisal-qazi-portrait.webp") },
   { name: "Najam Fasiuddin, DO", detail: "Advisor", img: asset("/images/our-team/advisor-najam-portrait.png") },
   { name: "Fatema Mirza", detail: "Advisor", img: asset("/images/our-team/fatema-portrait.jpg") },
   { name: "Imam Ayman Soliman", detail: "Advisor", img: asset("/images/our-team/advisor-ayman-portrait.jpg") },
@@ -106,7 +94,7 @@ export default function TeamPage() {
               </div>
               <div className="tm-lead-body">
                 <h3>Aasim I. Padela, MD, MSc, FACEP</h3>
-                <p className="tm-role">Founder / Chairperson / Director</p>
+                <p className="tm-role">Founder, Initiative on Islam & Medicine</p>
                 <p>
                   Dr. Padela leads II&amp;M’s work at the intersection of Islam, medicine, and bioethics — advancing research, education, and consultation that strengthen compassionate, evidence-informed care.
                 </p>
@@ -117,6 +105,24 @@ export default function TeamPage() {
                   <Link href="/about" className="tm-btn-outline">
                     VIEW PROFILE <i className="fa-solid fa-arrow-right" />
                   </Link>
+                  <Link href="/consultation" className="tm-btn-outline">
+                    SPEAKING REQUEST <i className="fa-solid fa-arrow-right" />
+                  </Link>
+                </div>
+              </div>
+            </article>
+
+            <article className="tm-lead-card">
+              <div className="tm-lead-media">
+                <img src={asset("/images/our-team/faisal-qazi-portrait.webp")} alt="Faisal Qazi, DO" />
+              </div>
+              <div className="tm-lead-body">
+                <h3>Faisal Qazi, DO</h3>
+                <p className="tm-role">President, Initiative on Islam & Medicine</p>
+                <p>
+                  Dr. Qazi brings clinical expertise and scholarly leadership to II&M, advancing the organization&apos;s mission of integrating Islamic values with contemporary medical practice and education.
+                </p>
+                <div className="tm-lead-actions">
                   <Link href="/consultation" className="tm-btn-outline">
                     SPEAKING REQUEST <i className="fa-solid fa-arrow-right" />
                   </Link>
@@ -155,7 +161,7 @@ export default function TeamPage() {
             {operations.map((person) => (
               <article className="tm-ops-card" key={person.name}>
                 <div className="tm-ops-media">
-                  <img src={person.img} alt={person.name} />
+                  <img src={person.img} alt={person.name} style={{ objectPosition: "top center" }} />
                 </div>
                 <div className="tm-ops-body">
                   <h3>{person.name}</h3>

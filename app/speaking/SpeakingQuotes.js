@@ -46,9 +46,6 @@ export default function SpeakingQuotes({ quotes }) {
         </div>
       </div>
       <div className="spk-quote-controls">
-        <button type="button" className="spk-quote-btn" aria-label="Previous testimonial" onClick={() => go(-1)}>
-          <i className="fa-solid fa-chevron-left" />
-        </button>
         <div className="spk-quote-dots" role="tablist" aria-label="Testimonial slides">
           {quotes.map((item, dot) => (
             <button
@@ -61,9 +58,6 @@ export default function SpeakingQuotes({ quotes }) {
             />
           ))}
         </div>
-        <button type="button" className="spk-quote-btn" aria-label="Next testimonial" onClick={() => go(1)}>
-          <i className="fa-solid fa-chevron-right" />
-        </button>
       </div>
     </div>
   );

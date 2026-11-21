@@ -65,11 +65,11 @@ const CORE_ACTIVITIES = [
 // 3. Sidebar Resource Links / Quick Links
 const SIDEBAR_LINKS = [
   { title: "Workshops", href: "/workshops" },
-  { title: "Publications Academic", href: "/resources" },
-  { title: "Community", href: "/impact" },
-  { title: "Presentations", href: "/speaking" },
-  { title: "Replication Materials (From the Guide)", href: "/resources" },
-  { title: "Further Videos to Watch", href: "/podcast" },
+  { title: "Academic Publications", href: "/resources" },
+  { title: "Community Impact", href: "/impact" },
+  { title: "Presentations & Talks", href: "/speaking" },
+  { title: "Replication Guide Materials", href: "https://www.medicineandislam.org/palliative-care-needs" },
+  { title: "Videos", href: "https://www.youtube.com/@medicineandislam" },
 ];
 
 // 4. Team Members
@@ -157,19 +157,27 @@ export default function IAmPcnPage() {
                 </div>
 
                 <p className="iampcn-paragraph">
-                  End-of-life (EOL) care remains an important but often
-                  under-addressed area for Muslim Americans. Palliative and
-                  hospice services can improve quality of life, reduce
-                  suffering, and support families during serious illness, yet
-                  many Muslim patients, families, and communities face unique
-                  needs and barriers.
+                  End-of-Life (EOL) healthcare poses unique challenges for Muslim Americans. Families often face the difficult task of navigating complex U.S. healthcare and legal systems while remaining true to deeply held Islamic values and principles. Yet many remain in the &ldquo;pre-contemplation&rdquo; phase—not actively engaging in advance care planning. As a result, when crises arise, families often experience stress, conflict, and emotional distress.
                 </p>
 
+                <p className="iampcn-paragraph"><strong>Barriers include:</strong></p>
+                <ul className="iampcn-bulletList">
+                  <li className="iampcn-bulletItem">
+                    <span className="iampcn-bulletMarker">■</span>
+                    <span><strong>Cultural and Religious Sensitivities</strong> – discomfort discussing death or fear that planning undermines trust in Allah&rsquo;s decree.</span>
+                  </li>
+                  <li className="iampcn-bulletItem">
+                    <span className="iampcn-bulletMarker">■</span>
+                    <span><strong>Limited Knowledge</strong> – lack of familiarity with terms and tools such as advance directives, living wills, and Do-Not-Resuscitate (DNR) orders.</span>
+                  </li>
+                  <li className="iampcn-bulletItem">
+                    <span className="iampcn-bulletMarker">■</span>
+                    <span><strong>Concerns About Accommodation</strong> – worries about prayer, modesty, gender-concordant care, and dietary needs in hospice and palliative settings.</span>
+                  </li>
+                </ul>
+
                 <p className="iampcn-paragraph">
-                  This work aims to better understand those needs, inform
-                  culturally and religiously appropriate approaches to care, and
-                  build knowledge and resources that are accessible, relevant,
-                  and practical for Muslim communities across the United States.
+                  At the same time, Muslim Americans—3–5 million people and one of the fastest-growing and most diverse U.S. faith communities—remain underrepresented in health data and in hospice/palliative care utilization. No Muslim-run hospice currently exists in the U.S., and families often encounter discrimination or care that is not religiously aligned.
                 </p>
 
                 <div className="iampcn-sectionDivider" />
@@ -183,12 +191,13 @@ export default function IAmPcnPage() {
                 </h2>
 
                 <p className="iampcn-paragraph">
-                  The I AM PCN project builds on a decade of iterative workshop
-                  development, community engagement, and collaboration with
-                  diverse Muslim community partners, healthcare providers, and
-                  scholars. Over time, this work has refined its focus, informed
-                  by participant feedback, and helped shape a more targeted and
-                  impactful project (I AM PCN).
+                  The work that eventually became I AM PCN began nearly a decade earlier with grassroots workshops, community engagement, and Islamic bioethics scholarship. Between 2014 and 2023, we organized nine mosque- and community-based workshops across the country, partnering with scholars, clinicians, chaplains, and imams to start much-needed conversations about EOL care.
+                </p>
+                <p className="iampcn-paragraph">
+                  <strong>Workshops Conducted:</strong> Through a series of workshops over time, we gathered feedback and continuously refined the content and delivery.
+                </p>
+                <p className="iampcn-paragraph">
+                  <strong>What We Learned:</strong> Each iteration deepened community partnerships, filled in knowledge gaps, and strengthened attendees&rsquo; preparedness for real-life decisions. This plan-do-study-revise process helped to clarify the content and methods of educational programs to empower decision-making about end-of-life healthcare.
                 </p>
 
                 <div className="iampcn-sectionDivider" />
@@ -201,13 +210,7 @@ export default function IAmPcnPage() {
                 </h2>
 
                 <p className="iampcn-paragraph">
-                  From this broader body of work, the Investigating American
-                  Muslim Palliative &amp; Hospice Care Needs (I AM PCN) project
-                  emerged to specifically examine the palliative and hospice care
-                  experiences, needs, and perspectives of Muslim Americans. The
-                  project uses community engagement, interviews, and educational
-                  workshops to identify key priorities, challenges, and
-                  opportunities for more inclusive, culturally responsive care.
+                  Launched in 2022, the Investigating American Muslim Palliative and Hospice Care Needs (I AM PCN) project formalized this decade of work into a national, multi-institutional initiative. Led by the Medical College of Wisconsin (MCW), in partnership with the Muslim Community and Health Center (MCHC) and the Initiative on Islam and Medicine (II&amp;M), I AM PCN brought together scholars, clinicians, chaplains, imams, and community leaders to develop solutions that are both culturally responsive and religiously aligned.
                 </p>
 
                 <div className="iampcn-sectionDivider" />
@@ -222,33 +225,28 @@ export default function IAmPcnPage() {
                 <ul className="iampcn-bulletList">
                   <li className="iampcn-bulletItem">
                     <span className="iampcn-bulletMarker">■</span>
-                    <span>
-                      Focuses on the lived experiences and perspectives of
-                      Muslim Americans
-                    </span>
+                    <span>First-of-its-kind national initiative grounded in Islamic bioethics.</span>
                   </li>
                   <li className="iampcn-bulletItem">
                     <span className="iampcn-bulletMarker">■</span>
-                    <span>
-                      Integrates Islamic ethical and religious considerations in
-                      EOL care
-                    </span>
+                    <span>Co-created with Muslim families, scholars, and caregivers.</span>
                   </li>
                   <li className="iampcn-bulletItem">
                     <span className="iampcn-bulletMarker">■</span>
-                    <span>
-                      Uses community engagement and educational workshops to
-                      inform practical resources
-                    </span>
+                    <span>Religiously aligned-centered tools for serious illness and advance care planning.</span>
                   </li>
                   <li className="iampcn-bulletItem">
                     <span className="iampcn-bulletMarker">■</span>
-                    <span>
-                      Bridges research, education, and real-world application
-                      for patients, families, and providers
-                    </span>
+                    <span>Bridges Islamic values with U.S. medical and legal systems.</span>
                   </li>
                 </ul>
+
+                <p className="iampcn-paragraph">
+                  As a centerpiece of this work, I AM PCN developed <em>Islamic Ethical Considerations for End-of-Life Healthcare: A Guide for Muslim Americans</em>. This first-of-its-kind resource equips families and providers to understand U.S. legal tools, explore Islamic rulings on pain relief, withdrawing care, and hospice, and prepare religiously and practically for end-of-life decisions. The guide has become a cornerstone for workshops, clinician trainings, and community engagement efforts nationwide.
+                </p>
+                <p className="iampcn-paragraph">
+                  In addition, the <em>Islamic Dimensions of End-of-Life Healthcare: A Community Education Workshop Replication Guide</em>, a step-by-step manual that supports community leaders, imams, and educators in hosting their own workshops, expanding the project&rsquo;s reach and impact. Together, these resources ensure that the lessons from the past decade can be scaled and shared widely across Muslim communities nationwide.
+                </p>
 
                 {/* PUBLICATION / GUIDEBOOK COVERS */}
                 <div className="iampcn-booksGrid">
@@ -362,44 +360,83 @@ export default function IAmPcnPage() {
           </div>
 
           <div className="iampcn-disseminationCard">
-            <div className="row g-4 align-items-center">
-              {/* Left Poster Image */}
-              <div className="col-md-5 col-lg-4 text-center">
-                <div className="iampcn-posterWrap">
-                  <img
-                    src={asset("/images/i-am-pcn/hd_dissemination-poster.png")}
-                    alt="Islamic Bioethics & End-of-Life Healthcare Decisions Workshop Poster"
-                    className="iampcn-posterImg"
-                    loading="lazy"
-                  />
-                </div>
+            <div className="row g-4">
+              {/* Workshop */}
+              <div className="col-12">
+                <h3 className="iampcn-disseminationTitle">Workshop</h3>
+                <a
+                  href="https://www.youtube.com/playlist?list=PLKPFd4mBCvIhv6oOBA1MJDvAd0uFY0Xqb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="iampcn-dissemLink"
+                >
+                  I AM PCN Workshop Recordings Playlist <i className="fa-solid fa-arrow-up-right-from-square ms-1" />
+                </a>
               </div>
 
-              {/* Center Divider on Desktop */}
-              <div className="col-md-1 d-none d-md-flex justify-content-center">
-                <div className="iampcn-disseminationDivider" />
+              {/* Publications */}
+              <div className="col-12">
+                <h3 className="iampcn-disseminationTitle">Publications</h3>
+                <ol className="iampcn-dissemList">
+                  <li>
+                    <a href="https://journals.sagepub.com/doi/10.1177/10499091251315140" target="_blank" rel="noopener noreferrer" className="iampcn-dissemLink">
+                      Journal of Palliative Medicine — SAGE Journals <i className="fa-solid fa-arrow-up-right-from-square ms-1" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S088539242400006X" target="_blank" rel="noopener noreferrer" className="iampcn-dissemLink">
+                      ScienceDirect Publication <i className="fa-solid fa-arrow-up-right-from-square ms-1" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://journals.sagepub.com/doi/10.1177/10499091231198216" target="_blank" rel="noopener noreferrer" className="iampcn-dissemLink">
+                      Journal of Palliative Medicine — SAGE Journals <i className="fa-solid fa-arrow-up-right-from-square ms-1" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://link.springer.com/article/10.1007/s10903-023-01541-x" target="_blank" rel="noopener noreferrer" className="iampcn-dissemLink">
+                      Springer — Journal of Immigrant and Minority Health <i className="fa-solid fa-arrow-up-right-from-square ms-1" />
+                    </a>
+                  </li>
+                </ol>
               </div>
 
-              {/* Right Event Content */}
-              <div className="col-md-6 col-lg-7">
-                <div className="iampcn-disseminationContent">
-                  <h3 className="iampcn-disseminationTitle">
-                    Islamic Bioethics &amp; End-of-Life Healthcare Decisions
-                  </h3>
-                  <p className="iampcn-disseminationLocation">
-                    Islamic Society of Milwaukee
-                  </p>
-                  <p className="iampcn-disseminationDate">January 2026</p>
-
-                  <a
-                    href="#meet-the-team"
-                    className="iampcn-btnMeetTeam"
-                  >
-                    Meet The Project Team{" "}
-                    <i className="fa-solid fa-arrow-right ms-2" />
-                  </a>
-                </div>
+              {/* Community */}
+              <div className="col-12">
+                <h3 className="iampcn-disseminationTitle">Community</h3>
+                <a
+                  href="https://wisconsinmuslimjournal.org/medical-college-of-wisconsin-research-highlights-muslim-americans-end-of-life-care-needs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="iampcn-dissemLink"
+                >
+                  Wisconsin Muslim Journal — MCW Research Highlights Muslim Americans&rsquo; End-of-Life Care Needs <i className="fa-solid fa-arrow-up-right-from-square ms-1" />
+                </a>
               </div>
+
+              {/* Presentations */}
+              <div className="col-12">
+                <h3 className="iampcn-disseminationTitle">Presentations</h3>
+                <ol className="iampcn-dissemList">
+                  <li>
+                    <a href="https://medicineandislam.org/wp-content/uploads/2025/12/MCW-Community-Engagement-Poster-1.pdf" target="_blank" rel="noopener noreferrer" className="iampcn-dissemLink">
+                      MCW Community Engagement Poster <i className="fa-solid fa-arrow-up-right-from-square ms-1" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://medicineandislam.org/wp-content/uploads/2025/12/I-AM-A-PCN-Poster-OCE-conference-25.pdf" target="_blank" rel="noopener noreferrer" className="iampcn-dissemLink">
+                      I AM PCN Poster — OCE Conference 2025 <i className="fa-solid fa-arrow-up-right-from-square ms-1" />
+                    </a>
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <a href="#meet-the-team" className="iampcn-btnMeetTeam">
+                Meet The Project Team{" "}
+                <i className="fa-solid fa-arrow-right ms-2" />
+              </a>
             </div>
           </div>
         </div>
@@ -492,57 +529,6 @@ export default function IAmPcnPage() {
         </div>
       </section>
 
-      {/* ====================================================================
-          7. SUBSCRIBE TO OUR NEWSLETTER SECTION
-          ==================================================================== */}
-      <section className="iampcn-newsletterSection">
-        <div className="container">
-          <div className="iampcn-newsletterCard">
-            <h3 className="iampcn-newsletterTitle">
-              Subscribe to our newsletter
-            </h3>
-
-            <form
-              action="#"
-              method="POST"
-              className="iampcn-newsletterForm"
-            >
-              <div className="row g-3 mb-3">
-                <div className="col-md-6">
-                  <input
-                    type="text"
-                    className="form-control iampcn-formInput"
-                    placeholder="Name"
-                    required
-                  />
-                </div>
-                <div className="col-md-6">
-                  <input
-                    type="email"
-                    className="form-control iampcn-formInput"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="mb-3">
-                <textarea
-                  className="form-control iampcn-formInput iampcn-formTextarea"
-                  placeholder="Message"
-                  rows={3}
-                />
-              </div>
-
-              <div className="text-center">
-                <button type="submit" className="iampcn-btnSubmit">
-                  Submit Now <i className="fa-solid fa-arrow-right ms-2" />
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

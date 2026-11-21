@@ -6,8 +6,8 @@ const NAV_ITEMS = [
   { id: "overview", label: "Overview" },
   { id: "five-questions", label: "Five Questions" },
   { id: "framework", label: "Framework" },
-  { id: "curriculum-units", label: "Curriculum Units" },
-  { id: "for-educators", label: "For Educators" },
+  { id: "what-youll-learn", label: "What You'll Learn" },
+  { id: "thoughtful-learning", label: "Teaching & Learning" },
   { id: "testimonials", label: "Testimonials" },
   { id: "faqs", label: "FAQs" },
 ];

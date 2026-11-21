@@ -28,110 +28,6 @@ const LEARNING_OBJECTIVES = [
   "Apply ethics to rapidly changing fields",
 ];
 
-const FIVE_QUESTIONS = [
-  {
-    num: "01",
-    question: "What is the origin of human persons?",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22v-9" />
-        <path d="M9 13a3 3 0 0 1 6 0" />
-        <path d="M12 7a4 4 0 0 1 4 4" />
-        <path d="M12 7a4 4 0 0 0-4 4" />
-        <circle cx="12" cy="4" r="2" />
-      </svg>
-    ),
-  },
-  {
-    num: "02",
-    question: "What is the human's essential nature?",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="7" r="4" />
-        <path d="M5.5 21a6.5 6.5 0 0 1 13 0" />
-      </svg>
-    ),
-  },
-  {
-    num: "03",
-    question: "What is the human's future?",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="9" />
-        <polyline points="12 6 12 12 16 14" />
-      </svg>
-    ),
-  },
-  {
-    num: "04",
-    question: "And whose will has power in the universe?",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-      </svg>
-    ),
-  },
-  {
-    num: "05",
-    question: "Are humans unique in the universe?",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="8" />
-        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-        <path d="M2 12h20" />
-      </svg>
-    ),
-  },
-];
-
-const CURRICULUM_UNITS = [
-  {
-    unit: "UNIT 01",
-    title: "Epistemic Framework",
-    desc: "Core concepts, sources of knowledge, and application exercises.",
-    image: asset("/images/exploring-bioscience/unit-01.jpg"),
-  },
-
-
-
-  {
-    unit: "UNIT 02",
-    title: "What Do We Know and How Do We Know It?",
-    desc: "Reasoning exercises in Islam and science.",
-    image: asset("/images/exploring-bioscience/unit-02.jpg"),
-  },
-  {
-    unit: "UNIT 03",
-    title: "What is the Origin of Mankind?",
-    desc: "Evolution and God's special creation.",
-    image: asset("/images/exploring-bioscience/unit-03.jpg"),
-  },
-  {
-    unit: "UNIT 04",
-    title: "What Does It Mean to Be a Human Being?",
-    desc: "Neuroscience, artificial intelligence, and the soul.",
-    image: asset("/images/exploring-bioscience/unit-04.jpg"),
-  },
-  {
-    unit: "UNIT 05",
-    title: "Human Enhancement and Transhumanism",
-    desc: "Are we changing—and should we change—our being?",
-    image: asset("/images/exploring-bioscience/unit-05.jpg"),
-  },
-  {
-    unit: "UNIT 06",
-    title: "Are We Programmed or Do We Have Free Will?",
-    desc: "Fate and genetic determinism.",
-    image: asset("/images/exploring-bioscience/unit-06.jpg"),
-  },
-  {
-    unit: "UNIT 07",
-    title: "Are Human Beings Unique in This Universe?",
-    desc: "Extraterrestrial life and theological inquiry.",
-    image: asset("/images/exploring-bioscience/unit-07.jpg"),
-  },
-];
-
 export default function ExploringBiosciencePage() {
   return (
     <div className="eb-pageWrapper">
@@ -161,11 +57,11 @@ export default function ExploringBiosciencePage() {
                 inquiry and human purpose.
               </p>
               <div className="eb-heroBtnGroup">
-                <a href="#curriculum-units" className="eb-btnBurgundy">
-                  Access the Curriculum ↗
+                <a href="https://muslimedex.org/courses/exploring-bioscience-and-islam" target="_blank" rel="noopener noreferrer" className="eb-btnBurgundy">
+                  EXPLORE ENROLLMENT ↗
                 </a>
-                <a href="#five-questions" className="eb-btnOutline">
-                  Explore the Units ↗
+                <a href="#what-youll-learn" className="eb-btnOutline">
+                  What You&apos;ll Learn ↗
                 </a>
               </div>
               <div className="eb-heroTagline">
@@ -246,30 +142,14 @@ export default function ExploringBiosciencePage() {
       </section>
 
       {/* ====================================================================
-          4. FIVE FUNDAMENTAL QUESTIONS
+          4. MUSLIM STUDENTS & BIOSCIENCE
           ==================================================================== */}
-      <section id="five-questions" className="eb-fiveQuestionsSection" aria-label="Five Fundamental Questions">
+      <section id="five-questions" className="eb-studentContextSection" aria-label="Muslim Students and Bioscience">
         <div className="container">
-          <div className="eb-sectionHeaderCenter">
-            <span className="eb-eyebrow">The Foundational Inquiries</span>
-            <h2 className="eb-sectionTitle">
-              Five Questions About the <span className="eb-burgundyItalic">Human Being</span>
-            </h2>
-            <p className="eb-sectionSubtitle">
-              Guiding explorations into scientific inquiry and theological reflection
+          <div className="eb-studentContextInner">
+            <p className="eb-studentContextText">
+              As Muslim students explore the biosciences, they may encounter difficult questions and wonder how their religious identity intersects with scientific discoveries: Does affirming scientific facts compromise religious beliefs? Does religion explain scientific findings? How can they navigate these domains constructively? We believe that conflicts are not inevitable, and that knowledge integration is possible and can shape stable professional identities in the future.
             </p>
-          </div>
-
-          <div className="eb-fiveQuestionsRow">
-            {FIVE_QUESTIONS.map((q) => (
-              <div key={q.num} className="eb-questionCard">
-                <span className="eb-questionNumber">{q.num}</span>
-                <div className="eb-questionIconCircle" aria-hidden="true">
-                  {q.icon}
-                </div>
-                <p className="eb-questionText">{q.question}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -392,84 +272,68 @@ export default function ExploringBiosciencePage() {
       </section>
 
       {/* ====================================================================
-          6. EXPLORE THE CURRICULUM (3x3 Grid)
+          6. WHAT YOU'LL LEARN (Replaces Curriculum Units)
           ==================================================================== */}
-      <section id="curriculum-units" className="eb-curriculumSection" aria-label="Curriculum Units">
+      <section id="what-youll-learn" className="eb-learnSection" aria-label="What You'll Learn">
+        <span id="curriculum-units" style={{ position: "relative", top: "-120px" }} />
+        <span id="for-educators" style={{ position: "relative", top: "-120px" }} />
         <div className="container">
-          <div className="eb-curriculumHeaderRow">
-            <div className="eb-curriculumHeaderLeft">
-              <span className="eb-eyebrow">Curriculum Units</span>
-              <h2 className="eb-sectionTitle">
-                Explore the <span className="eb-burgundyItalic">Curriculum</span>
-              </h2>
-              <p className="eb-sectionSubtitle">
-                Six thematic units plus an introductory framework and application activities.
-              </p>
-            </div>
-            <Link href="/research" className="eb-curriculumLinkRight">
-              Explore original curriculum ↗
-            </Link>
-          </div>
-
-          <div className="eb-curriculumGrid">
-            {/* 7 Curriculum Units */}
-            {CURRICULUM_UNITS.map((u) => (
-              <div key={u.unit} className="eb-unitCard">
-                <div className="eb-unitImageContainer">
-                  <Image
-                    src={u.image}
-                    alt={u.title}
-                    fill
-                    className="eb-unitImage"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-                <div className="eb-unitContent">
-                  <h3 className="eb-unitTitle">{u.title}</h3>
-                  <p className="eb-unitDesc">{u.desc}</p>
-                  <div className="eb-unitFooter">
-                    <span className="eb-unitArrowBtn" aria-hidden="true">
-                      ↗
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            {/* Card 08: For Educators */}
-            <div id="for-educators" className="eb-audienceCard">
-              <div className="eb-audienceIconCircle" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
-                  <path d="M8 7h6" />
-                  <path d="M8 11h8" />
-                </svg>
-              </div>
-              <h3 className="eb-audienceTitle">For Educators</h3>
-              <p className="eb-audienceDesc">
-                Lesson plans, presentations, worksheets, and teaching resources for schools and learning communities.
-              </p>
-              <Link href="/educate" className="eb-audienceBtn">
-                Access Educator Curriculum ↗
-              </Link>
+          <div className="eb-learnCard">
+            {/* Architectural minaret/dome watermark matching reference */}
+            <div className="eb-learnWatermark" aria-hidden="true">
+              <svg viewBox="0 0 340 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40 240V130C40 105 60 75 85 55C110 75 130 105 130 130V240H40Z" fill="currentColor" />
+                <circle cx="85" cy="45" r="4" fill="currentColor" />
+                <path d="M140 240V90C140 60 170 25 200 5C230 25 260 60 260 90V240H140Z" fill="currentColor" />
+                <circle cx="200" cy="-2" r="5" fill="currentColor" />
+                <path d="M250 240V140C250 115 270 85 295 65C320 85 340 115 340 140V240H250Z" fill="currentColor" />
+                <circle cx="295" cy="55" r="4" fill="currentColor" />
+              </svg>
             </div>
 
-            {/* Card 09: For Individual Learners */}
-            <div className="eb-audienceCard">
-              <div className="eb-audienceIconCircle" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" />
-                  <circle cx="12" cy="12" r="6" />
-                  <circle cx="12" cy="12" r="2" />
-                </svg>
+            <div className="eb-learnHeader">
+              <span className="eb-learnIcon" aria-hidden="true">
+                <i className="fa-solid fa-graduation-cap" />
+              </span>
+              <h2 className="eb-learnTitle">What You&apos;ll Learn</h2>
+            </div>
+
+            <div className="eb-learnGrid">
+              <div className="eb-learnItem">
+                <span className="eb-learnCheck" aria-hidden="true">
+                  <i className="fa-solid fa-check" />
+                </span>
+                <span className="eb-learnText">
+                  Explain the relationship between bioscience and Islamic thought.
+                </span>
               </div>
-              <h3 className="eb-audienceTitle">For Individual Learners</h3>
-              <p className="eb-audienceDesc">
-                Learn at your own pace through the Exploring Bioscience &amp; Islam online course.
-              </p>
-              <Link href="/courses" className="eb-audienceBtn">
-                Explore Online Course ↗
-              </Link>
+
+              <div className="eb-learnItem">
+                <span className="eb-learnCheck" aria-hidden="true">
+                  <i className="fa-solid fa-check" />
+                </span>
+                <span className="eb-learnText">
+                  Examine fundamental questions about the human being from scientific and ethical perspectives.
+                </span>
+              </div>
+
+              <div className="eb-learnItem">
+                <span className="eb-learnCheck" aria-hidden="true">
+                  <i className="fa-solid fa-check" />
+                </span>
+                <span className="eb-learnText">
+                  Describe how Islamic scholarship has engaged with medicine and the life sciences.
+                </span>
+              </div>
+
+              <div className="eb-learnItem">
+                <span className="eb-learnCheck" aria-hidden="true">
+                  <i className="fa-solid fa-check" />
+                </span>
+                <span className="eb-learnText">
+                  Analyze contemporary bioethical issues using interdisciplinary approaches.
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -478,7 +342,7 @@ export default function ExploringBiosciencePage() {
       {/* ====================================================================
           7. BUILT FOR THOUGHTFUL LEARNING
           ==================================================================== */}
-      <section className="eb-thoughtfulSection" aria-label="Built for Thoughtful Learning">
+      <section id="thoughtful-learning" className="eb-thoughtfulSection" aria-label="Built for Thoughtful Learning">
         <div className="container">
           <div className="eb-sectionHeaderCenter">
             <span className="eb-eyebrow">Teaching &amp; Learning</span>

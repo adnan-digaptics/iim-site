@@ -1,5 +1,6 @@
 import { asset } from "../lib/asset";
 import Link from "next/link";
+import PastPartners from "../components/PastPartners";
 
 export const metadata = {
   title: "Home | Initiative on Islam & Medicine",
@@ -43,11 +44,11 @@ Public Impact.          </p>
       <div className="container-fluid px-0">
         <div className="row g-0 align-items-center">
           <div className="col-6 col-lg-3 four-values-col">
-            <div className="value-exact-item">
+            <Link href="/courses" className="value-exact-item value-exact-item--link">
               <i className="fa-solid fa-book-open value-exact-icon" />
-              <h3 className="value-exact-title">Islamic Bioethics</h3>
+              <h3 className="value-exact-title">Religion &amp; Bioethics</h3>
               <p className="value-exact-text">Grounded guidance for complex questions</p>
-            </div>
+            </Link>
           </div>
           <div className="col-6 col-lg-3 four-values-col">
             <div className="value-exact-item">
@@ -143,7 +144,7 @@ LEARN MORE{' '}                    <i className="fa-solid fa-arrow-right ms-1" /
               <div className="col-md-4">
                 <div className="expertise-card">
                   <img src={asset("/images/expertise-speaking.jpg")} alt="Speaking &amp; Engagements" className="expertise-card-img" loading="lazy" />
-                  <h3 className="expertise-card-title">Speaking &amp; Engagements</h3>
+                  <h3 className="expertise-card-title">Speaking Engagements</h3>
                   <p className="expertise-card-text">Keynotes, grand rounds, panels, and community events.</p>
                   <Link href="/speaking" className="card-maroon-link">
 REQUEST A SPEAKER{' '}                    <i className="fa-solid fa-arrow-right ms-1" />
@@ -155,6 +156,7 @@ REQUEST A SPEAKER{' '}                    <i className="fa-solid fa-arrow-right 
         </div>
       </div>
     </section>
+    <PastPartners />
     <section className="section-featured-learning">
       <div className="container">
         <div className="learning-content-wrap">
@@ -164,14 +166,14 @@ REQUEST A SPEAKER{' '}                    <i className="fa-solid fa-arrow-right 
               <span className="eyebrow-line" />
             </div>
             <h2 className="learning-main-heading">Courses for Real-World Impact</h2>
-            <p className="learning-subhead">Evidence-informed, practical, and rooted in Islamic ethics.</p>
+            <p className="learning-subhead">Evidence-informed, practical, and rooted in Islamic ethics. CME credits available.</p>
           </div>
           <div className="row g-4 justify-content-center">
                   <div className="col-md-4">
                     <div className="learning-card">
                       <img src={asset("/images/course-bioethics.jpg")} alt="Islamic Bioethics: A Primer for Muslim Physicians" className="learning-card-img" loading="lazy" />
                       <h3 className="learning-card-title">
-                        Islamic Bioethics: A Primer for Muslim Physicians
+                        Islamic Bioethics: A Primer for Muslim Physicians (CME credits available)
                       </h3>
                       <p className="learning-card-text">Foundational frameworks for ethical decision-making.</p>
                       <Link href="/courses" className="card-maroon-link">
@@ -184,9 +186,9 @@ VIEW COURSE{' '}                        <i className="fa-solid fa-arrow-right ms
                       <img src={asset("/images/course-muslim-doctor.jpg")} alt="Becoming a Muslim Doctor" className="learning-card-img" loading="lazy" />
                       <h3 className="learning-card-title">Becoming a Muslim Doctor</h3>
                       <p className="learning-card-text">Identity, vocation, ethics, and professional development for medical students.</p>
-                      <Link href="/courses" className="card-maroon-link">
-LEARN MORE{' '}                        <i className="fa-solid fa-arrow-right ms-1" />
-{' '}                      </Link>
+                      <Link href="/becoming-a-muslim-doctor" className="card-maroon-link">
+LEARN MORE <i className="fa-solid fa-arrow-right ms-1" />
+                      </Link>
                     </div>
                   </div>
                   <div className="col-md-4">

@@ -100,7 +100,7 @@ export default function TeamResearch() {
     <>
       <div className="tm-section-head tm-section-head--row">
         <div>
-          <p className="tm-eyebrow">RESEARCH &amp; EDUCATION TEAM</p>
+          <p className="tm-eyebrow">PAST TEAM MEMBERS</p>
           <p className="tm-lead">Advancing knowledge. Training the next generation.</p>
         </div>
         <div className="tm-carousel-nav" role="group" aria-label="Research team carousel">

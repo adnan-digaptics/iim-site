@@ -9,12 +9,12 @@ export const metadata = {
 };
 
 const EPISODES = [
-  ["01", "Science and Religion: How Can We Know Anything at All?", "Released April 15, 2024", "/images/podcast/ep-cosmos.jpg"],
-  ["02", "How Did We Come About? The Question of Human Origin", "Released May 6, 2024", "/images/bio-topic-genes.jpg"],
-  ["03", "What Does it Mean to be Human? Reflections on Neuroscience, Artificial Intelligence and the Soul", "Released June 3, 2024", "/images/podcast/ep-brain.jpg"],
-  ["04", "What is the Future of Humankind? Are we and should we be changing our bodies and brains?", "Released July 1, 2024", "/images/bio-topic-robot.jpg"],
-  ["05", "Are Our Lives Pre-determined? The Question of Free Will and Human Agency", "Released July 29, 2024", "/images/podcast/ep-horizon.jpg"],
-  ["06", "Are Humans Unique in the Universe? The Question of Extraterrestrial Intelligent Life", "Released August 26, 2024", "/images/bio-planet.jpg"],
+  ["01", "Science and Religion: How Can We Know Anything at All?", "Released April 15, 2024", "/images/podcast/ep-cosmos.jpg", "https://www.youtube.com/watch?v=XpN53zAzTPg"],
+  ["02", "How Did We Come About? The Question of Human Origin", "Released May 6, 2024", "/images/bio-topic-genes.jpg", "https://www.youtube.com/@medicineandislam"],
+  ["03", "What Does it Mean to be Human? Reflections on Neuroscience, Artificial Intelligence and the Soul", "Released June 3, 2024", "/images/podcast/ep-brain.jpg", "https://www.youtube.com/@medicineandislam"],
+  ["04", "What is the Future of Humankind? Are we and should we be changing our bodies and brains?", "Released July 1, 2024", "/images/bio-topic-robot.jpg", "https://www.youtube.com/@medicineandislam"],
+  ["05", "Are Our Lives Pre-determined? The Question of Free Will and Human Agency", "Released July 29, 2024", "/images/podcast/ep-horizon.jpg", "https://www.youtube.com/@medicineandislam"],
+  ["06", "Are Humans Unique in the Universe? The Question of Extraterrestrial Intelligent Life", "Released August 26, 2024", "/images/bio-planet.jpg", "https://www.youtube.com/@medicineandislam"],
 ];
 
 const GUESTS = [
@@ -51,11 +51,8 @@ const GUESTS = [
 ];
 
 const PLATFORMS = [
-  ["fa-solid fa-globe", "Listen on", "II&M Website", "#listen", ""],
-  ["fa-brands fa-youtube", "Watch on", "YouTube", "#listen", "is-youtube"],
-  ["fa-solid fa-podcast", "Listen on", "Apple Podcasts", "#listen", "is-apple"],
-  ["fa-brands fa-spotify", "Listen on", "Spotify", "#listen", "is-spotify"],
-  ["fa-solid fa-file-lines", "Read", "Transcripts", "#episodes", ""],
+  ["fa-solid fa-globe", "Listen on", "II&M Website", "#episodes", ""],
+  ["fa-brands fa-youtube", "Watch on", "YouTube", "https://www.youtube.com/@medicineandislam", "is-youtube"],
 ];
 
 const TOPICS = [
@@ -174,7 +171,7 @@ export default function PodcastPage() {
             </div>
             <figure className="pod-trailer">
               <img src={asset("/images/podcast-medic-mufti.jpg")} alt="Scholars speaking across a podcast table" />
-              <a href="#listen" className="pod-play" aria-label="Introduction listing">
+              <a href="https://www.youtube.com/watch?v=XpN53zAzTPg" target="_blank" rel="noopener noreferrer" className="pod-play" aria-label="Watch trailer on YouTube">
                 <i className="fa-solid fa-play" />
               </a>
               <figcaption>
@@ -265,16 +262,15 @@ export default function PodcastPage() {
             <p className="pod-eyebrow">FEATURED EPISODES</p>
           </div>
           <div className="pod-episode-row">
-            {EPISODES.map(([num, title, date, image]) => (
+            {EPISODES.map(([num, title, date, image, ytUrl]) => (
               <article key={num}>
                 <img src={asset(image)} alt="" />
                 <p className="pod-ep-num">EPISODE {num}</p>
                 <h3>{title}</h3>
                 <p className="pod-date">{date}</p>
                 <div className="pod-ep-actions">
-                  <a href="#listen"><i className="fa-solid fa-play" /> Watch</a>
-                  <a href="#listen"><i className="fa-solid fa-headphones" /> Listen</a>
-                  <a href="#listen"><i className="fa-solid fa-file-lines" /> Transcript</a>
+                  <a href={ytUrl} target="_blank" rel="noopener noreferrer"><i className="fa-solid fa-play" /> Watch</a>
+                  <a href={ytUrl} target="_blank" rel="noopener noreferrer"><i className="fa-solid fa-headphones" /> Listen</a>
                 </div>
               </article>
             ))}

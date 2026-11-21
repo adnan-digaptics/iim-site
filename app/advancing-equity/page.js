@@ -194,84 +194,120 @@ const RECOMMENDATIONS = [
 // 8. RESEARCH PUBLICATIONS (2-Column Cards)
 const PUBLICATIONS = [
   {
-    meta: "Academic Medicine / JHM • Verified PubMed",
+    meta: "CAIR-MA • Employer Resource",
     title:
-      "Religious Identity and Workplace Discrimination: A National Survey of American Muslim Physicians",
-    authors: "Padela AI, Curlin FA, et al. | PMID: 25547434",
+      "Employer Handbook on Religious Accommodation in the Workplace",
+    authors: "Council on American-Islamic Relations (CAIR-MA)",
     linkText: "VIEW PUBLICATION ↗",
-    href: "https://pubmed.ncbi.nlm.nih.gov/25547434/",
+    href: "https://www.cairma.org/wp-content/uploads/2017/05/Employer-Handbook-12-page-CAIR-MA.pdf",
   },
   {
-    meta: "Journal of General Internal Medicine • Verified PubMed",
+    meta: "Tanenbaum Center • Princeton Media Central",
     title:
-      "Empathy and Attending to Patient Religion/Spirituality: Findings from a National Survey of Muslim Physicians",
-    authors: "Padela AI, Curlin FA, et al. | PMID: 30627918",
+      "Religious Diversity Manager/Supervisor Training",
+    authors: "Tanenbaum Center for Interreligious Understanding",
     linkText: "VIEW PUBLICATION ↗",
-    href: "https://pubmed.ncbi.nlm.nih.gov/30627918/",
+    href: "https://mediacentral.princeton.edu/media/TanenbaumA+Religious+Diversity+Manager+Supervisor+Training/1_yxoghepi",
   },
   {
-    meta: "American Journal of Bioethics",
+    meta: "TAHSN • Documents & Resources",
     title:
-      "Assessing Relationships Between Muslim Physicians' Religiosity and End-of-Life Healthcare Attitudes",
-    authors: "Padela AI, Shanawani H, et al. | Clinical Ethics & Palliative Care",
+      "TAHSN Document Resources",
+    authors: "Toronto Academic Health Science Network (TAHSN)",
     linkText: "VIEW PUBLICATION ↗",
-    href: "#publications",
+    href: "https://tahsn.ca/documents-resources",
   },
   {
-    meta: "BMC Medical Ethics",
+    meta: "Springer • Book",
     title:
-      "Predictors of Physician Recommendation for Ethically Controversial Medical Procedures",
-    authors: "Padela AI, Curlin FA. | National Survey Findings",
+      "Handbook of Islamic Medical Ethics",
+    authors: "Springer International Publishing",
     linkText: "VIEW PUBLICATION ↗",
-    href: "#publications",
+    href: "https://link.springer.com/book/10.1007/978-3-319-92762-6",
   },
   {
-    meta: "Clinical Transplantation",
+    meta: "AJOB Empirical Bioethics • Research",
     title:
-      "American Muslim Physician Attitudes Toward Organ Donation and Brain Death Determination",
-    authors: "Padela AI, Rasheed S, et al. | Transplantation Ethics",
+      "Religious Identity Discrimination in the Physician Workforce: Insights from Two National Studies of Muslim Clinicians in the US",
+    authors: "Padela AI, et al.",
     linkText: "VIEW PUBLICATION ↗",
-    href: "#publications",
+    href: "https://www.tandfonline.com/doi/abs/10.1080/23294515.2015.1111271",
   },
   {
-    meta: "Journal of Religion and Health",
+    meta: "Academia.edu • Research Paper",
     title:
-      "Career Satisfaction and Burnout Among American Muslim Physicians: Workplace Climate and Identity",
-    authors: "Padela AI, et al. | Healthcare Workforce Studies",
+      "Religious Identity Discrimination in the Physician Workforce: Insights from Two National Studies of Muslim Clinicians in the US",
+    authors: "Padela AI, et al.",
     linkText: "VIEW PUBLICATION ↗",
-    href: "#publications",
+    href: "https://www.academia.edu/94461347/Religious_Identity_Discrimination_in_the_Physician_Workforce_Insights_from_Two_National_Studies_of_Muslim_Clinicians_in_the_US",
+  },
+  {
+    meta: "Academia.edu • Research Paper",
+    title:
+      "The Impact of Practicing Both Medicine and Religion: Muslim Identity as a Predictor of Discrimination, Accommodation, and Career Outcomes in Academic Medicine",
+    authors: "Padela AI, et al.",
+    linkText: "VIEW PUBLICATION ↗",
+    href: "https://www.academia.edu/89347717/The_Impact_of_Practicing_Both_Medicine_and_Religion_Muslim_Identity_as_a_Predictor_of_Discrimination_Accommodation_and_Career_Outcomes_in_Academic_Medicine",
+  },
+  {
+    meta: "Academia.edu • Research Paper",
+    title:
+      "Muslim American Physicians' Experiences with and Views on Religious Discrimination and Accommodation in Academic Medicine",
+    authors: "Padela AI, et al.",
+    linkText: "VIEW PUBLICATION ↗",
+    href: "https://www.academia.edu/98516917/Muslim_American_physicians_experiences_with_and_views_on_religious_discrimination_and_accommodation_in_academic_medicine",
+  },
+  {
+    meta: "Academia.edu • Research Paper",
+    title:
+      "A Religious Minority Tax in Healthcare: Insights from Muslim American Physicians",
+    authors: "Padela AI, et al.",
+    linkText: "VIEW PUBLICATION ↗",
+    href: "https://www.academia.edu/105350151/A_religious_minority_tax_in_healthcare_Insights_from_Muslim_American_physicians",
   },
 ];
 
 // 9. PRESENTATIONS & CONFERENCES (2-Column Cards)
 const PRESENTATIONS = [
   {
-    event: "Society of General Internal Medicine (SGIM)",
+    event: "Invited Keynote",
     title:
-      "Workplace Discrimination and Professional Identity Among Minority-Faith Physicians",
-    desc: "National research paper presentation examining survey metrics on bias, accommodation deficits, and clinician retention in internal medicine.",
-    date: "Annual Scientific Meeting",
+      "Discrimination & Diversity in Healthcare Workforce: Muslim Physician Experiences",
+    desc: "Dr. Aasim Padela presents national empirical survey data on religion-directed workplace discrimination, accommodation hurdles, and diversity within the healthcare workforce.",
+    date: "Invited Lecture",
+    href: "https://www.youtube.com/watch?v=BfXF6wQL40A",
   },
   {
-    event: "American Society for Bioethics and Humanities (ASBH)",
+    event: "NIIMS Academic Panel",
     title:
-      "Islamic Bioethics, Clinician Well-Being, and Healthcare Workforce Equity",
-    desc: "Plenary research panel addressing religious obligations, conscientious practice, and institutional equity across health systems.",
-    date: "Annual Conference",
+      "Being Muslim in Academic Medicine",
+    desc: "Faculty members, physician-scholars, and educators discuss navigating professional identity, mentoring trainees, and advancing equity across academic health systems.",
+    date: "Academic Panel",
+    href: "https://m.facebook.com/NIIMS.org/videos/being-muslim-in-academic-medicine/1183676399093794/",
   },
   {
-    event: "Association of American Medical Colleges (AAMC)",
+    event: "ResearchGate Publication",
     title:
-      "Religious Diversity in Academic Medicine: Accommodating Faith in Clinical Training",
-    desc: "Workshop for residency program directors, designated institutional officials (DIOs), and medical school leadership on inclusive training climates.",
-    date: "Learn Serve Lead Conference",
+      "Review of Muslim Patient Needs and Its Implications on Healthcare Delivery",
+    desc: "Scholarly review examining Muslim patient care needs and how healthcare systems can better respond to religious and cultural considerations.",
+    date: "Research Publication",
+    href: "https://www.researchgate.net/publication/377695458_wReview_of_Muslim_Patient_Needs_and_Its_Imertplications_on_Healthcare_Delivery",
   },
   {
-    event: "Conference on Medicine and Religion (CMR)",
+    event: "Invited Lecture",
     title:
-      "Ethical Deliberation and Conscience in Clinical Practice: Muslim Clinician Perspectives",
-    desc: "Scholarly paper presentation investigating how religious values guide difficult bioethical deliberations at the bedside.",
-    date: "Annual Conference",
+      "Religion and Workplace Discrimination: Muslim Physician Experiences",
+    desc: "An academic presentation examining religious identity, minority-faith clinician experiences, and institutional policy recommendations for equitable medical environments.",
+    date: "Invited Lecture",
+    href: "https://www.youtube.com/watch?v=I-ZBtFsIoEM",
+  },
+  {
+    event: "Wisconsin Public Health Association",
+    title:
+      "2023 Annual Public Health Conference",
+    desc: "Presentation on Muslim American health needs and equity issues at the 2023 Wisconsin Public Health Association Annual Conference.",
+    date: "Annual Conference 2023",
+    href: "https://www.wpha.org/page/2023AnnualPublicHealthConferenceSchedule",
   },
 ];
 
@@ -279,30 +315,45 @@ const PRESENTATIONS = [
 const MEDIA_ITEMS = [
   {
     outlet: "The Washington Post",
-    headline: "How Muslim Doctors Balance Faith and Care in America's Hospitals",
-    desc: "National feature detailing the daily commitment, clinical excellence, and unique workplace hurdles faced by Muslim clinicians.",
-    href: "https://www.washingtonpost.com/",
+    headline: "American Muslim Doctors Feel Greater Scrutiny, Even Patients' Suspicions",
+    desc: "National feature detailing workplace challenges and scrutiny faced by Muslim physicians in America's hospitals.",
+    href: "https://www.washingtonpost.com/news/to-your-health/wp/2015/12/11/american-muslim-doctors-feel-greater-scrutiny-even-patients-suspicions/",
   },
   {
-    outlet: "USA Today",
-    headline:
-      "Faith on the Frontlines: American Muslim Physicians Face Bias While Saving Lives",
-    desc: "Investigative coverage of national survey findings highlighting religious discrimination among acute care providers.",
-    href: "https://www.usatoday.com/",
+    outlet: "Wisconsin Muslim Journal",
+    headline: "Discrimination Against Muslim Physicians on the Rise",
+    desc: "Coverage of research findings on increasing discrimination faced by Muslim physicians in healthcare settings.",
+    href: "https://wisconsinmuslimjournal.org/discrimination-against-muslim-physicians-on-the-rise/",
   },
   {
-    outlet: "NPR / Michigan Radio",
-    headline:
-      "Study Sheds Light on Religious Discrimination Among Healthcare Workers",
-    desc: "In-depth radio broadcast interview discussing findings on physician burnout, accommodation, and institutional policies.",
-    href: "https://www.michiganpublic.org/",
+    outlet: "ACP Hospitalist",
+    headline: "Muslim Physicians Report Significant Discrimination",
+    desc: "Report on national survey findings showing significant rates of religious discrimination among Muslim physicians.",
+    href: "https://acphospitalist.acponline.org/archives/2023/03/01/free/muslim-physicians-report-significant-discrimination.htm",
   },
   {
-    outlet: "Arab American News",
-    headline:
-      "Survey Reveals Healthcare Contributions and Hurdles for Muslim Doctors",
-    desc: "Analysis of the national workforce survey exploring professional identity, community advocacy, and healthcare equity.",
-    href: "https://www.arabamericannews.com/",
+    outlet: "Detroit News",
+    headline: "Detroit News Article on Muslim Physicians",
+    desc: "Print media coverage of research on Muslim physician experiences in the American healthcare workforce.",
+    href: "https://medicineandislam.org/wp-content/uploads/2024/11/Detroit-News-article-1.pdf",
+  },
+  {
+    outlet: "MCW Newsroom",
+    headline: "MCW Research on Muslim American Healthcare",
+    desc: "Medical College of Wisconsin newsroom coverage on research examining Muslim American healthcare experiences.",
+    href: "https://medicineandislam.org/wp-content/uploads/2023/04/MCW-Newsroom.pdf",
+  },
+  {
+    outlet: "MCW News",
+    headline: "Dr. Aasim Padela Comments on Former Corewell Health Physician's Religious Discrimination Lawsuit",
+    desc: "Expert commentary on a religious discrimination lawsuit involving a Muslim physician in the U.S. healthcare system.",
+    href: "https://www.mcw.edu/news/dr-aasim-padela-comments-on-former-corewell-health-physicians-religious-discrimination-lawsuit",
+  },
+  {
+    outlet: "Islamic Horizons / ISNA",
+    headline: "Islamic Horizons Article on Muslim Physicians",
+    desc: "ISNA's Islamic Horizons magazine feature on Muslim physician experiences, identity, and healthcare equity.",
+    href: "https://issuu.com/isnacreative/docs/ih_march-april_23/s/19954468",
   },
 ];
 
@@ -479,7 +530,7 @@ export default function AdvancingEquityPage() {
               <a href="#findings" className="ae-btnPrimary">
                 EXPLORE FINDINGS <i className="fa-solid fa-arrow-down" />
               </a>
-              <a href="#publications" className="ae-btnOutline">
+              <a href="/books" className="ae-btnOutline">
                 VIEW PUBLICATIONS <i className="fa-solid fa-book-open" />
               </a>
             </div>
@@ -766,31 +817,6 @@ export default function AdvancingEquityPage() {
               </article>
 
               {/* SECTION 09: POLICY REPORT */}
-              <article id="policy-report" className="ae-sectionBlock">
-                <p className="ae-sectionEyebrow">09 • FEATURED PUBLICATION</p>
-                <h2 className="ae-sectionTitle">Policy Report</h2>
-                <div className="ae-burgundyBar" />
-
-                <div className="ae-policyReportPanel">
-                  <p className="ae-policyPanelEyebrow">
-                    INSTITUTIONAL POLICY BLUEPRINT
-                  </p>
-                  <h3 className="ae-policyPanelTitle">
-                    Advancing Equity for Muslim Healthcare Professionals: Policy
-                    Brief &amp; Framework
-                  </h3>
-                  <p className="ae-policyPanelDesc">
-                    A comprehensive, evidence-based policy framework offering
-                    actionable guidance for hospital networks, medical school
-                    deans, and residency training programs to foster religious
-                    inclusion, address discrimination, and support Muslim clinicians.
-                  </p>
-                  <Link href="/consultation" className="ae-btnPolicyWhite">
-                    REQUEST POLICY REPORT <i className="fa-solid fa-arrow-right" />
-                  </Link>
-                </div>
-              </article>
-
               {/* SECTION 10: RESEARCH PUBLICATIONS */}
               <article id="publications" className="ae-sectionBlock">
                 <p className="ae-sectionEyebrow">
@@ -844,7 +870,14 @@ export default function AdvancingEquityPage() {
 
                 <div className="ae-presentationsGrid">
                   {PRESENTATIONS.map((pres) => (
-                    <div key={pres.title} className="ae-presentationCard">
+                    <a
+                      key={pres.title}
+                      href={pres.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ae-presentationCard"
+                      style={{ textDecoration: "none", display: "block" }}
+                    >
                       <span className="ae-presEvent">{pres.event}</span>
                       <h3 className="ae-presTitle">{pres.title}</h3>
                       <p className="ae-presDesc">{pres.desc}</p>
@@ -852,7 +885,7 @@ export default function AdvancingEquityPage() {
                         <i className="fa-regular fa-calendar me-1" />
                         {pres.date}
                       </p>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </article>
@@ -886,34 +919,6 @@ export default function AdvancingEquityPage() {
                         READ ARTICLE <i className="fa-solid fa-arrow-up-right-from-square" />
                       </span>
                     </a>
-                  ))}
-                </div>
-              </article>
-
-              {/* SECTION 13: WORKSHOPS & EMPLOYEE RESOURCES */}
-              <article id="resources" className="ae-sectionBlock">
-                <p className="ae-sectionEyebrow">
-                  13 • PROFESSIONAL DEVELOPMENT
-                </p>
-                <h2 className="ae-sectionTitle">
-                  Workshops &amp; Employee Resources
-                </h2>
-                <div className="ae-burgundyBar" />
-                <p className="ae-sectionSubtext">
-                  Practical toolkits and educational workshops designed to support
-                  healthcare supervisors and clinician affinity groups:
-                </p>
-
-                <div className="ae-workshopsGrid">
-                  {WORKSHOPS.map((ws) => (
-                    <div key={ws.title} className="ae-workshopCard">
-                      <span className="ae-workshopType">{ws.type}</span>
-                      <h3 className="ae-workshopTitle">{ws.title}</h3>
-                      <p className="ae-workshopDesc">{ws.desc}</p>
-                      <Link href="/consultation" className="ae-workshopLink">
-                        {ws.linkText}
-                      </Link>
-                    </div>
                   ))}
                 </div>
               </article>

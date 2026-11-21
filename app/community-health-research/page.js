@@ -311,7 +311,7 @@ export default function EmarchPage() {
                     </h3>
 
                     <p className="emarch-paragraph">
-                      The growing complexity of the American healthcare system and healthcare outcomes has created a need for well-researched, culturally attuned support strategies. The Mosque-Based PCOR Toolkit provides accessible frameworks and guidance for mosque-based research and community engagement.
+                      The growing complexity of the American healthcare system and continued existence of health and healthcare inequities has spurred leading institutes and funders to develop novel methods and enhanced strategies by which to conduct, implement, and disseminate health outcomes research. Central to these efforts has been the focus on bringing value to patients by measuring outcomes of import to them, and on partnering with stakeholders across multiple sectors including the healthcare industry, community-based organizations, policy makers, and the academy so that health research and programming is better situated to the broader contexts of healthcare delivery within the US. This toolkit leverages these resources in bringing PCORI methods and tools to bear upon Muslim American community health through the venue of mosque communities.
                     </p>
 
                     <div className="mt-3">
@@ -529,7 +529,7 @@ export default function EmarchPage() {
                 </ul>
 
                 <p className="emarch-goalsClosing">
-                  PCOR is a research method that focuses on providing patients with evidence-based information that allows them and caregivers with clinicians to make informed healthcare decisions. Involving Muslim American community members helps make the healthcare system attentive to holistic needs and improves health outcomes for all.
+                  PCOR is a research method that focuses on providing patients with evidence-based information that allows them and caretakers with clinicians to make informed healthcare decisions. Involving Muslim American community members helps make the healthcare system attentive to holistic needs and improves health outcomes for all.
                 </p>
               </div>
             </div>
@@ -553,7 +553,7 @@ export default function EmarchPage() {
               </div>
 
               <a
-                href="https://www.youtube.com/@InitiativeonIslamandMedicine"
+                href="https://www.youtube.com/watch?v=iAdoZl2l9Ds"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="emarch-videoCard"
@@ -611,7 +611,7 @@ export default function EmarchPage() {
                 </h3>
 
                 <p className="emarch-paragraph">
-                  AMHP (Advancing Muslim American Health Priorities) was the culmination of E-MARCH&apos;s multi-stakeholder convening of religious leaders, scholars, educators, community health workers, social workers, caregivers, clinicians, healthcare leaders, and researchers united around key community health research priorities for Muslim Americans.
+                  AMHP (Advancing Muslim American Health Priorities) was the culmination of E-MARCH&apos;s multi-stakeholder convening of religious leaders, scholars, educators, community health workers, social workers, caretakers, clinicians, healthcare leaders, and researchers united around key community health research priorities for Muslim Americans.
                 </p>
 
                 <p className="emarch-paragraph">
@@ -654,18 +654,23 @@ export default function EmarchPage() {
                 <ul className="emarch-resourceLinks">
                   <li>
                     <Link href="/resources" className="emarch-resourceLink">
-                      Advancing Muslim American Health Priorities (AMHP) Conference Report
+                      Islamic Horizons A-MAP Conference Report
                     </Link>
                   </li>
                   <li>
-                    <Link href="/research" className="emarch-resourceLink">
-                      Project Activities &amp; Findings
-                    </Link>
+                    <a href={asset("/documents/Project-Findings-Public-Piece.pdf")} target="_blank" rel="noopener noreferrer" className="emarch-resourceLink">
+                      Project Activities &amp; Findings ↗
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/watch?v=iAdoZl2l9Ds" target="_blank" rel="noopener noreferrer" className="emarch-resourceLink">
+                      E-MARCH Project Video ↗
+                    </a>
                   </li>
                 </ul>
 
                 <p className="emarch-resourceNote">
-                  Archival standalone press PDF files are not bundled in local static assets; explore related summaries in the II&amp;M Resources hub.
+                  Downloadable project briefs, posters, and research summaries from the E-MARCH initiative.
                 </p>
               </div>
             </div>
@@ -689,12 +694,12 @@ export default function EmarchPage() {
                   The growing complexity of the American healthcare system and healthcare outcomes creates a vital need for culturally responsive and community-engaged research frameworks. This whitepaper provides an overview of the project, key findings, and recommendations for future work.
                 </p>
 
-                <Link href="/resources" className="emarch-resourceHighlightLink">
+                <a href={asset("/documents/EMARCH-White-Paper-Final-1.pdf")} target="_blank" rel="noopener noreferrer" className="emarch-resourceHighlightLink">
                   <span>
                     A Tool-kit for Mosque-Based Patient-Centered Outcomes Research: A resource guide for conducting PCOR in Muslim communities
                   </span>
                   <ArrowRightIcon />
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -714,13 +719,10 @@ export default function EmarchPage() {
                     <h3 className="emarch-resourceTitle">Poster</h3>
                   </div>
 
-                  <p className="emarch-resourceMissingNote">
-                    Direct poster PDF unbundled locally
-                  </p>
-                  <Link href="/resources" className="emarch-btnSlate">
-                    <span>Resources</span>
+                  <a href={asset("/documents/MCWCE2021-E-MARCH_Poster.pdf")} target="_blank" rel="noopener noreferrer" className="emarch-btnSlate">
+                    <span>View Poster</span>
                     <ArrowRightIcon />
-                  </Link>
+                  </a>
                 </div>
 
                 <div className="emarch-resourceCard emarch-resourceCard--compact">
@@ -735,10 +737,10 @@ export default function EmarchPage() {
                     <h3 className="emarch-resourceTitle">Presentations</h3>
                   </div>
 
-                  <Link href="/speaking" className="emarch-btnSlate">
-                    <span>View Talks</span>
+                  <a href="https://www.youtube.com/watch?v=8ntZ4qdge0g" target="_blank" rel="noopener noreferrer" className="emarch-btnSlate">
+                    <span>View Presentations</span>
                     <ArrowRightIcon />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

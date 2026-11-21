@@ -80,7 +80,7 @@ export default function ContactForm({ initialSubject = "" }) {
   return (
     <form className="ct-form" onSubmit={submit} noValidate>
       <p className="ct-eyebrow">GET IN TOUCH</p>
-      <h2>Send Us a Message.</h2>
+      <h2>Let&apos;s Collaborate.</h2>
       <p className="ct-lead">Please fill out the form below and a member of our team will get back to you as soon as possible.</p>
       <div className="ct-pair">
         <Field label="First Name" name="firstName" value={values.firstName} error={errors.firstName} onChange={update} required autoComplete="given-name" />

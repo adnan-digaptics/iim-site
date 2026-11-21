@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" role="img" aria-label="Johns Hopkins University">
-  <path d="M18 14 H48 L56 30 L48 66 H18 L10 30 Z" fill="#002D72"/>
-  <path d="M24 22 H42 V32 H24 Z" fill="#fff" opacity="0.92"/>
-  <path d="M26 36 H40 V54 H26 Z" fill="#C8102E"/>
-  <text x="68" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#002D72">JOHNS HOPKINS</text>
-  <text x="68" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#002D72">UNIVERSITY</text>
-</svg>

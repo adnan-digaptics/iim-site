@@ -6,15 +6,15 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
 /** II&M / Dr. Padela talk from Initiative workshop materials (YouTube). */
-const IMPACT_VIDEO_ID = "JAwBx3WjAuA";
+const IMPACT_VIDEO_ID = "t4U0QCrrYcA";
 
 const JOURNEY = [
-  ["fa-people-group", "Listening", "We listened to Muslim patients, healthcare professionals, and communities about real needs in care."],
-  ["fa-magnifying-glass", "Researching", "We conducted rigorous research to understand evidence, ethics, and practice gaps."],
-  ["fa-file-lines", "Publishing", "We published findings that inform education, policy conversations, and clinical guidance."],
-  ["fa-handshake", "Collaborating", "We partnered with institutions, scholars, and organizations to turn insight into action."],
-  ["fa-book-open", "Educating & Engaging", "We deliver courses, workshops, consulting, and speaking that equip learners and leaders."],
-  ["fa-bullseye", "Today & Beyond — Making an Impact", "Your support helps us expand education and create lasting change in healthcare."],
+  ["fa-people-group", "Listening", <>We listened to Muslim patients, healthcare professionals, and communities about real needs in care.</>],
+  ["fa-magnifying-glass", "Researching", <>We conducted rigorous research to understand evidence, ethics, and practice gaps.</>],
+  ["fa-file-lines", "Publishing", <>We published findings that inform education, policy conversations, and clinical guidance. See our <Link href="/books">published articles and books</Link>.</>],
+  ["fa-handshake", "Collaborating", <>We partnered with institutions, scholars, and organizations to turn insight into action. Projects include <Link href="/mahsn-pro">MAHSN</Link> and <Link href="/community-health-research">EMARCH</Link>.</>],
+  ["fa-book-open", "Educating & Engaging", <>We deliver <Link href="/courses">courses</Link>, <Link href="/workshops">workshops</Link>, <Link href="/consultation">consulting</Link>, and <Link href="/speaking">speaking</Link> that equip learners and leaders.</>],
+  ["fa-bullseye", "Today & Beyond — Making an Impact", <>Your support helps us expand education and create lasting change in healthcare. <Link href="/donate">Support us today</Link>.</>],
 ];
 
 const FILTERS = [
@@ -32,7 +32,7 @@ const TESTIMONIALS = [
     img: asset("/images/donation/voice-1.jpg"),
     duration: "2:18",
     quote: "II&M gave me language and frameworks to care for Muslim patients with greater confidence and compassion.",
-    name: "Dr. Rania Awaad",
+    name: "Rania Awad",
     role: "Psychiatrist, Columbia University",
   },
   {
@@ -74,16 +74,16 @@ const TESTIMONIALS = [
 ];
 
 const IMPACT = [
-  [asset("/images/donation/impact-learners.jpg"), "fa-user-doctor", "Equip Learners and Clinicians", "Deliver courses and practical resources that strengthen ethical, faith-informed care."],
-  [asset("/images/donation/impact-institutions.jpg"), "fa-building-columns", "Strengthen Institutions", "Integrate curricula and training into schools, hospitals, and organizations."],
-  [asset("/images/donation/impact-expertise.jpg"), "fa-microphone", "Share Expertise Globally", "Bring research-informed teaching and speaking to communities worldwide."],
-  [asset("/images/donation/impact-resources.jpg"), "fa-laptop", "Develop Practical Resources", "Create guides, modules, and tools that move knowledge into everyday practice."],
-  [asset("/images/donation/impact-bridges.jpg"), "fa-handshake", "Build Bridges and Partnerships", "Collaborate with partners who expand education and community impact."],
-  [asset("/images/donation/impact-change.jpg"), "fa-seedling", "Create Lasting Change", "Sustain programs that improve understanding, equity, and compassionate care."],
+  [asset("/images/donation/impact-learners.jpg"), "fa-user-doctor", "Equip Learners and Clinicians", "Deliver courses and practical resources that strengthen ethical, faith-informed care.", "/courses"],
+  [asset("/images/donation/impact-institutions.jpg"), "fa-building-columns", "Strengthen Institutions", "Integrate curricula and training into schools, hospitals, and organizations.", "/workshops"],
+  [asset("/images/donation/impact-expertise.jpg"), "fa-microphone", "Share Expertise Globally", "Bring research-informed teaching and speaking to communities worldwide.", "/speaking"],
+  [asset("/images/donation/impact-resources.jpg"), "fa-laptop", "Develop Practical Resources", "Create guides, modules, and tools that move knowledge into everyday practice.", "/mahsn-pro"],
+  [asset("/images/donation/impact-bridges.jpg"), "fa-handshake", "Build Bridges and Partnerships", "Collaborate with partners who expand education and community impact.", "/consultation"],
+  [asset("/images/donation/impact-change.jpg"), "fa-seedling", "Create Lasting Change", "Sustain programs that improve understanding, equity, and compassionate care.", "/community-health-research"],
 ];
 
 const PARTNERS = [
-  [asset("/images/partners/logos/muslim-edex.webp"), "Muslim EdEx", "Professional learning platform"],
+  [asset("/images/partners/logos/muslim-edex.webp"), "Muslim EdEx", "Professional learning platform", "https://muslimEdEx.com"],
   [asset("/images/partners/logos/imana.webp"), "IMANA", "Medical education & professional development"],
   [asset("/images/partners/logos/albalagh.png"), "ALBALAGH INSTITUTE", "Islamic scholarship and education"],
   [asset("/images/partners/logos/umma-health.png"), "UMMA HEALTH", "Community health and healthcare initiatives"],
@@ -154,8 +154,9 @@ export default function DonatePageClient() {
               Real Knowledge. Real People. Real Change.
             </h1>
             <p className="hero-seamless-lead">
-              For years, we listened to Muslim patients, healthcare professionals, and communities. We conducted research, published our findings, and worked with diverse stakeholders. Today, we are bringing together leading thinkers, educators, and practitioners to deliver education, workshops, courses, training, consulting, and speaking engagements — turning knowledge into meaningful impact.
+              For years, we listened to Muslim patients, healthcare professionals, and communities. We conducted <Link href="/research">research</Link>, published our findings, and worked with diverse stakeholders. Today, we are bringing together leading thinkers, educators, and practitioners to deliver education, <Link href="/workshops">workshops</Link>, <Link href="/courses">courses</Link>, training, <Link href="/consultation">consulting</Link>, and <Link href="/speaking">speaking engagements</Link> — turning knowledge into meaningful impact.
             </p>
+
             <div className="hero-seamless-actions donate-hero-actions">
               <a href="#donate-panel" className="btn-seamless-maroon">
                 MAKE A DONATION <i className="fa-solid fa-arrow-right" />
@@ -314,7 +315,7 @@ export default function DonatePageClient() {
                   }}
                   src="https://www.zeffy.com/embed/donation-form/instilling-hikmah-in-healthcare"
                   allow="payment"
-                  allowTransparency="true"
+                  allowtransparency="true"
                 />
               </div>
             </aside>
@@ -337,12 +338,17 @@ export default function DonatePageClient() {
             </Link>
           </div>
           <div className="donate-impact-grid">
-            {IMPACT.map(([img, icon, title, text]) => (
+            {IMPACT.map(([img, icon, title, text, href]) => (
               <article className="donate-impact-card" key={title}>
                 <img src={img} alt={title} />
                 <span className="donate-impact-icon"><i className={`fa-solid ${icon}`} /></span>
                 <h3>{title}</h3>
                 <p>{text}</p>
+                {href && (
+                  <Link href={href} className="donate-impact-link">
+                    LEARN MORE <i className="fa-solid fa-arrow-right" />
+                  </Link>
+                )}
               </article>
             ))}
           </div>
@@ -385,18 +391,28 @@ export default function DonatePageClient() {
             </Link>
           </div>
           <div className="donate-partners-marquee">
-            <div className="donate-partners-track">
+            <div className="donate-partners-track" style={{ animation: "partner-logo-loop 28s linear infinite" }}>
               {[0, 1].map((copy) =>
-                PARTNERS.map(([logo, name, text]) => (
+                PARTNERS.map(([logo, name, text, href]) => (
                   <article
                     className={`donate-partner${name === "Muslim EdEx" ? " donate-partner-edex" : ""}`}
                     key={`${name}-${copy}`}
                     aria-hidden={copy === 1 ? "true" : undefined}
                   >
                     <div className="donate-partner-logo">
-                      <img src={logo} alt={copy === 0 ? name : ""} />
+                      {href && copy === 0 ? (
+                        <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${name} website`}>
+                          <img src={logo} alt={name} />
+                        </a>
+                      ) : (
+                        <img src={logo} alt={copy === 0 ? name : ""} />
+                      )}
                     </div>
-                    <h3>{name}</h3>
+                    <h3>
+                      {href && copy === 0 ? (
+                        <a href={href} target="_blank" rel="noopener noreferrer">{name}</a>
+                      ) : name}
+                    </h3>
                     <p>{text}</p>
                   </article>
                 ))

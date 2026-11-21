@@ -8,20 +8,31 @@ export const metadata = {
 };
 
 const snapshot = [
-  ["fa-people-group", "Workshops & Seminars", "Interactive learning experiences for healthcare professionals, students, and communities."],
-  ["fa-chalkboard-user", "Conferences & Symposia", "Bringing together diverse voices to advance knowledge and elevate important conversations."],
-  ["fa-magnifying-glass", "Research Projects", "Generating evidence and insights to inform practice, policy, and education."],
-  ["fa-book-open", "Courses & Lectures", "Educational programs that build knowledge and practical skills."],
-  ["fa-handshake", "Strategic Partnerships", "Collaborating with healthcare, academic, faith-based, and community organizations to expand reach and impact."],
-];
-
-const creates = [
-  ["fa-flask", "Research", "Evidence that informs practice, education, and policy."],
-  ["fa-graduation-cap", "Education & Training", "Programs that build knowledge and strengthen care."],
-  ["fa-users", "Workshops", "Interactive learning for clinicians and communities."],
-  ["fa-microphone", "Conferences", "Convenings that elevate critical conversations."],
-  ["fa-book", "Lectures & Courses", "Teaching that shapes ethical judgment and practice."],
-  ["fa-handshake", "Partnerships", "Collaborations that expand reach and lasting impact."],
+  [
+    "fa-people-group",
+    "Workshops & Seminars",
+    "Interactive learning experiences for healthcare professionals, students, and communities.",
+  ],
+  [
+    "fa-chalkboard-user",
+    "Conferences & Symposia",
+    "Bringing together diverse voices to advance dialogue, learning, and collaboration.",
+  ],
+  [
+    "fa-magnifying-glass",
+    "Consultation & Advisory",
+    "Providing guidance to organizations and professionals on faith-informed, culturally responsive care.",
+  ],
+  [
+    "fa-book-open",
+    "Courses & Lectures",
+    "Educational programs that build knowledge, practical skills, and deeper understanding.",
+  ],
+  [
+    "fa-handshake",
+    "Strategic Partnerships",
+    "Collaborating with healthcare, academic, faith-based, and community organizations to expand reach and impact.",
+  ],
 ];
 
 const examples = [
@@ -52,7 +63,7 @@ const conferences = [
     img: asset("/images/our-impact/conf-1.jpg"),
     title: "Dignity and Healthcare at End-of-Life: Abrahamic Faiths in a Bioethics Conversation",
     text: "A multidisciplinary dialogue on dignity, care, and faith traditions at the end of life.",
-    href: "/dignity-healthcare-end-of-life/",
+    href: "/dignity-and-healthcare-at-end-of-life/",
   },
   {
     img: asset("/images/our-impact/conf-2.jpg"),
@@ -64,13 +75,13 @@ const conferences = [
     img: asset("/images/our-impact/conf-3.jpg"),
     title: "Multidisciplinary Symposium on Islam and Biomedicine",
     text: "Advancing research and conversation across medicine, ethics, and Islamic studies.",
-    href: "/multidisciplinary-symposium/",
+    href: "/multidisciplinary-symposium-on-islam-and-biomedicine/",
   },
   {
     img: asset("/images/our-impact/conf-4.jpg"),
     title: "Religious Dimensions of Healthcare Delivery: A Multidisciplinary Workshop",
     text: "Practical workshop exploring faith, values, and healthcare delivery.",
-    href: "/religious-dimensions-workshop/",
+    href: "/religious-dimensions-of-healthcare-delivery/",
   },
 ];
 
@@ -125,22 +136,22 @@ const teaching = [
 ];
 
 const partners = [
-  { src: asset("/images/our-impact/partners/imana.svg"), name: "IMANA" },
-  { src: asset("/images/our-impact/partners/georgetown.svg"), name: "Georgetown University" },
-  { src: asset("/images/our-impact/partners/jhu.svg"), name: "Johns Hopkins University" },
-  { src: asset("/images/our-impact/partners/michigan.svg"), name: "University of Michigan" },
-  { src: asset("/images/our-impact/partners/rush.svg"), name: "Rush University" },
-  { src: asset("/images/our-impact/partners/kaiser.svg"), name: "The Kaiser Permanente School of Medicine" },
-  { src: asset("/images/our-impact/partners/community.svg"), name: "Community & Faith-Based Organizations" },
+  { src: asset("/images/our-impact/partners/isla.png"), name: "Islamic Schools League of America (ISLA)" },
+  { src: asset("/images/our-impact/partners/amc.png"), name: "Association of Muslim Chaplains (AMC)" },
+  { src: asset("/images/our-impact/partners/imana.png"), name: "Islamic Medical Association of North America (IMANA)" },
+  { src: asset("/images/our-impact/partners/amhp.png"), name: "American Muslim Health Professionals (AMHP)" },
+  { src: asset("/images/our-impact/partners/fyi.png"), name: "The Family & Youth Institute (FYI)" },
+  { src: asset("/images/our-impact/partners/khalil-center.png"), name: "Khalil Center" },
+  { src: asset("/images/our-impact/partners/iman-network.png"), name: "Inner-City Muslim Action Network (IMAN)" },
+  { src: asset("/images/our-impact/partners/stanford-mmhl.png"), name: "Stanford Muslim Mental Health & Islamic Psychology Lab" },
 ];
 
 const journey = [
-  ["fa-headphones", "Listen", "Begin with community needs and lived experience."],
-  ["fa-magnifying-glass", "Research", "Generate evidence that informs care and policy."],
-  ["fa-book-open", "Educate", "Translate knowledge into practical learning."],
-  ["fa-people-group", "Convene", "Bring diverse voices into shared dialogue."],
-  ["fa-handshake", "Collaborate", "Partner across institutions and communities."],
-  ["fa-heart", "Improve Care", "Strengthen compassionate, equitable healthcare."],
+  ["fa-people-group", "Workshops & Seminars", "Interactive learning experiences for healthcare professionals, students, and communities."],
+  ["fa-chalkboard-user", "Conferences & Symposia", "Bringing together diverse voices to advance dialogue, learning, and collaboration."],
+  ["fa-magnifying-glass", "Consultation & Advisory", "Providing guidance to organizations and professionals on faith-informed, culturally responsive care."],
+  ["fa-book-open", "Courses & Lectures", "Educational programs that build knowledge, practical skills, and deeper understanding."],
+  ["fa-handshake", "Strategic Partnerships", "Collaborating with healthcare, academic, faith-based, and community organizations to expand reach and impact."],
 ];
 
 export default function ImpactPage() {
@@ -165,7 +176,7 @@ export default function ImpactPage() {
               From Research to <em>Real-World Change.</em>
             </h1>
             <p className="hero-seamless-lead">
-              II&amp;M advances understanding and improves healthcare through research, educational programs, conferences, workshops, lectures, and strategic partnerships at the intersection of Islam and medicine.
+              We advance understanding at the intersection of Islam and healthcare through expert consultation, educational programs, professional training, courses, and speaking engagements. Building on our foundation of research and scholarship, we equip healthcare professionals, organizations, and communities with the knowledge and insights needed to provide culturally responsive, compassionate care.
             </p>
             <div className="hero-seamless-actions">
               <a href="#snapshot" className="btn-seamless-maroon">
@@ -191,38 +202,16 @@ export default function ImpactPage() {
       <section className="imp-snapshot" id="snapshot">
         <div className="container">
           <div className="imp-section-intro">
-            <p className="imp-eyebrow">IMPACT SNAPSHOT</p>
+            <p className="imp-eyebrow-accent">IMPACT SNAPSHOT</p>
             <h2 className="imp-h2">Broad Impact Across a Shared Mission</h2>
             <p className="imp-lead">
-              Through research, education, workshops, lectures, conferences, and partnerships, II&amp;M creates meaningful change at the intersection of Islam and medicine.
+              Through consultation, education, workshops, lectures, courses, and partnerships, II&amp;M advances meaningful understanding at the intersection of Islam and healthcare.
             </p>
           </div>
           <div className="imp-snapshot-grid">
             {snapshot.map(([icon, title, text]) => (
               <article className="imp-snapshot-card" key={title}>
                 <span className="imp-icon-circle">
-                  <i className={`fa-solid ${icon}`} />
-                </span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="imp-creates">
-        <div className="container">
-          <div className="imp-section-intro">
-            <h2 className="imp-h2">How II&amp;M Creates Impact</h2>
-            <p className="imp-lead">
-              Six interconnected areas of work that drive understanding, build capacity, and improve care.
-            </p>
-          </div>
-          <div className="imp-creates-grid">
-            {creates.map(([icon, title, text]) => (
-              <article className="imp-creates-card" key={title}>
-                <span className="imp-icon-circle imp-icon-circle--sm">
                   <i className={`fa-solid ${icon}`} />
                 </span>
                 <h3>{title}</h3>
@@ -271,11 +260,16 @@ export default function ImpactPage() {
 
       <section className="imp-conferences">
         <div className="container">
-          <div className="imp-section-intro imp-section-intro--left">
-            <h2 className="imp-h2">Featured Conferences &amp; Public Programs</h2>
-            <p className="imp-lead">
-              II&amp;M convenes thought leaders, healthcare professionals, scholars, and community members to explore pressing issues at the intersection of Islam and medicine.
-            </p>
+          <div className="imp-section-intro imp-section-intro--left imp-section-intro--withlink">
+            <div>
+              <h2 className="imp-h2">Featured Conferences &amp; Public Programs</h2>
+              <p className="imp-lead">
+                II&amp;M convenes thought leaders, healthcare professionals, scholars, and community members to explore pressing issues at the intersection of Islam and medicine.
+              </p>
+            </div>
+            <Link href="/impact#conferences" className="imp-view-all-link">
+              View all <i className="fa-solid fa-arrow-right" />
+            </Link>
           </div>
           <div className="imp-card-grid-4">
             {conferences.map((item) => (
@@ -304,11 +298,16 @@ export default function ImpactPage() {
 
       <section className="imp-discourse">
         <div className="container">
-          <div className="imp-section-intro imp-section-intro--left">
-            <h2 className="imp-h2">Research, Publications &amp; Public Discourse</h2>
-            <p className="imp-lead">
-              II&amp;M&apos;s work informs scholarly research, shapes professional practice, and contributes to broader public conversations.
-            </p>
+          <div className="imp-section-intro imp-section-intro--left imp-section-intro--withlink">
+            <div>
+              <h2 className="imp-h2">Research, Publications &amp; Public Discourse</h2>
+              <p className="imp-lead">
+                II&amp;M&apos;s work informs scholarly research, shapes professional practice, and contributes to broader public conversations.
+              </p>
+            </div>
+            <Link href="/books" className="imp-view-all-link">
+              View all <i className="fa-solid fa-arrow-right" />
+            </Link>
           </div>
           <div className="imp-discourse-grid">
             {discourse.map((item) => (
@@ -334,11 +333,16 @@ export default function ImpactPage() {
 
       <section className="imp-teaching">
         <div className="container">
-          <div className="imp-section-intro imp-section-intro--left">
-            <h2 className="imp-h2">Courses, Lectures &amp; Teaching Impact</h2>
-            <p className="imp-lead">
-              Educational programs that build knowledge, inspire dialogue, and develop future leaders in Islamic bioethics and healthcare.
-            </p>
+          <div className="imp-section-intro imp-section-intro--left imp-section-intro--withlink">
+            <div>
+              <h2 className="imp-h2">Courses, Lectures &amp; Teaching Impact</h2>
+              <p className="imp-lead">
+                Educational programs that build knowledge, inspire dialogue, and develop future leaders in Islamic bioethics and healthcare.
+              </p>
+            </div>
+            <Link href="/courses" className="imp-view-all-link">
+              View all <i className="fa-solid fa-arrow-right" />
+            </Link>
           </div>
           <div className="imp-card-grid-4">
             {teaching.map((item) => (
@@ -418,12 +422,18 @@ export default function ImpactPage() {
                 We invite healthcare systems, universities, community organizations, and institutions to collaborate with II&amp;M to advance research, education, and compassionate care.
               </p>
               <div className="imp-cta-actions">
-                <Link href="/consultation" className="imp-btn imp-btn-fill">
+                <a href="https://links.360growthlab.com/widget/form/CstJIHikubJG75Zv16TR" target="_blank" rel="noopener noreferrer" className="imp-btn imp-btn-fill">
                   REQUEST A CONSULTATION <i className="fa-solid fa-arrow-right" />
-                </Link>
-                <Link href="/speaking" className="imp-btn imp-btn-light">
+                </a>
+                <a
+                  href="#donate"
+                  data-open-donation-modal="true"
+                  className="imp-btn imp-btn-light"
+                  role="button"
+                  style={{ cursor: "pointer" }}
+                >
                   INVITE A SPEAKER <i className="fa-solid fa-arrow-right" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

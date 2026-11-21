@@ -390,7 +390,7 @@ export default function MHeartPage() {
                     </p>
                     <ul className="mheart-bulletList">
                       <li>
-                        <Link href="/research" className="mheart-textLink">
+                        <Link href="/community-health-research" className="mheart-textLink">
                           The Engaging Muslim Americans for Research on
                           Community Health Project
                         </Link>
@@ -415,23 +415,18 @@ export default function MHeartPage() {
                           </li>
                         </ul>
                       </li>
-                      <li>
-                        <Link href="/research" className="mheart-textLink">
-                          Focus of the core inquiry
-                        </Link>
-                      </li>
                     </ul>
                   </div>
 
                   {/* Subsection: Webinars */}
                   <div className="mheart-relatedSection">
-                    <h4 className="mheart-subheading">Webinars</h4>
+                    <h4 className="mheart-subheading">Webinars &amp; Videos</h4>
                     <ul className="mheart-bulletList">
                       <li>
-                        <Link href="/podcast" className="mheart-textLink">
+                        <a href="https://www.youtube.com/@medicineandislam" target="_blank" rel="noopener noreferrer" className="mheart-textLink">
                           Imams, Community Organizations &amp; Muslim Health Equity
                           (by II&amp;M, 1hr session)
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -443,17 +438,17 @@ export default function MHeartPage() {
                     </h4>
                     <ul className="mheart-bulletList">
                       <li>
-                        <Link href="/resources" className="mheart-textLink">
+                        <a href="https://www.medicineandislam.org/mosque-health-education" target="_blank" rel="noopener noreferrer" className="mheart-textLink">
                           Toolkit for Patient-Centered Outcomes Research in Islamic
                           Spaces: A Beginner&apos;s Resource Guide for Health
                           Researchers
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link href="/resources" className="mheart-textLink">
+                        <a href="https://www.medicineandislam.org/mosque-health-education" target="_blank" rel="noopener noreferrer" className="mheart-textLink">
                           Islamic Dimensions of End-of-Life Healthcare: A Community
                           Education Workshop Replication Guide
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </div>

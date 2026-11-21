@@ -46,19 +46,20 @@ const partners = [
 ];
 
 const pathways = [
-  [asset("/images/courses/islamic-bioethics.jpg"), "fa-book-open", "Islamic Bioethics", "Foundational and advanced study of ethical questions in contemporary medicine."],
-  [asset("/images/hero-doctor-team.jpg"), "fa-stethoscope", "Muslim Patient Care", "Practical guidance for culturally responsive, faith-sensitive clinical care."],
-  [asset("/images/bio-faculty-talk.jpg"), "fa-user-doctor", "Professional Development", "Courses that strengthen ethical judgment and leadership in healthcare."],
-  [asset("/images/distinct-building.jpg"), "fa-building-columns", "Institutional Programs", "Curriculum and training designed for schools, hospitals, and organizations."],
+  [asset("/images/courses/islamic-bioethics.jpg"), "fa-book-open", "Islamic Bioethics", "Foundational and advanced study of ethical questions in contemporary medicine.", "/interfaces-and-discourses"],
+  [asset("/images/hero-doctor-team.jpg"), "fa-stethoscope", "Muslim Patient Care", "Practical guidance for culturally responsive, faith-sensitive clinical care.", "/becoming-a-muslim-doctor"],
+  [asset("/images/bio-faculty-talk.jpg"), "fa-user-doctor", "Professional Development", "Courses that strengthen ethical judgment and leadership in healthcare.", "/medical-student-internship"],
+  [asset("/images/distinct-building.jpg"), "fa-building-columns", "Institutional Programs", "Curriculum and training designed for schools, hospitals, and organizations.", "/consultation"],
 ];
 
 const upcoming = [
   {
     img: asset("/images/courses/islamic-bioethics-seminar.jpg"),
     badge: "32 CME CREDITS LISTED BY IMANA",
+    statusLabel: "ONGOING",
     title: "Islamic Bioethics — A Primer for Muslim Physicians",
     meta: [
-      ["fa-handshake", "Offered with IMANA"],
+      ["fa-handshake", "Offered in Collaboration with IMANA"],
       ["fa-laptop", "Online (Self-Paced)"],
       ["fa-user", "Dr. Aasim I. Padela"],
       ["fa-calendar", "September – December 2026"],
@@ -70,9 +71,10 @@ const upcoming = [
   {
     img: asset("/images/courses/islamic-bioethics-library.jpg"),
     badge: null,
+    statusLabel: "LIVE",
     title: "An Intensive Introduction to the Field of Islamic Bioethics",
     meta: [
-      ["fa-handshake", "Offered with Muslim EdEx"],
+      ["fa-handshake", "Offered in collaboration with Muslim Edex"],
       ["fa-laptop", "Online (Self-Paced)"],
       ["fa-user", "Dr. Aasim I. Padela"],
       ["fa-calendar", "September – December 2026"],
@@ -83,7 +85,7 @@ const upcoming = [
   },
   {
     img: asset("/images/course-eol.jpg"),
-    badge: "PREVIOUSLY OFFERED",
+    badge: "PAST COURSE",
     badgeSoft: true,
     title: "End-of-Life Healthcare for Muslims: Islamic Guidance for Care, Planning, and Decision-Making",
     meta: [
@@ -92,7 +94,7 @@ const upcoming = [
     ],
     note: "This course was previously offered. Check back for future offerings.",
     price: null,
-    href: "/education",
+    href: "/dignity-healthcare-end-of-life",
     cta: "VIEW DETAILS",
   },
 ];
@@ -103,11 +105,11 @@ const additional = [
     title: "Becoming a Muslim Doctor",
     subtitle: "Foundations of Identity, Ethics, and Practice",
     meta: [
-      ["fa-handshake", "Offered with Muslim EdEx"],
+      ["fa-handshake", "Offered in collaboration with Muslim Edex"],
       ["fa-users", "Live Cohort"],
       ["fa-user", "Dr. Aasim I. Padela & Sami Ahmed"],
     ],
-    href: "/education",
+    href: "/becoming-a-muslim-doctor",
     cta: "LEARN MORE",
   },
   {
@@ -119,19 +121,19 @@ const additional = [
       ["fa-chalkboard-user", "Interdisciplinary faculty"],
       ["fa-building-columns", "For universities, colleges, and schools"],
     ],
-    href: "/education",
-    cta: "REQUEST CURRICULUM INTEGRATION",
+    href: "/exploring-bioscience",
+    cta: "LEARN MORE",
   },
   {
     img: asset("/images/about-cta-arch.jpg"),
     title: "Islam, Medical Ethics, and Spiritual Care",
     subtitle: null,
     meta: [
-      ["fa-handshake", "Offered with Bayan Islamic Graduate School"],
+      ["fa-handshake", "Offered in collaboration with Bayan Islamic Graduate School"],
       ["fa-laptop", "Online / Hybrid"],
       ["fa-user", "Dr. Aasim I. Padela"],
     ],
-    href: "/education",
+    href: "/religious-dimensions-workshop",
     cta: "LEARN MORE",
   },
 ];
@@ -234,7 +236,7 @@ export default function CoursesPage() {
             Choose a learning pathway that fits your goals, whether you are a clinician, student, educator, or institution.
           </p>
           <div className="crs-path-grid">
-            {pathways.map(([img, icon, title, text]) => (
+            {pathways.map(([img, icon, title, text, href]) => (
               <article className="crs-path" key={title}>
                 <div className="crs-path-media">
                   <img src={img} alt={title} />
@@ -243,7 +245,7 @@ export default function CoursesPage() {
                 <div className="crs-path-body">
                   <h3>{title}</h3>
                   <p>{text}</p>
-                  <Link href="/education" className="crs-path-arrow" aria-label={`Explore ${title}`}>
+                  <Link href={href || "/education"} className="crs-path-arrow" aria-label={`Explore ${title}`}>
                     <i className="fa-solid fa-arrow-right" />
                   </Link>
                 </div>
@@ -264,6 +266,9 @@ export default function CoursesPage() {
               <article className="crs-course" key={course.title}>
                 <div className="crs-course-media">
                   <img src={course.img} alt={course.title} />
+                  {course.statusLabel ? (
+                    <span className={`crs-status-label crs-status-${course.statusLabel.toLowerCase()}`}>{course.statusLabel}</span>
+                  ) : null}
                   {course.badge ? (
                     <span className={`crs-badge${course.badgeSoft ? " crs-badge-soft" : ""}`}>{course.badge}</span>
                   ) : null}
@@ -341,7 +346,7 @@ export default function CoursesPage() {
             ))}
           </div>
           <Link href="/consultation" className="crs-btn crs-btn-fill">
-            REQUEST A COURSE OR CONSULTATION <i className="fa-solid fa-arrow-right" />
+            Reach out to discuss your Educational Needs <i className="fa-solid fa-arrow-right" />
           </Link>
         </div>
       </section>

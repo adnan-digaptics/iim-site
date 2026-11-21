@@ -62,9 +62,9 @@ const NAV = [
     href: "/workshops",
     items: [
       ["Workshops Overview", "/workshops"],
-      ["Religious Dimensions Workshop", "/religious-dimensions-workshop"],
-      ["Multidisciplinary Symposium", "/multidisciplinary-symposium"],
-      ["Dignity & Healthcare at End-of-Life", "/dignity-healthcare-end-of-life"],
+      ["Religious Dimensions of Healthcare Delivery", "/religious-dimensions-of-healthcare-delivery"],
+      ["Multidisciplinary Symposium on Islam & Biomedicine", "/multidisciplinary-symposium-on-islam-and-biomedicine"],
+      ["Dignity and Healthcare at End-of-Life", "/dignity-and-healthcare-at-end-of-life"],
       ["Interfaces & Discourses", "/interfaces-and-discourses"],
     ],
   },

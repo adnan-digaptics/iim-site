@@ -209,10 +209,7 @@ export default function ResearchPage() {
                 From Community Voices to Measurable Change.
               </h2>
               <p>
-                II&amp;M conducts research that highlights the lived experiences of Muslim patients and healthcare professionals, identifies gaps in knowledge and practice, and informs practical solutions.
-              </p>
-              <p>
-                Our work bridges scholarship and real-world application — ensuring that evidence leads to education, resources, and more equitable care.
+                Our past research initiatives have helped advance understanding, inform clinical practice, and shape conversations around healthcare policy and education, particularly where Islamic values and healthcare intersect.
               </p>
               <a href="#process" className="rs-btn rs-btn-outline">
                 LEARN MORE ABOUT OUR APPROACH <i className="fa-solid fa-arrow-right" />

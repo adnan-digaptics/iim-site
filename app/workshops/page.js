@@ -7,22 +7,54 @@ export const metadata = {
     "Evidence-informed workshops, seminars, and educational sessions at the intersection of Islam, healthcare, and bioethics.",
 };
 
-const WHY = [
-  ["fa-book-open", "Research-grounded", "Built on rigorous research and real-world experience in Islamic ethics, healthcare, and bioethics."],
-  ["fa-users", "Audience-tailored", "Customized for the needs of your institution, profession, and community."],
-  ["fa-comments", "Interactive formats", "Engaging, participatory sessions that encourage dialogue and practical application."],
-  ["fa-chart-column", "Practical impact", "Equips participants with knowledge and tools to inform practice, policy, and community engagement."],
+const TOPICS = [
+  ["Islamic Bioethics", "Explore foundational and contemporary bioethical questions from an Islamic perspective.", "/images/our-mission/vision-mosque.jpg", "/interfaces-and-discourses"],
+  ["End-of-Life Care Ethics", "Discuss ethical, spiritual, and practical considerations in end-of-life and palliative care.", "/images/research/project-palliative.jpg", "/dignity-healthcare-end-of-life"],
+  ["Organ Donation Ethics", "Examine Islamic perspectives on organ donation, transplantation, and related ethical issues.", "/images/workshops/topic-organ.jpg", "/living-organ-donation"],
+  ["Mammography Screening", "Address religious, cultural, and practical considerations for breast cancer screening among Muslim women.", "/images/research/project-mammography.jpg", "/mammography"],
+  ["Muslim Health Research", "Understand key findings, methods, and community perspectives in Muslim health research.", "/images/workshops/topic-research.jpg", "/research"],
+  ["Muslim Patients’ Religious & Spiritual Needs", "Learn how to support the religious and spiritual needs of Muslim patients in clinical settings.", "/images/workshops/topic-spiritual.jpg", "/mahsn-pro"],
+  ["Mosque-Based Health Education", "Explore strategies for community health education and engagement in mosque settings.", "/images/research/project-mheart.jpg", "/mosque-health-education"],
+  ["Muslim Physicians and the Healthcare Workforce", "Discuss challenges, opportunities, and support for Muslim physicians and healthcare professionals.", "/images/research/education.jpg", "/advancing-equity"],
 ];
 
-const TOPICS = [
-  ["Islamic Bioethics", "Explore foundational and contemporary bioethical questions from an Islamic perspective.", "/images/our-mission/vision-mosque.jpg", "/research"],
-  ["End-of-Life Care Ethics", "Discuss ethical, spiritual, and practical considerations in end-of-life and palliative care.", "/images/research/project-palliative.jpg", "/research"],
-  ["Organ Donation Ethics", "Examine Islamic perspectives on organ donation, transplantation, and related ethical issues.", "/images/workshops/topic-organ.jpg", "/research"],
-  ["Mammography Screening", "Address religious, cultural, and practical considerations for breast cancer screening among Muslim women.", "/images/research/project-mammography.jpg", "/research"],
-  ["Muslim Health Research", "Understand key findings, methods, and community perspectives in Muslim health research.", "/images/workshops/topic-research.jpg", "/research"],
-  ["Muslim Patients’ Religious & Spiritual Needs", "Learn how to support the religious and spiritual needs of Muslim patients in clinical settings.", "/images/workshops/topic-spiritual.jpg", "/research"],
-  ["Mosque-Based Health Education", "Explore strategies for community health education and engagement in mosque settings.", "/images/research/project-mheart.jpg", "/research"],
-  ["Muslim Physicians and the Healthcare Workforce", "Discuss challenges, opportunities, and support for Muslim physicians and healthcare professionals.", "/images/research/education.jpg", "/research"],
+const CONFERENCES = [
+  {
+    img: asset("/images/our-impact/conf-1.jpg"),
+    title: "Mapping Out an Islamic Bioethics",
+    text: "A foundational workshop charting core themes and frameworks in Islamic bioethics.",
+    href: "https://medicineandislam.org/in-person-seminars-workshops/mapping-out-an-islamic-bioethics",
+  },
+  {
+    img: asset("/images/our-impact/conf-2.jpg"),
+    title: "Annual Islamic Bioethics Workshop",
+    text: "Scholars and clinicians examining the intersections of theology, law, and biomedicine.",
+    href: "https://medicineandislam.org/in-person-seminars-workshops/2nd-annual-islamic-bioethics-workshop",
+  },
+  {
+    img: asset("/images/our-impact/conf-3.jpg"),
+    title: "Islamic Bioethics Spring Conference",
+    text: "Advancing research and conversation across medicine, ethics, and Islamic studies.",
+    href: "https://medicineandislam.org/conference-april/",
+  },
+  {
+    img: asset("/images/our-impact/conf-4.jpg"),
+    title: "Islamic Bioethics: AMMSA Conference",
+    text: "Dialogue on Islamic bioethics presented at the AMMSA annual gathering.",
+    href: "https://medicineandislam.org/islamic-bioethics-ammsa-conference/",
+  },
+  {
+    img: asset("/images/our-impact/teach-3.jpg"),
+    title: "Producing Parenthood in Modernity",
+    text: "Exploring reproductive ethics, modern medicine, and Islamic perspectives on parenthood.",
+    href: "https://medicineandislam.org/producing-parenthood-in-modernity/",
+  },
+  {
+    img: asset("/images/our-impact/teach-4.jpg"),
+    title: "CMR 2026",
+    text: "Annual continuing medical education workshop on religion and healthcare.",
+    href: "https://medicineandislam.org/cmr-2026",
+  },
 ];
 
 const PROJECTS = [
@@ -34,26 +66,43 @@ const PROJECTS = [
   ["American Muslim Cultural Challenges with U.S. Healthcare", "Cultural and religious challenges faced by American Muslims in healthcare settings.", "/images/research/project-equity.jpg", "/advancing-equity"],
 ];
 
-const LENGTHS = [
-  ["fa-clock", "1–2 Hour Lecture", "Focused session on key topics"],
-  ["fa-sun", "Half-Day Seminar", "In-depth exploration with discussion"],
-  ["fa-calendar-day", "1-Day Intensive", "Comprehensive learning experience"],
-];
-
-const STYLES = [
-  ["fa-chalkboard-user", "Didactic Session", "Expert-led presentations with Q&A"],
-  ["fa-comments", "Round Table Discussion", "Facilitated dialogue and shared perspectives"],
-  ["fa-briefcase-medical", "Case-Based Discussion", "Real-world scenarios and practical application"],
-  ["fa-users", "Scholarly Panel", "Diverse experts and multidisciplinary insights"],
-];
-
 const AUDIENCES = [
-  ["fa-hospital", "Hospitals & Health Systems", "Healthcare institutions and clinical teams"],
-  ["fa-graduation-cap", "Medical Schools & Universities", "Academic institutions, faculty, and students"],
-  ["fa-user-doctor", "Healthcare Professionals", "Physicians, nurses, allied health, and more"],
-  ["fa-people-group", "Community Organizations", "Local organizations and community groups"],
-  ["fa-mosque", "Mosques & Faith Leaders", "Imams, religious leaders, and mosque communities"],
-  ["fa-user-graduate", "Students & Trainees", "Medical, graduate, and pre-health students"],
+  {
+    img: "/images/audience-hospital.jpg",
+    icon: "fa-hospital",
+    title: "Healthcare Institutions",
+    text: "Hospitals, health systems, and academic medical centers",
+  },
+  {
+    img: "/images/audience-clinician.jpg",
+    icon: "fa-stethoscope",
+    title: "Clinicians",
+    text: "Physicians, nurses, and allied health professionals",
+  },
+  {
+    img: "/images/audience-students.jpg",
+    icon: "fa-graduation-cap",
+    title: "Medical Students and Fellows",
+    text: "The next generation of healthcare leaders",
+  },
+  {
+    img: "/images/audience-family.jpg",
+    icon: "fa-people-roof",
+    title: "Muslim Patients and Families",
+    text: "Individuals and communities seeking respectful, informed care",
+  },
+  {
+    img: "/images/audience-researcher.jpg",
+    icon: "fa-clipboard-user",
+    title: "Researchers",
+    text: "Scholars and practitioners advancing knowledge",
+  },
+  {
+    img: "/images/audience-community.jpg",
+    icon: "fa-handshake-angle",
+    title: "Community Organizations",
+    text: "Faith-based and community groups working for healthier communities",
+  },
 ];
 
 const PAPERS = [
@@ -118,48 +167,32 @@ export default function WorkshopsPage() {
         </div>
       </header>
 
-      <section className="ws-why">
+      <section className="imp-conferences ws-featured-conferences">
         <div className="container">
-          <div className="ws-why-grid">
-            <div className="ws-why-intro">
-              <p className="ws-eyebrow">WHY II&amp;M WORKSHOPS</p>
-              <h2>
-                Distinctive Learning Grounded in Research.
-              </h2>
-            </div>
-            <div className="ws-why-cols">
-              {WHY.map(([icon, title, text]) => (
-                <article key={title}>
-                  <i className={`fa-solid ${icon}`} aria-hidden="true" />
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </article>
-              ))}
-            </div>
+          <div className="imp-section-intro imp-section-intro--left">
+            <p className="ws-eyebrow">SIGNATURE SYMPOSIA &amp; CONFERENCES</p>
+            <h2 className="imp-h2">Featured Conferences &amp; Public Programs</h2>
+            <p className="imp-lead">
+              II&amp;M convenes thought leaders, healthcare professionals, scholars, and community members to explore pressing issues at the intersection of Islam and medicine.
+            </p>
           </div>
-        </div>
-      </section>
-
-      <section className="ws-topics" id="topics">
-        <div className="container">
-          <div className="ws-head">
-            <div>
-              <p className="ws-eyebrow">OUR WORKSHOP TOPICS</p>
-              <h2>Workshop Topics Informed by Research and Practice.</h2>
-            </div>
-            <Link href="#topics" className="ws-text-link">
-              VIEW ALL WORKSHOP TOPICS <i className="fa-solid fa-arrow-right" />
-            </Link>
-          </div>
-          <div className="ws-topic-grid">
-            {TOPICS.map(([title, text, image, href]) => (
-              <article className="ws-topic" key={title}>
-                <img src={asset(image)} alt="" />
-                <div>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                  <Link href={href}>
-                    RELATED RESEARCH <i className="fa-solid fa-arrow-right" />
+          <div className="imp-card-grid-4">
+            {CONFERENCES.map((item) => (
+              <article className="imp-media-card" key={item.title}>
+                <div className="imp-media-card-img">
+                  <Link href={item.href} aria-label={item.title}>
+                    <img src={item.img} alt={item.title} />
+                  </Link>
+                </div>
+                <div className="imp-media-card-body">
+                  <h3>
+                    <Link href={item.href} className="imp-card-title-link">
+                      {item.title}
+                    </Link>
+                  </h3>
+                  <p>{item.text}</p>
+                  <Link href={item.href} className="imp-card-arrow" aria-label={`Learn more about ${item.title}`}>
+                    <i className="fa-solid fa-arrow-right" />
                   </Link>
                 </div>
               </article>
@@ -199,90 +232,28 @@ export default function WorkshopsPage() {
         </div>
       </section>
 
-      <section className="ws-formats">
-        <div className="container">
-          <p className="ws-eyebrow">WORKSHOP FORMATS &amp; DELIVERY</p>
-          <h2>Flexible Formats for Different Audiences.</h2>
-          <div className="ws-format-board">
-            <div className="ws-format-group ws-format-group-lengths">
-              <p>Program Lengths</p>
-              <div>
-                {LENGTHS.map(([icon, title, text]) => (
-                  <article key={title}>
-                    <i className={`fa-solid ${icon}`} aria-hidden="true" />
-                    <h3>{title}</h3>
-                    <span>{text}</span>
-                  </article>
-                ))}
-              </div>
-            </div>
-            <div className="ws-format-group ws-format-group-styles">
-              <p>Teaching Styles</p>
-              <div>
-                {STYLES.map(([icon, title, text]) => (
-                  <article key={title}>
-                    <i className={`fa-solid ${icon}`} aria-hidden="true" />
-                    <h3>{title}</h3>
-                    <span>{text}</span>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="ws-who">
         <div className="container">
           <p className="ws-eyebrow">WHO WE WORK WITH</p>
           <h2>Trusted by a Wide Range of Institutions and Communities.</h2>
-          <div className="ws-who-row">
-            {AUDIENCES.map(([icon, title, text]) => (
-              <article key={title}>
-                <i className={`fa-solid ${icon}`} aria-hidden="true" />
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
+          <div className="row g-3 mt-3 text-start">
+            {AUDIENCES.map((item) => (
+              <div className="col-6 col-md-4 col-lg-2" key={item.title}>
+                <div className="audience-card">
+                  <img
+                    src={asset(item.img)}
+                    alt={item.title}
+                    className="audience-card-img"
+                    loading="lazy"
+                  />
+                  <div className="audience-card-body">
+                    <i className={`fa-solid ${item.icon} audience-icon`} />
+                    <h3 className="audience-title">{item.title}</h3>
+                    <p className="audience-text">{item.text}</p>
+                  </div>
+                </div>
+              </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="ws-scholar">
-        <div className="container">
-          <div className="ws-scholar-grid">
-            <div className="ws-scholar-intro">
-              <p className="ws-eyebrow">GROUNDED IN SCHOLARSHIP</p>
-              <h2>
-                Workshops Backed by Rigorous Research.
-              </h2>
-              <p>
-                Our educational programs draw on peer-reviewed publications and scholarly work at the intersection of Islam, medicine, and bioethics.
-              </p>
-              <Link href="/resources" className="btn-seamless-maroon">
-                BROWSE PUBLICATIONS <i className="fa-solid fa-arrow-right" />
-              </Link>
-            </div>
-            <div className="ws-paper-row">
-              {PAPERS.map(([title, image, href]) => (
-                <article className="ws-paper" key={title}>
-                  <img src={asset(image)} alt="" />
-                  <h3>{title}</h3>
-                  <Link href={href}>
-                    READ PUBLICATION <i className="fa-solid fa-arrow-right" />
-                  </Link>
-                </article>
-              ))}
-              <article className="ws-paper-cta">
-                <h3>
-                  Connect Research to Your Event.
-                </h3>
-                <p>We can tailor workshop content using our latest research and publications.</p>
-                <Link href="/consultation" className="btn-seamless-outline">
-                  DISCUSS A PROGRAM <i className="fa-solid fa-arrow-right" />
-                </Link>
-              </article>
-            </div>
           </div>
         </div>
       </section>
@@ -296,8 +267,11 @@ export default function WorkshopsPage() {
             {STEPS.map(([num, icon, title, text], index) => (
               <div className="ws-step-wrap" key={num}>
                 <article>
-                  <span>{num}</span>
-                  <i className={`fa-solid ${icon}`} aria-hidden="true" />
+                  <div className="ws-step-badge">
+                    <span className="ws-step-num">{num}</span>
+                    <span className="ws-step-divider-line" />
+                    <i className={`fa-solid ${icon}`} aria-hidden="true" />
+                  </div>
                   <h3>{title}</h3>
                   <p>{text}</p>
                 </article>
