@@ -234,9 +234,10 @@ export function EnrollmentButtons() {
   return (
     <>
       <div className="bmd-heroCtaRow">
-        <button
-          type="button"
-          onClick={scrollToCurriculum}
+        <a
+          href="https://muslimedex.org/courses/becoming-a-muslim-doctor-foundations-of-identity-ethics-and-practice"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bmd-btnPrimaryBurgundy"
         >
           EXPLORE ENROLLMENT
@@ -255,7 +256,7 @@ export function EnrollmentButtons() {
             <line x1="5" y1="12" x2="19" y2="12" />
             <polyline points="12 5 19 12 12 19" />
           </svg>
-        </button>
+        </a>
 
         <button
           type="button"

@@ -1,6 +1,7 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
-import Script from "next/script";
+import ConsultationBtn from "../../components/ConsultationBtn";
+import ConsultationAreasSlider from "./ConsultationAreasSlider";
 
 export const metadata = {
   title: "Consultation & Advisory Services | Initiative on Islam & Medicine",
@@ -26,9 +27,9 @@ const partners = [
 const areas = [
   [asset("/images/story-consultation.jpg"), "Islamic Bioethics", "Guidance on ethical decision-making in clinical care."],
   [asset("/images/bio-faculty-talk.jpg"), "Cultural & Religious Competency", "Strategies for more inclusive, culturally responsive care."],
-  [asset("/images/expertise-consultation.jpg"), "Institutional Policy & Guidance", "Review and development of policies, protocols, and systems of care."],
-  [asset("/images/expertise-consultation.jpg"), "Organ Donation & Religion", "Faith-sensitive guidance on organ donation decisions for Muslim individuals and communities."],
-  [asset("/images/story-consultation.jpg"), "End of Life Care", "Islamically informed support for end-of-life care planning, hospice, and palliative decisions."],
+  [asset("/images/courses-institutional.jpg"), "Institutional Policy & Guidance", "Review and development of policies, protocols, and systems of care."],
+  [asset("/images/workshops/topic-organ.jpg"), "Organ Donation & Religion", "Faith-sensitive guidance on organ donation decisions for Muslim individuals and communities."],
+  [asset("/images/research/project-palliative.jpg"), "End of Life Care", "Islamically informed support for end-of-life care planning, hospice, and palliative decisions."],
   [asset("/images/learning-lecture.jpg"), "Program Development & Training", "Custom educational programs for healthcare professionals."],
   [asset("/images/audience-community.jpg"), "Community Engagement", "Building bridges between healthcare institutions and Muslim communities."],
 ];
@@ -67,7 +68,7 @@ export default function ConsultationPage() {
             We partner with healthcare institutions, academic centers, policymakers, and community organizations to bring Islamic ethical perspectives, cultural understanding, and evidence-informed guidance into practice.
           </p>
           <div className="consult-actions">
-            <Link href="#request" className="consult-btn consult-btn-fill">REQUEST A CONSULTATION <i className="fa-solid fa-arrow-right" /></Link>
+            <ConsultationBtn className="consult-btn consult-btn-fill">REQUEST A CONSULTATION <i className="fa-solid fa-arrow-right" /></ConsultationBtn>
             <Link href="#areas" className="consult-btn consult-btn-outline">EXPLORE OUR SERVICES <i className="fa-solid fa-arrow-right" /></Link>
           </div>
         </div>
@@ -129,17 +130,7 @@ export default function ConsultationPage() {
         <div className="container">
           <p className="consult-eyebrow consult-eyebrow-gold">KEY AREAS OF CONSULTATION</p>
           <h2 className="consult-h2 consult-h2-light">Expertise for Your Most Important Questions</h2>
-          <div className="consult-areas-grid">
-            {areas.map(([src, title, text]) => (
-              <article className="consult-area" key={title}>
-                <img src={src} alt={title} />
-                <div>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </div>
-              </article>
-            ))}
-          </div>
+          <ConsultationAreasSlider areas={areas} />
         </div>
       </section>
 
@@ -173,9 +164,9 @@ export default function ConsultationPage() {
             <p className="consult-about-body">
               Over the past 15 years, II&amp;M has developed innovative community health research methodologies, crafted research-tested implementation toolkits, informed nuanced Islamic bioethical guidelines, designed effective workshops and courses, and authored data-driven policy reports. This knowledge and expertise is available to community leaders, researchers, policy-makers, patients, and others through our dedicated consultation services. You will meet with vetted experts and scholars and obtain high-quality insights and tools to assist you in the domains. Please click the form below to start an initial inquiry.
             </p>
-            <a href="https://links.360growthlab.com/widget/form/CstJIHikubJG75Zv16TR" target="_blank" rel="noopener noreferrer" className="consult-btn consult-btn-fill">
-              CLICK TO CONSULT II&amp;M <i className="fa-solid fa-arrow-right" />
-            </a>
+            <ConsultationBtn className="consult-btn consult-btn-fill">
+              REQUEST A CONSULTATION <i className="fa-solid fa-arrow-right" />
+            </ConsultationBtn>
           </div>
         </div>
       </section>
@@ -195,7 +186,7 @@ export default function ConsultationPage() {
             We welcome the opportunity to learn more about your needs and explore how II&amp;M can support your institution or organization.
           </p>
           <div className="consult-actions">
-            <a href="https://links.360growthlab.com/widget/form/CstJIHikubJG75Zv16TR" target="_blank" rel="noopener noreferrer" className="consult-btn consult-btn-fill">CLICK TO CONSULT II&amp;M <i className="fa-solid fa-arrow-right" /></a>
+            <ConsultationBtn className="consult-btn consult-btn-fill">REQUEST A CONSULTATION <i className="fa-solid fa-arrow-right" /></ConsultationBtn>
             <a href="mailto:info@initiativeonislamandmedicine.org" className="consult-btn consult-btn-outline">OR EMAIL US</a>
           </div>
         </div>
@@ -215,35 +206,6 @@ export default function ConsultationPage() {
         </div>
       </section>
 
-      <iframe
-        src="https://links.360growthlab.com/widget/form/CstJIHikubJG75Zv16TR"
-        style={{
-          display: "none",
-          width: "100%",
-          height: "100%",
-          border: "none",
-          borderRadius: "8px",
-        }}
-        id="sticky-sidebar-left-CstJIHikubJG75Zv16TR"
-        data-layout="{'id':'STICKY_SIDEBAR','minimizedTitle':'Consulting Engine','isLeftAligned':true,'isRightAligned':false,'allowMinimize':true,'buttonColor':'#101828','buttonType':'text','buttonSize':'medium','buttonIcon':'chat','cornerRadius':{'tl':8,'tr':8,'bl':8,'br':8},'fontSize':16}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="Consultation Request"
-        data-height="1078"
-        data-layout-iframe-id="sticky-sidebar-left-CstJIHikubJG75Zv16TR"
-        data-form-id="CstJIHikubJG75Zv16TR"
-        data-cookie-consent="true"
-        data-cookie-consent-provider="auto"
-        title="Consultation Request"
-      />
-      <Script
-        src="https://links.360growthlab.com/js/form_embed.js"
-        strategy="afterInteractive"
-      />
     </div>
   );
 }

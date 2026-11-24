@@ -1,5 +1,6 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
+import SpeakingBtn from "../../components/SpeakingBtn";
 import TeamAmbassadors from "./TeamAmbassadors";
 import TeamResearch from "./TeamResearch";
 
@@ -262,9 +263,9 @@ export default function TeamPage() {
               <Link href="/consultation" className="tm-btn-fill">
                 REQUEST CONSULTATION <i className="fa-solid fa-arrow-right" />
               </Link>
-              <Link href="/consultation" className="tm-btn-light">
+              <SpeakingBtn className="tm-btn-light">
                 INVITE A SPEAKER <i className="fa-solid fa-arrow-right" />
-              </Link>
+              </SpeakingBtn>
               <Link href="/consultation" className="tm-btn-light">
                 PARTNER WITH US <i className="fa-solid fa-arrow-right" />
               </Link>

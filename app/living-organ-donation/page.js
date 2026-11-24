@@ -257,20 +257,9 @@ const DISCOURSE_COL2 = [
   "9. Discussion — Shaykh Amin Kholwadia and Dr. Rafaqat Rashid",
 ];
 
-const GALLERY_CARDS = [
-  {
-    location: "ADAMS–Sulley, DC",
-    speaker: "Dr. Aasim Padela",
-  },
-  {
-    location: "ADAMS–Sterling, DC",
-    speaker: "Dr. Milda Saunders",
-  },
-  {
-    location: "ADAMS–Sterling, DC",
-    speaker: "Dr. Ermin Sinanovic",
-  },
-];
+const GALLERY_IMGS = Array.from({ length: 20 }, (_, i) =>
+  asset(`/images/organ-donation-gallery/gallery-${i + 1}.jpg`)
+);
 
 const SUPPORTERS = [
   ["Mahsin Habib", "Muhammad Nabeel Hasan", "Kamran Husain"],
@@ -416,10 +405,13 @@ export default function LivingOrganDonationPage() {
               <div className="row g-4 align-items-start">
                 <div className="col-md-7">
                   <p className="lod-leadText">
-                    Many studies note that Muslims share health beliefs, values, and experiences that impact healthcare behaviors across ethnic and racial lines. For example, some Muslims turn to ethico-legal guidance before having a medical procedure to understand whether a procedure is Islamically permissible.
+                    Many studies note that Muslims share health beliefs, values, and experiences that impact healthcare behaviors across ethnic and racial lines. In addition to sharing a theo-centric framework of health and disease, many Muslims look to Islamic ethico-legal guidelines to decide which medical treatments and procedures are permissible.
                   </p>
                   <p className="lod-leadText">
-                    For the topic of organ donation, different Muslim scholars hold different opinions, contributing to knowledge gaps in Muslim communities. This project aimed to understand what knowledge and belief gaps exist and develop religiously-tailored, peer-led group education workshops to be delivered in mosque settings that discuss both the biomedical and religious aspects of organ donation and end-of-life care.
+                    There is a difference of opinion within Islamic law and among Muslim scholars on the permissibility of organ donation contributing to knowledge gaps within Muslim communities. Our project began by seeking to define these knowledge gaps aiding in the design religiously-tailored, peer-led group education workshops conducted in mosques.
+                  </p>
+                  <p className="lod-leadText">
+                    Organ donation and end-of-life care attitudes are impacted by biomedical and religious knowledge gaps. This project aimed to deliver and test the effectiveness of religiously-tailored, mosque-based educational workshops that discuss the biomedical and religious aspects of end-of-life care and living organ donation.
                   </p>
                 </div>
 
@@ -475,7 +467,7 @@ export default function LivingOrganDonationPage() {
               </div>
 
               <p className="lod-leadText">
-                The disparity between supply and demand for life-saving and/or life-sustaining organs is well-known and contributes to over 140 people on the waiting list per week dying in the United States. Living organ donation entails the donation of a non-vital paired organ (most commonly a kidney) or a portion of the liver or lung to someone in need. Living organ donation can be from a living family member, a known non-relative, or a stranger.
+                The disparity between supply and demand for life-saving and/or life-sustaining organs is well-known and contributes to over 140 people on the waiting list per week dying in the United States (U.S. Department of Health and Human Services, 2013). The situation for ethnic and racial minorities is even more dire as, not only do biological factors make finding appropriate matches more difficult, organ donors rarely come from such backgrounds (Health Resources and Services Administration).
               </p>
 
               <div className="lod-quoteBox">
@@ -752,52 +744,6 @@ export default function LivingOrganDonationPage() {
             </article>
 
             {/* SECTION 12 — ISLAMIC BIOETHICAL DISCOURSE */}
-            <article id="media" className="lod-sectionBlock">
-              <div className="lod-sectionHead">
-                <h2 className="lod-sectionTitle">
-                  Introduction to Islamic Bioethical Discourse
-                </h2>
-                <div className="lod-accentBar" />
-              </div>
-
-              <p className="lod-leadText">
-                The original project page includes the following speakers and
-                discussion topics. Access embedded media through the original
-                project page.
-              </p>
-
-              <div className="row g-2 mb-3">
-                <div className="col-md-6">
-                  <ul className="lod-discourseList">
-                    {DISCOURSE_COL1.map((item, i) => (
-                      <li key={i} className="lod-discourseItem">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="col-md-6">
-                  <ul className="lod-discourseList">
-                    {DISCOURSE_COL2.map((item, i) => (
-                      <li key={i} className="lod-discourseItem">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <a
-                href="https://www.islamandmedicine.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="lod-btnOutline"
-              >
-                EXPLORE ORIGINAL MEDIA{" "}
-                <i className="fa-solid fa-arrow-up-right-from-square" />
-              </a>
-            </article>
-
             {/* SECTION 13 — COMMUNITY GALLERY */}
             <article className="lod-sectionBlock">
               <div className="lod-sectionHead">
@@ -805,21 +751,13 @@ export default function LivingOrganDonationPage() {
                 <div className="lod-accentBar" />
               </div>
 
-              <div className="row g-3">
-                {GALLERY_CARDS.map((card, i) => (
-                  <div key={i} className="col-md-4">
-                    <div className="lod-galleryCard">
-                      <h4 className="lod-galleryLocation">{card.location}</h4>
-                      <p className="lod-gallerySpeaker">{card.speaker}</p>
-                    </div>
+              <div className="lod-photo-grid">
+                {GALLERY_IMGS.map((src, i) => (
+                  <div key={i} className="lod-photo-cell">
+                    <img src={src} alt={`Community gallery photo ${i + 1}`} loading="lazy" />
                   </div>
                 ))}
               </div>
-
-              <p className="lod-galleryCaption">
-                Photo captions reflect original project gallery. Image thumbnails
-                should be replaced with the project&apos;s approved photographs.
-              </p>
 
             </article>
 

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { asset } from "../../lib/asset";
 import EmarchGalleryClient from "./EmarchGalleryClient";
+import EmarchVideoLightbox from "./EmarchVideoLightbox";
 
 export const metadata = {
   title:
@@ -264,7 +265,7 @@ export default function EmarchPage() {
                 </div>
 
                 <p className="emarch-paragraph">
-                  Patients, caregivers, and other healthcare stakeholders face a number of challenges when it comes to figuring out what the right decision is for them in a healthcare setting. While health and healthcare researchers have made incredible progress in improving health outcomes, current research methodology doesn&apos;t always provide patients with the information they want to make an informed health decision. Patient-centered outcomes research (PCOR) is designed to help close that gap.
+                  Patients, caretakers, and other healthcare stakeholders face a number of challenges when it comes to figuring out what the right decision is for them in a healthcare setting. While health and healthcare researchers have made incredible progress in improving health outcomes, current research methodology doesn&apos;t always provide patients with the information they want to make an informed health decision. Patient-centered outcomes research (PCOR) is designed to help close that gap.
                 </p>
 
                 <p className="emarch-paragraph">
@@ -282,6 +283,8 @@ export default function EmarchPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="emarch-awardBannerBtn"
+                    title="Visit PCORI website (opens in a new window)"
+                    aria-label="Visit PCORI website (opens in a new window)"
                   >
                     <span>
                       This project was funded through a Patient-Centered Outcomes Research Institute (PCORI) Eugene Washington PCORI Engagement Award (EAIN-5990).
@@ -552,50 +555,7 @@ export default function EmarchPage() {
                 </h2>
               </div>
 
-              <a
-                href="https://www.youtube.com/watch?v=iAdoZl2l9Ds"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="emarch-videoCard"
-                aria-label="Watch video on YouTube: Conducting Patient-Centered Muslim Health Research (E-MARCH)"
-              >
-                <div className="emarch-videoThumbWrap">
-                  <Image
-                    src={asset("/images/workshops/hero.jpg")}
-                    alt="Community research webinar presentation scene for E-MARCH"
-                    width={1280}
-                    height={720}
-                    className="emarch-videoThumb"
-                    loading="lazy"
-                  />
-                  <div className="emarch-videoCrimsonTint" aria-hidden="true" />
-
-                  <div className="emarch-videoTopBar">
-                    <span className="emarch-videoAvatar" aria-hidden="true">
-                      I&amp;M
-                    </span>
-                    <span className="emarch-videoTopTitle">
-                      PCORI E-MARCH — How to Conduct Patient-Centered Muslim Health Research
-                    </span>
-                  </div>
-
-                  <div className="emarch-videoPlayBtn" aria-hidden="true">
-                    <svg viewBox="0 0 68 48" width="60" height="42">
-                      <path
-                        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,0.13,34,0,34,0S12.21,0.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
-                        fill="#FF0000"
-                      />
-                      <path d="M 45,24 27,14 27,34" fill="#FFFFFF" />
-                    </svg>
-                  </div>
-
-                  <div className="emarch-videoWatchBadge" aria-hidden="true">
-                    <span>Watch on</span>
-                    <YoutubeSmallIcon />
-                    <strong>YouTube</strong>
-                  </div>
-                </div>
-              </a>
+              <EmarchVideoLightbox />
             </div>
 
             {/* Right Column: E-MARCH Project Updates */}
@@ -653,9 +613,9 @@ export default function EmarchPage() {
 
                 <ul className="emarch-resourceLinks">
                   <li>
-                    <Link href="/resources" className="emarch-resourceLink">
-                      Islamic Horizons A-MAP Conference Report
-                    </Link>
+                    <a href={asset("/pdfs/Islamic-Horizons-AMAP-Conference-Summary.pdf")} target="_blank" rel="noopener noreferrer" className="emarch-resourceLink">
+                      Islamic Horizons A-MAP Conference Report ↗
+                    </a>
                   </li>
                   <li>
                     <a href={asset("/documents/Project-Findings-Public-Piece.pdf")} target="_blank" rel="noopener noreferrer" className="emarch-resourceLink">
@@ -766,28 +726,17 @@ export default function EmarchPage() {
               </p>
             </div>
 
-            {/* Center 2-5-5-2 Portrait Collage */}
+            {/* Team Collage Image */}
             <div className="col-lg-5">
-              <div
-                className="emarch-collageWrap"
-                aria-label="Collage of community advisory and II&M research contributors"
-              >
-                {OUTPUT_COLLAGE_ROWS.map((row, rowIdx) => (
-                  <div key={rowIdx} className="emarch-collageRow">
-                    {row.map((person, colIdx) => (
-                      <div key={`${rowIdx}-${colIdx}`} className="emarch-collageTile">
-                        <Image
-                          src={asset(person.src)}
-                          alt={person.alt}
-                          width={160}
-                          height={160}
-                          className="emarch-collageImg"
-                          loading="lazy"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+              <div className="emarch-collageWrap">
+                <Image
+                  src={asset("/images/e-march/emarch-team-collage.webp")}
+                  alt="Collage of community advisory and II&M research contributors"
+                  width={520}
+                  height={390}
+                  className="emarch-collageImg--single"
+                  loading="lazy"
+                />
               </div>
             </div>
 

@@ -64,12 +64,35 @@ const CORE_ACTIVITIES = [
 
 // 3. Sidebar Resource Links / Quick Links
 const SIDEBAR_LINKS = [
-  { title: "Workshops", href: "/workshops" },
-  { title: "Academic Publications", href: "/resources" },
-  { title: "Community Impact", href: "/impact" },
-  { title: "Presentations & Talks", href: "/speaking" },
-  { title: "Replication Guide Materials", href: "https://www.medicineandislam.org/palliative-care-needs" },
-  { title: "Videos", href: "https://www.youtube.com/@medicineandislam" },
+  {
+    title: "Workshops",
+    href: "https://www.youtube.com/playlist?list=PLKPFd4mBCvIhv6oOBA1MJDvAd0uFY0Xqb",
+    external: true,
+  },
+  {
+    title: "Academic Publications",
+    external: true,
+    children: [
+      { label: "Publication 1", href: "https://journals.sagepub.com/doi/10.1177/10499091251315140" },
+      { label: "Publication 2", href: "https://www.sciencedirect.com/science/article/abs/pii/S088539242400006X" },
+      { label: "Publication 3", href: "https://journals.sagepub.com/doi/10.1177/10499091231198216" },
+      { label: "Publication 4", href: "https://link.springer.com/article/10.1007/s10903-023-01541-x" },
+    ],
+  },
+  {
+    title: "Community Impact",
+    external: true,
+    children: [
+      { label: "Wisconsin Muslim Journal", href: "https://wisconsinmuslimjournal.org/medical-college-of-wisconsin-research-highlights-muslim-americans-end-of-life-care-needs/" },
+    ],
+  },
+  {
+    title: "Presentations & Talks",
+    children: [
+      { label: "MCW Community Engagement Poster", href: "/pdfs/resources/mcw-community-engagement-poster.pdf" },
+      { label: "I AM PCN Poster – OCE 2025", href: "/pdfs/resources/i-am-pcn-poster-oce-2025.pdf" },
+    ],
+  },
 ];
 
 // 4. Team Members
@@ -191,13 +214,16 @@ export default function IAmPcnPage() {
                 </h2>
 
                 <p className="iampcn-paragraph">
-                  The work that eventually became I AM PCN began nearly a decade earlier with grassroots workshops, community engagement, and Islamic bioethics scholarship. Between 2014 and 2023, we organized nine mosque- and community-based workshops across the country, partnering with scholars, clinicians, chaplains, and imams to start much-needed conversations about EOL care.
+                  The work that eventually became I AM PCN began nearly a decade earlier with <strong>grassroots workshops, community engagement, and Islamic bioethics scholarship</strong>. Between <strong>2014 and 2023</strong>, we organized <strong>nine mosque- and community-based workshops</strong> across the country, partnering with scholars, clinicians, chaplains, and imams to start much-needed conversations about EOL care.
                 </p>
                 <p className="iampcn-paragraph">
-                  <strong>Workshops Conducted:</strong> Through a series of workshops over time, we gathered feedback and continuously refined the content and delivery.
+                  <strong>Workshops Conducted</strong>
                 </p>
                 <p className="iampcn-paragraph">
-                  <strong>What We Learned:</strong> Each iteration deepened community partnerships, filled in knowledge gaps, and strengthened attendees&rsquo; preparedness for real-life decisions. This plan-do-study-revise process helped to clarify the content and methods of educational programs to empower decision-making about end-of-life healthcare.
+                  Through a series of workshops over time, we gathered feedback and continuously refined the content and delivery.
+                </p>
+                <p className="iampcn-paragraph">
+                  <strong>What We Learned:</strong> Through a series of workshops over time, we gathered feedback and continuously refined the content and delivery. Each iteration deepened community partnerships, filled in knowledge gaps, and strengthened attendee&rsquo;s preparedness for real-life decisions. This plan-do-study-revise process helped to clarify the content and methods of educational programs to empower decision-making about end-of-life healthcare.
                 </p>
 
                 <div className="iampcn-sectionDivider" />
@@ -210,7 +236,10 @@ export default function IAmPcnPage() {
                 </h2>
 
                 <p className="iampcn-paragraph">
-                  Launched in 2022, the Investigating American Muslim Palliative and Hospice Care Needs (I AM PCN) project formalized this decade of work into a national, multi-institutional initiative. Led by the Medical College of Wisconsin (MCW), in partnership with the Muslim Community and Health Center (MCHC) and the Initiative on Islam and Medicine (II&amp;M), I AM PCN brought together scholars, clinicians, chaplains, imams, and community leaders to develop solutions that are both culturally responsive and religiously aligned.
+                  Launched in 2022, the Investigating American Muslim Palliative and Hospice Care Needs (I AM PCN) project formalized this decade of work into a national, multi-institutional initiative.
+                </p>
+                <p className="iampcn-paragraph">
+                  Led by the <strong>Medical College of Wisconsin (MCW)</strong>, in partnership with the <strong>Muslim Community and Health Center (MCHC)</strong> and the <strong>Initiative on Islam and Medicine (II&amp;M)</strong>, I AM PCN brought together scholars, clinicians, chaplains, imams, and community leaders to develop solutions that are both culturally responsive and religiously aligned.
                 </p>
 
                 <div className="iampcn-sectionDivider" />
@@ -242,10 +271,18 @@ export default function IAmPcnPage() {
                 </ul>
 
                 <p className="iampcn-paragraph">
-                  As a centerpiece of this work, I AM PCN developed <em>Islamic Ethical Considerations for End-of-Life Healthcare: A Guide for Muslim Americans</em>. This first-of-its-kind resource equips families and providers to understand U.S. legal tools, explore Islamic rulings on pain relief, withdrawing care, and hospice, and prepare religiously and practically for end-of-life decisions. The guide has become a cornerstone for workshops, clinician trainings, and community engagement efforts nationwide.
+                  As a centerpiece of this work, I AM PCN developed{" "}
+                  <a href="/pdfs/resources/islamic-bioethical-considerations-guide.pdf" className="iampcn-inlineLink">
+                    <em>Islamic Ethical Considerations for End-of-Life Healthcare: A Guide for Muslim Americans.</em>
+                  </a>{" "}
+                  This first-of-its-kind resource equips families and providers to understand U.S. legal tools, explore Islamic rulings on pain relief, withdrawing care, and hospice, and prepare religiously and practically for end-of-life decisions. The guide has become a cornerstone for workshops, clinician trainings, and community engagement efforts nationwide. A completed, practical resource guide for patients, families, imams, and healthcare providers.
                 </p>
                 <p className="iampcn-paragraph">
-                  In addition, the <em>Islamic Dimensions of End-of-Life Healthcare: A Community Education Workshop Replication Guide</em>, a step-by-step manual that supports community leaders, imams, and educators in hosting their own workshops, expanding the project&rsquo;s reach and impact. Together, these resources ensure that the lessons from the past decade can be scaled and shared widely across Muslim communities nationwide.
+                  In addition, the{" "}
+                  <a href="/pdfs/resources/eol-community-workshop-replication-guide.pdf" className="iampcn-inlineLink">
+                    <em>Islamic Dimensions of End-of-Life Healthcare: A Community Education Workshop Replication Guide</em>
+                  </a>
+                  , a step-by-step manual that supports community leaders, imams, and educators in hosting their own workshops, expanding the project&rsquo;s reach and impact. (See Replication Materials.) Together, these resources ensure that the lessons from the past decade can be scaled and shared widely across Muslim communities nationwide.
                 </p>
 
                 {/* PUBLICATION / GUIDEBOOK COVERS */}
@@ -319,18 +356,40 @@ export default function IAmPcnPage() {
 
                 {/* SIDEBAR NAVIGATION PILLS */}
                 <div className="iampcn-navPillsList">
-                  {SIDEBAR_LINKS.map((link, idx) => (
-                    <Link
-                      key={idx}
-                      href={link.href}
-                      className="iampcn-navPillItem"
-                    >
-                      <span className="iampcn-navPillTitle">{link.title}</span>
-                      <span className="iampcn-navPillArrow" aria-hidden="true">
-                        →
-                      </span>
-                    </Link>
-                  ))}
+                  {SIDEBAR_LINKS.map((link, idx) =>
+                    link.children ? (
+                      <div key={idx} className="iampcn-navPillGroup">
+                        <div className="iampcn-navPillGroupTitle">
+                          <span className="iampcn-navPillTitle">{link.title}</span>
+                        </div>
+                        <div className="iampcn-navPillChildren">
+                          {link.children.map((child, ci) => (
+                            <a
+                              key={ci}
+                              href={child.href}
+                              className="iampcn-navPillChild"
+                              target={link.external ? "_blank" : undefined}
+                              rel={link.external ? "noopener noreferrer" : undefined}
+                            >
+                              <span>{child.label}</span>
+                              <span aria-hidden="true">→</span>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <a
+                        key={idx}
+                        href={link.href}
+                        className="iampcn-navPillItem"
+                        target={link.external ? "_blank" : undefined}
+                        rel={link.external ? "noopener noreferrer" : undefined}
+                      >
+                        <span className="iampcn-navPillTitle">{link.title}</span>
+                        <span className="iampcn-navPillArrow" aria-hidden="true">→</span>
+                      </a>
+                    )
+                  )}
                 </div>
 
                 {/* SIDEBAR CARD 3: Get Involved */}

@@ -1,5 +1,7 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
+import ConsultationBtn from "../../components/ConsultationBtn";
+import SpeakingBtn from "../../components/SpeakingBtn";
 
 export const metadata = {
   title: "Our Mission | Initiative on Islam & Medicine",
@@ -178,17 +180,11 @@ export default function MissionPage() {
           </div>
           <div className="col-lg-3 msn-vision-quote">
             <p>
-              Faith-Informed
+              Faith-Informed Understanding.
               <br />
-              Understanding.
+              Compassionate Care.
               <br />
-              Compassionate
-              <br />
-              Care.
-              <br />
-              A Healthier
-              <br />
-              World Together.
+              A Healthier World Together.
             </p>
           </div>
         </div>
@@ -320,18 +316,12 @@ export default function MissionPage() {
               </p>
             </div>
             <div className="msn-cta-actions">
-              <a href="https://links.360growthlab.com/widget/form/CstJIHikubJG75Zv16TR" target="_blank" rel="noopener noreferrer" className="msn-btn msn-btn-fill">
+              <ConsultationBtn className="msn-btn msn-btn-fill">
                 REQUEST A CONSULTATION <i className="fa-solid fa-arrow-right" />
-              </a>
-              <a
-                href="#donate"
-                data-open-donation-modal="true"
-                className="msn-btn msn-btn-light"
-                role="button"
-                style={{ cursor: "pointer" }}
-              >
+              </ConsultationBtn>
+              <SpeakingBtn className="msn-btn msn-btn-light">
                 INVITE A SPEAKER <i className="fa-solid fa-arrow-right" />
-              </a>
+              </SpeakingBtn>
             </div>
           </div>
           <div className="msn-cta-media">

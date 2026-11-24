@@ -513,8 +513,7 @@ export default function ExploringBiosciencePage() {
             <div>
               <span className="eb-eyebrow">Have Questions?</span>
               <h2 className="eb-faqTitle">
-                Frequently <br />
-                Asked <br />
+                Frequently Asked <br />
                 <span className="eb-burgundyItalic">Questions</span>
               </h2>
               <p className="eb-faqDesc">

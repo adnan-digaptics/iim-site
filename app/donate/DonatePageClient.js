@@ -4,6 +4,8 @@ import { asset } from "../../lib/asset";
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import DonatePartnersMarquee from "./DonatePartnersMarquee";
+import DonateBtn from "../../components/DonateBtn";
 
 /** II&M / Dr. Padela talk from Initiative workshop materials (YouTube). */
 const IMPACT_VIDEO_ID = "t4U0QCrrYcA";
@@ -158,9 +160,9 @@ export default function DonatePageClient() {
             </p>
 
             <div className="hero-seamless-actions donate-hero-actions">
-              <a href="#donate-panel" className="btn-seamless-maroon">
+              <DonateBtn className="btn-seamless-maroon">
                 MAKE A DONATION <i className="fa-solid fa-arrow-right" />
-              </a>
+              </DonateBtn>
               <button type="button" className="donate-video-link" onClick={() => openImpactVideo()}>
                 <span className="donate-video-link-icon" aria-hidden="true">
                   <i className="fa-solid fa-play" />
@@ -365,9 +367,9 @@ export default function DonatePageClient() {
               <p>
                 The research established the need. The evidence built our foundation. Now, your support helps us put that knowledge to work — through education, training, consultation, and speaking that create meaningful change.
               </p>
-              <a href="#donate-panel" className="donate-cta-btn">
+              <DonateBtn className="donate-cta-btn">
                 SUPPORT II&amp;M TODAY <i className="fa-solid fa-arrow-right" />
-              </a>
+              </DonateBtn>
             </div>
           </div>
           <div className="col-12 col-lg-6 donate-cta-media">
@@ -390,35 +392,7 @@ export default function DonatePageClient() {
               PARTNER WITH US <i className="fa-solid fa-arrow-right" />
             </Link>
           </div>
-          <div className="donate-partners-marquee">
-            <div className="donate-partners-track" style={{ animation: "partner-logo-loop 28s linear infinite" }}>
-              {[0, 1].map((copy) =>
-                PARTNERS.map(([logo, name, text, href]) => (
-                  <article
-                    className={`donate-partner${name === "Muslim EdEx" ? " donate-partner-edex" : ""}`}
-                    key={`${name}-${copy}`}
-                    aria-hidden={copy === 1 ? "true" : undefined}
-                  >
-                    <div className="donate-partner-logo">
-                      {href && copy === 0 ? (
-                        <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${name} website`}>
-                          <img src={logo} alt={name} />
-                        </a>
-                      ) : (
-                        <img src={logo} alt={copy === 0 ? name : ""} />
-                      )}
-                    </div>
-                    <h3>
-                      {href && copy === 0 ? (
-                        <a href={href} target="_blank" rel="noopener noreferrer">{name}</a>
-                      ) : name}
-                    </h3>
-                    <p>{text}</p>
-                  </article>
-                ))
-              )}
-            </div>
-          </div>
+          <DonatePartnersMarquee partners={PARTNERS} />
         </div>
       </section>
     </div>

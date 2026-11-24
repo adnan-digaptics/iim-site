@@ -164,64 +164,48 @@ export default function VolunteerPageClient() {
       <section className="volunteer-apply-section" id="apply">
         <div className="container">
           <div className="volunteer-apply-card">
-            <div className="row g-0 align-items-stretch">
-              {/* Left Column: Photograph */}
-              <div className="col-lg-5 volunteer-apply-photo-col">
-                <div className="volunteer-apply-photo-wrap">
-                  <img
-                    src={asset("/images/volunteer/volunteer-community-event.jpg")}
-                    alt="Smiling Muslim female volunteer in burgundy II&M vest handing an event tote bag to a visitor"
-                    className="volunteer-apply-img"
-                    loading="lazy"
-                  />
-                </div>
+            <div className="volunteer-apply-form-inner">
+              {/* Subtle Geometric Watermark */}
+              <div className="volunteer-form-watermark" aria-hidden="true" />
+
+              {/* Header Decoration & Title */}
+              <div className="volunteer-form-header">
+                <div className="volunteer-form-accent-bar" aria-hidden="true" />
+                <h2 className="volunteer-form-title">Become a Volunteer</h2>
               </div>
 
-              {/* Right Column: Application Form */}
-              <div className="col-lg-7 volunteer-apply-form-col">
-                <div className="volunteer-apply-form-inner">
-                  {/* Subtle Geometric Watermark */}
-                  <div className="volunteer-form-watermark" aria-hidden="true" />
-
-                  {/* Header Decoration & Title */}
-                  <div className="volunteer-form-header">
-                    <div className="volunteer-form-accent-bar" aria-hidden="true" />
-                    <h2 className="volunteer-form-title">Become a Volunteer</h2>
-                  </div>
-
-                  {/* Embedded NPE Volunteer Application Form (GHL) */}
-                  <div className="volunteer-iframe-wrap">
-                    <iframe
-                      src="https://links.360growthlab.com/widget/form/uCLJ2qglm3CgvwDM9aGv"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        minHeight: "720px",
-                        border: "none",
-                        borderRadius: "8px",
-                      }}
-                      id="inline-uCLJ2qglm3CgvwDM9aGv"
-                      data-layout="{'id':'INLINE'}"
-                      data-trigger-type="alwaysShow"
-                      data-trigger-value=""
-                      data-activation-type="alwaysActivated"
-                      data-activation-value=""
-                      data-deactivation-type="neverDeactivate"
-                      data-deactivation-value=""
-                      data-form-name="NPE Volunteer Application"
-                      data-height="1825"
-                      data-layout-iframe-id="inline-uCLJ2qglm3CgvwDM9aGv"
-                      data-form-id="uCLJ2qglm3CgvwDM9aGv"
-                      data-cookie-consent="true"
-                      data-cookie-consent-provider="auto"
-                      title="NPE Volunteer Application"
-                    />
-                    <Script
-                      src="https://links.360growthlab.com/js/form_embed.js"
-                      strategy="afterInteractive"
-                    />
-                  </div>
-                </div>
+              {/* Embedded NPE Volunteer Application Form (GHL) */}
+              <div className="volunteer-iframe-wrap">
+                <iframe
+                  src="https://links.360growthlab.com/widget/form/uCLJ2qglm3CgvwDM9aGv"
+                  style={{
+                    width: "100%",
+                    maxWidth: "100%",
+                    height: "100%",
+                    minHeight: "720px",
+                    border: "none",
+                    borderRadius: "8px",
+                  }}
+                  id="inline-uCLJ2qglm3CgvwDM9aGv"
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="NPE Volunteer Application"
+                  data-height="1825"
+                  data-layout-iframe-id="inline-uCLJ2qglm3CgvwDM9aGv"
+                  data-form-id="uCLJ2qglm3CgvwDM9aGv"
+                  data-cookie-consent="true"
+                  data-cookie-consent-provider="auto"
+                  title="NPE Volunteer Application"
+                />
+                <Script
+                  src="https://links.360growthlab.com/js/form_embed.js"
+                  strategy="afterInteractive"
+                />
               </div>
             </div>
           </div>

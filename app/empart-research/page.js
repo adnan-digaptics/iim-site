@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { asset } from "../../lib/asset";
 import EmpartDownloadsSlider from "./EmpartDownloadsSlider";
+import EmpartTeamSlider from "./EmpartTeamSlider";
+import PastPartners from "../../components/PastPartners";
 
 export const metadata = {
   title:
@@ -64,11 +66,16 @@ const CORE_TEAM = [
 
 // 3. Meet the EMPART Team (Circular Portraits)
 const EMPART_TEAM_CIRCLES = [
-  { id: 1, name: "EMPART Team Member 1", image: "/images/empart-study/circle_member_1.png" },
-  { id: 2, name: "EMPART Team Member 2", image: "/images/empart-study/circle_member_2.png" },
-  { id: 3, name: "EMPART Team Member 3", image: "/images/empart-study/circle_member_3.png" },
-  { id: 4, name: "EMPART Team Member 4", image: "/images/empart-study/circle_member_4.png" },
-  { id: 5, name: "EMPART Team Member 5", image: "/images/empart-study/circle_member_5.png" },
+  { id: 1,  name: "EMPART Team Member 1",  image: "/images/empart-team/team-1.jpg" },
+  { id: 2,  name: "EMPART Team Member 2",  image: "/images/empart-team/team-2.jpg" },
+  { id: 3,  name: "EMPART Team Member 3",  image: "/images/empart-team/team-3.jpg" },
+  { id: 4,  name: "EMPART Team Member 4",  image: "/images/empart-team/team-4.jpg" },
+  { id: 5,  name: "EMPART Team Member 5",  image: "/images/empart-team/team-5.jpg" },
+  { id: 6,  name: "EMPART Team Member 6",  image: "/images/empart-team/team-6.jpg" },
+  { id: 7,  name: "EMPART Team Member 7",  image: "/images/empart-team/team-7.jpg" },
+  { id: 8,  name: "EMPART Team Member 8",  image: "/images/empart-team/team-8.jpg" },
+  { id: 9,  name: "EMPART Team Member 9",  image: "/images/empart-team/team-9.jpg" },
+  { id: 10, name: "EMPART Team Member 10", image: "/images/empart-team/team-10.jpg" },
 ];
 
 // 4. Videos (2x2 Grid — crisp HD still photography + native YouTube UI overlay)
@@ -429,30 +436,7 @@ export default function EmpartStudyPage() {
           <h2 className="empart-centeredHeading">Meet the EMPART Team</h2>
           <div className="empart-centeredDivider" aria-hidden="true" />
 
-          {/* Row of 5 Circular Portraits */}
-          <div className="empart-circlesRow">
-            {EMPART_TEAM_CIRCLES.map((c) => (
-              <div key={c.id} className="empart-circleItem">
-                <div className="empart-circleImgWrap">
-                  <img
-                    src={asset(c.image)}
-                    alt={c.name}
-                    className="empart-circleImg"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Pagination Indicators */}
-          <div className="empart-paginationDots" aria-hidden="true">
-            <span className="empart-dot active" />
-            <span className="empart-dot" />
-            <span className="empart-dot" />
-            <span className="empart-dot" />
-            <span className="empart-dot" />
-          </div>
+          <EmpartTeamSlider members={EMPART_TEAM_CIRCLES.map(c => ({ ...c, image: asset(c.image) }))} />
         </div>
       </section>
 
@@ -544,33 +528,9 @@ export default function EmpartStudyPage() {
       </section>
 
       {/* ====================================================================
-          10. PROJECT PARTNERS
+          10. PARTNER ORGANIZATIONS
           ==================================================================== */}
-      <section className="empart-partnersSection">
-        <div className="container text-center">
-          <h2 className="empart-centeredHeading">Project Partners</h2>
-          <div className="empart-centeredDivider" aria-hidden="true" />
-
-          <div className="empart-partnersRow">
-            <div className="empart-partnerItem">
-              <img
-                src={asset("/images/empart-study/partner-worry-free.svg")}
-                alt="Worry Free Community"
-                className="empart-partnerLogo"
-                loading="lazy"
-              />
-            </div>
-            <div className="empart-partnerItem">
-              <img
-                src={asset("/images/empart-study/partner-pcor-collective.svg")}
-                alt="Partners in PCOR / Community Health"
-                className="empart-partnerLogo"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <PastPartners />
 
       {/* ====================================================================
           11. FULL-BLEED GREEN CTA BANNER

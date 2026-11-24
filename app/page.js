@@ -1,6 +1,8 @@
 import { asset } from "../lib/asset";
 import Link from "next/link";
 import PastPartners from "../components/PastPartners";
+import ConsultationBtn from "../components/ConsultationBtn";
+import SpeakingBtn from "../components/SpeakingBtn";
 
 export const metadata = {
   title: "Home | Initiative on Islam & Medicine",
@@ -28,14 +30,15 @@ We educate, consult, and convene to better serve the needs of{' '}            <e
 {' '}patients and healthcare professionals at the intersection of Islam and medicine.          </p>
           <div className="hero-seamless-actions">
             <Link href="/education" className="btn-seamless-maroon">EXPLORE OUR PROGRAMS &gt;</Link>
-            <Link href="/consultation" className="btn-seamless-outline">REQUEST A CONSULTATION</Link>
+            <ConsultationBtn className="btn-seamless-outline">REQUEST A CONSULTATION</ConsultationBtn>
           </div>
         </div>
         <div className="hero-seamless-quote">
           <p className="quote-text">
-Better Care            <br />
-to            <br />
-Public Impact.          </p>
+            Better Care to
+            <br />
+            Public Impact.
+          </p>
           <div className="quote-gold-bar" />
         </div>
       </div>
@@ -315,12 +318,12 @@ LISTEN TO THE PODCAST{' '}                    <i className="fa-solid fa-arrow-ri
               </h2>
               <p className="cta-emerald-desc">Connect with II&amp;M to bring evidence-informed learning, institutional guidance, and expert perspectives to your community.</p>
               <div className="cta-emerald-actions">
-                <Link href="/consultation" className="btn-solid-maroon">
-REQUEST A CONSULTATION{' '}                  <i className="fa-solid fa-arrow-right ms-2" />
-{' '}                </Link>
-                <Link href="/speaking" className="btn-outline-trans-white">
-INVITE A SPEAKER{' '}                  <i className="fa-solid fa-arrow-right ms-2" />
-{' '}                </Link>
+                <ConsultationBtn className="btn-solid-maroon">
+REQUEST A CONSULTATION <i className="fa-solid fa-arrow-right ms-2" />
+                </ConsultationBtn>
+                <SpeakingBtn className="btn-outline-trans-white">
+INVITE A SPEAKER <i className="fa-solid fa-arrow-right ms-2" />
+                </SpeakingBtn>
               </div>
             </div>
           </div>

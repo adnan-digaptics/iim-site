@@ -154,9 +154,7 @@ export default function ResearchPage() {
               <br />
               Equity.
               <br />
-              Real-World
-              <br />
-              Impact.
+              Real-World Impact.
             </p>
           </div>
         </div>

@@ -4,6 +4,9 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SiteEffects from "../components/SiteEffects";
+import ConsultationModal from "../components/ConsultationModal";
+import SpeakingModal from "../components/SpeakingModal";
+import DonateModal from "../components/DonateModal";
 import { asset } from "../lib/asset";
 
 export const metadata = {
@@ -34,6 +37,9 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <SiteEffects />
+        <ConsultationModal />
+        <SpeakingModal />
+        <DonateModal />
       </body>
     </html>
   );

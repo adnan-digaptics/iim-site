@@ -1,8 +1,11 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
+import ConsultationBtn from "../../components/ConsultationBtn";
+import SpeakingBtn from "../../components/SpeakingBtn";
 import AboutPrograms from "./AboutPrograms";
 import JourneyToolsDropup from "./JourneyToolsDropup";
 import PastPartners from "./PastPartners";
+import WhoWeServeSlider from "./WhoWeServeSlider";
 
 export const metadata = {
   title: "About II&M | Initiative on Islam & Medicine",
@@ -35,9 +38,10 @@ OUR STORY{' '}              <i className="fa-solid fa-arrow-down ms-2" />
         </div>
         <div className="hero-seamless-quote">
           <p className="quote-text">
-          care to            <br />
-{' '}Impact.            <br />
-{' '}Better Impact         </p>
+            Better Care to
+            <br />
+            Public Impact.
+          </p>
           <div className="quote-gold-bar" />
         </div>
       </div>
@@ -232,89 +236,7 @@ Our Research Work{' '}                <i className="fa-solid fa-arrow-right ms-2
     </section>
     <section className="section-audiences">
       <div className="container">
-        <div className="row align-items-end mb-4">
-          <div className="col-lg-6">
-            <div className="expertise-eyebrow-wrap mb-1">
-              <span className="expertise-eyebrow-text">OUR AUDIENCES</span>
-            </div>
-            <h2 className="expertise-heading m-0">Who We Serve</h2>
-          </div>
-          <div className="col-lg-6 text-lg-end mt-2 mt-lg-0">
-            <p className="text-muted lead-aside">We work with a wide range of individuals and organizations to advance understanding and improve care at the intersection of Islam and medicine.</p>
-          </div>
-        </div>
-        <div className="row g-3">
-          <div className="col-6 col-md-4 col-lg-2">
-            <div className="audience-card">
-              <img src={asset("/images/audience-hospital.jpg")} alt="Healthcare Institutions" className="audience-card-img" loading="lazy" />
-              <div className="audience-card-body">
-                <i className="fa-solid fa-hospital audience-icon" />
-                <h3 className="audience-title">Healthcare Institutions</h3>
-                <p className="audience-text">Hospitals, health systems, and academic medical centers</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-6 col-md-4 col-lg-2">
-            <div className="audience-card">
-              <img src={asset("/images/audience-clinician.jpg")} alt="Clinicians" className="audience-card-img" loading="lazy" />
-              <div className="audience-card-body">
-                <i className="fa-solid fa-stethoscope audience-icon" />
-                <h3 className="audience-title">Clinicians</h3>
-                <p className="audience-text">Physicians, nurses, and allied health professionals</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-6 col-md-4 col-lg-2">
-            <div className="audience-card">
-              <img src={asset("/images/audience-students.jpg")} alt="Medical Students and Fellows" className="audience-card-img" loading="lazy" />
-              <div className="audience-card-body">
-                <i className="fa-solid fa-graduation-cap audience-icon" />
-                <h3 className="audience-title">Medical Students and Fellows</h3>
-                <p className="audience-text">The next generation of healthcare leaders</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-6 col-md-4 col-lg-2">
-            <div className="audience-card">
-              <img src={asset("/images/audience-family.jpg")} alt="Muslim Patients and Families" className="audience-card-img" loading="lazy" />
-              <div className="audience-card-body">
-                <i className="fa-solid fa-people-roof audience-icon" />
-                <h3 className="audience-title">Muslim Patients and Families</h3>
-                <p className="audience-text">Individuals and communities seeking respectful, informed care</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-6 col-md-4 col-lg-2">
-            <div className="audience-card">
-              <img src={asset("/images/audience-researcher.jpg")} alt="Researchers" className="audience-card-img" loading="lazy" />
-              <div className="audience-card-body">
-                <i className="fa-solid fa-clipboard-user audience-icon" />
-                <h3 className="audience-title">Researchers</h3>
-                <p className="audience-text">Scholars and practitioners advancing knowledge</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-6 col-md-4 col-lg-2">
-            <div className="audience-card">
-              <img src={asset("/images/audience-community.jpg")} alt="Community Organizations" className="audience-card-img" loading="lazy" />
-              <div className="audience-card-body">
-                <i className="fa-solid fa-handshake-angle audience-icon" />
-                <h3 className="audience-title">Community Organizations</h3>
-                <p className="audience-text">Faith-based and community groups working for healthier communities</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-6 col-md-4 col-lg-2">
-            <Link href="/advancing-equity" className="audience-card audience-card-link">
-              <img src={asset("/images/research/project-equity.jpg")} alt="Muslim Physicians and Healthcare Workers" className="audience-card-img" loading="lazy" />
-              <div className="audience-card-body">
-                <i className="fa-solid fa-user-doctor audience-icon" />
-                <h3 className="audience-title">Muslim Physicians &amp; Healthcare Workers</h3>
-                <p className="audience-text">Advancing equity and inclusion for Muslim healthcare professionals</p>
-              </div>
-            </Link>
-          </div>
-        </div>
+        <WhoWeServeSlider />
       </div>
     </section>
     <section className="section-about-quicklinks">
@@ -464,12 +386,12 @@ Different              <br />
                 <Link href="/education" className="btn-solid-maroon">
 EXPLORE EDUCATION{' '}                  <i className="fa-solid fa-arrow-right ms-2" />
 {' '}                </Link>
-                <a href="https://360growthlab.com/" target="_blank" rel="noopener noreferrer" className="btn-outline-trans-white">
-REQUEST A CONSULTATION{' '}                  <i className="fa-solid fa-arrow-right ms-2" />
-{' '}                </a>
-                <a href="#donate" data-open-donation-modal="true" className="btn-outline-trans-white" role="button" style={{ cursor: "pointer" }}>
-INVITE A SPEAKER{' '}                  <i className="fa-solid fa-arrow-right ms-2" />
-{' '}                </a>
+                <ConsultationBtn className="btn-outline-trans-white">
+REQUEST A CONSULTATION <i className="fa-solid fa-arrow-right ms-2" />
+                </ConsultationBtn>
+                <SpeakingBtn className="btn-outline-trans-white">
+INVITE A SPEAKER <i className="fa-solid fa-arrow-right ms-2" />
+                </SpeakingBtn>
               </div>
             </div>
           </div>

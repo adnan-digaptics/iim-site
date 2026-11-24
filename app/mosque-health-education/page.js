@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { asset } from "../../lib/asset";
+import PastPartners from "../../components/PastPartners";
 
 export const metadata = {
   title: "Mosque-Based Health Education and Research Tools (M-HEaRT) | II&M",
@@ -390,10 +391,10 @@ export default function MHeartPage() {
                     </p>
                     <ul className="mheart-bulletList">
                       <li>
-                        <Link href="/community-health-research" className="mheart-textLink">
+                        <a href="https://adnan-digaptics.github.io/iim-site/community-health-research/" target="_blank" rel="noopener noreferrer" className="mheart-textLink">
                           The Engaging Muslim Americans for Research on
                           Community Health Project
-                        </Link>
+                        </a>
                       </li>
                       <li>
                         <span className="mheart-sublistTitle">
@@ -423,10 +424,9 @@ export default function MHeartPage() {
                     <h4 className="mheart-subheading">Webinars &amp; Videos</h4>
                     <ul className="mheart-bulletList">
                       <li>
-                        <a href="https://www.youtube.com/@medicineandislam" target="_blank" rel="noopener noreferrer" className="mheart-textLink">
-                          Imams, Community Organizations &amp; Muslim Health Equity
-                          (by II&amp;M, 1hr session)
-                        </a>
+                        <a href="https://youtu.be/l56KQSsDYbk?feature=shared" target="_blank" rel="noopener noreferrer" className="mheart-textLink">
+                          Islam, Community Organizations &amp; Muslim Health Equity
+                        </a>, M-HEaRT Learning Institute, 8/25
                       </li>
                     </ul>
                   </div>
@@ -438,14 +438,14 @@ export default function MHeartPage() {
                     </h4>
                     <ul className="mheart-bulletList">
                       <li>
-                        <a href="https://www.medicineandislam.org/mosque-health-education" target="_blank" rel="noopener noreferrer" className="mheart-textLink">
+                        <a href="https://medicineandislam.org/wp-content/uploads/2026/04/Toolkit-for-PCOR-in-Islamic-Schools-Submit-to-PCORI-2.pdf" target="_blank" rel="noopener noreferrer" className="mheart-textLink">
                           Toolkit for Patient-Centered Outcomes Research in Islamic
                           Spaces: A Beginner&apos;s Resource Guide for Health
                           Researchers
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.medicineandislam.org/mosque-health-education" target="_blank" rel="noopener noreferrer" className="mheart-textLink">
+                        <a href="https://go.fliplink.me/view/059A3FB8-0738-4DAE-ADC6-84FA79329749" target="_blank" rel="noopener noreferrer" className="mheart-textLink">
                           Islamic Dimensions of End-of-Life Healthcare: A Community
                           Education Workshop Replication Guide
                         </a>
@@ -458,11 +458,11 @@ export default function MHeartPage() {
                     <h4 className="mheart-subheading">Additional Resources</h4>
                     <ul className="mheart-bulletList mb-0">
                       <li>
-                        <Link href="/curriculum" className="mheart-textLink">
+                        <a href="https://www.academia.edu/36269570/Developing_religiously_tailored_health_messages_for_behavioral_change_Introducing_the_reframe_reprioritize_and_reform_3R_model" target="_blank" rel="noopener noreferrer" className="mheart-textLink">
                           Translating religiously-rooted health messages for
                           behavioral change: introducing the anchors,
                           aspirations, and action (3A2) model.
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -506,36 +506,9 @@ export default function MHeartPage() {
       </section>
 
       {/* ====================================================================
-          4. PARTNER ORGANIZATIONS (UMMA, BAYAN, HEALTH EQUITY COLLECTIVE)
+          4. PARTNER ORGANIZATIONS
           ==================================================================== */}
-      <section className="mheart-partnersContainerSection">
-        <div className="container">
-          <div className="mheart-partnersCardPanel">
-            <div className="mheart-sectionHeader mb-4">
-              <span className="mheart-accentBar" aria-hidden="true" />
-              <h2 className="mheart-sectionHeading">Partner Organizations</h2>
-            </div>
-
-            <div className="row g-4">
-              {PARTNER_ORGANIZATIONS.map((partner, idx) => (
-                <div key={idx} className="col-md-4">
-                  <div className="mheart-partnerTile">
-                    <div className="mheart-partnerLogoWrap">
-                      <img
-                        src={asset(partner.logoImg)}
-                        alt={partner.alt}
-                        className="mheart-partnerLogo"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="mheart-partnerBadge">{partner.badge}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <PastPartners />
 
       {/* ====================================================================
           5. MEET THE PROJECT TEAM

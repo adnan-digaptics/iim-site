@@ -239,7 +239,7 @@ export default function SymposiumPageClient() {
           </div>
           <div className="hero-seamless-quote">
             <p className="quote-text">
-              Faith, Ethics<br />&amp;<br />Biomedicine.
+              Faith, Ethics &amp;<br />Biomedicine.
             </p>
             <div className="quote-gold-bar" />
           </div>

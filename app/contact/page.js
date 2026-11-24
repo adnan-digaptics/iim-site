@@ -58,13 +58,9 @@ export default function ContactPage() {
           </div>
           <div className="hero-seamless-quote ct-hero-quote">
             <p className="quote-text">
-              Meaningful
+              Meaningful conversations.
               <br />
-              conversations.
-              <br />
-              Stronger
-              <br />
-              communities.
+              Stronger communities.
               <br />
               Lasting impact.
             </p>
@@ -99,6 +95,7 @@ export default function ContactPage() {
                 <h2>Our Office</h2>
                 <span className="ct-gold-line" />
                 <p className="ct-org">Initiative on Islam &amp; Medicine</p>
+                <p className="ct-org" style={{ fontSize: "13px", color: "#666", marginTop: "-6px" }}>c/o 360 Growth Lab</p>
                 <p>
                   <i className="fa-regular fa-envelope" aria-hidden="true" />
                   <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
@@ -109,10 +106,30 @@ export default function ContactPage() {
               </div>
             </article>
             <aside className="ct-side">
-              <div className="ct-map">
-                <i className="fa-solid fa-location-dot" aria-hidden="true" />
-                <p>A public map pin is not available, because II&amp;M has not published an office address.</p>
-                <a className="btn-seamless-maroon" href={`mailto:${EMAIL}?subject=${encodeURIComponent("Request for directions")}`}>
+              <div className="ct-map ct-map-hasAddress">
+                <div className="ct-map-addressRow">
+                  <i className="fa-solid fa-location-dot" aria-hidden="true" />
+                  <div>
+                    <strong>Our Office</strong>
+                    <p>1S280 Summit Ave Unit e2 suite 1,<br />Oakbrook Terrace, IL 60181, United States</p>
+                  </div>
+                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.0!2d-87.9765!3d41.8514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e4e2c2c2c2c2b%3A0x0!2s1S280+Summit+Ave%2C+Oakbrook+Terrace%2C+IL+60181!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus&q=1S280+Summit+Ave+Oakbrook+Terrace+IL+60181"
+                  width="100%"
+                  height="260"
+                  style={{ border: 0, borderRadius: "10px" }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="II&M Office Location"
+                />
+                <a
+                  className="btn-seamless-maroon"
+                  href="https://maps.google.com/?q=1S280+Summit+Ave+Unit+e2+suite+1,+Oakbrook+Terrace,+IL+60181"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   GET DIRECTIONS <i className="fa-solid fa-arrow-right" aria-hidden="true" />
                 </a>
               </div>

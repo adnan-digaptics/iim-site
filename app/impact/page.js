@@ -1,5 +1,7 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
+import ConsultationBtn from "../../components/ConsultationBtn";
+import SpeakingBtn from "../../components/SpeakingBtn";
 
 export const metadata = {
   title: "Our Impact | Initiative on Islam & Medicine",
@@ -147,11 +149,11 @@ const partners = [
 ];
 
 const journey = [
-  ["fa-people-group", "Workshops & Seminars", "Interactive learning experiences for healthcare professionals, students, and communities."],
-  ["fa-chalkboard-user", "Conferences & Symposia", "Bringing together diverse voices to advance dialogue, learning, and collaboration."],
-  ["fa-magnifying-glass", "Consultation & Advisory", "Providing guidance to organizations and professionals on faith-informed, culturally responsive care."],
-  ["fa-book-open", "Courses & Lectures", "Educational programs that build knowledge, practical skills, and deeper understanding."],
-  ["fa-handshake", "Strategic Partnerships", "Collaborating with healthcare, academic, faith-based, and community organizations to expand reach and impact."],
+  ["fa-people-group", "Workshops & Seminars"],
+  ["fa-chalkboard-user", "Conferences & Symposia"],
+  ["fa-magnifying-glass", "Consultation & Advisory"],
+  ["fa-book-open", "Courses & Lectures"],
+  ["fa-handshake", "Strategic Partnerships"],
 ];
 
 export default function ImpactPage() {
@@ -267,7 +269,7 @@ export default function ImpactPage() {
                 II&amp;M convenes thought leaders, healthcare professionals, scholars, and community members to explore pressing issues at the intersection of Islam and medicine.
               </p>
             </div>
-            <Link href="/impact#conferences" className="imp-view-all-link">
+            <Link href="/conferences" className="imp-view-all-link">
               View all <i className="fa-solid fa-arrow-right" />
             </Link>
           </div>
@@ -387,10 +389,9 @@ export default function ImpactPage() {
         <div className="container">
           <div className="imp-section-intro">
             <h2 className="imp-h2">The Impact Journey</h2>
-            <p className="imp-lead">A collaborative process that turns dialogue into meaningful change.</p>
           </div>
           <div className="imp-journey-track">
-            {journey.map(([icon, title, text], index) => (
+            {journey.map(([icon, title], index) => (
               <div className="imp-journey-item" key={title}>
                 <div className="imp-journey-node">
                   <span className="imp-icon-circle">
@@ -403,7 +404,6 @@ export default function ImpactPage() {
                   ) : null}
                 </div>
                 <h3>{title}</h3>
-                <p>{text}</p>
               </div>
             ))}
           </div>
@@ -422,18 +422,12 @@ export default function ImpactPage() {
                 We invite healthcare systems, universities, community organizations, and institutions to collaborate with II&amp;M to advance research, education, and compassionate care.
               </p>
               <div className="imp-cta-actions">
-                <a href="https://links.360growthlab.com/widget/form/CstJIHikubJG75Zv16TR" target="_blank" rel="noopener noreferrer" className="imp-btn imp-btn-fill">
+                <ConsultationBtn className="imp-btn imp-btn-fill">
                   REQUEST A CONSULTATION <i className="fa-solid fa-arrow-right" />
-                </a>
-                <a
-                  href="#donate"
-                  data-open-donation-modal="true"
-                  className="imp-btn imp-btn-light"
-                  role="button"
-                  style={{ cursor: "pointer" }}
-                >
+                </ConsultationBtn>
+                <SpeakingBtn className="imp-btn imp-btn-light">
                   INVITE A SPEAKER <i className="fa-solid fa-arrow-right" />
-                </a>
+                </SpeakingBtn>
               </div>
             </div>
           </div>

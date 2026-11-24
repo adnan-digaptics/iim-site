@@ -2,84 +2,95 @@
 
 import { asset } from "../../lib/asset";
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+// useMemo removed — tab filtering is synchronous
 
-const AUDIENCES = [
-  { id: "all", label: "ALL" },
-  { id: "patients", label: "Patients & Families" },
-  { id: "clinicians", label: "Clinicians" },
-  { id: "leaders", label: "Community Leaders" },
-  { id: "educators", label: "Educators & Students" },
-  { id: "researchers", label: "Researchers" },
-];
-
-const TYPES = [
-  { id: "guides", label: "Guides & Toolkits", icon: "fa-book-open" },
-  { id: "research", label: "Research & Publications", icon: "fa-book" },
-  { id: "workshops", label: "Workshop Materials", icon: "fa-chalkboard-user" },
-  { id: "courses", label: "Courses & Webinars", icon: "fa-circle-play" },
+const TABS = [
+  { id: "guides",    label: "Replication Guides & Teaching Modules" },
+  { id: "research",  label: "Survey Measures" },
+  { id: "workshops", label: "Decision Aids" },
 ];
 
 const RESOURCES = [
-  {
-    id: "eol-guide",
-    title: "Islamic Bioethical Considerations for End-of-Life Healthcare: A Guide for Muslim Americans",
-    description: "A practical guide for patients, families, and healthcare professionals on navigating end-of-life care through an Islamic framework.",
-    type: "guides",
-    audiences: ["patients", "clinicians", "leaders"],
-    image: "/images/course-eol.jpg",
-    href: "/books",
-    keywords: "end of life bioethics guide muslim americans",
-  },
+  /* ── Replication Guides & Teaching Modules ── */
   {
     id: "eol-workshop",
-    title: "Islamic Dimensions of End-of-Life Healthcare: Community Education Workshop Replication Guide",
-    description: "Step-by-step materials to conduct community workshops on end-of-life care, designed for mosques and community organizations.",
-    type: "workshops",
-    audiences: ["leaders", "patients", "educators"],
-    image: "/images/research/resource-workshop.jpg",
-    href: "/workshops",
-    keywords: "mosque workshop replication end of life community",
+    title: "Islamic Dimensions of End-of-Life Healthcare: A Community Education Workshop Replication Guide",
+    tab: "guides",
+    image: "/images/resource-covers/cover-eol-workshop.png",
+    href: "/exploring-bioscience",
   },
   {
-    id: "mheart",
-    title: "M-HEaRT: Mosque-Based Health Education & Research Tools",
-    description: "Evidence-based tools to support mosque communities in identifying health priorities and delivering culturally and religiously relevant education.",
-    type: "research",
-    audiences: ["leaders", "researchers", "clinicians"],
-    image: "/images/research/project-mheart.jpg",
-    href: "/mosque-health-education",
-    keywords: "mheart mosque health education research tools",
+    id: "women-health-guide",
+    title: "Caring for Body and Soul: A Workshop on Women's Health Program Replication Guide.",
+    tab: "guides",
+    image: "/images/resource-covers/cover-women-health-guide.png",
+    href: "/pdfs/resources/women-health-replication-guide.pdf",
+  },
+  {
+    id: "women-health-manual",
+    title: "Caring for Body and Soul: A Workshop on Women's Health Peer Educator Training Manual.",
+    tab: "guides",
+    image: "/images/resource-covers/cover-women-health-manual.png",
+    href: "/pdfs/resources/women-health-peer-educator-manual.pdf",
   },
   {
     id: "pcor-toolkit",
-    title: "Toolkit for Patient-Centered Outcomes Research in Islamic Schools",
-    description: "A comprehensive toolkit to build research capacity and engage Muslim communities in patient-centered outcomes research.",
-    type: "research",
-    audiences: ["researchers", "educators", "leaders"],
-    image: "/images/research/project-empart.jpg",
-    href: "/empart-research",
-    keywords: "pcor islamic schools outcomes research toolkit empart",
+    title: "Toolkit For Patient-Centered Outcomes Research in Islamic Schools",
+    tab: "guides",
+    image: "/images/resource-covers/cover-pcor-toolkit.png",
+    href: "/pdfs/resources/pcor-islamic-schools-toolkit.pdf",
   },
   {
-    id: "spiritual-needs",
-    title: "Muslim Patients' Religious & Spiritual Resource Needs in US Hospitals",
-    description: "Findings from a national study examining the religious and spiritual needs of Muslim patients in inpatient settings.",
-    type: "research",
-    audiences: ["clinicians", "researchers"],
-    image: "/images/research/project-mahsn.jpg",
+    id: "bioscience",
+    title: "Exploring Bioscience & Islam (A Curriculum on Fundamental Questions about the Human Being)",
+    tab: "guides",
+    image: "/images/resource-covers/cover-bioscience.png",
+    href: "/exploring-bioscience",
+  },
+  {
+    id: "mosque-pcor",
+    title: "A Tool-kit for Mosque-Based Patient Centered Outcomes Research — A Resource Guide For Conducting PCOR In Muslim Communities",
+    tab: "guides",
+    image: "/images/resource-covers/cover-mosque-pcor.png",
+    href: "/mosque-health-education",
+  },
+  /* ── Survey Measures ── */
+  {
+    id: "survey-1",
+    title: "Adapting a Religious Health Fatalism Measure for Use in Muslim Populations",
+    tab: "research",
+    image: "/images/resource-covers/cover-survey-1.png",
     href: "/research",
-    keywords: "mahsn spiritual religious needs hospitals inpatient",
   },
   {
-    id: "bioethics-primer",
-    title: "Islamic Bioethics — A Primer for Muslim Physicians (CME credits available)",
-    description: "An educational course exploring foundational bioethical frameworks for clinical practice.",
-    type: "courses",
-    audiences: ["clinicians", "educators"],
-    image: "/images/course-bioethics.jpg",
-    href: "/courses",
-    keywords: "islamic bioethics primer physicians course",
+    id: "survey-2",
+    title: "The Development and Validation of a Modesty Measure for Diverse Muslim Populations",
+    tab: "research",
+    image: "/images/resource-covers/cover-survey-2.png",
+    href: "/research",
+  },
+  {
+    id: "survey-3",
+    title: "The Development and Validation of the Islamic Knowledge of Living Organ Donation Knowledge Scale",
+    tab: "research",
+    image: "/images/resource-covers/cover-survey-1.png",
+    href: "/living-organ-donation",
+  },
+  /* ── Decision Aids ── */
+  {
+    id: "decision-1",
+    title: "Islamic Bioethical Considerations for End-of-Life Healthcare: A Guide for Muslim Americans",
+    tab: "workshops",
+    image: "/images/resource-covers/cover-decision-1.png",
+    href: "/pdfs/resources/organ-donation-guide.pdf",
+  },
+  {
+    id: "decision-2",
+    title: "End-of-Life Care Decision Aid for Muslim Patients & Families",
+    tab: "workshops",
+    image: "/images/resource-covers/cover-decision-2.png",
+    href: "/books",
   },
 ];
 
@@ -158,12 +169,10 @@ const AUDIENCE_CARDS = [
 ];
 
 export default function ResourcesPageClient() {
-  const [draft, setDraft] = useState("");
-  const [query, setQuery] = useState("");
-  const [audience, setAudience] = useState("all");
-  const [type, setType] = useState("");
+  const [activeTab, setActiveTab] = useState("guides");
   const scroller = useRef(null);
   const pausedRef = useRef(false);
+  const tabItems = RESOURCES.filter((r) => r.tab === activeTab);
   const pubCount = PUBLICATIONS.length;
   const slides = [...PUBLICATIONS, ...PUBLICATIONS];
 
@@ -247,36 +256,6 @@ export default function ResourcesPageClient() {
     };
   }, []);
 
-  const results = useMemo(() => {
-    const needle = query.trim().toLowerCase();
-    return RESOURCES.filter((item) => {
-      if (audience !== "all" && !item.audiences.includes(audience)) return false;
-      if (type && item.type !== type) return false;
-      if (!needle) return true;
-      const haystack = `${item.title} ${item.description} ${item.keywords} ${item.type} ${item.audiences.join(" ")}`.toLowerCase();
-      return haystack.includes(needle);
-    });
-  }, [audience, query, type]);
-
-  const filtersActive = Boolean(query || type || audience !== "all");
-
-  function submitSearch(event) {
-    event.preventDefault();
-    setQuery(draft.trim());
-  }
-
-  function clearFilters() {
-    setDraft("");
-    setQuery("");
-    setAudience("all");
-    setType("");
-  }
-
-  function chooseAudience(id) {
-    setAudience(id);
-    document.getElementById("featured-resources")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
   function movePublications(direction) {
     const el = scroller.current;
     if (!el) return;
@@ -332,117 +311,50 @@ export default function ResourcesPageClient() {
           </div>
           <div className="hero-seamless-quote res-hero-quote">
             <p className="quote-text">
-              Knowledge
+              Knowledge today.
               <br />
-              today.
-              <br />
-              Stronger
-              <br />
-              communities
-              <br />
-              tomorrow.
+              Stronger communities tomorrow.
             </p>
           </div>
         </div>
       </header>
 
-      <section className="res-find" id="find-resources">
+      <section className="res-toolkit" id="find-resources">
         <div className="container">
-          <div className="res-find-panel">
-            <form className="res-search-row" onSubmit={submitSearch}>
-              <h2>Find the resources you need.</h2>
-              <div className="res-search">
-                <i className="fa-solid fa-magnifying-glass" aria-hidden="true" />
-                <label className="visually-hidden" htmlFor="resource-search">
-                  Search resources
-                </label>
-                <input
-                  id="resource-search"
-                  type="search"
-                  value={draft}
-                  placeholder="Search guides, publications, tools, and more..."
-                  onChange={(event) => setDraft(event.target.value)}
-                />
-                <button type="submit">SEARCH</button>
-              </div>
-            </form>
+          <h2 className="res-toolkit-heading">Find the resources you need.</h2>
 
-            <div className="res-filter-row">
-              <span className="res-filter-label">Browse by Audience:</span>
-              <div className="res-pills" role="group" aria-label="Browse by audience">
-                {AUDIENCES.map((item) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    className={audience === item.id ? "is-active" : ""}
-                    aria-pressed={audience === item.id}
-                    onClick={() => setAudience(item.id)}
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="res-filter-row">
-              <span className="res-filter-label">Browse by Resource Type:</span>
-              <div className="res-types" role="group" aria-label="Browse by resource type">
-                {TYPES.map((item) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    className={type === item.id ? "is-active" : ""}
-                    aria-pressed={type === item.id}
-                    onClick={() => setType((current) => (current === item.id ? "" : item.id))}
-                  >
-                    <i className={`fa-solid ${item.icon}`} aria-hidden="true" />
-                    {item.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {filtersActive ? (
-              <button type="button" className="res-clear" onClick={clearFilters}>
-                Clear all filters
+          {/* Tab bar */}
+          <div className="res-toolkit-tabs" role="tablist">
+            {TABS.map((tab) => (
+              <button
+                key={tab.id}
+                role="tab"
+                type="button"
+                aria-selected={activeTab === tab.id}
+                className={`res-toolkit-tab${activeTab === tab.id ? " active" : ""}`}
+                onClick={() => setActiveTab(tab.id)}
+              >
+                {tab.label}
               </button>
-            ) : null}
+            ))}
           </div>
-        </div>
-      </section>
 
-      <section className="res-featured" id="featured-resources">
-        <div className="container">
-          <div className="res-section-head">
-            <div>
-              <h2>Practical Tools. Lasting Impact.</h2>
-            </div>
-            <button type="button" className="res-text-link" onClick={clearFilters}>
-              VIEW ALL RESOURCES <i className="fa-solid fa-arrow-right" />
-            </button>
+          {/* Resource cards grid */}
+          <div className="res-toolkit-grid">
+            {tabItems.map((item) => (
+              <article className="res-toolkit-card" key={item.id}>
+                <div className="res-toolkit-cover">
+                  <img src={asset(item.image)} alt={item.title} loading="lazy" />
+                </div>
+                <div className="res-toolkit-info">
+                  <h3>{item.title}</h3>
+                  <a href={item.href} className="res-toolkit-btn">
+                    Read More
+                  </a>
+                </div>
+              </article>
+            ))}
           </div>
-          {results.length === 0 ? (
-            <p className="res-empty" role="status">
-              No resources match this search. Try another word, or clear the filters to see the full collection.
-            </p>
-          ) : (
-            <div className="res-featured-grid">
-              {results.map((item) => (
-                <article className="res-card" key={item.id}>
-                  <div className="res-card-media">
-                    <img src={asset(item.image)} alt="" />
-                  </div>
-                  <div className="res-card-body">
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <Link href={item.href} className="res-card-btn">
-                      VIEW RESOURCE
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
-          )}
         </div>
       </section>
 
@@ -459,7 +371,7 @@ export default function ResourcesPageClient() {
                 <div className="res-audience-body">
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                  <button type="button" className="res-text-link" onClick={() => { chooseAudience(item.id); document.getElementById("find-resources")?.scrollIntoView({ behavior: "smooth" }); }}>
+                  <button type="button" className="res-text-link" onClick={() => { document.getElementById("find-resources")?.scrollIntoView({ behavior: "smooth" }); }}>
                     {item.cta} <i className="fa-solid fa-arrow-right" />
                   </button>
                 </div>

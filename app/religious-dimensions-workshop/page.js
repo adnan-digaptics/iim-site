@@ -99,7 +99,7 @@ export default function ReligiousDimensionsWorkshopPage() {
           </div>
           <div className="hero-seamless-quote">
             <p className="quote-text">
-              Faith, Healing<br />&amp;<br />Spiritual Care.
+              Faith, Healing &amp;<br />Spiritual Care.
             </p>
             <div className="quote-gold-bar" />
           </div>
