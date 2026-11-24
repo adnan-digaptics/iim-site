@@ -1,16 +1,18 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 const FORM_URL = "https://links.360growthlab.com/widget/form/CstJIHikubJG75Zv16TR";
 
 export default function ConsultationModal() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const autoCount = useRef(0); // tracks how many times auto-opened (max 2)
+  const autoCount = useRef(0);
   const secondTimer = useRef(null);
+  const firstTimer = useRef(null);
 
   function close() {
     setOpen(false);
-    // After first auto-close, schedule second auto-open once
     if (autoCount.current === 1) {
       secondTimer.current = setTimeout(() => {
         autoCount.current = 2;
@@ -22,22 +24,29 @@ export default function ConsultationModal() {
   useEffect(() => {
     function onOpen() { setOpen(true); }
     window.addEventListener("open-consultation-modal", onOpen);
+    return () => window.removeEventListener("open-consultation-modal", onOpen);
+  }, []);
 
-    let firstTimer = null;
-    const isOwnPage = window.location.pathname.startsWith("/consultation");
+  useEffect(() => {
+    // Reset and close when navigating away
+    setOpen(false);
+    autoCount.current = 0;
+    if (firstTimer.current) clearTimeout(firstTimer.current);
+    if (secondTimer.current) clearTimeout(secondTimer.current);
+
+    const isOwnPage = pathname.startsWith("/consultation");
     if (isOwnPage) {
-      firstTimer = setTimeout(() => {
+      firstTimer.current = setTimeout(() => {
         autoCount.current = 1;
         setOpen(true);
       }, 5000);
     }
 
     return () => {
-      window.removeEventListener("open-consultation-modal", onOpen);
-      if (firstTimer) clearTimeout(firstTimer);
+      if (firstTimer.current) clearTimeout(firstTimer.current);
       if (secondTimer.current) clearTimeout(secondTimer.current);
     };
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     function onKey(e) { if (e.key === "Escape") close(); }
@@ -81,7 +90,7 @@ export default function ConsultationModal() {
           src={FORM_URL}
           title="Request a Consultation"
           className="consult-modal-iframe"
-          loading="lazy"
+          loading="eager"
         />
       </div>
     </div>

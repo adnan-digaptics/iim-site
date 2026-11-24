@@ -1,12 +1,15 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 const FORM_URL = "https://links.360growthlab.com/widget/form/knkk3hzAow89ULUZjO7q";
 
 export default function SpeakingModal() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const autoCount = useRef(0);
   const secondTimer = useRef(null);
+  const firstTimer = useRef(null);
 
   function close() {
     setOpen(false);
@@ -21,22 +24,28 @@ export default function SpeakingModal() {
   useEffect(() => {
     function onOpen() { setOpen(true); }
     window.addEventListener("open-speaking-modal", onOpen);
+    return () => window.removeEventListener("open-speaking-modal", onOpen);
+  }, []);
 
-    let firstTimer = null;
-    const isOwnPage = window.location.pathname.startsWith("/speaking");
+  useEffect(() => {
+    setOpen(false);
+    autoCount.current = 0;
+    if (firstTimer.current) clearTimeout(firstTimer.current);
+    if (secondTimer.current) clearTimeout(secondTimer.current);
+
+    const isOwnPage = pathname.startsWith("/speaking");
     if (isOwnPage) {
-      firstTimer = setTimeout(() => {
+      firstTimer.current = setTimeout(() => {
         autoCount.current = 1;
         setOpen(true);
       }, 5000);
     }
 
     return () => {
-      window.removeEventListener("open-speaking-modal", onOpen);
-      if (firstTimer) clearTimeout(firstTimer);
+      if (firstTimer.current) clearTimeout(firstTimer.current);
       if (secondTimer.current) clearTimeout(secondTimer.current);
     };
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     function onKey(e) { if (e.key === "Escape") close(); }
@@ -80,7 +89,7 @@ export default function SpeakingModal() {
           src={FORM_URL}
           title="Invite a Speaker"
           className="consult-modal-iframe"
-          loading="lazy"
+          loading="eager"
         />
       </div>
     </div>
