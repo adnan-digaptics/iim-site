@@ -138,14 +138,14 @@ const TEACHER_TRAINING = [
     title: "Reimagining Bioscience for Muslim Students",
     meta: "II&M + ISLA · Jan 31 & Feb 3, 2025",
     linkText: "WATCH / LEARN MORE ↗",
-    href: "https://www.youtube.com/playlist?list=PLKPFd4mBCvIhvq40ccvRkJ2KT_4HLaTRP",
+    href: "https://www.youtube.com/playlist?list=PLKPFd4mBCvIhxHEc-xetB1MnFDQT9qhAV",
   },
   {
     num: "03",
     title: "Special Symposium on Islam & Bioscience",
     meta: "II&M + IIUM · Feb 24, 2025",
     linkText: "WATCH / LEARN MORE ↗",
-    href: "https://medicineandislam.org/wp-content/uploads/2025/01/Dr.-Raudah-Yunus-Slide-deck.pptx",
+    href: "https://www.youtube.com/playlist?list=PLKPFd4mBCvIhvq40ccvRkJ2KT_4HLaTRP",
   },
 ];
 
@@ -155,7 +155,7 @@ const PUBLICATIONS = [
     title: "Exploring Muslim Student Learning Experiences at the Bioscience–Islam Interface: Insights from Two Cultural Contexts",
     meta: "Journal of Education in Muslim Societies · Apr 2026",
     linkText: "READ PUBLICATION ↗",
-    href: "https://www.academia.edu/166760336/Exploring_Muslim_Student_Learning_Experiences_at_the_Bioscience_Islam_Interface_Insights_from_Two_Cultural_Contexts",
+    href: "https://www.academia.edu/166760336/Exploring_Muslim_Student_Learning_Experiences_at_the_Bioscience_Islam_Interface_Insights_from_Two_Cultural_Contexts?sm=b&rhid=39904480689",
   },
   {
     num: "02",
@@ -225,6 +225,7 @@ const PRESENTATIONS = [
     meta: "ISLA Research Symposium · Dec 2024 · Slides",
     linkText: "VIEW PRESENTATION ↗",
     href: "https://www.youtube.com/watch?v=3pzjRR38a_8",
+    newTab: true,
   },
   {
     num: "06",
@@ -622,7 +623,7 @@ export default function FosteringConnectionsPage() {
                         </div>
                         <p className="fc-cardMeta">{pres.meta}</p>
                       </div>
-                      <a href={pres.href} className="fc-cardLink">
+                      <a href={pres.href} className="fc-cardLink" {...(pres.newTab ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
                         {pres.linkText}
                       </a>
                     </div>

@@ -219,21 +219,23 @@ export default function VolunteerPageClient() {
         <div className="volunteer-newsletter-pattern" aria-hidden="true" />
         <div className="container">
           <div className="volunteer-newsletter-wrapper">
-            {/* Left: Envelope Icon + Separator */}
-            <div className="volunteer-newsletter-left">
-              <div className="volunteer-newsletter-icon" aria-hidden="true">
-                <i className="fa-regular fa-envelope" />
+            <div className="volunteer-newsletter-lgroup">
+              {/* Left: Envelope Icon + Separator */}
+              <div className="volunteer-newsletter-left">
+                <div className="volunteer-newsletter-icon" aria-hidden="true">
+                  <i className="fa-regular fa-envelope" />
+                </div>
+                <div className="volunteer-newsletter-divider" aria-hidden="true" />
               </div>
-              <div className="volunteer-newsletter-divider" aria-hidden="true" />
-            </div>
 
-            {/* Center: Heading & Description */}
-            <div className="volunteer-newsletter-center">
-              <h2 className="volunteer-newsletter-title">Stay Connected</h2>
-              <p className="volunteer-newsletter-desc">
-                Subscribe for updates on opportunities, events, and new
-                initiatives at II&amp;M.
-              </p>
+              {/* Center: Heading & Description */}
+              <div className="volunteer-newsletter-center">
+                <h2 className="volunteer-newsletter-title">Stay Connected</h2>
+                <p className="volunteer-newsletter-desc">
+                  Subscribe for updates on opportunities, events, and new
+                  initiatives at II&amp;M.
+                </p>
+              </div>
             </div>
 
             {/* Right: Subscription Input + Button */}

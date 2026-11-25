@@ -94,6 +94,30 @@ export default function ConsultationPage() {
         </div>
       </section>
 
+      <section className="consult-intro">
+        <div className="container">
+          <div className="row align-items-center g-4 g-lg-5">
+            <div className="col-lg-7">
+              <p className="consult-eyebrow">CONSULTING AT II&amp;M</p>
+              <h2 className="consult-h2">Expertise Built Over <em>15 Years</em> of Impact.</h2>
+              <p className="consult-body">
+                Over the past 15 years, II&amp;M has developed innovative community health research methodologies, crafted research-tested implementation toolkits, informed nuanced Islamic bioethical guidelines, designed effective workshops and courses, and authored data-driven policy reports. This knowledge and expertise is available to community leaders, researchers, policy-makers, patients, and others through our dedicated consultation services. You will meet with vetted experts and scholars and obtain high-quality insights and tools to assist you in the domains. Please click the form below to start an initial inquiry.
+              </p>
+              <ConsultationBtn className="consult-btn consult-btn-fill mt-3">
+                CLICK TO CONSULT II&amp;M <i className="fa-solid fa-arrow-right" />
+              </ConsultationBtn>
+            </div>
+            <div className="col-lg-5">
+              <img
+                className="consult-intro-img"
+                src={asset("/images/consult-hero-team.jpg")}
+                alt="II&M consultation team meeting"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="consult-approach" id="approach">
         <div className="container">
           <div className="row align-items-center g-4 g-lg-5">

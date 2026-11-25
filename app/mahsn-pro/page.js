@@ -79,7 +79,7 @@ const PUBLICATIONS = [
     title:
       "Muslim Patients' Religious & Spiritual Resource Needs in US Hospitals: Findings from a National Survey",
     desc: "National survey findings concerning the importance and availability of religious and spiritual resources for Muslim patients.",
-    href: "https://link.springer.com/article/10.1007/s11606-024-08748-2",
+    href: "https://link.springer.com/article/10.1007/s11606-024-08960-y?mc_cid=cdf233e6d8&mc_eid=UNIQID",
   },
   {
     num: "02",
@@ -87,7 +87,7 @@ const PUBLICATIONS = [
     title:
       "Associations Between Every-day and Medical Setting-Based Discrimination on Religion and Sociodemographic Characteristics of Muslim Americans: Findings from a National Survey",
     desc: "Research examining experiences of everyday and healthcare-related discrimination among Muslim Americans.",
-    href: "https://link.springer.com/article/10.1007/s10903-024-01587-3",
+    href: "https://link.springer.com/article/10.1007/s10903-024-01633-2",
   },
 ];
 
@@ -454,32 +454,30 @@ export default function MahsnPage() {
                   MAHSN project.
                 </p>
 
-                <div className="row g-3">
+                <div className="row g-4">
                   {/* Product 1 */}
                   <div className="col-md-6">
                     <div className="mahsn-productCard">
-                      <div className="mahsn-productMockupWrap1">
-                        <div className="mahsn-mockupPaper">
-                          <p className="mahsn-mockupKicker">RESEARCH PAPER</p>
-                          <h4 className="mahsn-mockupHeading">
-                            Religious &amp; Spiritual Resource Needs
-                          </h4>
-                          <p className="mahsn-mockupSub">
-                            National Survey Findings
-                          </p>
-                        </div>
+                      <div className="mahsn-productImgWrap">
+                        <img
+                          src={asset("/images/research/mp-tab-publications.jpg")}
+                          alt="Associations research paper thumbnail"
+                          className="mahsn-productImg"
+                          loading="lazy"
+                        />
                       </div>
                       <div className="mahsn-productBody">
                         <h4 className="mahsn-productTitle">
-                          Religious &amp; Spiritual Needs
+                          Associations Between Every day and Medical Setting-Based Discrimination and Religious and Sociodemographic Characteristics of Muslim Americans: Findings from a National Survey.
                         </h4>
+                        <p className="mahsn-productJournal">Journal of Immigrant and Minority Health, 10/2024.</p>
                         <a
-                          href="https://link.springer.com/article/10.1007/s11606-024-08960-y"
+                          href="https://link.springer.com/article/10.1007/s10903-024-01633-2"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mahsn-productLink"
+                          className="mahsn-productReadMore"
                         >
-                          READ ARTICLE <span className="ms-1">↗</span>
+                          Read More
                         </a>
                       </div>
                     </div>
@@ -488,28 +486,26 @@ export default function MahsnPage() {
                   {/* Product 2 */}
                   <div className="col-md-6">
                     <div className="mahsn-productCard">
-                      <div className="mahsn-productMockupWrap2">
-                        <div className="mahsn-mockupPaper">
-                          <p className="mahsn-mockupKicker">RESEARCH PAPER</p>
-                          <h4 className="mahsn-mockupHeading">
-                            Discrimination &amp; Healthcare Experience
-                          </h4>
-                          <p className="mahsn-mockupSub">
-                            National Survey Findings
-                          </p>
-                        </div>
+                      <div className="mahsn-productImgWrap mahsn-productImgWrap--dark">
+                        <img
+                          src={asset("/images/research/resource-pubs.jpg")}
+                          alt="Muslim Patients journal article thumbnail"
+                          className="mahsn-productImg"
+                          loading="lazy"
+                        />
                       </div>
                       <div className="mahsn-productBody">
                         <h4 className="mahsn-productTitle">
-                          Discrimination &amp; Healthcare
+                          Muslim Patients&apos; Religious &amp; Spiritual Resource Needs in US Hospitals: Findings from a National Survey.
                         </h4>
+                        <p className="mahsn-productJournal">Journal of General Internal Medicine, 2024.</p>
                         <a
-                          href="https://link.springer.com/article/10.1007/s10903-024-01633-2"
+                          href="https://link.springer.com/article/10.1007/s11606-024-08960-y?mc_cid=cdf233e6d8&mc_eid=UNIQID"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mahsn-productLink"
+                          className="mahsn-productReadMore"
                         >
-                          READ ARTICLE <span className="ms-1">↗</span>
+                          Read More
                         </a>
                       </div>
                     </div>
@@ -642,7 +638,11 @@ export default function MahsnPage() {
 
                 <div className="mahsn-fundingBox">
                   <div className="mahsn-fundingBadge" aria-hidden="true">
-                    I&amp;M
+                    <img
+                      src={asset("/images/iim-logo-badge.png")}
+                      alt="Initiative on Islam & Medicine"
+                      className="mahsn-fundingLogoImg"
+                    />
                   </div>
                   <p className="mahsn-fundingText">
                     This project is funded by the{" "}

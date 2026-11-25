@@ -102,6 +102,7 @@ const upcoming = [
 const additional = [
   {
     img: asset("/images/course-muslim-doctor.jpg"),
+    statusLabel: "ONGOING",
     title: "Becoming a Muslim Doctor",
     subtitle: "Foundations of Identity, Ethics, and Practice",
     meta: [
@@ -114,6 +115,8 @@ const additional = [
   },
   {
     img: asset("/images/bio-campus.jpg"),
+    badge: "PAST COURSE",
+    badgeSoft: true,
     title: "Exploring Bioscience and Islam",
     subtitle: "A Curriculum on Fundamental Questions about the Human Being",
     meta: [
@@ -126,6 +129,8 @@ const additional = [
   },
   {
     img: asset("/images/about-cta-arch.jpg"),
+    badge: "PAST COURSE",
+    badgeSoft: true,
     title: "Islam, Medical Ethics, and Spiritual Care",
     subtitle: null,
     meta: [
@@ -305,6 +310,12 @@ export default function CoursesPage() {
               <article className="crs-course" key={course.title}>
                 <div className="crs-course-media">
                   <img src={course.img} alt={course.title} />
+                  {course.statusLabel ? (
+                    <span className={`crs-status-label crs-status-${course.statusLabel.toLowerCase()}`}>{course.statusLabel}</span>
+                  ) : null}
+                  {course.badge ? (
+                    <span className={`crs-badge${course.badgeSoft ? " crs-badge-soft" : ""}`}>{course.badge}</span>
+                  ) : null}
                 </div>
                 <div className="crs-course-body">
                   <h3>{course.title}</h3>

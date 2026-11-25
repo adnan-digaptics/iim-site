@@ -75,7 +75,7 @@ export default function BooksPage() {
               </p>
               <div className="books-featured-actions">
                 <Link href="/education" className="books-btn-outline">LEARN MORE</Link>
-                <a href="https://link.springer.com/book/10.1007/978-3-031-50003-1" target="_blank" rel="noopener noreferrer" className="books-btn-maroon">BUY NOW</a>
+                <a href="https://link.springer.com/book/10.1007/978-3-032-09996-9?sv1=affiliate&sv_campaign_id=2940809&awc=26429_1794947802_1af4e781e2017c5b0d37e66798de743c&utm_medium=affiliate&utm_source=awin&utm_campaign=CONR_BOOKS_ECOM_GL_PBOK_06YUE_GL_ALWYS_DEEPLINK&utm_content=textlink&utm_term=2940809" target="_blank" rel="noopener noreferrer" className="books-btn-maroon">BUY NOW</a>
               </div>
             </div>
           </div>
