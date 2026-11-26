@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { asset } from "../../lib/asset";
 
@@ -40,11 +40,38 @@ const TESTIMONIALS = [
   {
     id: "t2",
     cat: "students",
-    img: asset("/images/donation/voice-2.jpg"),
+    img: asset("/images/our-team/nabeel.jpg"),
     duration: "1:54",
-    quote: "The courses helped me connect my faith with clinical training in a way that feels rigorous and practical.",
-    name: "Omar H.",
-    role: "Medical Student",
+    quote: "My internship with II&M was a highly enriching experience. I had the opportunity to understand the profound interface between Islamic ethics and modern medicine and developed practical skills that will benefit my future career.",
+    name: "Muhammad Yusuf Khan",
+    role: "Medical Student, Summer Intern 2023",
+  },
+  {
+    id: "t6",
+    cat: "students",
+    img: asset("/images/educate/testimonial-intern.jpg"),
+    duration: "2:10",
+    quote: "My internship with II&M allowed me to formally study Islamic bioethics in a way that deepened both my medical education and my faith. The program introduced me to mentors truly invested in developing the next generation of Muslim healthcare leaders.",
+    name: "Salma Saifuddin",
+    role: "Medical Student, Summer Intern 2025",
+  },
+  {
+    id: "t7",
+    cat: "students",
+    img: asset("/images/interns/intern-nasar-qureshi.jpg"),
+    duration: "1:45",
+    quote: "Being part of II&M's internship opened new ways to integrate Islamic principles into how I approach patient care and research.",
+    name: "Nasar Qureshi",
+    role: "Medical Student, Summer Intern 2026",
+  },
+  {
+    id: "t8",
+    cat: "students",
+    img: asset("/images/interns/intern-sajid-fahumy.jpg"),
+    duration: "1:38",
+    quote: "The II&M internship gave me a framework for thinking about faith and medicine that I carry into every clinical encounter and educational experience.",
+    name: "Sajid H. Fahumy",
+    role: "Rowan-Virtua School of Osteopathic Medicine, Summer Intern 2026",
   },
   {
     id: "t3",
@@ -56,22 +83,31 @@ const TESTIMONIALS = [
     role: "Founder, Initiative on Islam & Medicine",
   },
   {
-    id: "t4",
+    id: "t9",
     cat: "leaders",
-    img: asset("/images/donation/impact-bridges.jpg"),
-    duration: "2:05",
-    quote: "Partnering with II&M helped our organization bring evidence-informed learning to our community.",
-    name: "Community Partner",
-    role: "Nonprofit Leader",
+    img: asset("/images/our-team/portrait-placeholder.svg"),
+    duration: "2:00",
+    quote: "II&M's work bridges the gap between Islamic values and modern healthcare in a way that empowers communities to seek care with confidence.",
+    name: "Talha",
+    role: "Community Leader",
   },
   {
-    id: "t5",
+    id: "t10",
+    cat: "leaders",
+    img: asset("/images/our-team/portrait-placeholder.svg"),
+    duration: "1:55",
+    quote: "The resources and education that II&M provides have helped our community engage with healthcare in a spiritually grounded and informed way.",
+    name: "Maulana Bilal",
+    role: "Community Leader",
+  },
+  {
+    id: "t11",
     cat: "patients",
-    img: asset("/images/donation/impact-learners.jpg"),
-    duration: "1:41",
-    quote: "Knowing clinicians are learning faith-sensitive care makes families feel seen and respected.",
-    name: "Family Advocate",
-    role: "Patient & Family Voice",
+    img: asset("/images/our-team/portrait-placeholder.svg"),
+    duration: "2:00",
+    quote: "II&M's work has given our community the tools to navigate healthcare with both confidence and spiritual grounding.",
+    name: "Sheikh Yaseen",
+    role: "Community & Spiritual Leader",
   },
 ];
 
@@ -258,12 +294,10 @@ export default function DonatePageClient() {
               <div className="donate-voice-cards">
                 {visible.map((t) => (
                   <article className="donate-voice-card" key={t.id}>
-                    <button type="button" className="donate-voice-thumb" onClick={() => openImpactVideo(t.video || IMPACT_VIDEO_ID)} aria-label={`Play testimonial from ${t.name}`}>
-                      <img src={t.img} alt="" />
-                      <span className="donate-voice-play"><i className="fa-solid fa-play" /></span>
-                      <span className="donate-voice-time">{t.duration}</span>
-                    </button>
-                    <p className="donate-voice-quote">“{t.quote}”</p>
+                    <div className="donate-voice-thumb">
+                      <img src={t.img} alt={t.name} />
+                    </div>
+                    <p className="donate-voice-quote">&ldquo;{t.quote}&rdquo;</p>
                     <div className="donate-voice-meta">
                       <strong>{t.name}</strong>
                       <span>{t.role}</span>

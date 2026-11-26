@@ -114,7 +114,7 @@ const STUDENT_SEMINARS = [
     title: "International Islamic University Malaysia",
     meta: "IIUM Gambang Campus · Jul 17–20, 2023 · Pre-university foundation students",
     linkText: "VIEW PROGRAM ↗",
-    href: "https://www.youtube.com/playlist?list=PLKPFd4mBCvIhsZjB0RnDRMROZqHPJ2Pf2",
+    href: "https://www.youtube.com/playlist?list=PLKPFd4mBCvIgCVEUKd-X87YFyTXPZYYi4",
   },
   {
     num: "03",
@@ -131,7 +131,7 @@ const TEACHER_TRAINING = [
     title: "Teaching Bioscience Through an Islamic Lens",
     meta: "II&M + ISLA · May 20, 2024",
     linkText: "WATCH / LEARN MORE ↗",
-    href: "https://www.youtube.com/playlist?list=PLKPFd4mBCvIhxHEc-xetB1MnFDQT9qhAV",
+    href: "https://www.youtube.com/playlist?list=PLKPFd4mBCvIhsZjB0RnDRMROZqHPJ2Pf2",
   },
   {
     num: "02",
@@ -239,45 +239,57 @@ const PRESENTATIONS = [
 const GALLERY_ITEMS = [
   {
     num: "01",
-    title: "Bridging Bioscience and Islam — Engaging Big Questions about the Human Being",
-    meta: "Curriculum overview and project guide",
-    linkText: "VIEW RESOURCE ↗",
+    title: "Bridging Bioscience and Islam",
+    meta: "Engaging Big Questions about the Human Being",
+    type: "Curriculum Guide",
+    image: "/images/fostering-connections/materials/mat-bridging-bioscience.png",
+    linkText: "VIEW RESOURCE",
     href: "https://medicineandislam.org/bridging-bioscience-and-islam-2/",
   },
   {
     num: "02",
-    title: "Exploring Bioscience and Islam",
-    meta: "Project resource page",
-    linkText: "VIEW RESOURCE ↗",
+    title: "Teaching Modules",
+    meta: "Seven seminar teaching modules",
+    type: "Modules",
+    image: "/images/fostering-connections/materials/mat-teaching-modules.png",
+    linkText: "VIEW MODULES",
     href: "https://medicineandislam.org/bioscience-and-islam/",
   },
   {
     num: "03",
-    title: "Teaching Modules — Interactive Access",
-    meta: "Seven seminar teaching modules",
-    linkText: "VIEW MODULES ↗",
+    title: "Teacher's Companion",
+    meta: "Companion resource for educators",
+    type: "Companion Guide",
+    image: "/images/fostering-connections/materials/mat-teachers-companion.png",
+    linkText: "VIEW GUIDE",
     href: "https://medicineandislam.org/fostering-connections-between-science-and-theology-2/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE2ODE4IiwidG9nZ2xlIjpmYWxzZX0%3D",
   },
   {
     num: "04",
     title: "Symposium Proceedings & Policy Recommendations",
     meta: "Biomedicine, Religion & Education · July 2025",
-    linkText: "VIEW PROCEEDINGS ↗",
-    href: "https://medicineandislam.org/wp-content/uploads/2026/09/Symposium-Proceedings-Policy-Recommendations.pdf",
+    type: "PDF",
+    image: "/images/fostering-connections/materials/mat-symposium.png",
+    linkText: "DOWNLOAD PDF",
+    href: "/pdfs/fostering-connections/symposium-proceedings.pdf",
   },
   {
     num: "05",
     title: "Student Reflection Booklet",
     meta: "Student-facing reflection and activity resource",
-    linkText: "VIEW BOOKLET ↗",
+    type: "Booklet",
+    image: "/images/fostering-connections/materials/mat-student-reflection.jpg",
+    linkText: "VIEW BOOKLET",
     href: "https://go.fliplink.me/view/E21B175C-A0FD-4217-BE09-88018472B342",
   },
   {
     num: "06",
     title: "Promotional Brochure",
     meta: "Project overview brochure",
-    linkText: "VIEW BROCHURE ↗",
-    href: "https://medicineandislam.org/wp-content/uploads/2026/03/bridging-bioscience-and-islam.pdf",
+    type: "PDF",
+    image: "/images/fostering-connections/materials/mat-brochure.jpg",
+    linkText: "DOWNLOAD PDF",
+    href: "/pdfs/fostering-connections/promotional-brochure.pdf",
   },
 ];
 
@@ -658,20 +670,31 @@ export default function FosteringConnectionsPage() {
                   Teaching modules, companion resources, symposium proceedings and student-facing material
                   developed through the project.
                 </p>
-                <div className="fc-materialsGrid">
+                <div className="fc-matGrid">
                   {GALLERY_ITEMS.map((gal) => (
-                    <div key={gal.num} className={`fc-cardItem fc-cardWhite`}>
-                      <div>
-                        <div className="fc-cardTopRow">
-                          <h3 className="fc-cardTitle">{gal.title}</h3>
-                          <span className="fc-cardTopNum">{gal.num}</span>
-                        </div>
-                        <p className="fc-cardMeta">{gal.meta}</p>
+                    <a
+                      key={gal.num}
+                      href={gal.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="fc-matCard"
+                    >
+                      <div className="fc-matImgWrap">
+                        <img
+                          src={asset(gal.image)}
+                          alt={gal.title}
+                          className="fc-matImg"
+                          loading="lazy"
+                        />
+                        <span className="fc-matTypeBadge">{gal.type}</span>
                       </div>
-                      <a href={gal.href} className="fc-cardLink">
-                        {gal.linkText}
-                      </a>
-                    </div>
+                      <div className="fc-matBody">
+                        <p className="fc-matNum">{gal.num}</p>
+                        <h3 className="fc-matTitle">{gal.title}</h3>
+                        <p className="fc-matMeta">{gal.meta}</p>
+                        <span className="fc-matBtn">{gal.linkText} ↗</span>
+                      </div>
+                    </a>
                   ))}
                 </div>
               </div>

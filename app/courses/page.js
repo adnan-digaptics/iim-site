@@ -209,27 +209,27 @@ export default function CoursesPage() {
             <p className="crs-eyebrow">EDUCATIONAL PARTNERS &amp; COLLABORATORS</p>
             <Link href="/education" className="crs-text-link">VIEW ALL PARTNERS <i className="fa-solid fa-arrow-right" /></Link>
           </div>
-          <div className="crs-partners-marquee">
-            <div className="crs-partners-track">
-              {[0, 1].map((copy) =>
-                partners.map((partner) => (
-                  <article
-                    className={`crs-partner${partner.name === "360 Growth Lab" ? " crs-partner-360" : ""}${partner.name === "Muslim EdEx" ? " crs-partner-edex" : ""}`}
-                    key={`${partner.name}-${copy}`}
-                    aria-hidden={copy === 1 ? "true" : undefined}
-                  >
-                    <div className="crs-partner-logo">
-                      <img src={partner.logo} alt={copy === 0 ? partner.name : ""} />
-                    </div>
-                    <div className="crs-partner-copy">
-                      <h3>{partner.name}</h3>
-                      {partner.sub ? <span className="crs-partner-sub">{partner.sub}</span> : null}
-                      <p>{partner.text}</p>
-                    </div>
-                  </article>
-                ))
-              )}
-            </div>
+        </div>
+        <div className="crs-partners-marquee">
+          <div className="crs-partners-track">
+            {[0, 1].map((copy) =>
+              partners.map((partner) => (
+                <article
+                  className={`crs-partner${partner.name === "360 Growth Lab" ? " crs-partner-360" : ""}${partner.name === "Muslim EdEx" ? " crs-partner-edex" : ""}`}
+                  key={`${partner.name}-${copy}`}
+                  aria-hidden={copy === 1 ? "true" : undefined}
+                >
+                  <div className="crs-partner-logo">
+                    <img src={partner.logo} alt={copy === 0 ? partner.name : ""} />
+                  </div>
+                  <div className="crs-partner-copy">
+                    <h3>{partner.name}</h3>
+                    {partner.sub ? <span className="crs-partner-sub">{partner.sub}</span> : null}
+                    <p>{partner.text}</p>
+                  </div>
+                </article>
+              ))
+            )}
           </div>
         </div>
       </section>

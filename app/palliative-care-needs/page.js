@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { asset } from "../../lib/asset";
+import PalliativeTeamSlider from "./PalliativeTeamSlider";
 
 export const metadata = {
   title:
@@ -97,22 +98,21 @@ const SIDEBAR_LINKS = [
 
 // 4. Team Members
 const TEAM_MEMBERS = [
-  {
-    name: "Sameeia Khalid",
-    image: "/images/i-am-pcn/hd_team-sameeia.png",
-  },
-  {
-    name: "Dr. Ramy Sedan",
-    image: "/images/i-am-pcn/hd_team-ramy.png",
-  },
-  {
-    name: "Gwenn McClendon",
-    image: "/images/i-am-pcn/hd_team-gwenn.png",
-  },
-  {
-    name: "Dr. Aasim I. Padela",
-    image: "/images/i-am-pcn/hd_team-padela.png",
-  },
+  { name: "Sameeia Khalid", image: "/images/i-am-pcn/hd_team-sameeia.png" },
+  { name: "Dr. Ramy Sedan", image: "/images/i-am-pcn/hd_team-ramy.png" },
+  { name: "Gwenn McClendon", image: "/images/i-am-pcn/hd_team-gwenn.png" },
+  { name: "Dr. Aasim I. Padela", image: "/images/i-am-pcn/hd_team-padela.png" },
+  { name: "Team Member", image: "/images/i-am-pcn/team-member-1.png" },
+  { name: "Team Member", image: "/images/i-am-pcn/team-member-2.png" },
+  { name: "Team Member", image: "/images/i-am-pcn/team-member-3.png" },
+  { name: "Team Member", image: "/images/i-am-pcn/team-member-4.png" },
+  { name: "Team Member", image: "/images/i-am-pcn/team-member-5.jpg" },
+  { name: "Team Member", image: "/images/i-am-pcn/team-member-6.webp" },
+  { name: "Team Member", image: "/images/i-am-pcn/team-member-7.jpg" },
+  { name: "Team Member", image: "/images/i-am-pcn/team-member-8.jpg" },
+  { name: "Team Member", image: "/images/i-am-pcn/team-member-9.png" },
+  { name: "Team Member", image: "/images/i-am-pcn/team-member-10.jpg" },
+  { name: "Team Member", image: "/images/i-am-pcn/team-member-11.png" },
 ];
 
 export default function IAmPcnPage() {
@@ -510,25 +510,7 @@ export default function IAmPcnPage() {
             <h2 className="iampcn-sectionHeading">Meet The Project Team</h2>
           </div>
 
-          <div className="row g-3 g-md-4">
-            {TEAM_MEMBERS.map((member, idx) => (
-              <div key={idx} className="col-6 col-md-3">
-                <div className="iampcn-teamTile">
-                  <div className="iampcn-teamPhotoWrap">
-                    <img
-                      src={asset(member.image)}
-                      alt={member.name}
-                      className="iampcn-teamPhoto"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="iampcn-teamContent">
-                    <h3 className="iampcn-teamMemberName">{member.name}</h3>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <PalliativeTeamSlider members={TEAM_MEMBERS.map(m => ({ ...m, image: asset(m.image) }))} />
         </div>
       </section>
 

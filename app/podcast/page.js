@@ -1,6 +1,7 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
 import PodcastGuests from "./PodcastGuests";
+import PodcastEpisodes from "./PodcastEpisodes";
 
 export const metadata = {
   title: "The Medic & The Mufti Podcast | Initiative on Islam & Medicine",
@@ -9,13 +10,27 @@ export const metadata = {
 };
 
 const EPISODES = [
-  ["01", "Science and Religion: How Can We Know Anything at All?", "Released April 15, 2024", "/images/podcast/ep-cosmos.jpg", "https://www.youtube.com/watch?v=XpN53zAzTPg"],
-  ["02", "How Did We Come About? The Question of Human Origin", "Released May 6, 2024", "/images/bio-topic-genes.jpg", "https://www.youtube.com/@medicineandislam"],
-  ["03", "What Does it Mean to be Human? Reflections on Neuroscience, Artificial Intelligence and the Soul", "Released June 3, 2024", "/images/podcast/ep-brain.jpg", "https://www.youtube.com/@medicineandislam"],
-  ["04", "What is the Future of Humankind? Are we and should we be changing our bodies and brains?", "Released July 1, 2024", "/images/bio-topic-robot.jpg", "https://www.youtube.com/@medicineandislam"],
-  ["05", "Are Our Lives Pre-determined? The Question of Free Will and Human Agency", "Released July 29, 2024", "/images/podcast/ep-horizon.jpg", "https://www.youtube.com/@medicineandislam"],
-  ["06", "Are Humans Unique in the Universe? The Question of Extraterrestrial Intelligent Life", "Released August 26, 2024", "/images/bio-planet.jpg", "https://www.youtube.com/@medicineandislam"],
+  ["01", "Released April 15, 2024", "https://www.youtube.com/watch?v=yi1DM62wy4k"],
+  ["02", "Released May 6, 2024", "https://www.youtube.com/watch?v=Ft98sJUpZH0"],
+  ["03", "Released June 3, 2024", "https://www.youtube.com/watch?v=TgfCwCya_BU"],
+  ["04", "Released July 1, 2024", "https://www.youtube.com/watch?v=L4qRWjOsQGU"],
+  ["05", "Released July 29, 2024", "https://www.youtube.com/watch?v=XW_hf--BsQg"],
+  ["06", "Released August 26, 2024", "https://www.youtube.com/watch?v=HXPgHWoBx7w"],
 ];
+
+async function fetchYouTubeTitle(url) {
+  try {
+    const res = await fetch(
+      `https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`,
+      { next: { revalidate: 86400 } }
+    );
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.title || null;
+  } catch {
+    return null;
+  }
+}
 
 const GUESTS = [
   ["Dr. Mohd Yusof Mohamad", "International Islamic University Malaysia", "/images/podcast/guest-mohamad.png"],
@@ -52,7 +67,7 @@ const GUESTS = [
 
 const PLATFORMS = [
   ["fa-solid fa-globe", "Listen on", "II&M Website", "#episodes", ""],
-  ["fa-brands fa-youtube", "Watch on", "YouTube", "https://www.youtube.com/@medicineandislam", "is-youtube"],
+  ["fa-brands fa-youtube", "Watch on", "YouTube", "https://www.youtube.com/watch?v=XpN53zAzTPg", "is-youtube"],
 ];
 
 const TOPICS = [
@@ -81,7 +96,14 @@ function initials(name) {
     .join("");
 }
 
-export default function PodcastPage() {
+export default async function PodcastPage() {
+  const resolvedEpisodes = await Promise.all(
+    EPISODES.map(async ([num, date, ytUrl]) => {
+      const title = await fetchYouTubeTitle(ytUrl);
+      return [num, title || `Episode ${num}`, date, "", ytUrl];
+    })
+  );
+
   const guests = GUESTS.map(([name, role, image]) => ({
     name,
     role: role || "Conversation partner",
@@ -261,20 +283,7 @@ export default function PodcastPage() {
           <div className="pod-head">
             <p className="pod-eyebrow">FEATURED EPISODES</p>
           </div>
-          <div className="pod-episode-row">
-            {EPISODES.map(([num, title, date, image, ytUrl]) => (
-              <article key={num}>
-                <img src={asset(image)} alt="" />
-                <p className="pod-ep-num">EPISODE {num}</p>
-                <h3>{title}</h3>
-                <p className="pod-date">{date}</p>
-                <div className="pod-ep-actions">
-                  <a href={ytUrl} target="_blank" rel="noopener noreferrer"><i className="fa-solid fa-play" /> Watch</a>
-                  <a href={ytUrl} target="_blank" rel="noopener noreferrer"><i className="fa-solid fa-headphones" /> Listen</a>
-                </div>
-              </article>
-            ))}
-          </div>
+          <PodcastEpisodes episodes={resolvedEpisodes} />
         </div>
       </section>
 

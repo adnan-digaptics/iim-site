@@ -1,6 +1,7 @@
 import { asset } from "../../lib/asset";
 import Link from "next/link";
 import MammographyNav from "./MammographyNav";
+import MammographyDisseminationSlider from "./MammographyDisseminationSlider";
 
 export const metadata = {
   title:
@@ -169,39 +170,39 @@ const PUBLICATIONS = [
 ];
 
 const PRESENTATIONS_COL1 = [
-  "Addressing Muslim Mammography Disparities Through A Religiously Tailored Intervention",
-  "Identifying And Intervening Upon American Muslim Health Disparities",
-  "Imams & Health Promotion: An Ethical Approach In The Context Of Cancer Screening",
-  "Incorporating Religious Authorities And Scripture In Health Interventions",
-  "ISNA: Women's Health Matters",
-  "Leveraging Religious Networks To Promote Breast Cancer Screening Amongst American Muslim Women",
-  "Leveraging Mosques To Promote Breast Cancer Screening Amongst American Muslim Women",
-  "Developing A Religiously Tailored Intervention To Enhance Mammography In Mosque Communities",
-  "Reducing Muslim Mammography Disparities: Outcomes From A Religiously Tailored Mosque-Based Group Education Intervention",
+  { title: "Addressing Muslim Mammography Disparities Through A Religiously Tailored Intervention", href: "/pdfs/mammography/addressing-muslim-mammography-disparities.pdf" },
+  { title: "Identifying And Intervening Upon American Muslim Health Disparities", href: "/pdfs/mammography/identifying-intervening-american-muslim-health-disparities.pdf" },
+  { title: "Imams & Health Promotion: An Ethical Approach In The Context Of Cancer Screening", href: "/pdfs/mammography/imams-health-promotion-cancer-screening.pdf" },
+  { title: "Incorporating Religious Authorities And Scripture In Health Interventions", href: "/pdfs/mammography/incorporating-religious-authorities-health-interventions.pdf" },
+  { title: "ISNA: Women's Health Matters", href: "https://www.medicineandislam.org/a-religiously-tailored-mammography-intervention-for-american-muslims/" },
+  { title: "Leveraging Religious Networks To Promote Breast Cancer Screening Amongst American Muslim Women", href: "/pdfs/mammography/leveraging-religious-networks-breast-cancer-screening.pdf" },
+  { title: "Leveraging Mosques To Promote Breast Cancer Screening Amongst American Muslim Women", href: "/pdfs/mammography/leveraging-mosques-breast-cancer-screening.pdf" },
+  { title: "Developing A Religiously Tailored Intervention To Enhance Mammography In Mosque Communities", href: "/pdfs/mammography/developing-religiously-tailored-intervention-mammography.pdf" },
+  { title: "Reducing Muslim Mammography Disparities: Outcomes From A Religiously Tailored Mosque-Based Group Education Intervention", href: "/pdfs/mammography/reducing-muslim-mammography-disparities.pdf" },
 ];
 
 const PRESENTATIONS_COL2 = [
-  "Religious Concepts & Breast Cancer Screening Practices In The Greater Chicago Muslim Community",
-  "Religious Influences On Health Care Practices Among American Muslim Women",
-  "Religiously Tailoring Messages To Enhance Mammography Intention Among Muslims",
-  "Exploring Associations Between Breast Cancer Screening Practices & Religious Concepts Among American Muslims",
-  "Muslim Women's Perspectives On Designing Mosque-Based Women's Health Interventions: An Exploratory Qualitative Study",
-  "A Religiously-Tailored Intervention To Enhance Mammography Uptake Among Muslims",
-  "The Influence Of Religion Upon American Muslim Mammography Beliefs And Practices",
-  "The Influence Of Modesty Concerns And Fatalistic Beliefs Upon Breast Cancer Screening Practices Amongst American Muslims",
-  "Understand American Muslim Communities",
+  { title: "Religious Concepts & Breast Cancer Screening Practices In The Greater Chicago Muslim Community", href: "/pdfs/mammography/religious-concepts-breast-cancer-chicago-muslim-community.pdf" },
+  { title: "Religious Influences On Health Care Practices Among American Muslim Women", href: "/pdfs/mammography/religious-influences-healthcare-american-muslim-women.pdf" },
+  { title: "Religiously Tailoring Messages To Enhance Mammography Intention Among Muslims", href: "/pdfs/mammography/religiously-tailoring-mammography-intention-muslims.pdf" },
+  { title: "Exploring Associations Between Breast Cancer Screening Practices & Religious Concepts Among American Muslims", href: "/pdfs/mammography/exploring-associations-breast-cancer-screening-american-muslims.pdf" },
+  { title: "Muslim Women's Perspectives On Designing Mosque-Based Women's Health Interventions: An Exploratory Qualitative Study", href: "/pdfs/mammography/muslim-womens-perspectives-mosque-health-interventions.pdf" },
+  { title: "A Religiously-Tailored Intervention To Enhance Mammography Uptake Among Muslims", href: "/pdfs/mammography/religiously-tailored-intervention-mammography-uptake-muslims.pdf" },
+  { title: "The Influence Of Religion Upon American Muslim Mammography Beliefs And Practices", href: "/pdfs/mammography/influence-religion-american-muslim-mammography-beliefs.pdf" },
+  { title: "The Influence Of Modesty Concerns And Fatalistic Beliefs Upon Breast Cancer Screening Practices Amongst American Muslims", href: "/pdfs/mammography/influence-modesty-fatalistic-beliefs-breast-cancer-screening.pdf" },
+  { title: "Understand American Muslim Communities", href: "/pdfs/mammography/understand-american-muslim-communities.pdf" },
 ];
 
 const POSTERS_COL1 = [
-  { title: "Reducing Muslim mammography disparities: Outcomes from a religiously tailored mosque-based intervention", href: "https://medicineandislam.org/wp-content/uploads/2024/11/AACR-2017-Outcomes.pdf" },
-  { title: "Outcomes from a Religiously Tailored Intervention to Enhance Mammography Uptake among American Muslims", href: "https://medicineandislam.org/wp-content/uploads/2024/11/AACR-2018.pdf" },
-  { title: "A Religiously Tailored Intervention to Enhance Mammography Uptake among American Muslims—Design Elements, Feasibility & Outcomes", href: "https://medicineandislam.org/wp-content/uploads/2024/11/Modesty-Poster-Final.pdf" },
+  { title: "Reducing Muslim mammography disparities: Outcomes from a religiously tailored mosque-based intervention", href: "/pdfs/mammography/aacr-2017-outcomes.pdf" },
+  { title: "Outcomes from a Religiously Tailored Intervention to Enhance Mammography Uptake among American Muslims", href: "/pdfs/mammography/aacr-2018.pdf" },
+  { title: "A Religiously Tailored Intervention to Enhance Mammography Uptake among American Muslims—Design Elements, Feasibility & Outcomes", href: "/pdfs/mammography/modesty-poster-final.pdf" },
 ];
 
 const POSTERS_COL2 = [
-  { title: "Development and Validation of a Modesty Measure for Diverse Muslim Populations", href: "https://medicineandislam.org/wp-content/uploads/2024/11/Modesty-Poster-Final.pdf" },
-  { title: "Reducing Disparities in Mammography Screening among American Muslim Women through a religiously-tailored mosque-based intervention", href: "https://medicineandislam.org/wp-content/uploads/2024/11/SAA-CUGH-Poster-draft-.pdf" },
-  { title: "Religion-Related Factors and Breast Cancer Screening among American Muslims", href: "https://medicineandislam.org/wp-content/uploads/2024/11/SABCS-2014-Poster.pdf" },
+  { title: "Development and Validation of a Modesty Measure for Diverse Muslim Populations", href: "/pdfs/mammography/modesty-poster-final.pdf" },
+  { title: "Reducing Disparities in Mammography Screening among American Muslim Women through a religiously-tailored mosque-based intervention", href: "/pdfs/mammography/saa-cugh-poster.pdf" },
+  { title: "Religion-Related Factors and Breast Cancer Screening among American Muslims", href: "/pdfs/mammography/sabcs-2014-poster.pdf" },
 ];
 
 const CONFERENCES_COL1 = [
@@ -232,29 +233,57 @@ const MEDIA_HIGHLIGHTS = [
   },
 ];
 
-const DISSEMINATION_ITEMS = [
+const DISSEMINATION_SLIDES = [
   {
-    title: "Dissemination Products",
-    desc: "Open the project's existing materials",
-    href: "https://www.islamandmedicine.org/",
+    title: "Developing A Religiously-Tailored Mammography Intervention For American Muslims",
+    image: "/images/mammography/dissemination-brca-results.png",
+    type: "Poster / Infographic",
+    href: "https://medicineandislam.org/wp-content/uploads/2024/10/BrCa-Results-2-768x1843-1.png",
   },
   {
-    title: "Toolkits",
-    desc: "Marked as coming soon on the source page",
-    href: "https://www.islamandmedicine.org/",
+    title: "Breast Cancer Statistics For American Muslim Women In Chicagoland",
+    image: "/images/mammography/dissemination-brca-statistics.png",
+    type: "Statistics Sheet",
+    href: "https://medicineandislam.org/wp-content/uploads/2024/10/BrCa-Statistics-2.png",
+  },
+  {
+    title: "Caring For Body And Soul Process",
+    image: "/images/mammography/dissemination-caring-body-soul.png",
+    type: "Process Diagram",
+    href: "https://medicineandislam.org/wp-content/uploads/2024/10/Caring-for-Body-and-Soul-Process.png",
+  },
+  {
+    title: "Breast Cancer Disparities Amongst Muslim Americans",
+    image: "/images/mammography/dissemination-brca-disparities.png",
+    type: "Disparities Report",
+    href: "https://medicineandislam.org/wp-content/uploads/2024/10/Breast-Cancer-Screening-Disparities.png",
+  },
+  {
+    title: "Caring For Body And Soul: A Workshop On Women's Health For Muslims",
+    image: "/images/mammography/dissemination-productbook1.jpg",
+    type: "Workshop Manual",
+    href: "https://medicineandislam.org/wp-content/uploads/2024/10/Group-Education-Manual-Replication-Guide-updated-1.pdf",
+  },
+  {
+    title: "Peer Education Training Manual",
+    image: "/images/mammography/dissemination-productbook.jpg",
+    type: "Training Manual",
+    href: "https://medicineandislam.org/wp-content/uploads/2024/10/Peer-Educator-Training-Manual_12-13-15-1.pdf",
   },
 ];
 
 const TEAM_MEMBERS = [
   {
-    initials: "AP",
+    image: "/images/our-team/padela-portrait.jpg",
     name: "Aasim I. Padela, MD, MSc, FACEP",
     role: "Medical College of Wisconsin & Initiative on Islam and Medicine",
+    href: "https://medicineandislam.org/aasim-padela/",
   },
   {
-    initials: "SA",
+    image: "/images/mammography/alkhaifi.jpg",
     name: "Dr. Sarah Alkhaifi",
     role: "Assistant Professor, King Abdulaziz University",
+    href: "https://medicineandislam.org/sarah-alkhaifi-2/",
   },
 ];
 
@@ -351,10 +380,10 @@ export default function MammographyPage() {
                 <div className="row align-items-center g-3 g-md-4">
                   <div className="col-md-7">
                     <p className="mm-text">
-                      Generally mistaken for a small homogenous group, American Muslims are many and diverse. Because of this diversity, and because national health care surveys and databases typically do not collect religious affiliation data, there is limited data on aggregate female American Muslim breast cancer incidence and outcomes. Despite this, there are reasons to believe disparities may exist. First, earlier work suggests that American Muslim women have lower mammography adherence than the national average. Second, there is evidence to suggest that religious beliefs and health care experiences related to Muslim identity may adversely impact screening behaviors among American Muslim women.
+                      Generally mistaken for a small homogenous group, American Muslims are many and diverse. Because of this diversity, and because national health care surveys and databases typically do not collect religious affiliation data, there is limited data on aggregate female American Muslim breast cancer incidence and outcomes; what is known is based on ethnic group data and community surveys. Ethnic group data suggest that Muslim women present with breast cancer at a younger age, with a more advanced stage, making breast cancer an important health challenge for the community. Despite the fact that adhering to regular mammography can overcome this challenge. Studies have shown poor mammography adherence rates among Muslim women in the USA.
                     </p>
-                    <p className={`mm-text mb-0`}>
-                      To address this disparity, the Initiative on Islam and Medicine conducted a series of studies to understand the influence of religion-related factors on mammography adherence among American Muslim women, and to develop and test a mosque-based educational intervention to increase screening rates.
+                    <p className="mm-text mb-0">
+                      While other factors impacted the women adherence to mammogram, religious beliefs have greatly impacted Muslim women&rsquo;s attitude towards mammography screenings. Among Muslim women in the USA, the project initially began by seeking to understand how religion impacts screening behaviors and attitudes towards mammography in an ethnically and racially diverse group of Muslim women. Results from our research were used to create religiously-tailored, peer-led group educational workshops conducted in mosques.
                     </p>
                   </div>
                   <div className="col-md-5">
@@ -586,7 +615,7 @@ export default function MammographyPage() {
                             <span className="mm-presentationNum">
                               {idx + 1}.
                             </span>
-                            <a href="https://www.medicineandislam.org/mammography" target="_blank" rel="noopener noreferrer" className="mm-presentationLink">{item}</a>
+                            <a href={item.href} target="_blank" rel="noopener noreferrer" className="mm-presentationLink">{item.title}</a>
                           </li>
                         ))}
                       </ul>
@@ -598,7 +627,7 @@ export default function MammographyPage() {
                             <span className="mm-presentationNum">
                               {idx + 10}.
                             </span>
-                            <a href="https://www.medicineandislam.org/mammography" target="_blank" rel="noopener noreferrer" className="mm-presentationLink">{item}</a>
+                            <a href={item.href} target="_blank" rel="noopener noreferrer" className="mm-presentationLink">{item.title}</a>
                           </li>
                         ))}
                       </ul>
@@ -622,7 +651,7 @@ export default function MammographyPage() {
                           <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer" className="mm-posterCard d-block text-decoration-none">
                             <div className="mm-posterHeader">
                               <span className="mm-posterNum">{idx + 1}.</span>
-                              <p className="mm-posterText">{item.title}</p>
+                              <p className="mm-posterText">{item.title} <span className="mm-confArrow">↗</span></p>
                             </div>
                           </a>
                         ))}
@@ -634,7 +663,7 @@ export default function MammographyPage() {
                           <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer" className="mm-posterCard d-block text-decoration-none">
                             <div className="mm-posterHeader">
                               <span className="mm-posterNum">{idx + 4}.</span>
-                              <p className="mm-posterText">{item.title}</p>
+                              <p className="mm-posterText">{item.title} <span className="mm-confArrow">↗</span></p>
                             </div>
                           </a>
                         ))}
@@ -660,7 +689,7 @@ export default function MammographyPage() {
                         {CONFERENCES_COL1.map((item, idx) => (
                           <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer" className="mm-conferenceCard d-block text-decoration-none">
                             <p className="mm-conferenceText">
-                              <strong>{idx + 1}.</strong> {item.title}
+                              <strong>{idx + 1}.</strong> {item.title} <span className="mm-confArrow">↗</span>
                             </p>
                           </a>
                         ))}
@@ -671,7 +700,7 @@ export default function MammographyPage() {
                         {CONFERENCES_COL2.map((item, idx) => (
                           <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer" className="mm-conferenceCard d-block text-decoration-none">
                             <p className="mm-conferenceText">
-                              <strong>{idx + 3}.</strong> {item.title}
+                              <strong>{idx + 3}.</strong> {item.title} <span className="mm-confArrow">↗</span>
                             </p>
                           </a>
                         ))}
@@ -721,34 +750,48 @@ export default function MammographyPage() {
                 <div className="mm-sectionHead">
                   <div className="mm-sectionHeadLeft">
                     <h2 className="mm-sectionTitle">
-                      Dissemination Products &amp; Toolkits
+                      Dissemination Products
                     </h2>
                     <div className="mm-accentBar" />
                   </div>
                 </div>
 
-                <p className="mm-leadText">
-                  The original project includes a dissemination products area.
-                  Its toolkit section is listed as forthcoming; no downloadable
-                  toolkit has been invented for this design.
-                </p>
+                <MammographyDisseminationSlider
+                  items={DISSEMINATION_SLIDES.map((s) => ({
+                    ...s,
+                    image: asset(s.image),
+                  }))}
+                />
 
-                <div className="row g-3">
-                  {DISSEMINATION_ITEMS.map((item) => (
-                    <div key={item.title} className="col-md-6">
+                {/* Toolkits sub-section */}
+                <div className="mt-5 pt-2">
+                  <div className="mm-sectionHead">
+                    <div className="mm-sectionHeadLeft">
+                      <h3 className="mm-sectionTitle">Toolkits</h3>
+                      <div className="mm-accentBar" />
+                    </div>
+                  </div>
+                  <div className="row g-3">
+                    <div className="col-md-6">
                       <a
-                        href={item.href}
+                        href="https://medicineandislam.org/tools-toolkits/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`mm-toolkitCard d-block text-decoration-none`}
+                        className="mm-toolkitCard d-block text-decoration-none"
                       >
-                        <h4 className="mm-toolkitTitle">{item.title}</h4>
+                        <h4 className="mm-toolkitTitle">Tools &amp; Toolkits</h4>
                         <p className="mm-toolkitDesc">
-                          {item.desc} <span className="ms-1">↗</span>
+                          Visit the II&amp;M Tools &amp; Toolkits page <span className="ms-1">↗</span>
                         </p>
                       </a>
                     </div>
-                  ))}
+                    <div className="col-md-6">
+                      <div className="mm-toolkitCard mm-toolkitCard--muted">
+                        <h4 className="mm-toolkitTitle">Mosque-Based Toolkit</h4>
+                        <p className="mm-toolkitDesc">Coming soon — listed as forthcoming on the source page</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </article>
 
@@ -764,15 +807,25 @@ export default function MammographyPage() {
                 <div className="row g-3">
                   {TEAM_MEMBERS.map((member) => (
                     <div key={member.name} className="col-md-6">
-                      <div className="mm-teamCard">
-                        <div className="mm-teamBadge" aria-hidden="true">
-                          {member.initials}
+                      <a
+                        href={member.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mm-teamCard mm-teamCard--photo d-block text-decoration-none"
+                      >
+                        <div className="mm-teamPhotoWrap">
+                          <img
+                            src={asset(member.image)}
+                            alt={member.name}
+                            className="mm-teamPhoto"
+                            loading="lazy"
+                          />
                         </div>
-                        <div>
+                        <div className="mm-teamInfo">
                           <h4 className="mm-teamName">{member.name}</h4>
                           <p className="mm-teamRole">{member.role}</p>
                         </div>
-                      </div>
+                      </a>
                     </div>
                   ))}
                 </div>

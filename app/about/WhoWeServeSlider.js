@@ -257,12 +257,9 @@ export default function WhoWeServeSlider({ audiences = AUDIENCES_DATA }) {
         onTouchEnd={handleTouchEnd}
       >
         <div
-          className="audience-slider-track"
+          className={`audience-slider-track${enableTransition ? " is-animating" : ""}`}
           style={{
             transform: `translate3d(-${(virtualIndex * 100) / itemsPerView}%, 0, 0)`,
-            transition: enableTransition
-              ? "transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)"
-              : "none",
           }}
           onTransitionEnd={handleTransitionEnd}
         >

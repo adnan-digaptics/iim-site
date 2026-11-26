@@ -95,7 +95,7 @@ export default function ContactPage() {
                 <h2>Our Office</h2>
                 <span className="ct-gold-line" />
                 <p className="ct-org">Initiative on Islam &amp; Medicine</p>
-                <p className="ct-org" style={{ fontSize: "13px", color: "#666", marginTop: "-6px" }}>c/o 360 Growth Lab</p>
+                <p className="ct-org" style={{ fontSize: "13px", color: "#fff", marginTop: "-6px" }}>c/o 360 Growth Lab</p>
                 <p>
                   <i className="fa-regular fa-envelope" aria-hidden="true" />
                   <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
