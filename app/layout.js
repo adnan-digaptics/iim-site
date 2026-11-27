@@ -7,6 +7,7 @@ import SiteEffects from "../components/SiteEffects";
 import ConsultationModal from "../components/ConsultationModal";
 import SpeakingModal from "../components/SpeakingModal";
 import DonateModal from "../components/DonateModal";
+import GSAPAnimations from "../components/GSAPAnimations";
 import { asset } from "../lib/asset";
 
 export const metadata = {
@@ -15,6 +16,15 @@ export const metadata = {
     template: "%s",
   },
   description: "Instilling Hikmah in Healthcare — research, education, consultation and speaking.",
+  icons: {
+    icon: [
+      { url: asset("/favicon.ico"), sizes: "any" },
+      { url: asset("/favicon-32x32.png"), sizes: "32x32", type: "image/png" },
+      { url: asset("/icon.png"), sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: asset("/favicon.ico"),
+    apple: [{ url: asset("/apple-touch-icon.png"), sizes: "180x180", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -40,6 +50,7 @@ export default function RootLayout({ children }) {
         <ConsultationModal />
         <SpeakingModal />
         <DonateModal />
+        <GSAPAnimations />
       </body>
     </html>
   );

@@ -45462,3 +45462,132 @@ img {
   /* conf hero actions handled by hero-seamless */
   .conf-pillars-grid { grid-template-columns: 1fr; }
 }
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   IIM INTERACTION & ATMOSPHERIC CSS
+   (Entrance animations handled by GSAP â€” see components/GSAPAnimations.js)
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+/* Prevent GSAP horizontal transform from creating scrollbar */
+main { overflow-x: clip; }
+
+/* â”€â”€ Ken Burns hero background â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@keyframes iim-ken-burns {
+  0%   { transform: scale(1)    translate(0, 0); }
+  50%  { transform: scale(1.04) translate(-0.6%, -0.4%); }
+  100% { transform: scale(1)    translate(0, 0); }
+}
+.hero-bg-img { animation: iim-ken-burns 28s ease-in-out infinite; }
+
+/* â”€â”€ Ambient hero orb (decorative) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@keyframes iim-orb-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(24px, -16px) scale(1.06); }
+  70%       { transform: translate(-16px, 12px) scale(0.96); }
+}
+.hero-seamless::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 42% at 84% 22%, rgba(221,180,122,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 38% 48% at 14% 72%, rgba(128,0,0,0.06) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+  animation: iim-orb-drift 20s ease-in-out infinite;
+}
+
+/* â”€â”€ Card hover lift â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.audience-card, .intern-profile-card, .donate-voice-card, .ct-lane,
+.donate-impact-card, .intern-pub-card, .crs-course-card, .about-partner-card,
+.bio-module-card, .bio-res-card, .ws-tier-card, .sp-topic-card, .vol-card {
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s ease;
+}
+.audience-card:hover, .intern-profile-card:hover, .donate-voice-card:hover,
+.ct-lane:hover, .donate-impact-card:hover, .intern-pub-card:hover,
+.crs-course-card:hover, .bio-module-card:hover, .bio-res-card:hover,
+.ws-tier-card:hover, .sp-topic-card:hover, .vol-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(16, 36, 58, 0.12);
+}
+
+/* â”€â”€ Button shimmer & lift â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@keyframes iim-shimmer-btn {
+  0%   { left: -130%; }
+  100% { left: 130%; }
+}
+.btn-seamless-maroon, .btn-seamless-outline, [class*="btn-seamless"] {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+}
+.btn-seamless-maroon::after, .btn-seamless-outline::after, [class*="btn-seamless"]::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: -130%;
+  width: 50%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  transform: skewX(-18deg);
+  pointer-events: none;
+}
+.btn-seamless-maroon:hover::after, .btn-seamless-outline:hover::after,
+[class*="btn-seamless"]:hover::after { animation: iim-shimmer-btn 0.5s ease forwards; }
+.btn-seamless-maroon:hover  { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(128,0,0,0.24); }
+.btn-seamless-outline:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(16,36,58,0.12); }
+
+/* â”€â”€ Image zoom on hover â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ct-office-photo { overflow: hidden; }
+.ct-office-photo img { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+.ct-office-photo:hover img { transform: scale(1.04); }
+
+/* â”€â”€ Audience icon float â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@keyframes iim-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-7px); }
+}
+.audience-card:hover .audience-icon { animation: iim-float 1.8s ease-in-out infinite; }
+
+/* â”€â”€ Stat number gradient â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@keyframes iim-gradient-pulse {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+[class*="stat-number"] {
+  background: linear-gradient(135deg, var(--maroon) 0%, #b91c1c 45%, var(--gold) 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: iim-gradient-pulse 6s ease infinite;
+}
+
+/* â”€â”€ Focus ring (WCAG 2.4.11) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:focus-visible {
+  outline: 3px solid var(--maroon);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* â”€â”€ Reduced motion â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-img, .hero-seamless::before,
+  [class*="stat-number"], .audience-card:hover .audience-icon {
+    animation: none;
+  }
+  .btn-seamless-maroon:hover, .btn-seamless-outline:hover,
+  [class*="btn-seamless"]:hover,
+  .audience-card:hover, .intern-profile-card:hover, .donate-voice-card:hover,
+  .ct-lane:hover, .donate-impact-card:hover, .intern-pub-card:hover {
+    transform: none;
+  }
+}

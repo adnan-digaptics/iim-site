@@ -9,7 +9,6 @@ const NAV_ITEMS = [
   { id: "publications", label: "Publications" },
   { id: "results", label: "Results" },
   { id: "media", label: "Media" },
-  { id: "partners", label: "Partners" },
 ];
 
 export default function MahsnNav() {

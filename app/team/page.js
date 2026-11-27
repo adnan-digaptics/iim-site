@@ -14,7 +14,7 @@ const operations = [
   {
     name: "Ahmer Faisal",
     role: "Project Manager",
-    img: asset("/images/our-team/hiba.jpg"),
+    img: asset("/images/our-team/ahmer-faisal.jpg"),
     text: "Coordinates programs and projects that advance II&M’s research, education, and engagement goals.",
   },
 ];

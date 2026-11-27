@@ -91,34 +91,6 @@ const PUBLICATIONS = [
   },
 ];
 
-const PARTNERS = [
-  {
-    bold: "Muslim Chaplains",
-    subtext: "Association of",
-    isPrefix: true,
-  },
-  {
-    bold: "IMANA",
-    subtext: "Islamic Medical Association of North America",
-    isPrefix: false,
-  },
-  {
-    bold: "Khalil Center",
-    subtext: "",
-    isPrefix: false,
-  },
-  {
-    bold: "IMAN Network",
-    subtext: "",
-    isPrefix: false,
-  },
-  {
-    bold: "Stanford",
-    subtext: "Muslim Mental Health Lab",
-    isPrefix: false,
-  },
-];
-
 const OBJECTIVES = [
   "Identify gaps in the healthcare experiences of Muslim Americans.",
   "Explore the impact of demographic and religious factors.",
@@ -550,81 +522,6 @@ export default function MahsnPage() {
                 </div>
 
                 <MahsnVideoSection />
-              </article>
-
-              {/* SECTION 08 — PROJECT GALLERY */}
-              <article id="gallery" className="mahsn-sectionBlock">
-                <div className="mahsn-sectionHead">
-                  <div className="mahsn-sectionHeadLeft">
-                    <h2 className="mahsn-sectionTitle">Project Gallery</h2>
-                    <div className="mahsn-accentBar" />
-                  </div>
-                </div>
-
-                <p className="mahsn-leadText">
-                  Gallery images from the original project page are marked as
-                  forthcoming. The gallery component below is ready for
-                  approved project photographs without changing this template.
-                </p>
-
-                <div className="row g-3">
-                  {[1, 2, 3].map((item) => (
-                    <div key={item} className="col-md-4">
-                      <div className="mahsn-galleryCard">
-                        <p className="mahsn-galleryText1">PROJECT PHOTO</p>
-                        <p className="mahsn-galleryText2">COMING SOON</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </article>
-
-              {/* SECTION 09 — PARTNER ORGANIZATIONS */}
-              <article id="partners" className="mahsn-sectionBlock">
-                <div className="mahsn-sectionHead">
-                  <div className="mahsn-sectionHeadLeft">
-                    <h2 className="mahsn-sectionTitle">
-                      Partner Organizations
-                    </h2>
-                    <div className="mahsn-accentBar" />
-                  </div>
-                </div>
-
-                <p className="mahsn-leadText">
-                  The project engaged a network of Muslim health and community
-                  organizations, including members of its National Steering
-                  Committee.
-                </p>
-
-                <div className="row g-3">
-                  {PARTNERS.map((partner, idx) => (
-                    <div
-                      key={idx}
-                      className={idx < 3 ? "col-md-4" : "col-md-6"}
-                    >
-                      <div className="mahsn-partnerCard">
-                        {partner.subtext && partner.isPrefix && (
-                          <span className="mahsn-partnerSubtext">
-                            {partner.subtext}
-                          </span>
-                        )}
-                        <span className="mahsn-partnerNameBold">
-                          {partner.bold}
-                        </span>
-                        {partner.subtext && !partner.isPrefix && (
-                          <span className="mahsn-partnerSubtext">
-                            {partner.subtext}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <p className="mahsn-partnerFootnote">
-                  Organization names are presented as text until approved logo
-                  assets are added.
-                </p>
               </article>
 
               {/* SECTION 10 — FUNDING */}
